@@ -238,7 +238,7 @@ namespace LecturerDB.Views
         private void bindingNavigatorAddNewItem1_Click(object sender, EventArgs e)
         {
             groupGrid.CancelEdit();
-            clearGroupFields();
+            //clearGroupFields();
             if (groupGrid.CurrentCell != null)
             {
                 groupGrid.BeginEdit(true);
@@ -1039,7 +1039,19 @@ namespace LecturerDB.Views
         {
             if (lecturerPKMaskedBox.Text != string.Empty)
             {
-                lecturerPublicationTableAdapter.GetData()
+                lecturerPublicationTableAdapter.GetData();
+            }
+        }
+
+        private void responsibilityStartDateDateTimePicker_Validating(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                responsibilityStartDateDateTimePicker.Focus();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -1053,10 +1065,10 @@ namespace LecturerDB.Views
            1 - не нажимать "Очистить" при выделенной строке с важной информацией - информация теряется
            2 - не сохраняются PDF в базе данных и соответственно не извлекаются
            3 - не измененные поля не валидируются заново - значения не извлекаются
-           //4 - проверить якоря разметки на развернутом экране с 3 вкладки
-           5 - поправить в обязанностях ошибку о невыбранной клетке 
-           6 - дробные значения не выводятся
-         
+           4 - проверить якоря разметки на развернутом экране с 3 вкладки - done
+           5 - поправить в обязанностях ошибку о невыбранной клетке - ?
+           6 - дробные значения не выводятся - поправить в базе значения на decimal
+           7 - concurrency violation когда сохраняю дважды
          */
     }
 }

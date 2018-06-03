@@ -1634,36 +1634,36 @@
             publicationNameLabel.AutoSize = true;
             publicationNameLabel.Location = new System.Drawing.Point(14, 9);
             publicationNameLabel.Name = "publicationNameLabel";
-            publicationNameLabel.Size = new System.Drawing.Size(93, 13);
+            publicationNameLabel.Size = new System.Drawing.Size(60, 13);
             publicationNameLabel.TabIndex = 1;
-            publicationNameLabel.Text = "Publication Name:";
+            publicationNameLabel.Text = "Название:";
             // 
             // publicationPlaceLabel
             // 
             publicationPlaceLabel.AutoSize = true;
             publicationPlaceLabel.Location = new System.Drawing.Point(15, 133);
             publicationPlaceLabel.Name = "publicationPlaceLabel";
-            publicationPlaceLabel.Size = new System.Drawing.Size(92, 13);
+            publicationPlaceLabel.Size = new System.Drawing.Size(42, 13);
             publicationPlaceLabel.TabIndex = 3;
-            publicationPlaceLabel.Text = "Publication Place:";
+            publicationPlaceLabel.Text = "Место:";
             // 
             // publicationRatesLabel
             // 
             publicationRatesLabel.AutoSize = true;
             publicationRatesLabel.Location = new System.Drawing.Point(509, 9);
             publicationRatesLabel.Name = "publicationRatesLabel";
-            publicationRatesLabel.Size = new System.Drawing.Size(93, 13);
+            publicationRatesLabel.Size = new System.Drawing.Size(51, 13);
             publicationRatesLabel.TabIndex = 5;
-            publicationRatesLabel.Text = "Publication Rates:";
+            publicationRatesLabel.Text = "Рейтинг:";
             // 
             // publicationYearLabel
             // 
             publicationYearLabel.AutoSize = true;
             publicationYearLabel.Location = new System.Drawing.Point(515, 133);
             publicationYearLabel.Name = "publicationYearLabel";
-            publicationYearLabel.Size = new System.Drawing.Size(87, 13);
+            publicationYearLabel.Size = new System.Drawing.Size(28, 13);
             publicationYearLabel.TabIndex = 7;
-            publicationYearLabel.Text = "Publication Year:";
+            publicationYearLabel.Text = "Год:";
             // 
             // groupLabel2
             // 
@@ -2645,8 +2645,8 @@
             this.bindingNavigatorSeparator8,
             this.bindingNavigatorAddNewItem2,
             this.bindingNavigatorDeleteItem2,
-            this.saveToolStripButton2,
-            this.subjectFieldClearButton});
+            this.subjectFieldClearButton,
+            this.saveToolStripButton2});
             this.subjectGridNavigator.Location = new System.Drawing.Point(811, 275);
             this.subjectGridNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem2;
             this.subjectGridNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem2;
@@ -3229,8 +3229,8 @@
             this.bindingNavigatorSeparator11,
             this.bindingNavigatorAddNewItem3,
             this.bindingNavigatorDeleteItem3,
-            this.saveToolStripButton3,
-            this.newToolStripButton1});
+            this.newToolStripButton1,
+            this.saveToolStripButton3});
             this.workLoadNavigator.Location = new System.Drawing.Point(811, 252);
             this.workLoadNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem3;
             this.workLoadNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem3;
@@ -3350,7 +3350,7 @@
             this.newToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton1.Name = "newToolStripButton1";
             this.newToolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.newToolStripButton1.Text = "&New";
+            this.newToolStripButton1.Text = "&Clear";
             this.newToolStripButton1.Click += new System.EventHandler(this.newToolStripButton1_Click);
             // 
             // workLoadContactHoursNumericUpDown
@@ -3842,7 +3842,7 @@
             this.newToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton3.Name = "newToolStripButton3";
             this.newToolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.newToolStripButton3.Text = "&New";
+            this.newToolStripButton3.Text = "&Clear";
             this.newToolStripButton3.Click += new System.EventHandler(this.newToolStripButton3_Click);
             // 
             // saveToolStripButton5
@@ -4238,8 +4238,8 @@
             this.bindingNavigatorSeparator20,
             this.bindingNavigatorAddNewItem6,
             this.bindingNavigatorDeleteItem6,
-            this.saveToolStripButton6,
-            this.newToolStripButton4});
+            this.newToolStripButton4,
+            this.saveToolStripButton6});
             this.planAccomplishmentNavigator.Location = new System.Drawing.Point(811, 242);
             this.planAccomplishmentNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem6;
             this.planAccomplishmentNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem6;
@@ -4699,7 +4699,7 @@
             this.newToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton5.Name = "newToolStripButton5";
             this.newToolStripButton5.Size = new System.Drawing.Size(23, 22);
-            this.newToolStripButton5.Text = "&New";
+            this.newToolStripButton5.Text = "&Clear";
             this.newToolStripButton5.Click += new System.EventHandler(this.newToolStripButton5_Click);
             // 
             // saveToolStripButton7
@@ -5029,7 +5029,7 @@
             this.newToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton6.Name = "newToolStripButton6";
             this.newToolStripButton6.Size = new System.Drawing.Size(23, 22);
-            this.newToolStripButton6.Text = "&New";
+            this.newToolStripButton6.Text = "&Clear";
             this.newToolStripButton6.Click += new System.EventHandler(this.newToolStripButton6_Click);
             // 
             // saveToolStripButton8
@@ -5306,7 +5306,7 @@
             this.newToolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton7.Name = "newToolStripButton7";
             this.newToolStripButton7.Size = new System.Drawing.Size(23, 22);
-            this.newToolStripButton7.Text = "&New";
+            this.newToolStripButton7.Text = "&Clear";
             this.newToolStripButton7.Click += new System.EventHandler(this.newToolStripButton7_Click);
             // 
             // saveToolStripButton9
@@ -5854,7 +5854,7 @@
             this.newToolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton9.Name = "newToolStripButton9";
             this.newToolStripButton9.Size = new System.Drawing.Size(23, 22);
-            this.newToolStripButton9.Text = "&New";
+            this.newToolStripButton9.Text = "&Clear";
             this.newToolStripButton9.Click += new System.EventHandler(this.newToolStripButton9_Click);
             // 
             // saveToolStripButton11
@@ -6136,7 +6136,7 @@
             this.newToolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton10.Name = "newToolStripButton10";
             this.newToolStripButton10.Size = new System.Drawing.Size(23, 22);
-            this.newToolStripButton10.Text = "&New";
+            this.newToolStripButton10.Text = "&Clear";
             this.newToolStripButton10.Click += new System.EventHandler(this.newToolStripButton10_Click);
             // 
             // saveToolStripButton12
@@ -6463,7 +6463,7 @@
             this.newToolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton12.Name = "newToolStripButton12";
             this.newToolStripButton12.Size = new System.Drawing.Size(23, 22);
-            this.newToolStripButton12.Text = "&New";
+            this.newToolStripButton12.Text = "&Clear";
             this.newToolStripButton12.Click += new System.EventHandler(this.newToolStripButton12_Click);
             // 
             // saveToolStripButton14
@@ -6562,7 +6562,7 @@
             // 
             this.responsibilityNavigator.AddNewItem = this.bindingNavigatorAddNewItem13;
             this.responsibilityNavigator.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.responsibilityNavigator.BindingSource = this.responsibilityBindingSource;
             this.responsibilityNavigator.CountItem = this.bindingNavigatorCountItem13;
             this.responsibilityNavigator.DeleteItem = this.bindingNavigatorDeleteItem13;
@@ -6581,7 +6581,7 @@
             this.bindingNavigatorDeleteItem13,
             this.newToolStripButton11,
             this.saveToolStripButton13});
-            this.responsibilityNavigator.Location = new System.Drawing.Point(234, 386);
+            this.responsibilityNavigator.Location = new System.Drawing.Point(186, 386);
             this.responsibilityNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem13;
             this.responsibilityNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem13;
             this.responsibilityNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem13;
@@ -6690,7 +6690,7 @@
             this.newToolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton11.Name = "newToolStripButton11";
             this.newToolStripButton11.Size = new System.Drawing.Size(23, 22);
-            this.newToolStripButton11.Text = "&New";
+            this.newToolStripButton11.Text = "&Clear";
             this.newToolStripButton11.Click += new System.EventHandler(this.newToolStripButton11_Click);
             // 
             // saveToolStripButton13
@@ -6708,7 +6708,7 @@
             this.responsibilityEndDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.responsibilityBindingSource, "EndDate", true));
             this.responsibilityEndDateDateTimePicker.Location = new System.Drawing.Point(145, 142);
             this.responsibilityEndDateDateTimePicker.Name = "responsibilityEndDateDateTimePicker";
-            this.responsibilityEndDateDateTimePicker.Size = new System.Drawing.Size(396, 20);
+            this.responsibilityEndDateDateTimePicker.Size = new System.Drawing.Size(390, 20);
             this.responsibilityEndDateDateTimePicker.TabIndex = 8;
             // 
             // responsibilityStartDateDateTimePicker
@@ -6716,8 +6716,9 @@
             this.responsibilityStartDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.responsibilityBindingSource, "StartDate", true));
             this.responsibilityStartDateDateTimePicker.Location = new System.Drawing.Point(145, 116);
             this.responsibilityStartDateDateTimePicker.Name = "responsibilityStartDateDateTimePicker";
-            this.responsibilityStartDateDateTimePicker.Size = new System.Drawing.Size(396, 20);
+            this.responsibilityStartDateDateTimePicker.Size = new System.Drawing.Size(390, 20);
             this.responsibilityStartDateDateTimePicker.TabIndex = 6;
+            this.responsibilityStartDateDateTimePicker.Validating += new System.ComponentModel.CancelEventHandler(this.responsibilityStartDateDateTimePicker_Validating);
             // 
             // lecturerComboBox
             // 
@@ -6727,7 +6728,7 @@
             this.lecturerComboBox.FormattingEnabled = true;
             this.lecturerComboBox.Location = new System.Drawing.Point(145, 89);
             this.lecturerComboBox.Name = "lecturerComboBox";
-            this.lecturerComboBox.Size = new System.Drawing.Size(396, 21);
+            this.lecturerComboBox.Size = new System.Drawing.Size(390, 21);
             this.lecturerComboBox.TabIndex = 4;
             this.lecturerComboBox.ValueMember = "PK";
             // 
@@ -6737,7 +6738,7 @@
             this.responsibilityDescriptionTextBox.Location = new System.Drawing.Point(145, 19);
             this.responsibilityDescriptionTextBox.Multiline = true;
             this.responsibilityDescriptionTextBox.Name = "responsibilityDescriptionTextBox";
-            this.responsibilityDescriptionTextBox.Size = new System.Drawing.Size(396, 64);
+            this.responsibilityDescriptionTextBox.Size = new System.Drawing.Size(390, 64);
             this.responsibilityDescriptionTextBox.TabIndex = 2;
             // 
             // responsibilityGrid
