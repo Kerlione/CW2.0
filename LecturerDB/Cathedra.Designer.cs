@@ -1991,7 +1991,7 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public LearningResultRow AddLearningResultRow(GroupRow parentGroupRowByGroupLearningResult, SubjectRow parentSubjectRowBySubjectLearningResult, string StudyYear, int Semester, int MeanMark, int FCount) {
+            public LearningResultRow AddLearningResultRow(GroupRow parentGroupRowByGroupLearningResult, SubjectRow parentSubjectRowBySubjectLearningResult, string StudyYear, int Semester, decimal MeanMark, int FCount) {
                 LearningResultRow rowLearningResultRow = ((LearningResultRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2057,7 +2057,7 @@ namespace LecturerDB {
                 base.Columns.Add(this.columnStudyYear);
                 this.columnSemester = new global::System.Data.DataColumn("Semester", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSemester);
-                this.columnMeanMark = new global::System.Data.DataColumn("MeanMark", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnMeanMark = new global::System.Data.DataColumn("MeanMark", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMeanMark);
                 this.columnFCount = new global::System.Data.DataColumn("FCount", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFCount);
@@ -6000,7 +6000,7 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public WorkloadRow AddWorkloadRow(GroupRow parentGroupRowByGroupWorkload, SubjectRow parentSubjectRowBySubjectWorkload, LecturerRow parentLecturerRowByLecturerWorkload, string StudyYear, string Semester, int LectionCount, int PracticeCount, int LaboratoryCount, int CourseWork, string Language, int LoadMultiply, int TotalHours, int ContactHours) {
+            public WorkloadRow AddWorkloadRow(GroupRow parentGroupRowByGroupWorkload, SubjectRow parentSubjectRowBySubjectWorkload, LecturerRow parentLecturerRowByLecturerWorkload, string StudyYear, string Semester, int LectionCount, int PracticeCount, int LaboratoryCount, int CourseWork, string Language, decimal LoadMultiply, int TotalHours, int ContactHours) {
                 WorkloadRow rowWorkloadRow = ((WorkloadRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -6095,7 +6095,7 @@ namespace LecturerDB {
                 base.Columns.Add(this.columnCourseWork);
                 this.columnLanguage = new global::System.Data.DataColumn("Language", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLanguage);
-                this.columnLoadMultiply = new global::System.Data.DataColumn("LoadMultiply", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnLoadMultiply = new global::System.Data.DataColumn("LoadMultiply", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLoadMultiply);
                 this.columnTotalHours = new global::System.Data.DataColumn("TotalHours", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalHours);
@@ -6737,10 +6737,10 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int MeanMark {
+            public decimal MeanMark {
                 get {
                     try {
-                        return ((int)(this[this.tableLearningResult.MeanMarkColumn]));
+                        return ((decimal)(this[this.tableLearningResult.MeanMarkColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'MeanMark\' in table \'LearningResult\' is DBNull.", e);
@@ -9223,10 +9223,10 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int LoadMultiply {
+            public decimal LoadMultiply {
                 get {
                     try {
-                        return ((int)(this[this.tableWorkload.LoadMultiplyColumn]));
+                        return ((decimal)(this[this.tableWorkload.LoadMultiplyColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'LoadMultiply\' in table \'Workload\' is DBNull.", e);
