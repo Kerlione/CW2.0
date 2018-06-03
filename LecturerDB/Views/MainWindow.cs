@@ -1030,6 +1030,19 @@ namespace LecturerDB.Views
             }
         }
 
+        private void moveStudentNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lecturerPublicationListButton_Click(object sender, EventArgs e)
+        {
+            if (lecturerPKMaskedBox.Text != string.Empty)
+            {
+                lecturerPublicationTableAdapter.GetData()
+            }
+        }
+
 
 
         //Lecturer publication end
