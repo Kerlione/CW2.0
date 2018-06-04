@@ -4191,6 +4191,7 @@
             this.languageNameTextBox.Name = "languageNameTextBox";
             this.languageNameTextBox.Size = new System.Drawing.Size(208, 20);
             this.languageNameTextBox.TabIndex = 2;
+            this.languageNameTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.languageNameTextBox_Validating);
             // 
             // planAccomplishmentTab
             // 

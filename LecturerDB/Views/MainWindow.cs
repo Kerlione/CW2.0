@@ -431,10 +431,22 @@ namespace LecturerDB.Views
 
         private void saveToolStripButton3_Click(object sender, EventArgs e)
         {
-            TabControlValidation(workLoadTab);
-            workloadBindingSource.EndEdit();
-            workloadTableAdapter.Update(cathedraDataSet.Workload);
-            workLoadGrid.Refresh();
+            if (workLoadGroupComboBox.SelectedValue!=null &&
+                workLoadLecturerComboBox.SelectedValue!=null &&
+                workLoadSubjectComboBox.SelectedValue!=null && workLoadStudyYearNumericUpDown.Value != 0)
+            {
+                try
+                {
+                    TabControlValidation(workLoadTab);
+                    workloadBindingSource.EndEdit();
+                    workloadTableAdapter.Update(cathedraDataSet.Workload);
+                    workLoadGrid.Refresh();
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show(exc.Message);
+                }
+            }
         }
 
         private void bindingNavigatorAddNewItem3_Click(object sender, EventArgs e)
@@ -489,10 +501,24 @@ namespace LecturerDB.Views
 
         private void saveToolStripButton4_Click(object sender, EventArgs e)
         {
-            TabControlValidation(languageTab);
-            languageBindingSource.EndEdit();
-            languageTableAdapter.Update(cathedraDataSet.Language);
-            languageGrid.Refresh();
+            if (languageNameTextBox.Text!=string.Empty)
+            {
+                try
+                {
+                    TabControlValidation(languageTab);
+                    languageBindingSource.EndEdit();
+                    languageTableAdapter.Update(cathedraDataSet.Language);
+                    languageGrid.Refresh();
+                }catch(Exception exc)
+                {
+                    MessageBox.Show(exc.Message);
+                }
+            }else
+            {
+                MessageBox.Show("Поле языка должно быть заполнено.");
+                errorProvider1.SetError(languageNameTextBox,"Поле языка должно быть заполнено.");
+            }
+            
         }
 
 
@@ -649,10 +675,20 @@ namespace LecturerDB.Views
 
         private void saveToolStripButton7_Click(object sender, EventArgs e)
         {
-            TabControlValidation(moveStudentTab);
-            moveStudentBindingSource.EndEdit();
-            moveStudentTableAdapter.Update(cathedraDataSet.MoveStudent);
-            moveStudentGrid.Refresh();
+            if (moveStudentGroupComboBox.SelectedValue!=null &&
+                moveStudentStudyYearNumericUpDown.Value!=0 &&
+                moveStudentStudySemesterListBox.SelectedIndex != 0)
+            {
+                TabControlValidation(moveStudentTab);
+                moveStudentBindingSource.EndEdit();
+                moveStudentTableAdapter.Update(cathedraDataSet.MoveStudent);
+                moveStudentGrid.Refresh();
+            }else
+            {
+
+            }
+
+            
         }
 
         private void clearMoveStudent()
@@ -783,10 +819,23 @@ namespace LecturerDB.Views
 
         private void saveToolStripButton9_Click(object sender, EventArgs e)
         {
-            TabControlValidation(projectTab);
-            projectBindingSource.EndEdit();
-            projectTableAdapter.Update(cathedraDataSet.Project);
-            projectGrid.Refresh();
+            if (projectNumberTextBox.Text!=string.Empty)
+            {
+                try
+                {
+                    TabControlValidation(projectTab);
+                    projectBindingSource.EndEdit();
+                    projectTableAdapter.Update(cathedraDataSet.Project);
+                    projectGrid.Refresh();
+                }catch(Exception ex)
+                {
+
+                }
+            }else
+            {
+
+            }
+            
         }
 
         private void clearProject()
@@ -1134,6 +1183,21 @@ namespace LecturerDB.Views
                 e.Cancel = true;
                 groupNumberTextBox.Select(0, subjectCodeTextBox.Text.Length);
                 errorProvider1.SetError(subjectCodeTextBox, "Номер группы должен быть введен!");
+
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void languageNameTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            if (languageNameTextBox.Text == string.Empty)
+            {
+                e.Cancel = true;
+                languageNameTextBox.Select(0, languageNameTextBox.Text.Length);
+                errorProvider1.SetError(languageNameTextBox, "Номер группы должен быть введен!");
 
             }
             else
