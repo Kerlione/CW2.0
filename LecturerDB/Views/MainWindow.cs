@@ -83,7 +83,7 @@ namespace LecturerDB.Views
                 lecturerDegreeTextBox.Text = string.Empty;
                 lecturerLanguagesTextBox.Text = string.Empty;
                 lecturerPhotoPictureBox.Image = null;
-                lecturerCVBytesTextBox.Text = string.Empty;
+                lecturerCVLinkLabel.Text = "CV";
                 lecturerCV = new byte[0];
             }
             catch (Exception)
@@ -111,7 +111,7 @@ namespace LecturerDB.Views
             }
         }
         //Add CV button
-        private void lecturerCVAddButton_Click(object sender, EventArgs e)
+        private void lecturerCVAddButton_Click(object sender, EventArgs e) // add cv to a special folder  called CV
         {
             using (OpenFileDialog dlg = new OpenFileDialog())
             {
@@ -120,8 +120,11 @@ namespace LecturerDB.Views
 
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
+                    string curDir = Directory.GetCurrentDirectory();
                     lecturerCV = File.ReadAllBytes(dlg.FileName);
-                    lecturerCVBytesTextBox.Text = String.Join("",lecturerCV); //TODO fix non saving PDF file
+                    Directory.CreateDirectory(curDir+ @"\CV\"); // If the directory already exists, this method does nothing.
+                    File.WriteAllBytes(Directory.GetCurrentDirectory()+@"\CV\" + lecturerFirstNameTextBox.Text + lecturerLastNameTextBox.Text + ".pdf", lecturerCV);
+                    lecturerCVLinkLabel.Text = @"\CV\"+lecturerFirstNameTextBox.Text + lecturerLastNameTextBox.Text+".pdf";
                 }
             }
         }
@@ -172,7 +175,7 @@ namespace LecturerDB.Views
         
         private void lecturerCVBytesTextBox_TextChanged(object sender, EventArgs e)
         {
-            lecturerViewCVButton.Enabled = lecturerCVBytesTextBox.Text != string.Empty;
+            lecturerViewCVButton.Enabled = lecturerCVLinkLabel.Text != string.Empty;
         }
 
         private void lecturerViewCVButton_Click(object sender, EventArgs e)
@@ -829,11 +832,12 @@ namespace LecturerDB.Views
                     projectGrid.Refresh();
                 }catch(Exception ex)
                 {
-
+                    MessageBox.Show(ex.Message);
                 }
             }else
             {
-
+                MessageBox.Show("Поле номера проекта должно быть заполнено.");
+                errorProvider1.SetError(languageNameTextBox, "Поле номера проекта должно быть заполнено.");
             }
             
         }
@@ -988,17 +992,26 @@ namespace LecturerDB.Views
 
         private void saveToolStripButton12_Click(object sender, EventArgs e)
         {
-            try
+            if (learningResultGroupComboBox.SelectedValue!=null &&
+                learningResultSubjectComboBox.SelectedValue!=null &&
+                learningResultSemesterListBox.SelectedValue!=null)
             {
-                TabControlValidation(learningResultTab);
-                learningResultBindingSource.EndEdit();
-                learningResultTableAdapter.Update(cathedraDataSet.LearningResult);
-                learningResultGrid.Refresh();
-            }
-            catch (Exception ex)
+                try
+                {
+                    TabControlValidation(learningResultTab);
+                    learningResultBindingSource.EndEdit();
+                    learningResultTableAdapter.Update(cathedraDataSet.LearningResult);
+                    learningResultGrid.Refresh();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }else
             {
-                MessageBox.Show(ex.Message);
+
             }
+            
         }
 
         private void clearLearningResult()
@@ -1204,6 +1217,35 @@ namespace LecturerDB.Views
             {
                 errorProvider1.Clear();
             }
+        }
+
+        private void projectNumberTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            if (projectNumberTextBox.Text == string.Empty)
+            {
+                e.Cancel = true;
+                projectNumberTextBox.Select(0, projectNumberTextBox.Text.Length);
+                errorProvider1.SetError(projectNumberTextBox, "Номер проекта должен быть введен!");
+
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void lecturerCVLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                string filePath = Directory.GetCurrentDirectory() + lecturerCVLinkLabel.Text;
+                File.WriteAllBytes(filePath, lecturerCV);
+                var pdfViewProcess = Process.Start(filePath);
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
 

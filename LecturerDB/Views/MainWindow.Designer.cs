@@ -133,11 +133,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.mainTab = new System.Windows.Forms.TabControl();
             this.lecturerTab = new System.Windows.Forms.TabPage();
-            this.lecturerPublicationListButton = new System.Windows.Forms.Button();
-            this.lecturerViewCVButton = new System.Windows.Forms.Button();
-            this.lecturerCVBytesTextBox = new System.Windows.Forms.TextBox();
+            this.lecturerCVLinkLabel = new System.Windows.Forms.LinkLabel();
             this.lecturerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cathedraDataSet = new LecturerDB.Cathedra();
+            this.lecturerPublicationListButton = new System.Windows.Forms.Button();
+            this.lecturerViewCVButton = new System.Windows.Forms.Button();
             this.lecturerGridNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -1802,9 +1802,9 @@
             // lecturerTab
             // 
             this.lecturerTab.AutoScroll = true;
+            this.lecturerTab.Controls.Add(this.lecturerCVLinkLabel);
             this.lecturerTab.Controls.Add(this.lecturerPublicationListButton);
             this.lecturerTab.Controls.Add(this.lecturerViewCVButton);
-            this.lecturerTab.Controls.Add(this.lecturerCVBytesTextBox);
             this.lecturerTab.Controls.Add(this.lecturerGridNavigator);
             this.lecturerTab.Controls.Add(this.lecturerCVAddButton);
             this.lecturerTab.Controls.Add(cVLabel);
@@ -1839,6 +1839,29 @@
             this.lecturerTab.UseVisualStyleBackColor = true;
             this.lecturerTab.Enter += new System.EventHandler(this.lecturerTab_Enter);
             // 
+            // lecturerCVLinkLabel
+            // 
+            this.lecturerCVLinkLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lecturerCVLinkLabel.AutoSize = true;
+            this.lecturerCVLinkLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lecturerBindingSource, "CV", true));
+            this.lecturerCVLinkLabel.Location = new System.Drawing.Point(966, 9);
+            this.lecturerCVLinkLabel.Name = "lecturerCVLinkLabel";
+            this.lecturerCVLinkLabel.Size = new System.Drawing.Size(21, 13);
+            this.lecturerCVLinkLabel.TabIndex = 28;
+            this.lecturerCVLinkLabel.TabStop = true;
+            this.lecturerCVLinkLabel.Text = "CV";
+            this.lecturerCVLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lecturerCVLinkLabel_LinkClicked);
+            // 
+            // lecturerBindingSource
+            // 
+            this.lecturerBindingSource.DataMember = "Lecturer";
+            this.lecturerBindingSource.DataSource = this.cathedraDataSet;
+            // 
+            // cathedraDataSet
+            // 
+            this.cathedraDataSet.DataSetName = "Cathedra";
+            this.cathedraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // lecturerPublicationListButton
             // 
             this.lecturerPublicationListButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1862,29 +1885,6 @@
             this.lecturerViewCVButton.Text = "Посмотреть CV";
             this.lecturerViewCVButton.UseVisualStyleBackColor = true;
             this.lecturerViewCVButton.Click += new System.EventHandler(this.lecturerViewCVButton_Click);
-            // 
-            // lecturerCVBytesTextBox
-            // 
-            this.lecturerCVBytesTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lecturerCVBytesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lecturerBindingSource, "CV", true));
-            this.lecturerCVBytesTextBox.Enabled = false;
-            this.lecturerCVBytesTextBox.Location = new System.Drawing.Point(969, 7);
-            this.lecturerCVBytesTextBox.Multiline = true;
-            this.lecturerCVBytesTextBox.Name = "lecturerCVBytesTextBox";
-            this.lecturerCVBytesTextBox.ReadOnly = true;
-            this.lecturerCVBytesTextBox.Size = new System.Drawing.Size(100, 20);
-            this.lecturerCVBytesTextBox.TabIndex = 23;
-            this.lecturerCVBytesTextBox.TextChanged += new System.EventHandler(this.lecturerCVBytesTextBox_TextChanged);
-            // 
-            // lecturerBindingSource
-            // 
-            this.lecturerBindingSource.DataMember = "Lecturer";
-            this.lecturerBindingSource.DataSource = this.cathedraDataSet;
-            // 
-            // cathedraDataSet
-            // 
-            this.cathedraDataSet.DataSetName = "Cathedra";
-            this.cathedraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lecturerGridNavigator
             // 
@@ -5369,6 +5369,7 @@
             this.projectNumberTextBox.Name = "projectNumberTextBox";
             this.projectNumberTextBox.Size = new System.Drawing.Size(225, 20);
             this.projectNumberTextBox.TabIndex = 2;
+            this.projectNumberTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.projectNumberTextBox_Validating);
             // 
             // projectGrid
             // 
@@ -7102,7 +7103,6 @@
         private System.Windows.Forms.ToolStripButton saveToolStripButton;
         private System.Windows.Forms.ToolStripButton newToolStripButton;
         private System.Windows.Forms.Button lecturerViewCVButton;
-        private System.Windows.Forms.TextBox lecturerCVBytesTextBox;
         private System.Windows.Forms.Button lecturerPublicationListButton;
         private System.Windows.Forms.DataGridView groupGrid;
         private CathedraTableAdapters.GroupTableAdapter groupTableAdapter;
@@ -7549,5 +7549,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn publicationIDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn lecturerPKDataGridViewTextBoxColumn;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.LinkLabel lecturerCVLinkLabel;
     }
 }
