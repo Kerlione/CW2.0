@@ -223,8 +223,8 @@
             this.bindingNavigatorMoveNextItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.saveToolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.subjectFieldClearButton = new System.Windows.Forms.ToolStripButton();
+            this.saveToolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.subjectDescriptionAddButton = new System.Windows.Forms.Button();
             this.subjectTematicPlanAddButoon = new System.Windows.Forms.Button();
             this.subjectZaochGroupBox = new System.Windows.Forms.GroupBox();
@@ -281,8 +281,8 @@
             this.bindingNavigatorMoveNextItem3 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem3 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.saveToolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.newToolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.saveToolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.workLoadContactHoursNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.workLoadTotalHoursNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.workLoadLoadMultiplyNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -372,8 +372,8 @@
             this.bindingNavigatorMoveNextItem6 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem6 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator20 = new System.Windows.Forms.ToolStripSeparator();
-            this.saveToolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.newToolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.saveToolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.planAccomplishmentHoursNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.planAccomplishmentLectureActualTopicTextBox = new System.Windows.Forms.TextBox();
             this.planAccomplishmentLecturePlannedTopicTextBox = new System.Windows.Forms.TextBox();
@@ -623,6 +623,7 @@
             this.learningResultTableAdapter = new LecturerDB.CathedraTableAdapters.LearningResultTableAdapter();
             this.lecturerPublicationTableAdapter = new LecturerDB.CathedraTableAdapters.LecturerPublicationTableAdapter();
             this.responsibilityTableAdapter = new LecturerDB.CathedraTableAdapters.ResponsibilityTableAdapter();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             pKLabel = new System.Windows.Forms.Label();
             lastNameLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
@@ -839,6 +840,7 @@
             this.responsibilityNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.responsibilityBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.responsibilityGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // pKLabel
@@ -2133,6 +2135,7 @@
             this.lecturerPKMaskedBox.Size = new System.Drawing.Size(204, 20);
             this.lecturerPKMaskedBox.TabIndex = 2;
             this.lecturerPKMaskedBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lecturerPKMaskedBox.Validating += new System.ComponentModel.CancelEventHandler(this.lecturerPKMaskedBox_Validating);
             this.lecturerPKMaskedBox.Validated += new System.EventHandler(this.lecturerPKMaskedBox_Validated);
             // 
             // lecturerGrid
@@ -2504,6 +2507,7 @@
             this.groupNumberTextBox.Name = "groupNumberTextBox";
             this.groupNumberTextBox.Size = new System.Drawing.Size(299, 20);
             this.groupNumberTextBox.TabIndex = 2;
+            this.groupNumberTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.groupNumberTextBox_Validating);
             // 
             // groupGrid
             // 
@@ -2749,16 +2753,6 @@
             this.bindingNavigatorSeparator8.Name = "bindingNavigatorSeparator8";
             this.bindingNavigatorSeparator8.Size = new System.Drawing.Size(6, 25);
             // 
-            // saveToolStripButton2
-            // 
-            this.saveToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.saveToolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton2.Image")));
-            this.saveToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.saveToolStripButton2.Name = "saveToolStripButton2";
-            this.saveToolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.saveToolStripButton2.Text = "&Save";
-            this.saveToolStripButton2.Click += new System.EventHandler(this.saveToolStripButton2_Click);
-            // 
             // subjectFieldClearButton
             // 
             this.subjectFieldClearButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -2768,6 +2762,16 @@
             this.subjectFieldClearButton.Size = new System.Drawing.Size(23, 22);
             this.subjectFieldClearButton.Text = "&Clear";
             this.subjectFieldClearButton.Click += new System.EventHandler(this.subjectFieldClearButton_Click);
+            // 
+            // saveToolStripButton2
+            // 
+            this.saveToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.saveToolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton2.Image")));
+            this.saveToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.saveToolStripButton2.Name = "saveToolStripButton2";
+            this.saveToolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton2.Text = "&Save";
+            this.saveToolStripButton2.Click += new System.EventHandler(this.saveToolStripButton2_Click);
             // 
             // subjectDescriptionAddButton
             // 
@@ -2976,6 +2980,7 @@
             this.subjectCodeTextBox.Name = "subjectCodeTextBox";
             this.subjectCodeTextBox.Size = new System.Drawing.Size(486, 20);
             this.subjectCodeTextBox.TabIndex = 2;
+            this.subjectCodeTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.subjectCodeTextBox_Validating);
             // 
             // subjectGrid
             // 
@@ -3333,16 +3338,6 @@
             this.bindingNavigatorSeparator11.Name = "bindingNavigatorSeparator11";
             this.bindingNavigatorSeparator11.Size = new System.Drawing.Size(6, 25);
             // 
-            // saveToolStripButton3
-            // 
-            this.saveToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.saveToolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton3.Image")));
-            this.saveToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.saveToolStripButton3.Name = "saveToolStripButton3";
-            this.saveToolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.saveToolStripButton3.Text = "&Save";
-            this.saveToolStripButton3.Click += new System.EventHandler(this.saveToolStripButton3_Click);
-            // 
             // newToolStripButton1
             // 
             this.newToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -3352,6 +3347,16 @@
             this.newToolStripButton1.Size = new System.Drawing.Size(23, 22);
             this.newToolStripButton1.Text = "&Clear";
             this.newToolStripButton1.Click += new System.EventHandler(this.newToolStripButton1_Click);
+            // 
+            // saveToolStripButton3
+            // 
+            this.saveToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.saveToolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton3.Image")));
+            this.saveToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.saveToolStripButton3.Name = "saveToolStripButton3";
+            this.saveToolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton3.Text = "&Save";
+            this.saveToolStripButton3.Click += new System.EventHandler(this.saveToolStripButton3_Click);
             // 
             // workLoadContactHoursNumericUpDown
             // 
@@ -4342,16 +4347,6 @@
             this.bindingNavigatorSeparator20.Name = "bindingNavigatorSeparator20";
             this.bindingNavigatorSeparator20.Size = new System.Drawing.Size(6, 25);
             // 
-            // saveToolStripButton6
-            // 
-            this.saveToolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.saveToolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton6.Image")));
-            this.saveToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.saveToolStripButton6.Name = "saveToolStripButton6";
-            this.saveToolStripButton6.Size = new System.Drawing.Size(23, 22);
-            this.saveToolStripButton6.Text = "&Save";
-            this.saveToolStripButton6.Click += new System.EventHandler(this.saveToolStripButton6_Click);
-            // 
             // newToolStripButton4
             // 
             this.newToolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -4361,6 +4356,16 @@
             this.newToolStripButton4.Size = new System.Drawing.Size(23, 22);
             this.newToolStripButton4.Text = "&Clear";
             this.newToolStripButton4.Click += new System.EventHandler(this.newToolStripButton4_Click);
+            // 
+            // saveToolStripButton6
+            // 
+            this.saveToolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.saveToolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton6.Image")));
+            this.saveToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.saveToolStripButton6.Name = "saveToolStripButton6";
+            this.saveToolStripButton6.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton6.Text = "&Save";
+            this.saveToolStripButton6.Click += new System.EventHandler(this.saveToolStripButton6_Click);
             // 
             // planAccomplishmentHoursNumericUpDown
             // 
@@ -6882,6 +6887,10 @@
             // 
             this.responsibilityTableAdapter.ClearBeforeFill = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -7039,6 +7048,7 @@
             this.responsibilityNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.responsibilityBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.responsibilityGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -7537,5 +7547,6 @@
         private System.Windows.Forms.ToolStripButton saveToolStripButton14;
         private System.Windows.Forms.DataGridViewTextBoxColumn publicationIDDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn lecturerPKDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

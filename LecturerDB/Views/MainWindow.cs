@@ -138,9 +138,22 @@ namespace LecturerDB.Views
         //Save button on navigator
         private void saveToolStripButton_Click(object sender, EventArgs e)
         {
-            TabControlValidation(lecturerTab);
-            lecturerBindingSource.EndEdit();
-            lecturerTableAdapter.Update(cathedraDataSet.Lecturer);
+            if (lecturerPKMaskedBox.Text!="      -")
+            {
+                try
+                {
+                    errorProvider1.Clear();
+                    TabControlValidation(lecturerTab);
+                    lecturerBindingSource.EndEdit();
+                    lecturerTableAdapter.Update(cathedraDataSet.Lecturer);
+                }
+                catch (Exception exc) { MessageBox.Show(exc.Message); }
+            }else
+            {
+                MessageBox.Show("Персональный код не должен быть пустым.");
+                errorProvider1.SetError(lecturerPKMaskedBox, "Персональный код не должен быть пустым.");
+            }
+            
         }
         //Validation?
         private void TabControlValidation(TabPage validatingTab)
@@ -247,10 +260,24 @@ namespace LecturerDB.Views
 
         private void saveToolStripButton1_Click(object sender, EventArgs e)
         {
-            TabControlValidation(groupTab);
-            groupBindingSource.EndEdit();
-            groupTableAdapter.Update(cathedraDataSet.Group);
-            groupGrid.Refresh();
+            if (groupNumberTextBox.Text != string.Empty)
+            {
+                try
+                {
+                    errorProvider1.Clear();
+                    TabControlValidation(groupTab);
+                    groupBindingSource.EndEdit();
+                    groupTableAdapter.Update(cathedraDataSet.Group);
+                    groupGrid.Refresh();
+                }catch(Exception exception)
+                {
+                    MessageBox.Show(exception.Message);
+                }
+            }else
+            {
+                errorProvider1.SetError(groupNumberTextBox, "Номер группы должен быть указан.");
+                MessageBox.Show("Номер группы должен быть указан.");
+            }
         }
 
         //Group End
@@ -308,10 +335,26 @@ namespace LecturerDB.Views
 
         private void saveToolStripButton2_Click(object sender, EventArgs e)
         {
-            TabControlValidation(subjectTab);
-            subjectBindingSource.EndEdit();
-            subjectTableAdapter.Update(cathedraDataSet.Subject);
-            subjectGrid.Refresh();
+            if (subjectCodeTextBox.Text != string.Empty)
+            {
+                try
+                {
+                    errorProvider1.Clear();
+                    TabControlValidation(subjectTab);
+                    subjectBindingSource.EndEdit();
+                    subjectTableAdapter.Update(cathedraDataSet.Subject);
+                    subjectGrid.Refresh();
+                }
+                catch(Exception exception)
+                {
+                    MessageBox.Show(exception.Message);
+                }
+            }else
+            {
+                errorProvider1.SetError(subjectCodeTextBox, "Код предмета должен быть указан");
+                MessageBox.Show("Код предмета должен быть указан");
+            }
+            
         }
 
         private void bindingNavigatorAddNewItem2_Click(object sender, EventArgs e)
@@ -1052,6 +1095,50 @@ namespace LecturerDB.Views
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void lecturerPKMaskedBox_Validating(object sender, CancelEventArgs e)
+        {
+            if(lecturerPKMaskedBox.Text.Contains(" "))
+            {
+                e.Cancel = true;
+                lecturerPKMaskedBox.Select(0, lecturerPKMaskedBox.Text.Length);
+                errorProvider1.SetError(lecturerPKMaskedBox, "Персональный код должен быть введен!");
+
+            }else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void groupNumberTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            if (groupNumberTextBox.Text==string.Empty)
+            {
+                e.Cancel = true;
+                groupNumberTextBox.Select(0, groupNumberTextBox.Text.Length);
+                errorProvider1.SetError(groupNumberTextBox, "Номер группы должен быть введен!");
+
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void subjectCodeTextBox_Validating(object sender, CancelEventArgs e)
+        {
+            if (subjectCodeTextBox.Text == string.Empty)
+            {
+                e.Cancel = true;
+                groupNumberTextBox.Select(0, subjectCodeTextBox.Text.Length);
+                errorProvider1.SetError(subjectCodeTextBox, "Номер группы должен быть введен!");
+
+            }
+            else
+            {
+                errorProvider1.Clear();
             }
         }
 
