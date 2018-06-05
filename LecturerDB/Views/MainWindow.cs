@@ -555,8 +555,8 @@ namespace LecturerDB.Views
         private void saveToolStripButton5_Click(object sender, EventArgs e)
         {
             TabControlValidation(languageTab);
-            subjectReadingReadYearNumericUpDown.Value = subjectReadingReadYearNumericUpDown.Value;
-            subjectReadingBindingSource.EndEdit();
+            subjectReadingReadYearNumericUpDown.Value = subjectReadingReadYearNumericUpDown.Value; //non-working kostyl
+            subjectReadingBindingSource.EndEdit(); // fix exception with null in ReadYear
             subjectReadingTableAdapter.Update(cathedraDataSet.SubjectReading);
             subjectReadingGrid.Refresh();
         }
