@@ -382,6 +382,10 @@ namespace LecturerDB.Views
             {
                 string lang = workLoadLanguageListBox.GetItemText(workLoadLanguageListBox.SelectedItem);
                 workLoadLoadMultiplyNumericUpDown.Value = lang == "English" ? new Decimal(1.5) : new Decimal(1.0);
+                workLoadLectionCountNumericUpDown.Value *= workLoadLoadMultiplyNumericUpDown.Value;
+                workLoadPracticeCountNumericUpDown.Value *= workLoadLoadMultiplyNumericUpDown.Value;
+                workLoadLaboratoryCountNumericUpDown.Value *= workLoadLoadMultiplyNumericUpDown.Value;
+                workLoadCourseWorkNumericUpDown.Value *= workLoadLoadMultiplyNumericUpDown.Value;
                 workLoadLoadMultiplyNumericUpDown.Validate();
             }
             catch (Exception exception)
@@ -429,7 +433,8 @@ namespace LecturerDB.Views
         {
             workLoadTotalHoursNumericUpDown.Value = workLoadLectionCountNumericUpDown.Value +
                                                     workLoadPracticeCountNumericUpDown.Value +
-                                                    workLoadLaboratoryCountNumericUpDown.Value;
+                                                    workLoadLaboratoryCountNumericUpDown.Value + 
+                                                    workLoadCourseWorkNumericUpDown.Value;
         }
 
         private void saveToolStripButton3_Click(object sender, EventArgs e)
@@ -1261,6 +1266,22 @@ namespace LecturerDB.Views
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void subjectKPNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void workLoadTotalHoursNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            workLoadContactHoursNumericUpDown.Value = workLoadTotalHoursNumericUpDown.Value;
         }
 
 

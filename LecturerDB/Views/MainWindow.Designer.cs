@@ -2949,6 +2949,7 @@
             this.subjectKPNumericUpDown.Name = "subjectKPNumericUpDown";
             this.subjectKPNumericUpDown.Size = new System.Drawing.Size(120, 23);
             this.subjectKPNumericUpDown.TabIndex = 10;
+            this.subjectKPNumericUpDown.ValueChanged += new System.EventHandler(this.subjectKPNumericUpDown_ValueChanged);
             // 
             // subjectName_enTextBox
             // 
@@ -3383,6 +3384,7 @@
             this.workLoadTotalHoursNumericUpDown.Name = "workLoadTotalHoursNumericUpDown";
             this.workLoadTotalHoursNumericUpDown.Size = new System.Drawing.Size(183, 23);
             this.workLoadTotalHoursNumericUpDown.TabIndex = 24;
+            this.workLoadTotalHoursNumericUpDown.ValueChanged += new System.EventHandler(this.workLoadTotalHoursNumericUpDown_ValueChanged);
             // 
             // workLoadLoadMultiplyNumericUpDown
             // 
@@ -3434,6 +3436,7 @@
             this.workLoadCourseWorkNumericUpDown.Name = "workLoadCourseWorkNumericUpDown";
             this.workLoadCourseWorkNumericUpDown.Size = new System.Drawing.Size(193, 23);
             this.workLoadCourseWorkNumericUpDown.TabIndex = 18;
+            this.workLoadCourseWorkNumericUpDown.ValueChanged += new System.EventHandler(this.workLoadLectionCountNumericUpDown_ValueChanged);
             // 
             // workLoadLaboratoryCountNumericUpDown
             // 
