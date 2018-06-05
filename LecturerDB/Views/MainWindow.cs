@@ -1248,6 +1248,21 @@ namespace LecturerDB.Views
             
         }
 
+        private void lecturerPublicationTab_Enter(object sender, EventArgs e)
+        {
+            try
+            {
+                lecturer_PKComboBox.BindingContext = new BindingContext();
+                lecturer_PKComboBox.DataSource = lecturerBindingSource;
+                lecturer_PKComboBox.DisplayMember = "FullName";
+                lecturer_PKComboBox.ValueMember = "PK";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
 
 
         //Lecturer publication end

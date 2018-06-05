@@ -846,36 +846,36 @@
             // pKLabel
             // 
             pKLabel.AutoSize = true;
-            pKLabel.Location = new System.Drawing.Point(14, 9);
+            pKLabel.Location = new System.Drawing.Point(10, 9);
             pKLabel.Name = "pKLabel";
-            pKLabel.Size = new System.Drawing.Size(107, 13);
+            pKLabel.Size = new System.Drawing.Size(137, 17);
             pKLabel.TabIndex = 1;
             pKLabel.Text = "Персональный код:";
             // 
             // lastNameLabel
             // 
             lastNameLabel.AutoSize = true;
-            lastNameLabel.Location = new System.Drawing.Point(62, 35);
+            lastNameLabel.Location = new System.Drawing.Point(73, 35);
             lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new System.Drawing.Size(59, 13);
+            lastNameLabel.Size = new System.Drawing.Size(74, 17);
             lastNameLabel.TabIndex = 3;
             lastNameLabel.Text = "Фамилия:";
             // 
             // firstNameLabel
             // 
             firstNameLabel.AutoSize = true;
-            firstNameLabel.Location = new System.Drawing.Point(89, 61);
+            firstNameLabel.Location = new System.Drawing.Point(108, 61);
             firstNameLabel.Name = "firstNameLabel";
-            firstNameLabel.Size = new System.Drawing.Size(32, 13);
+            firstNameLabel.Size = new System.Drawing.Size(39, 17);
             firstNameLabel.TabIndex = 5;
             firstNameLabel.Text = "Имя:";
             // 
             // middleNameLabel
             // 
             middleNameLabel.AutoSize = true;
-            middleNameLabel.Location = new System.Drawing.Point(64, 87);
+            middleNameLabel.Location = new System.Drawing.Point(72, 87);
             middleNameLabel.Name = "middleNameLabel";
-            middleNameLabel.Size = new System.Drawing.Size(57, 13);
+            middleNameLabel.Size = new System.Drawing.Size(75, 17);
             middleNameLabel.TabIndex = 7;
             middleNameLabel.Text = "Отчество:";
             // 
@@ -884,43 +884,43 @@
             birthdayLabel.AutoSize = true;
             birthdayLabel.Location = new System.Drawing.Point(32, 110);
             birthdayLabel.Name = "birthdayLabel";
-            birthdayLabel.Size = new System.Drawing.Size(89, 13);
+            birthdayLabel.Size = new System.Drawing.Size(115, 17);
             birthdayLabel.TabIndex = 9;
             birthdayLabel.Text = "Дата рождения:";
             // 
             // cathedraIDLabel
             // 
             cathedraIDLabel.AutoSize = true;
-            cathedraIDLabel.Location = new System.Drawing.Point(413, 9);
+            cathedraIDLabel.Location = new System.Drawing.Point(422, 9);
             cathedraIDLabel.Name = "cathedraIDLabel";
-            cathedraIDLabel.Size = new System.Drawing.Size(55, 13);
+            cathedraIDLabel.Size = new System.Drawing.Size(72, 17);
             cathedraIDLabel.TabIndex = 11;
             cathedraIDLabel.Text = "Кафедра:";
             // 
             // occupationLabel
             // 
             occupationLabel.AutoSize = true;
-            occupationLabel.Location = new System.Drawing.Point(400, 35);
+            occupationLabel.Location = new System.Drawing.Point(409, 35);
             occupationLabel.Name = "occupationLabel";
-            occupationLabel.Size = new System.Drawing.Size(68, 13);
+            occupationLabel.Size = new System.Drawing.Size(85, 17);
             occupationLabel.TabIndex = 13;
             occupationLabel.Text = "Должность:";
             // 
             // degreeLabel
             // 
             degreeLabel.AutoSize = true;
-            degreeLabel.Location = new System.Drawing.Point(372, 61);
+            degreeLabel.Location = new System.Drawing.Point(368, 61);
             degreeLabel.Name = "degreeLabel";
-            degreeLabel.Size = new System.Drawing.Size(96, 13);
+            degreeLabel.Size = new System.Drawing.Size(126, 17);
             degreeLabel.TabIndex = 15;
             degreeLabel.Text = "Научная степень:";
             // 
             // languagesLabel
             // 
             languagesLabel.AutoSize = true;
-            languagesLabel.Location = new System.Drawing.Point(424, 90);
+            languagesLabel.Location = new System.Drawing.Point(440, 90);
             languagesLabel.Name = "languagesLabel";
-            languagesLabel.Size = new System.Drawing.Size(44, 13);
+            languagesLabel.Size = new System.Drawing.Size(54, 17);
             languagesLabel.TabIndex = 17;
             languagesLabel.Text = "Языки:";
             // 
@@ -928,9 +928,9 @@
             // 
             photoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             photoLabel.AutoSize = true;
-            photoLabel.Location = new System.Drawing.Point(728, 9);
+            photoLabel.Location = new System.Drawing.Point(718, 9);
             photoLabel.Name = "photoLabel";
-            photoLabel.Size = new System.Drawing.Size(38, 13);
+            photoLabel.Size = new System.Drawing.Size(48, 17);
             photoLabel.TabIndex = 19;
             photoLabel.Text = "Фото:";
             // 
@@ -940,43 +940,43 @@
             cVLabel.AutoSize = true;
             cVLabel.Location = new System.Drawing.Point(936, 9);
             cVLabel.Name = "cVLabel";
-            cVLabel.Size = new System.Drawing.Size(24, 13);
+            cVLabel.Size = new System.Drawing.Size(30, 17);
             cVLabel.TabIndex = 22;
             cVLabel.Text = "CV:";
             // 
             // groupNumberLabel
             // 
             groupNumberLabel.AutoSize = true;
-            groupNumberLabel.Location = new System.Drawing.Point(48, 8);
+            groupNumberLabel.Location = new System.Drawing.Point(66, 9);
             groupNumberLabel.Name = "groupNumberLabel";
-            groupNumberLabel.Size = new System.Drawing.Size(83, 13);
+            groupNumberLabel.Size = new System.Drawing.Size(105, 17);
             groupNumberLabel.TabIndex = 1;
             groupNumberLabel.Text = "Номер группы:";
             // 
             // studentCountLabel
             // 
             studentCountLabel.AutoSize = true;
-            studentCountLabel.Location = new System.Drawing.Point(8, 33);
+            studentCountLabel.Location = new System.Drawing.Point(10, 34);
             studentCountLabel.Name = "studentCountLabel";
-            studentCountLabel.Size = new System.Drawing.Size(123, 13);
+            studentCountLabel.Size = new System.Drawing.Size(161, 17);
             studentCountLabel.TabIndex = 3;
             studentCountLabel.Text = "Количество студентов:";
             // 
             // groupHeadLabel
             // 
             groupHeadLabel.AutoSize = true;
-            groupHeadLabel.Location = new System.Drawing.Point(74, 60);
+            groupHeadLabel.Location = new System.Drawing.Point(97, 61);
             groupHeadLabel.Name = "groupHeadLabel";
-            groupHeadLabel.Size = new System.Drawing.Size(57, 13);
+            groupHeadLabel.Size = new System.Drawing.Size(74, 17);
             groupHeadLabel.TabIndex = 5;
             groupHeadLabel.Text = "Староста:";
             // 
             // contactInfoLabel
             // 
             contactInfoLabel.AutoSize = true;
-            contactInfoLabel.Location = new System.Drawing.Point(72, 86);
+            contactInfoLabel.Location = new System.Drawing.Point(95, 87);
             contactInfoLabel.Name = "contactInfoLabel";
-            contactInfoLabel.Size = new System.Drawing.Size(59, 13);
+            contactInfoLabel.Size = new System.Drawing.Size(76, 17);
             contactInfoLabel.TabIndex = 7;
             contactInfoLabel.Text = "Контакты:";
             // 
@@ -984,9 +984,9 @@
             // 
             facultyLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             facultyLabel.AutoSize = true;
-            facultyLabel.Location = new System.Drawing.Point(608, 8);
+            facultyLabel.Location = new System.Drawing.Point(590, 9);
             facultyLabel.Name = "facultyLabel";
-            facultyLabel.Size = new System.Drawing.Size(66, 13);
+            facultyLabel.Size = new System.Drawing.Size(84, 17);
             facultyLabel.TabIndex = 9;
             facultyLabel.Text = "Факультет:";
             // 
@@ -994,9 +994,9 @@
             // 
             learningTypeLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             learningTypeLabel.AutoSize = true;
-            learningTypeLabel.Location = new System.Drawing.Point(596, 34);
+            learningTypeLabel.Location = new System.Drawing.Point(570, 35);
             learningTypeLabel.Name = "learningTypeLabel";
-            learningTypeLabel.Size = new System.Drawing.Size(78, 13);
+            learningTypeLabel.Size = new System.Drawing.Size(104, 17);
             learningTypeLabel.TabIndex = 11;
             learningTypeLabel.Text = "Тип обучения:";
             // 
@@ -1004,9 +1004,9 @@
             // 
             programLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             programLabel.AutoSize = true;
-            programLabel.Location = new System.Drawing.Point(605, 60);
+            programLabel.Location = new System.Drawing.Point(589, 61);
             programLabel.Name = "programLabel";
-            programLabel.Size = new System.Drawing.Size(69, 13);
+            programLabel.Size = new System.Drawing.Size(85, 17);
             programLabel.TabIndex = 13;
             programLabel.Text = "Программа:";
             // 
@@ -1014,45 +1014,45 @@
             // 
             startYearLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             startYearLabel.AutoSize = true;
-            startYearLabel.Location = new System.Drawing.Point(608, 86);
+            startYearLabel.Location = new System.Drawing.Point(586, 87);
             startYearLabel.Name = "startYearLabel";
-            startYearLabel.Size = new System.Drawing.Size(66, 13);
+            startYearLabel.Size = new System.Drawing.Size(88, 17);
             startYearLabel.TabIndex = 15;
             startYearLabel.Text = "Год начала:";
             // 
             // subjectCodeLabel
             // 
             subjectCodeLabel.AutoSize = true;
-            subjectCodeLabel.Location = new System.Drawing.Point(39, 9);
+            subjectCodeLabel.Location = new System.Drawing.Point(21, 9);
             subjectCodeLabel.Name = "subjectCodeLabel";
-            subjectCodeLabel.Size = new System.Drawing.Size(81, 13);
+            subjectCodeLabel.Size = new System.Drawing.Size(105, 17);
             subjectCodeLabel.TabIndex = 1;
             subjectCodeLabel.Text = "Код предмета:";
             // 
             // subjectName_rusLabel
             // 
             subjectName_rusLabel.AutoSize = true;
-            subjectName_rusLabel.Location = new System.Drawing.Point(60, 35);
+            subjectName_rusLabel.Location = new System.Drawing.Point(50, 35);
             subjectName_rusLabel.Name = "subjectName_rusLabel";
-            subjectName_rusLabel.Size = new System.Drawing.Size(60, 13);
+            subjectName_rusLabel.Size = new System.Drawing.Size(76, 17);
             subjectName_rusLabel.TabIndex = 3;
             subjectName_rusLabel.Text = "Название:";
             // 
             // subjectName_lvLabel
             // 
             subjectName_lvLabel.AutoSize = true;
-            subjectName_lvLabel.Location = new System.Drawing.Point(54, 61);
+            subjectName_lvLabel.Location = new System.Drawing.Point(40, 61);
             subjectName_lvLabel.Name = "subjectName_lvLabel";
-            subjectName_lvLabel.Size = new System.Drawing.Size(66, 13);
+            subjectName_lvLabel.Size = new System.Drawing.Size(86, 17);
             subjectName_lvLabel.TabIndex = 5;
             subjectName_lvLabel.Text = "Nosaukums:";
             // 
             // subjectName_enLabel
             // 
             subjectName_enLabel.AutoSize = true;
-            subjectName_enLabel.Location = new System.Drawing.Point(45, 87);
+            subjectName_enLabel.Location = new System.Drawing.Point(28, 87);
             subjectName_enLabel.Name = "subjectName_enLabel";
-            subjectName_enLabel.Size = new System.Drawing.Size(75, 13);
+            subjectName_enLabel.Size = new System.Drawing.Size(98, 17);
             subjectName_enLabel.TabIndex = 7;
             subjectName_enLabel.Text = "Subject name:";
             // 
@@ -1061,7 +1061,7 @@
             kPLabel.AutoSize = true;
             kPLabel.Location = new System.Drawing.Point(96, 112);
             kPLabel.Name = "kPLabel";
-            kPLabel.Size = new System.Drawing.Size(24, 13);
+            kPLabel.Size = new System.Drawing.Size(30, 17);
             kPLabel.TabIndex = 9;
             kPLabel.Text = "KP:";
             // 
@@ -1070,43 +1070,43 @@
             lections_DLabel.AutoSize = true;
             lections_DLabel.Location = new System.Drawing.Point(65, 24);
             lections_DLabel.Name = "lections_DLabel";
-            lections_DLabel.Size = new System.Drawing.Size(48, 13);
+            lections_DLabel.Size = new System.Drawing.Size(61, 17);
             lections_DLabel.TabIndex = 0;
             lections_DLabel.Text = "Лекции:";
             // 
             // practices_DLabel
             // 
             practices_DLabel.AutoSize = true;
-            practices_DLabel.Location = new System.Drawing.Point(54, 50);
+            practices_DLabel.Location = new System.Drawing.Point(51, 50);
             practices_DLabel.Name = "practices_DLabel";
-            practices_DLabel.Size = new System.Drawing.Size(59, 13);
+            practices_DLabel.Size = new System.Drawing.Size(75, 17);
             practices_DLabel.TabIndex = 2;
             practices_DLabel.Text = "Практики:";
             // 
             // laboratories_DLabel
             // 
             laboratories_DLabel.AutoSize = true;
-            laboratories_DLabel.Location = new System.Drawing.Point(28, 76);
+            laboratories_DLabel.Location = new System.Drawing.Point(15, 76);
             laboratories_DLabel.Name = "laboratories_DLabel";
-            laboratories_DLabel.Size = new System.Drawing.Size(85, 13);
+            laboratories_DLabel.Size = new System.Drawing.Size(111, 17);
             laboratories_DLabel.TabIndex = 4;
             laboratories_DLabel.Text = "Лабораторные:";
             // 
             // contactHoursLabel
             // 
             contactHoursLabel.AutoSize = true;
-            contactHoursLabel.Location = new System.Drawing.Point(14, 100);
+            contactHoursLabel.Location = new System.Drawing.Point(-3, 100);
             contactHoursLabel.Name = "contactHoursLabel";
-            contactHoursLabel.Size = new System.Drawing.Size(99, 13);
+            contactHoursLabel.Size = new System.Drawing.Size(129, 17);
             contactHoursLabel.TabIndex = 6;
             contactHoursLabel.Text = "Контактные часы:";
             // 
             // courseWorkLabel
             // 
             courseWorkLabel.AutoSize = true;
-            courseWorkLabel.Location = new System.Drawing.Point(275, 112);
+            courseWorkLabel.Location = new System.Drawing.Point(259, 112);
             courseWorkLabel.Name = "courseWorkLabel";
-            courseWorkLabel.Size = new System.Drawing.Size(58, 13);
+            courseWorkLabel.Size = new System.Drawing.Size(74, 17);
             courseWorkLabel.TabIndex = 12;
             courseWorkLabel.Text = "Курсовая:";
             // 
@@ -1115,178 +1115,178 @@
             testLabel.AutoSize = true;
             testLabel.Location = new System.Drawing.Point(426, 112);
             testLabel.Name = "testLabel";
-            testLabel.Size = new System.Drawing.Size(76, 13);
+            testLabel.Size = new System.Drawing.Size(99, 17);
             testLabel.TabIndex = 14;
             testLabel.Text = "Контрольная:";
             // 
             // lections_VLabel
             // 
             lections_VLabel.AutoSize = true;
-            lections_VLabel.Location = new System.Drawing.Point(38, 23);
+            lections_VLabel.Location = new System.Drawing.Point(53, 22);
             lections_VLabel.Name = "lections_VLabel";
-            lections_VLabel.Size = new System.Drawing.Size(48, 13);
+            lections_VLabel.Size = new System.Drawing.Size(61, 17);
             lections_VLabel.TabIndex = 0;
             lections_VLabel.Text = "Лекции:";
             // 
             // practices_VLabel
             // 
             practices_VLabel.AutoSize = true;
-            practices_VLabel.Location = new System.Drawing.Point(27, 49);
+            practices_VLabel.Location = new System.Drawing.Point(39, 48);
             practices_VLabel.Name = "practices_VLabel";
-            practices_VLabel.Size = new System.Drawing.Size(59, 13);
+            practices_VLabel.Size = new System.Drawing.Size(75, 17);
             practices_VLabel.TabIndex = 2;
             practices_VLabel.Text = "Практики:";
             // 
             // laboratories_VLabel
             // 
             laboratories_VLabel.AutoSize = true;
-            laboratories_VLabel.Location = new System.Drawing.Point(1, 75);
+            laboratories_VLabel.Location = new System.Drawing.Point(3, 74);
             laboratories_VLabel.Name = "laboratories_VLabel";
-            laboratories_VLabel.Size = new System.Drawing.Size(85, 13);
+            laboratories_VLabel.Size = new System.Drawing.Size(111, 17);
             laboratories_VLabel.TabIndex = 4;
             laboratories_VLabel.Text = "Лабораторные:";
             // 
             // lections_ZLabel
             // 
             lections_ZLabel.AutoSize = true;
-            lections_ZLabel.Location = new System.Drawing.Point(65, 21);
+            lections_ZLabel.Location = new System.Drawing.Point(51, 21);
             lections_ZLabel.Name = "lections_ZLabel";
-            lections_ZLabel.Size = new System.Drawing.Size(48, 13);
+            lections_ZLabel.Size = new System.Drawing.Size(61, 17);
             lections_ZLabel.TabIndex = 0;
             lections_ZLabel.Text = "Лекции:";
             // 
             // practices_ZLabel
             // 
             practices_ZLabel.AutoSize = true;
-            practices_ZLabel.Location = new System.Drawing.Point(54, 47);
+            practices_ZLabel.Location = new System.Drawing.Point(37, 47);
             practices_ZLabel.Name = "practices_ZLabel";
-            practices_ZLabel.Size = new System.Drawing.Size(59, 13);
+            practices_ZLabel.Size = new System.Drawing.Size(75, 17);
             practices_ZLabel.TabIndex = 2;
             practices_ZLabel.Text = "Практики:";
             // 
             // laboratories_ZLabel
             // 
             laboratories_ZLabel.AutoSize = true;
-            laboratories_ZLabel.Location = new System.Drawing.Point(28, 73);
+            laboratories_ZLabel.Location = new System.Drawing.Point(1, 73);
             laboratories_ZLabel.Name = "laboratories_ZLabel";
-            laboratories_ZLabel.Size = new System.Drawing.Size(85, 13);
+            laboratories_ZLabel.Size = new System.Drawing.Size(111, 17);
             laboratories_ZLabel.TabIndex = 4;
             laboratories_ZLabel.Text = "Лабораторные:";
             // 
             // groupLabel
             // 
             groupLabel.AutoSize = true;
-            groupLabel.Location = new System.Drawing.Point(84, 18);
+            groupLabel.Location = new System.Drawing.Point(70, 18);
             groupLabel.Name = "groupLabel";
-            groupLabel.Size = new System.Drawing.Size(45, 13);
+            groupLabel.Size = new System.Drawing.Size(59, 17);
             groupLabel.TabIndex = 1;
             groupLabel.Text = "Группа:";
             // 
             // subjectLabel
             // 
             subjectLabel.AutoSize = true;
-            subjectLabel.Location = new System.Drawing.Point(74, 45);
+            subjectLabel.Location = new System.Drawing.Point(59, 45);
             subjectLabel.Name = "subjectLabel";
-            subjectLabel.Size = new System.Drawing.Size(55, 13);
+            subjectLabel.Size = new System.Drawing.Size(70, 17);
             subjectLabel.TabIndex = 3;
             subjectLabel.Text = "Предмет:";
             // 
             // lecturerLabel
             // 
             lecturerLabel.AutoSize = true;
-            lecturerLabel.Location = new System.Drawing.Point(40, 72);
+            lecturerLabel.Location = new System.Drawing.Point(14, 72);
             lecturerLabel.Name = "lecturerLabel";
-            lecturerLabel.Size = new System.Drawing.Size(89, 13);
+            lecturerLabel.Size = new System.Drawing.Size(115, 17);
             lecturerLabel.TabIndex = 5;
             lecturerLabel.Text = "Преподаватель:";
             // 
             // studyYearLabel
             // 
             studyYearLabel.AutoSize = true;
-            studyYearLabel.Location = new System.Drawing.Point(54, 98);
+            studyYearLabel.Location = new System.Drawing.Point(33, 98);
             studyYearLabel.Name = "studyYearLabel";
-            studyYearLabel.Size = new System.Drawing.Size(75, 13);
+            studyYearLabel.Size = new System.Drawing.Size(96, 17);
             studyYearLabel.TabIndex = 7;
             studyYearLabel.Text = "Учебный год:";
             // 
             // semesterLabel
             // 
             semesterLabel.AutoSize = true;
-            semesterLabel.Location = new System.Drawing.Point(75, 122);
+            semesterLabel.Location = new System.Drawing.Point(61, 122);
             semesterLabel.Name = "semesterLabel";
-            semesterLabel.Size = new System.Drawing.Size(54, 13);
+            semesterLabel.Size = new System.Drawing.Size(68, 17);
             semesterLabel.TabIndex = 9;
             semesterLabel.Text = "Семестр:";
             // 
             // lectionCountLabel
             // 
             lectionCountLabel.AutoSize = true;
-            lectionCountLabel.Location = new System.Drawing.Point(482, 18);
+            lectionCountLabel.Location = new System.Drawing.Point(469, 20);
             lectionCountLabel.Name = "lectionCountLabel";
-            lectionCountLabel.Size = new System.Drawing.Size(48, 13);
+            lectionCountLabel.Size = new System.Drawing.Size(61, 17);
             lectionCountLabel.TabIndex = 11;
             lectionCountLabel.Text = "Лекции:";
             // 
             // practiceCountLabel
             // 
             practiceCountLabel.AutoSize = true;
-            practiceCountLabel.Location = new System.Drawing.Point(471, 44);
+            practiceCountLabel.Location = new System.Drawing.Point(455, 46);
             practiceCountLabel.Name = "practiceCountLabel";
-            practiceCountLabel.Size = new System.Drawing.Size(59, 13);
+            practiceCountLabel.Size = new System.Drawing.Size(75, 17);
             practiceCountLabel.TabIndex = 13;
             practiceCountLabel.Text = "Практики:";
             // 
             // laboratoryCountLabel
             // 
             laboratoryCountLabel.AutoSize = true;
-            laboratoryCountLabel.Location = new System.Drawing.Point(445, 70);
+            laboratoryCountLabel.Location = new System.Drawing.Point(419, 72);
             laboratoryCountLabel.Name = "laboratoryCountLabel";
-            laboratoryCountLabel.Size = new System.Drawing.Size(85, 13);
+            laboratoryCountLabel.Size = new System.Drawing.Size(111, 17);
             laboratoryCountLabel.TabIndex = 15;
             laboratoryCountLabel.Text = "Лабораторные:";
             // 
             // courseWorkLabel1
             // 
             courseWorkLabel1.AutoSize = true;
-            courseWorkLabel1.Location = new System.Drawing.Point(472, 96);
+            courseWorkLabel1.Location = new System.Drawing.Point(456, 98);
             courseWorkLabel1.Name = "courseWorkLabel1";
-            courseWorkLabel1.Size = new System.Drawing.Size(58, 13);
+            courseWorkLabel1.Size = new System.Drawing.Size(74, 17);
             courseWorkLabel1.TabIndex = 17;
             courseWorkLabel1.Text = "Курсовая:";
             // 
             // languageLabel
             // 
             languageLabel.AutoSize = true;
-            languageLabel.Location = new System.Drawing.Point(492, 122);
+            languageLabel.Location = new System.Drawing.Point(484, 124);
             languageLabel.Name = "languageLabel";
-            languageLabel.Size = new System.Drawing.Size(38, 13);
+            languageLabel.Size = new System.Drawing.Size(46, 17);
             languageLabel.TabIndex = 19;
             languageLabel.Text = "Язык:";
             // 
             // loadMultiplyLabel
             // 
             loadMultiplyLabel.AutoSize = true;
-            loadMultiplyLabel.Location = new System.Drawing.Point(799, 18);
+            loadMultiplyLabel.Location = new System.Drawing.Point(775, 18);
             loadMultiplyLabel.Name = "loadMultiplyLabel";
-            loadMultiplyLabel.Size = new System.Drawing.Size(89, 13);
+            loadMultiplyLabel.Size = new System.Drawing.Size(113, 17);
             loadMultiplyLabel.TabIndex = 21;
             loadMultiplyLabel.Text = "Коэф. нагрузки:";
             // 
             // totalHoursLabel
             // 
             totalHoursLabel.AutoSize = true;
-            totalHoursLabel.Location = new System.Drawing.Point(816, 45);
+            totalHoursLabel.Location = new System.Drawing.Point(797, 45);
             totalHoursLabel.Name = "totalHoursLabel";
-            totalHoursLabel.Size = new System.Drawing.Size(72, 13);
+            totalHoursLabel.Size = new System.Drawing.Size(91, 17);
             totalHoursLabel.TabIndex = 23;
             totalHoursLabel.Text = "Всего часов:";
             // 
             // contactHoursLabel1
             // 
             contactHoursLabel1.AutoSize = true;
-            contactHoursLabel1.Location = new System.Drawing.Point(789, 70);
+            contactHoursLabel1.Location = new System.Drawing.Point(759, 70);
             contactHoursLabel1.Name = "contactHoursLabel1";
-            contactHoursLabel1.Size = new System.Drawing.Size(99, 13);
+            contactHoursLabel1.Size = new System.Drawing.Size(129, 17);
             contactHoursLabel1.TabIndex = 25;
             contactHoursLabel1.Text = "Контактные часы:";
             // 
@@ -1295,43 +1295,43 @@
             languageNameLabel.AutoSize = true;
             languageNameLabel.Location = new System.Drawing.Point(108, 22);
             languageNameLabel.Name = "languageNameLabel";
-            languageNameLabel.Size = new System.Drawing.Size(38, 13);
+            languageNameLabel.Size = new System.Drawing.Size(46, 17);
             languageNameLabel.TabIndex = 1;
             languageNameLabel.Text = "Язык:";
             // 
             // subjectLanguageLabel
             // 
             subjectLanguageLabel.AutoSize = true;
-            subjectLanguageLabel.Location = new System.Drawing.Point(68, 21);
+            subjectLanguageLabel.Location = new System.Drawing.Point(81, 22);
             subjectLanguageLabel.Name = "subjectLanguageLabel";
-            subjectLanguageLabel.Size = new System.Drawing.Size(38, 13);
+            subjectLanguageLabel.Size = new System.Drawing.Size(46, 17);
             subjectLanguageLabel.TabIndex = 0;
             subjectLanguageLabel.Text = "Язык:";
             // 
             // subjectLabel1
             // 
             subjectLabel1.AutoSize = true;
-            subjectLabel1.Location = new System.Drawing.Point(51, 47);
+            subjectLabel1.Location = new System.Drawing.Point(57, 48);
             subjectLabel1.Name = "subjectLabel1";
-            subjectLabel1.Size = new System.Drawing.Size(55, 13);
+            subjectLabel1.Size = new System.Drawing.Size(70, 17);
             subjectLabel1.TabIndex = 2;
             subjectLabel1.Text = "Предмет:";
             // 
             // lecturerLabel1
             // 
             lecturerLabel1.AutoSize = true;
-            lecturerLabel1.Location = new System.Drawing.Point(17, 74);
+            lecturerLabel1.Location = new System.Drawing.Point(12, 75);
             lecturerLabel1.Name = "lecturerLabel1";
-            lecturerLabel1.Size = new System.Drawing.Size(89, 13);
+            lecturerLabel1.Size = new System.Drawing.Size(115, 17);
             lecturerLabel1.TabIndex = 4;
             lecturerLabel1.Text = "Преподаватель:";
             // 
             // readYearLabel
             // 
             readYearLabel.AutoSize = true;
-            readYearLabel.Location = new System.Drawing.Point(31, 100);
+            readYearLabel.Location = new System.Drawing.Point(31, 101);
             readYearLabel.Name = "readYearLabel";
-            readYearLabel.Size = new System.Drawing.Size(75, 13);
+            readYearLabel.Size = new System.Drawing.Size(96, 17);
             readYearLabel.TabIndex = 6;
             readYearLabel.Text = "Учебный год:";
             // 
@@ -1341,43 +1341,43 @@
             readSemesterLabel.AutoSize = true;
             readSemesterLabel.Location = new System.Drawing.Point(490, 16);
             readSemesterLabel.Name = "readSemesterLabel";
-            readSemesterLabel.Size = new System.Drawing.Size(54, 13);
+            readSemesterLabel.Size = new System.Drawing.Size(68, 17);
             readSemesterLabel.TabIndex = 8;
             readSemesterLabel.Text = "Семестр:";
             // 
             // planAccomplishmentLecturerLabel
             // 
             planAccomplishmentLecturerLabel.AutoSize = true;
-            planAccomplishmentLecturerLabel.Location = new System.Drawing.Point(21, 12);
+            planAccomplishmentLecturerLabel.Location = new System.Drawing.Point(3, 9);
             planAccomplishmentLecturerLabel.Name = "planAccomplishmentLecturerLabel";
-            planAccomplishmentLecturerLabel.Size = new System.Drawing.Size(89, 13);
+            planAccomplishmentLecturerLabel.Size = new System.Drawing.Size(115, 17);
             planAccomplishmentLecturerLabel.TabIndex = 1;
             planAccomplishmentLecturerLabel.Text = "Преподаватель:";
             // 
             // planAccomplishmentSubjectLabel
             // 
             planAccomplishmentSubjectLabel.AutoSize = true;
-            planAccomplishmentSubjectLabel.Location = new System.Drawing.Point(55, 40);
+            planAccomplishmentSubjectLabel.Location = new System.Drawing.Point(48, 37);
             planAccomplishmentSubjectLabel.Name = "planAccomplishmentSubjectLabel";
-            planAccomplishmentSubjectLabel.Size = new System.Drawing.Size(55, 13);
+            planAccomplishmentSubjectLabel.Size = new System.Drawing.Size(70, 17);
             planAccomplishmentSubjectLabel.TabIndex = 3;
             planAccomplishmentSubjectLabel.Text = "Предмет:";
             // 
             // planAccomplishmentGroupLabel
             // 
             planAccomplishmentGroupLabel.AutoSize = true;
-            planAccomplishmentGroupLabel.Location = new System.Drawing.Point(65, 64);
+            planAccomplishmentGroupLabel.Location = new System.Drawing.Point(59, 61);
             planAccomplishmentGroupLabel.Name = "planAccomplishmentGroupLabel";
-            planAccomplishmentGroupLabel.Size = new System.Drawing.Size(45, 13);
+            planAccomplishmentGroupLabel.Size = new System.Drawing.Size(59, 17);
             planAccomplishmentGroupLabel.TabIndex = 5;
             planAccomplishmentGroupLabel.Text = "Группа:";
             // 
             // planAccomplishmentEventDateLabel
             // 
             planAccomplishmentEventDateLabel.AutoSize = true;
-            planAccomplishmentEventDateLabel.Location = new System.Drawing.Point(74, 104);
+            planAccomplishmentEventDateLabel.Location = new System.Drawing.Point(72, 101);
             planAccomplishmentEventDateLabel.Name = "planAccomplishmentEventDateLabel";
-            planAccomplishmentEventDateLabel.Size = new System.Drawing.Size(36, 13);
+            planAccomplishmentEventDateLabel.Size = new System.Drawing.Size(46, 17);
             planAccomplishmentEventDateLabel.TabIndex = 7;
             planAccomplishmentEventDateLabel.Text = "Дата:";
             // 
@@ -1388,7 +1388,7 @@
             planAccomplishmentLectureTypeLabel.AutoSize = true;
             planAccomplishmentLectureTypeLabel.Location = new System.Drawing.Point(358, 12);
             planAccomplishmentLectureTypeLabel.Name = "planAccomplishmentLectureTypeLabel";
-            planAccomplishmentLectureTypeLabel.Size = new System.Drawing.Size(68, 13);
+            planAccomplishmentLectureTypeLabel.Size = new System.Drawing.Size(88, 17);
             planAccomplishmentLectureTypeLabel.TabIndex = 9;
             planAccomplishmentLectureTypeLabel.Text = "Тип лекции:";
             // 
@@ -1398,7 +1398,7 @@
             planAccomplishmentLecturePlannedTopicLabel.AutoSize = true;
             planAccomplishmentLecturePlannedTopicLabel.Location = new System.Drawing.Point(647, 12);
             planAccomplishmentLecturePlannedTopicLabel.Name = "planAccomplishmentLecturePlannedTopicLabel";
-            planAccomplishmentLecturePlannedTopicLabel.Size = new System.Drawing.Size(107, 13);
+            planAccomplishmentLecturePlannedTopicLabel.Size = new System.Drawing.Size(138, 17);
             planAccomplishmentLecturePlannedTopicLabel.TabIndex = 11;
             planAccomplishmentLecturePlannedTopicLabel.Text = "Планируемая тема:";
             // 
@@ -1406,9 +1406,9 @@
             // 
             planAccomplishmentLectureActualTopicLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             planAccomplishmentLectureActualTopicLabel.AutoSize = true;
-            planAccomplishmentLectureActualTopicLabel.Location = new System.Drawing.Point(647, 39);
+            planAccomplishmentLectureActualTopicLabel.Location = new System.Drawing.Point(648, 39);
             planAccomplishmentLectureActualTopicLabel.Name = "planAccomplishmentLectureActualTopicLabel";
-            planAccomplishmentLectureActualTopicLabel.Size = new System.Drawing.Size(107, 13);
+            planAccomplishmentLectureActualTopicLabel.Size = new System.Drawing.Size(137, 17);
             planAccomplishmentLectureActualTopicLabel.TabIndex = 13;
             planAccomplishmentLectureActualTopicLabel.Text = "Фактическая тема:";
             // 
@@ -1416,36 +1416,36 @@
             // 
             planAccomplishmentHoursLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             planAccomplishmentHoursLabel.AutoSize = true;
-            planAccomplishmentHoursLabel.Location = new System.Drawing.Point(716, 66);
+            planAccomplishmentHoursLabel.Location = new System.Drawing.Point(738, 66);
             planAccomplishmentHoursLabel.Name = "planAccomplishmentHoursLabel";
-            planAccomplishmentHoursLabel.Size = new System.Drawing.Size(38, 13);
+            planAccomplishmentHoursLabel.Size = new System.Drawing.Size(47, 17);
             planAccomplishmentHoursLabel.TabIndex = 15;
             planAccomplishmentHoursLabel.Text = "Часы:";
             // 
             // groupLabel1
             // 
             groupLabel1.AutoSize = true;
-            groupLabel1.Location = new System.Drawing.Point(66, 11);
+            groupLabel1.Location = new System.Drawing.Point(52, 13);
             groupLabel1.Name = "groupLabel1";
-            groupLabel1.Size = new System.Drawing.Size(45, 13);
+            groupLabel1.Size = new System.Drawing.Size(59, 17);
             groupLabel1.TabIndex = 1;
             groupLabel1.Text = "Группа:";
             // 
             // studyYearLabel1
             // 
             studyYearLabel1.AutoSize = true;
-            studyYearLabel1.Location = new System.Drawing.Point(34, 37);
+            studyYearLabel1.Location = new System.Drawing.Point(8, 39);
             studyYearLabel1.Name = "studyYearLabel1";
-            studyYearLabel1.Size = new System.Drawing.Size(77, 13);
+            studyYearLabel1.Size = new System.Drawing.Size(103, 17);
             studyYearLabel1.TabIndex = 3;
             studyYearLabel1.Text = "Год обучения:";
             // 
             // studySemesterLabel
             // 
             studySemesterLabel.AutoSize = true;
-            studySemesterLabel.Location = new System.Drawing.Point(57, 61);
+            studySemesterLabel.Location = new System.Drawing.Point(43, 63);
             studySemesterLabel.Name = "studySemesterLabel";
-            studySemesterLabel.Size = new System.Drawing.Size(54, 13);
+            studySemesterLabel.Size = new System.Drawing.Size(68, 17);
             studySemesterLabel.TabIndex = 5;
             studySemesterLabel.Text = "Семестр:";
             // 
@@ -1454,9 +1454,9 @@
             studentCountBeginLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             studentCountBeginLabel.AutoSize = true;
-            studentCountBeginLabel.Location = new System.Drawing.Point(376, 13);
+            studentCountBeginLabel.Location = new System.Drawing.Point(332, 13);
             studentCountBeginLabel.Name = "studentCountBeginLabel";
-            studentCountBeginLabel.Size = new System.Drawing.Size(197, 13);
+            studentCountBeginLabel.Size = new System.Drawing.Size(257, 17);
             studentCountBeginLabel.TabIndex = 7;
             studentCountBeginLabel.Text = "Кол-во студентов в начале семестра:";
             // 
@@ -1465,9 +1465,9 @@
             studentCountEndLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             studentCountEndLabel.AutoSize = true;
-            studentCountEndLabel.Location = new System.Drawing.Point(381, 39);
+            studentCountEndLabel.Location = new System.Drawing.Point(341, 39);
             studentCountEndLabel.Name = "studentCountEndLabel";
-            studentCountEndLabel.Size = new System.Drawing.Size(192, 13);
+            studentCountEndLabel.Size = new System.Drawing.Size(248, 17);
             studentCountEndLabel.TabIndex = 9;
             studentCountEndLabel.Text = "Кол-во студентов в конце семестра:";
             // 
@@ -1476,9 +1476,9 @@
             removedLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             removedLabel.AutoSize = true;
-            removedLabel.Location = new System.Drawing.Point(509, 65);
+            removedLabel.Location = new System.Drawing.Point(504, 65);
             removedLabel.Name = "removedLabel";
-            removedLabel.Size = new System.Drawing.Size(64, 13);
+            removedLabel.Size = new System.Drawing.Size(85, 17);
             removedLabel.TabIndex = 11;
             removedLabel.Text = "Отчислено:";
             // 
@@ -1486,72 +1486,72 @@
             // 
             reasonLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             reasonLabel.AutoSize = true;
-            reasonLabel.Location = new System.Drawing.Point(855, 9);
+            reasonLabel.Location = new System.Drawing.Point(832, 11);
             reasonLabel.Name = "reasonLabel";
-            reasonLabel.Size = new System.Drawing.Size(53, 13);
+            reasonLabel.Size = new System.Drawing.Size(70, 17);
             reasonLabel.TabIndex = 13;
             reasonLabel.Text = "Причина:";
             // 
             // diplomaTopicLabel
             // 
             diplomaTopicLabel.AutoSize = true;
-            diplomaTopicLabel.Location = new System.Drawing.Point(59, 9);
+            diplomaTopicLabel.Location = new System.Drawing.Point(37, 9);
             diplomaTopicLabel.Name = "diplomaTopicLabel";
-            diplomaTopicLabel.Size = new System.Drawing.Size(77, 13);
+            diplomaTopicLabel.Size = new System.Drawing.Size(99, 17);
             diplomaTopicLabel.TabIndex = 1;
             diplomaTopicLabel.Text = "Тема работы:";
             // 
             // diplomaHeadLabel
             // 
             diplomaHeadLabel.AutoSize = true;
-            diplomaHeadLabel.Location = new System.Drawing.Point(55, 111);
+            diplomaHeadLabel.Location = new System.Drawing.Point(33, 111);
             diplomaHeadLabel.Name = "diplomaHeadLabel";
-            diplomaHeadLabel.Size = new System.Drawing.Size(81, 13);
+            diplomaHeadLabel.Size = new System.Drawing.Size(104, 17);
             diplomaHeadLabel.TabIndex = 3;
             diplomaHeadLabel.Text = "Руководитель:";
             // 
             // diplomaTypeLabel
             // 
             diplomaTypeLabel.AutoSize = true;
-            diplomaTypeLabel.Location = new System.Drawing.Point(424, 9);
+            diplomaTypeLabel.Location = new System.Drawing.Point(401, 9);
             diplomaTypeLabel.Name = "diplomaTypeLabel";
-            diplomaTypeLabel.Size = new System.Drawing.Size(69, 13);
+            diplomaTypeLabel.Size = new System.Drawing.Size(90, 17);
             diplomaTypeLabel.TabIndex = 5;
             diplomaTypeLabel.Text = "Тип работы:";
             // 
             // defenceDateLabel
             // 
             defenceDateLabel.AutoSize = true;
-            defenceDateLabel.Location = new System.Drawing.Point(412, 111);
+            defenceDateLabel.Location = new System.Drawing.Point(389, 111);
             defenceDateLabel.Name = "defenceDateLabel";
-            defenceDateLabel.Size = new System.Drawing.Size(79, 13);
+            defenceDateLabel.Size = new System.Drawing.Size(101, 17);
             defenceDateLabel.TabIndex = 7;
             defenceDateLabel.Text = "Дата защиты:";
             // 
             // markLabel
             // 
             markLabel.AutoSize = true;
-            markLabel.Location = new System.Drawing.Point(554, 135);
+            markLabel.Location = new System.Drawing.Point(540, 135);
             markLabel.Name = "markLabel";
-            markLabel.Size = new System.Drawing.Size(48, 13);
+            markLabel.Size = new System.Drawing.Size(62, 17);
             markLabel.TabIndex = 9;
             markLabel.Text = "Оценка:";
             // 
             // projectNumberLabel
             // 
             projectNumberLabel.AutoSize = true;
-            projectNumberLabel.Location = new System.Drawing.Point(24, 9);
+            projectNumberLabel.Location = new System.Drawing.Point(21, 9);
             projectNumberLabel.Name = "projectNumberLabel";
-            projectNumberLabel.Size = new System.Drawing.Size(88, 13);
+            projectNumberLabel.Size = new System.Drawing.Size(113, 17);
             projectNumberLabel.TabIndex = 1;
             projectNumberLabel.Text = "Номер проекта:";
             // 
             // projectNameLabel
             // 
             projectNameLabel.AutoSize = true;
-            projectNameLabel.Location = new System.Drawing.Point(52, 38);
+            projectNameLabel.Location = new System.Drawing.Point(58, 38);
             projectNameLabel.Name = "projectNameLabel";
-            projectNameLabel.Size = new System.Drawing.Size(60, 13);
+            projectNameLabel.Size = new System.Drawing.Size(76, 17);
             projectNameLabel.TabIndex = 3;
             projectNameLabel.Text = "Название:";
             // 
@@ -1560,7 +1560,7 @@
             projectTypeLabel.AutoSize = true;
             projectTypeLabel.Location = new System.Drawing.Point(39, 109);
             projectTypeLabel.Name = "projectTypeLabel";
-            projectTypeLabel.Size = new System.Drawing.Size(73, 13);
+            projectTypeLabel.Size = new System.Drawing.Size(95, 17);
             projectTypeLabel.TabIndex = 5;
             projectTypeLabel.Text = "Тип проекта:";
             // 
@@ -1569,9 +1569,9 @@
             startDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             startDateLabel.AutoSize = true;
-            startDateLabel.Location = new System.Drawing.Point(456, 12);
+            startDateLabel.Location = new System.Drawing.Point(432, 11);
             startDateLabel.Name = "startDateLabel";
-            startDateLabel.Size = new System.Drawing.Size(74, 13);
+            startDateLabel.Size = new System.Drawing.Size(98, 17);
             startDateLabel.TabIndex = 7;
             startDateLabel.Text = "Дата начала:";
             // 
@@ -1580,45 +1580,45 @@
             endDateLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             endDateLabel.AutoSize = true;
-            endDateLabel.Location = new System.Drawing.Point(438, 38);
+            endDateLabel.Location = new System.Drawing.Point(409, 37);
             endDateLabel.Name = "endDateLabel";
-            endDateLabel.Size = new System.Drawing.Size(92, 13);
+            endDateLabel.Size = new System.Drawing.Size(121, 17);
             endDateLabel.TabIndex = 9;
             endDateLabel.Text = "Дата окончания:";
             // 
             // lecturerLabel2
             // 
             lecturerLabel2.AutoSize = true;
-            lecturerLabel2.Location = new System.Drawing.Point(4, 14);
+            lecturerLabel2.Location = new System.Drawing.Point(6, 12);
             lecturerLabel2.Name = "lecturerLabel2";
-            lecturerLabel2.Size = new System.Drawing.Size(89, 13);
+            lecturerLabel2.Size = new System.Drawing.Size(115, 17);
             lecturerLabel2.TabIndex = 1;
             lecturerLabel2.Text = "Преподаватель:";
             // 
             // projectLabel
             // 
             projectLabel.AutoSize = true;
-            projectLabel.Location = new System.Drawing.Point(46, 39);
+            projectLabel.Location = new System.Drawing.Point(61, 37);
             projectLabel.Name = "projectLabel";
-            projectLabel.Size = new System.Drawing.Size(47, 13);
+            projectLabel.Size = new System.Drawing.Size(60, 17);
             projectLabel.TabIndex = 3;
             projectLabel.Text = "Проект:";
             // 
             // participationStartDateLabel
             // 
             participationStartDateLabel.AutoSize = true;
-            participationStartDateLabel.Location = new System.Drawing.Point(357, 18);
+            participationStartDateLabel.Location = new System.Drawing.Point(357, 16);
             participationStartDateLabel.Name = "participationStartDateLabel";
-            participationStartDateLabel.Size = new System.Drawing.Size(116, 13);
+            participationStartDateLabel.Size = new System.Drawing.Size(155, 17);
             participationStartDateLabel.TabIndex = 5;
             participationStartDateLabel.Text = "Дата начала участия:";
             // 
             // participationEndDateLabel
             // 
             participationEndDateLabel.AutoSize = true;
-            participationEndDateLabel.Location = new System.Drawing.Point(339, 46);
+            participationEndDateLabel.Location = new System.Drawing.Point(334, 44);
             participationEndDateLabel.Name = "participationEndDateLabel";
-            participationEndDateLabel.Size = new System.Drawing.Size(134, 13);
+            participationEndDateLabel.Size = new System.Drawing.Size(178, 17);
             participationEndDateLabel.TabIndex = 7;
             participationEndDateLabel.Text = "Дата окончания участия:";
             // 
@@ -1627,43 +1627,43 @@
             noteLabel.AutoSize = true;
             noteLabel.Location = new System.Drawing.Point(745, 17);
             noteLabel.Name = "noteLabel";
-            noteLabel.Size = new System.Drawing.Size(73, 13);
+            noteLabel.Size = new System.Drawing.Size(95, 17);
             noteLabel.TabIndex = 9;
             noteLabel.Text = "Примечание:";
             // 
             // publicationNameLabel
             // 
             publicationNameLabel.AutoSize = true;
-            publicationNameLabel.Location = new System.Drawing.Point(14, 9);
+            publicationNameLabel.Location = new System.Drawing.Point(31, 9);
             publicationNameLabel.Name = "publicationNameLabel";
-            publicationNameLabel.Size = new System.Drawing.Size(60, 13);
+            publicationNameLabel.Size = new System.Drawing.Size(76, 17);
             publicationNameLabel.TabIndex = 1;
             publicationNameLabel.Text = "Название:";
             // 
             // publicationPlaceLabel
             // 
             publicationPlaceLabel.AutoSize = true;
-            publicationPlaceLabel.Location = new System.Drawing.Point(15, 133);
+            publicationPlaceLabel.Location = new System.Drawing.Point(54, 133);
             publicationPlaceLabel.Name = "publicationPlaceLabel";
-            publicationPlaceLabel.Size = new System.Drawing.Size(42, 13);
+            publicationPlaceLabel.Size = new System.Drawing.Size(53, 17);
             publicationPlaceLabel.TabIndex = 3;
             publicationPlaceLabel.Text = "Место:";
             // 
             // publicationRatesLabel
             // 
             publicationRatesLabel.AutoSize = true;
-            publicationRatesLabel.Location = new System.Drawing.Point(509, 9);
+            publicationRatesLabel.Location = new System.Drawing.Point(537, 9);
             publicationRatesLabel.Name = "publicationRatesLabel";
-            publicationRatesLabel.Size = new System.Drawing.Size(51, 13);
+            publicationRatesLabel.Size = new System.Drawing.Size(65, 17);
             publicationRatesLabel.TabIndex = 5;
             publicationRatesLabel.Text = "Рейтинг:";
             // 
             // publicationYearLabel
             // 
             publicationYearLabel.AutoSize = true;
-            publicationYearLabel.Location = new System.Drawing.Point(515, 133);
+            publicationYearLabel.Location = new System.Drawing.Point(566, 133);
             publicationYearLabel.Name = "publicationYearLabel";
-            publicationYearLabel.Size = new System.Drawing.Size(28, 13);
+            publicationYearLabel.Size = new System.Drawing.Size(36, 17);
             publicationYearLabel.TabIndex = 7;
             publicationYearLabel.Text = "Год:";
             // 
@@ -1672,25 +1672,25 @@
             groupLabel2.AutoSize = true;
             groupLabel2.Location = new System.Drawing.Point(80, 11);
             groupLabel2.Name = "groupLabel2";
-            groupLabel2.Size = new System.Drawing.Size(45, 13);
+            groupLabel2.Size = new System.Drawing.Size(59, 17);
             groupLabel2.TabIndex = 1;
             groupLabel2.Text = "Группа:";
             // 
             // subjectLabel2
             // 
             subjectLabel2.AutoSize = true;
-            subjectLabel2.Location = new System.Drawing.Point(70, 38);
+            subjectLabel2.Location = new System.Drawing.Point(69, 38);
             subjectLabel2.Name = "subjectLabel2";
-            subjectLabel2.Size = new System.Drawing.Size(55, 13);
+            subjectLabel2.Size = new System.Drawing.Size(70, 17);
             subjectLabel2.TabIndex = 3;
             subjectLabel2.Text = "Предмет:";
             // 
             // studyYearLabel2
             // 
             studyYearLabel2.AutoSize = true;
-            studyYearLabel2.Location = new System.Drawing.Point(48, 62);
+            studyYearLabel2.Location = new System.Drawing.Point(36, 62);
             studyYearLabel2.Name = "studyYearLabel2";
-            studyYearLabel2.Size = new System.Drawing.Size(77, 13);
+            studyYearLabel2.Size = new System.Drawing.Size(103, 17);
             studyYearLabel2.TabIndex = 5;
             studyYearLabel2.Text = "Год обучения:";
             // 
@@ -1699,7 +1699,7 @@
             semesterLabel1.AutoSize = true;
             semesterLabel1.Location = new System.Drawing.Point(71, 88);
             semesterLabel1.Name = "semesterLabel1";
-            semesterLabel1.Size = new System.Drawing.Size(54, 13);
+            semesterLabel1.Size = new System.Drawing.Size(68, 17);
             semesterLabel1.TabIndex = 7;
             semesterLabel1.Text = "Семестр:";
             // 
@@ -1708,7 +1708,7 @@
             meanMarkLabel.AutoSize = true;
             meanMarkLabel.Location = new System.Drawing.Point(442, 11);
             meanMarkLabel.Name = "meanMarkLabel";
-            meanMarkLabel.Size = new System.Drawing.Size(80, 13);
+            meanMarkLabel.Size = new System.Drawing.Size(105, 17);
             meanMarkLabel.TabIndex = 9;
             meanMarkLabel.Text = "Средний балл:";
             // 
@@ -1717,52 +1717,52 @@
             fCountLabel.AutoSize = true;
             fCountLabel.Location = new System.Drawing.Point(440, 37);
             fCountLabel.Name = "fCountLabel";
-            fCountLabel.Size = new System.Drawing.Size(82, 13);
+            fCountLabel.Size = new System.Drawing.Size(107, 17);
             fCountLabel.TabIndex = 11;
             fCountLabel.Text = "Кол-во неудов:";
             // 
             // responsibilityDescriptionLabel
             // 
             responsibilityDescriptionLabel.AutoSize = true;
-            responsibilityDescriptionLabel.Location = new System.Drawing.Point(79, 22);
+            responsibilityDescriptionLabel.Location = new System.Drawing.Point(64, 22);
             responsibilityDescriptionLabel.Name = "responsibilityDescriptionLabel";
-            responsibilityDescriptionLabel.Size = new System.Drawing.Size(60, 13);
+            responsibilityDescriptionLabel.Size = new System.Drawing.Size(78, 17);
             responsibilityDescriptionLabel.TabIndex = 1;
             responsibilityDescriptionLabel.Text = "Описание:";
             // 
             // lecturerLabel3
             // 
             lecturerLabel3.AutoSize = true;
-            lecturerLabel3.Location = new System.Drawing.Point(50, 92);
+            lecturerLabel3.Location = new System.Drawing.Point(27, 92);
             lecturerLabel3.Name = "lecturerLabel3";
-            lecturerLabel3.Size = new System.Drawing.Size(89, 13);
+            lecturerLabel3.Size = new System.Drawing.Size(115, 17);
             lecturerLabel3.TabIndex = 3;
             lecturerLabel3.Text = "Преподаватель:";
             // 
             // startDateLabel1
             // 
             startDateLabel1.AutoSize = true;
-            startDateLabel1.Location = new System.Drawing.Point(65, 122);
+            startDateLabel1.Location = new System.Drawing.Point(44, 122);
             startDateLabel1.Name = "startDateLabel1";
-            startDateLabel1.Size = new System.Drawing.Size(74, 13);
+            startDateLabel1.Size = new System.Drawing.Size(98, 17);
             startDateLabel1.TabIndex = 5;
             startDateLabel1.Text = "Дата начала:";
             // 
             // endDateLabel1
             // 
             endDateLabel1.AutoSize = true;
-            endDateLabel1.Location = new System.Drawing.Point(47, 148);
+            endDateLabel1.Location = new System.Drawing.Point(21, 148);
             endDateLabel1.Name = "endDateLabel1";
-            endDateLabel1.Size = new System.Drawing.Size(92, 13);
+            endDateLabel1.Size = new System.Drawing.Size(121, 17);
             endDateLabel1.TabIndex = 7;
             endDateLabel1.Text = "Дата окончания:";
             // 
             // publication_IDLabel
             // 
             publication_IDLabel.AutoSize = true;
-            publication_IDLabel.Location = new System.Drawing.Point(47, 25);
+            publication_IDLabel.Location = new System.Drawing.Point(52, 25);
             publication_IDLabel.Name = "publication_IDLabel";
-            publication_IDLabel.Size = new System.Drawing.Size(71, 13);
+            publication_IDLabel.Size = new System.Drawing.Size(92, 17);
             publication_IDLabel.TabIndex = 1;
             publication_IDLabel.Text = "Публикация:";
             // 
@@ -1771,7 +1771,7 @@
             lecturer_PKLabel.AutoSize = true;
             lecturer_PKLabel.Location = new System.Drawing.Point(29, 52);
             lecturer_PKLabel.Name = "lecturer_PKLabel";
-            lecturer_PKLabel.Size = new System.Drawing.Size(89, 13);
+            lecturer_PKLabel.Size = new System.Drawing.Size(115, 17);
             lecturer_PKLabel.TabIndex = 3;
             lecturer_PKLabel.Text = "Преподаватель:";
             // 
@@ -1793,6 +1793,7 @@
             this.mainTab.Controls.Add(this.publicationTab);
             this.mainTab.Controls.Add(this.learningResultTab);
             this.mainTab.Controls.Add(this.lecturerPublicationTab);
+            this.mainTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.mainTab.Location = new System.Drawing.Point(13, 13);
             this.mainTab.Name = "mainTab";
             this.mainTab.SelectedIndex = 0;
@@ -1830,10 +1831,10 @@
             this.lecturerTab.Controls.Add(pKLabel);
             this.lecturerTab.Controls.Add(this.lecturerPKMaskedBox);
             this.lecturerTab.Controls.Add(this.lecturerGrid);
-            this.lecturerTab.Location = new System.Drawing.Point(4, 22);
+            this.lecturerTab.Location = new System.Drawing.Point(4, 25);
             this.lecturerTab.Name = "lecturerTab";
             this.lecturerTab.Padding = new System.Windows.Forms.Padding(3);
-            this.lecturerTab.Size = new System.Drawing.Size(1118, 582);
+            this.lecturerTab.Size = new System.Drawing.Size(1118, 579);
             this.lecturerTab.TabIndex = 0;
             this.lecturerTab.Text = "Преподаватель";
             this.lecturerTab.UseVisualStyleBackColor = true;
@@ -1846,7 +1847,7 @@
             this.lecturerCVLinkLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lecturerBindingSource, "CV", true));
             this.lecturerCVLinkLabel.Location = new System.Drawing.Point(966, 9);
             this.lecturerCVLinkLabel.Name = "lecturerCVLinkLabel";
-            this.lecturerCVLinkLabel.Size = new System.Drawing.Size(21, 13);
+            this.lecturerCVLinkLabel.Size = new System.Drawing.Size(26, 17);
             this.lecturerCVLinkLabel.TabIndex = 28;
             this.lecturerCVLinkLabel.TabStop = true;
             this.lecturerCVLinkLabel.Text = "CV";
@@ -1916,7 +1917,7 @@
             this.lecturerGridNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.lecturerGridNavigator.Name = "lecturerGridNavigator";
             this.lecturerGridNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.lecturerGridNavigator.Size = new System.Drawing.Size(301, 22);
+            this.lecturerGridNavigator.Size = new System.Drawing.Size(301, 19);
             this.lecturerGridNavigator.TabIndex = 26;
             this.lecturerGridNavigator.Text = "bindingNavigator1";
             // 
@@ -1926,14 +1927,14 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 19);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 16);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 19);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 16);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -1943,7 +1944,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 19);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 16);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -1952,7 +1953,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 19);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 16);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -1961,13 +1962,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 19);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 16);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 22);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 19);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -1981,7 +1982,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 22);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 19);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -1989,7 +1990,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 19);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 16);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -1998,13 +1999,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 19);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 16);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 22);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 19);
             // 
             // saveToolStripButton
             // 
@@ -2012,7 +2013,7 @@
             this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
             this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton.Name = "saveToolStripButton";
-            this.saveToolStripButton.Size = new System.Drawing.Size(23, 19);
+            this.saveToolStripButton.Size = new System.Drawing.Size(23, 16);
             this.saveToolStripButton.Text = "&Save";
             this.saveToolStripButton.Click += new System.EventHandler(this.saveToolStripButton_Click);
             // 
@@ -2022,7 +2023,7 @@
             this.newToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton.Image")));
             this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton.Name = "newToolStripButton";
-            this.newToolStripButton.Size = new System.Drawing.Size(23, 19);
+            this.newToolStripButton.Size = new System.Drawing.Size(23, 16);
             this.newToolStripButton.Text = "&New";
             this.newToolStripButton.Click += new System.EventHandler(this.lecturerClearFieldsButton_Click);
             // 
@@ -2063,7 +2064,7 @@
             // lecturerLanguagesTextBox
             // 
             this.lecturerLanguagesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lecturerBindingSource, "Languages", true));
-            this.lecturerLanguagesTextBox.Location = new System.Drawing.Point(474, 87);
+            this.lecturerLanguagesTextBox.Location = new System.Drawing.Point(500, 87);
             this.lecturerLanguagesTextBox.Multiline = true;
             this.lecturerLanguagesTextBox.Name = "lecturerLanguagesTextBox";
             this.lecturerLanguagesTextBox.Size = new System.Drawing.Size(204, 43);
@@ -2072,67 +2073,67 @@
             // lecturerDegreeTextBox
             // 
             this.lecturerDegreeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lecturerBindingSource, "Degree", true));
-            this.lecturerDegreeTextBox.Location = new System.Drawing.Point(474, 58);
+            this.lecturerDegreeTextBox.Location = new System.Drawing.Point(500, 58);
             this.lecturerDegreeTextBox.Name = "lecturerDegreeTextBox";
-            this.lecturerDegreeTextBox.Size = new System.Drawing.Size(204, 20);
+            this.lecturerDegreeTextBox.Size = new System.Drawing.Size(204, 23);
             this.lecturerDegreeTextBox.TabIndex = 16;
             // 
             // lecturerOccupationTextBox
             // 
             this.lecturerOccupationTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lecturerBindingSource, "Occupation", true));
-            this.lecturerOccupationTextBox.Location = new System.Drawing.Point(474, 32);
+            this.lecturerOccupationTextBox.Location = new System.Drawing.Point(500, 32);
             this.lecturerOccupationTextBox.Name = "lecturerOccupationTextBox";
-            this.lecturerOccupationTextBox.Size = new System.Drawing.Size(204, 20);
+            this.lecturerOccupationTextBox.Size = new System.Drawing.Size(204, 23);
             this.lecturerOccupationTextBox.TabIndex = 14;
             // 
             // lecturerCathedraIDTextBox
             // 
             this.lecturerCathedraIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lecturerBindingSource, "CathedraID", true));
-            this.lecturerCathedraIDTextBox.Location = new System.Drawing.Point(474, 6);
+            this.lecturerCathedraIDTextBox.Location = new System.Drawing.Point(500, 6);
             this.lecturerCathedraIDTextBox.Name = "lecturerCathedraIDTextBox";
-            this.lecturerCathedraIDTextBox.Size = new System.Drawing.Size(204, 20);
+            this.lecturerCathedraIDTextBox.Size = new System.Drawing.Size(204, 23);
             this.lecturerCathedraIDTextBox.TabIndex = 12;
             // 
             // lecturerBirthdayDateTimePicker
             // 
             this.lecturerBirthdayDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.lecturerBindingSource, "Birthday", true));
             this.lecturerBirthdayDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.lecturerBirthdayDateTimePicker.Location = new System.Drawing.Point(127, 110);
+            this.lecturerBirthdayDateTimePicker.Location = new System.Drawing.Point(157, 110);
             this.lecturerBirthdayDateTimePicker.Name = "lecturerBirthdayDateTimePicker";
-            this.lecturerBirthdayDateTimePicker.Size = new System.Drawing.Size(204, 20);
+            this.lecturerBirthdayDateTimePicker.Size = new System.Drawing.Size(204, 23);
             this.lecturerBirthdayDateTimePicker.TabIndex = 10;
             // 
             // lecturerMiddleNameTextBox
             // 
             this.lecturerMiddleNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lecturerBindingSource, "MiddleName", true));
-            this.lecturerMiddleNameTextBox.Location = new System.Drawing.Point(127, 84);
+            this.lecturerMiddleNameTextBox.Location = new System.Drawing.Point(157, 84);
             this.lecturerMiddleNameTextBox.Name = "lecturerMiddleNameTextBox";
-            this.lecturerMiddleNameTextBox.Size = new System.Drawing.Size(204, 20);
+            this.lecturerMiddleNameTextBox.Size = new System.Drawing.Size(204, 23);
             this.lecturerMiddleNameTextBox.TabIndex = 8;
             // 
             // lecturerFirstNameTextBox
             // 
             this.lecturerFirstNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lecturerBindingSource, "FirstName", true));
-            this.lecturerFirstNameTextBox.Location = new System.Drawing.Point(127, 58);
+            this.lecturerFirstNameTextBox.Location = new System.Drawing.Point(157, 58);
             this.lecturerFirstNameTextBox.Name = "lecturerFirstNameTextBox";
-            this.lecturerFirstNameTextBox.Size = new System.Drawing.Size(204, 20);
+            this.lecturerFirstNameTextBox.Size = new System.Drawing.Size(204, 23);
             this.lecturerFirstNameTextBox.TabIndex = 6;
             // 
             // lecturerLastNameTextBox
             // 
             this.lecturerLastNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lecturerBindingSource, "LastName", true));
-            this.lecturerLastNameTextBox.Location = new System.Drawing.Point(127, 32);
+            this.lecturerLastNameTextBox.Location = new System.Drawing.Point(157, 32);
             this.lecturerLastNameTextBox.Name = "lecturerLastNameTextBox";
-            this.lecturerLastNameTextBox.Size = new System.Drawing.Size(204, 20);
+            this.lecturerLastNameTextBox.Size = new System.Drawing.Size(204, 23);
             this.lecturerLastNameTextBox.TabIndex = 4;
             // 
             // lecturerPKMaskedBox
             // 
             this.lecturerPKMaskedBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lecturerBindingSource, "PK", true));
-            this.lecturerPKMaskedBox.Location = new System.Drawing.Point(127, 6);
+            this.lecturerPKMaskedBox.Location = new System.Drawing.Point(157, 6);
             this.lecturerPKMaskedBox.Mask = "000000-00000";
             this.lecturerPKMaskedBox.Name = "lecturerPKMaskedBox";
-            this.lecturerPKMaskedBox.Size = new System.Drawing.Size(204, 20);
+            this.lecturerPKMaskedBox.Size = new System.Drawing.Size(204, 23);
             this.lecturerPKMaskedBox.TabIndex = 2;
             this.lecturerPKMaskedBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.lecturerPKMaskedBox.Validating += new System.ComponentModel.CancelEventHandler(this.lecturerPKMaskedBox_Validating);
@@ -2167,7 +2168,7 @@
             this.lecturerGrid.Name = "lecturerGrid";
             this.lecturerGrid.ReadOnly = true;
             this.lecturerGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.lecturerGrid.Size = new System.Drawing.Size(1105, 294);
+            this.lecturerGrid.Size = new System.Drawing.Size(1105, 291);
             this.lecturerGrid.TabIndex = 0;
             this.lecturerGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.lecturerGrid_RowEnter);
             // 
@@ -2270,10 +2271,10 @@
             this.groupTab.Controls.Add(groupNumberLabel);
             this.groupTab.Controls.Add(this.groupNumberTextBox);
             this.groupTab.Controls.Add(this.groupGrid);
-            this.groupTab.Location = new System.Drawing.Point(4, 22);
+            this.groupTab.Location = new System.Drawing.Point(4, 25);
             this.groupTab.Name = "groupTab";
             this.groupTab.Padding = new System.Windows.Forms.Padding(3);
-            this.groupTab.Size = new System.Drawing.Size(1118, 582);
+            this.groupTab.Size = new System.Drawing.Size(1118, 579);
             this.groupTab.TabIndex = 1;
             this.groupTab.Text = "Группа";
             this.groupTab.UseVisualStyleBackColor = true;
@@ -2309,7 +2310,7 @@
             this.groupGridNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
             this.groupGridNavigator.Name = "groupGridNavigator";
             this.groupGridNavigator.PositionItem = this.bindingNavigatorPositionItem1;
-            this.groupGridNavigator.Size = new System.Drawing.Size(301, 25);
+            this.groupGridNavigator.Size = new System.Drawing.Size(301, 22);
             this.groupGridNavigator.TabIndex = 17;
             this.groupGridNavigator.Text = "bindingNavigator1";
             // 
@@ -2319,7 +2320,7 @@
             this.bindingNavigatorAddNewItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem1.Image")));
             this.bindingNavigatorAddNewItem1.Name = "bindingNavigatorAddNewItem1";
             this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorAddNewItem1.Text = "Add new";
             this.bindingNavigatorAddNewItem1.Click += new System.EventHandler(this.bindingNavigatorAddNewItem1_Click);
             // 
@@ -2331,7 +2332,7 @@
             // bindingNavigatorCountItem1
             // 
             this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(35, 19);
             this.bindingNavigatorCountItem1.Text = "of {0}";
             this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
             // 
@@ -2341,7 +2342,7 @@
             this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
             this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem1";
             this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorDeleteItem1.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem1
@@ -2350,7 +2351,7 @@
             this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
             this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem1";
             this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveFirstItem1.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem1
@@ -2359,13 +2360,13 @@
             this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
             this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
             this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMovePreviousItem1.Text = "Move previous";
             // 
             // bindingNavigatorSeparator3
             // 
             this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
-            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorPositionItem1
             // 
@@ -2379,7 +2380,7 @@
             // bindingNavigatorSeparator4
             // 
             this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
-            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorMoveNextItem1
             // 
@@ -2387,7 +2388,7 @@
             this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
             this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
             this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveNextItem1.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem1
@@ -2396,13 +2397,13 @@
             this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
             this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem1";
             this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveLastItem1.Text = "Move last";
             // 
             // bindingNavigatorSeparator5
             // 
             this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
-            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 22);
             // 
             // clearGroupFieldsButton
             // 
@@ -2410,7 +2411,7 @@
             this.clearGroupFieldsButton.Image = ((System.Drawing.Image)(resources.GetObject("clearGroupFieldsButton.Image")));
             this.clearGroupFieldsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.clearGroupFieldsButton.Name = "clearGroupFieldsButton";
-            this.clearGroupFieldsButton.Size = new System.Drawing.Size(23, 22);
+            this.clearGroupFieldsButton.Size = new System.Drawing.Size(23, 19);
             this.clearGroupFieldsButton.Text = "&Clear";
             this.clearGroupFieldsButton.Click += new System.EventHandler(this.clearGroupFieldButton_Click);
             // 
@@ -2420,7 +2421,7 @@
             this.saveToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton1.Image")));
             this.saveToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton1.Name = "saveToolStripButton1";
-            this.saveToolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton1.Size = new System.Drawing.Size(23, 19);
             this.saveToolStripButton1.Text = "&Save";
             this.saveToolStripButton1.Click += new System.EventHandler(this.saveToolStripButton1_Click);
             // 
@@ -2440,7 +2441,7 @@
             0,
             0});
             this.groupStartYearNumericUpDown.Name = "groupStartYearNumericUpDown";
-            this.groupStartYearNumericUpDown.Size = new System.Drawing.Size(322, 20);
+            this.groupStartYearNumericUpDown.Size = new System.Drawing.Size(322, 23);
             this.groupStartYearNumericUpDown.TabIndex = 16;
             this.groupStartYearNumericUpDown.Value = new decimal(new int[] {
             1990,
@@ -2454,7 +2455,7 @@
             this.groupProgramTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.groupBindingSource, "Program", true));
             this.groupProgramTextBox.Location = new System.Drawing.Point(680, 57);
             this.groupProgramTextBox.Name = "groupProgramTextBox";
-            this.groupProgramTextBox.Size = new System.Drawing.Size(322, 20);
+            this.groupProgramTextBox.Size = new System.Drawing.Size(322, 23);
             this.groupProgramTextBox.TabIndex = 14;
             // 
             // groupLearningTypeTextBox
@@ -2463,7 +2464,7 @@
             this.groupLearningTypeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.groupBindingSource, "LearningType", true));
             this.groupLearningTypeTextBox.Location = new System.Drawing.Point(680, 31);
             this.groupLearningTypeTextBox.Name = "groupLearningTypeTextBox";
-            this.groupLearningTypeTextBox.Size = new System.Drawing.Size(322, 20);
+            this.groupLearningTypeTextBox.Size = new System.Drawing.Size(322, 23);
             this.groupLearningTypeTextBox.TabIndex = 12;
             // 
             // groupFacultyTextBox
@@ -2472,13 +2473,13 @@
             this.groupFacultyTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.groupBindingSource, "Faculty", true));
             this.groupFacultyTextBox.Location = new System.Drawing.Point(680, 5);
             this.groupFacultyTextBox.Name = "groupFacultyTextBox";
-            this.groupFacultyTextBox.Size = new System.Drawing.Size(322, 20);
+            this.groupFacultyTextBox.Size = new System.Drawing.Size(322, 23);
             this.groupFacultyTextBox.TabIndex = 10;
             // 
             // groupContactInfoTextBox
             // 
             this.groupContactInfoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.groupBindingSource, "ContactInfo", true));
-            this.groupContactInfoTextBox.Location = new System.Drawing.Point(137, 83);
+            this.groupContactInfoTextBox.Location = new System.Drawing.Point(177, 84);
             this.groupContactInfoTextBox.Multiline = true;
             this.groupContactInfoTextBox.Name = "groupContactInfoTextBox";
             this.groupContactInfoTextBox.Size = new System.Drawing.Size(299, 76);
@@ -2487,25 +2488,25 @@
             // groupHeadTextBox
             // 
             this.groupHeadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.groupBindingSource, "GroupHead", true));
-            this.groupHeadTextBox.Location = new System.Drawing.Point(137, 57);
+            this.groupHeadTextBox.Location = new System.Drawing.Point(177, 58);
             this.groupHeadTextBox.Name = "groupHeadTextBox";
-            this.groupHeadTextBox.Size = new System.Drawing.Size(299, 20);
+            this.groupHeadTextBox.Size = new System.Drawing.Size(299, 23);
             this.groupHeadTextBox.TabIndex = 6;
             // 
             // groupStudentCountNumericUpDown
             // 
             this.groupStudentCountNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.groupBindingSource, "StudentCount", true));
-            this.groupStudentCountNumericUpDown.Location = new System.Drawing.Point(137, 31);
+            this.groupStudentCountNumericUpDown.Location = new System.Drawing.Point(177, 32);
             this.groupStudentCountNumericUpDown.Name = "groupStudentCountNumericUpDown";
-            this.groupStudentCountNumericUpDown.Size = new System.Drawing.Size(299, 20);
+            this.groupStudentCountNumericUpDown.Size = new System.Drawing.Size(299, 23);
             this.groupStudentCountNumericUpDown.TabIndex = 4;
             // 
             // groupNumberTextBox
             // 
             this.groupNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.groupBindingSource, "GroupNumber", true));
-            this.groupNumberTextBox.Location = new System.Drawing.Point(137, 5);
+            this.groupNumberTextBox.Location = new System.Drawing.Point(177, 6);
             this.groupNumberTextBox.Name = "groupNumberTextBox";
-            this.groupNumberTextBox.Size = new System.Drawing.Size(299, 20);
+            this.groupNumberTextBox.Size = new System.Drawing.Size(299, 23);
             this.groupNumberTextBox.TabIndex = 2;
             this.groupNumberTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.groupNumberTextBox_Validating);
             // 
@@ -2535,7 +2536,7 @@
             this.groupGrid.Name = "groupGrid";
             this.groupGrid.ReadOnly = true;
             this.groupGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.groupGrid.Size = new System.Drawing.Size(1105, 281);
+            this.groupGrid.Size = new System.Drawing.Size(1105, 278);
             this.groupGrid.TabIndex = 0;
             this.groupGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.groupGrid_RowEnter);
             // 
@@ -2619,10 +2620,10 @@
             this.subjectTab.Controls.Add(subjectCodeLabel);
             this.subjectTab.Controls.Add(this.subjectCodeTextBox);
             this.subjectTab.Controls.Add(this.subjectGrid);
-            this.subjectTab.Location = new System.Drawing.Point(4, 22);
+            this.subjectTab.Location = new System.Drawing.Point(4, 25);
             this.subjectTab.Name = "subjectTab";
             this.subjectTab.Padding = new System.Windows.Forms.Padding(3);
-            this.subjectTab.Size = new System.Drawing.Size(1118, 582);
+            this.subjectTab.Size = new System.Drawing.Size(1118, 579);
             this.subjectTab.TabIndex = 2;
             this.subjectTab.Text = "Предмет";
             this.subjectTab.UseVisualStyleBackColor = true;
@@ -2658,7 +2659,7 @@
             this.subjectGridNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem2;
             this.subjectGridNavigator.Name = "subjectGridNavigator";
             this.subjectGridNavigator.PositionItem = this.bindingNavigatorPositionItem2;
-            this.subjectGridNavigator.Size = new System.Drawing.Size(301, 25);
+            this.subjectGridNavigator.Size = new System.Drawing.Size(301, 22);
             this.subjectGridNavigator.TabIndex = 20;
             this.subjectGridNavigator.Text = "subjetcGridNavigator";
             // 
@@ -2668,7 +2669,7 @@
             this.bindingNavigatorAddNewItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem2.Image")));
             this.bindingNavigatorAddNewItem2.Name = "bindingNavigatorAddNewItem2";
             this.bindingNavigatorAddNewItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem2.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem2.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorAddNewItem2.Text = "Add new";
             this.bindingNavigatorAddNewItem2.Click += new System.EventHandler(this.bindingNavigatorAddNewItem2_Click);
             // 
@@ -2680,7 +2681,7 @@
             // bindingNavigatorCountItem2
             // 
             this.bindingNavigatorCountItem2.Name = "bindingNavigatorCountItem2";
-            this.bindingNavigatorCountItem2.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem2.Size = new System.Drawing.Size(35, 19);
             this.bindingNavigatorCountItem2.Text = "of {0}";
             this.bindingNavigatorCountItem2.ToolTipText = "Total number of items";
             // 
@@ -2690,7 +2691,7 @@
             this.bindingNavigatorDeleteItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem2.Image")));
             this.bindingNavigatorDeleteItem2.Name = "bindingNavigatorDeleteItem2";
             this.bindingNavigatorDeleteItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem2.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem2.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorDeleteItem2.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem2
@@ -2699,7 +2700,7 @@
             this.bindingNavigatorMoveFirstItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem2.Image")));
             this.bindingNavigatorMoveFirstItem2.Name = "bindingNavigatorMoveFirstItem2";
             this.bindingNavigatorMoveFirstItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem2.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem2.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveFirstItem2.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem2
@@ -2708,13 +2709,13 @@
             this.bindingNavigatorMovePreviousItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem2.Image")));
             this.bindingNavigatorMovePreviousItem2.Name = "bindingNavigatorMovePreviousItem2";
             this.bindingNavigatorMovePreviousItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem2.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem2.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMovePreviousItem2.Text = "Move previous";
             // 
             // bindingNavigatorSeparator6
             // 
             this.bindingNavigatorSeparator6.Name = "bindingNavigatorSeparator6";
-            this.bindingNavigatorSeparator6.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator6.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorPositionItem2
             // 
@@ -2728,7 +2729,7 @@
             // bindingNavigatorSeparator7
             // 
             this.bindingNavigatorSeparator7.Name = "bindingNavigatorSeparator7";
-            this.bindingNavigatorSeparator7.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator7.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorMoveNextItem2
             // 
@@ -2736,7 +2737,7 @@
             this.bindingNavigatorMoveNextItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem2.Image")));
             this.bindingNavigatorMoveNextItem2.Name = "bindingNavigatorMoveNextItem2";
             this.bindingNavigatorMoveNextItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem2.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem2.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveNextItem2.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem2
@@ -2745,13 +2746,13 @@
             this.bindingNavigatorMoveLastItem2.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem2.Image")));
             this.bindingNavigatorMoveLastItem2.Name = "bindingNavigatorMoveLastItem2";
             this.bindingNavigatorMoveLastItem2.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem2.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem2.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveLastItem2.Text = "Move last";
             // 
             // bindingNavigatorSeparator8
             // 
             this.bindingNavigatorSeparator8.Name = "bindingNavigatorSeparator8";
-            this.bindingNavigatorSeparator8.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator8.Size = new System.Drawing.Size(6, 22);
             // 
             // subjectFieldClearButton
             // 
@@ -2759,7 +2760,7 @@
             this.subjectFieldClearButton.Image = ((System.Drawing.Image)(resources.GetObject("subjectFieldClearButton.Image")));
             this.subjectFieldClearButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.subjectFieldClearButton.Name = "subjectFieldClearButton";
-            this.subjectFieldClearButton.Size = new System.Drawing.Size(23, 22);
+            this.subjectFieldClearButton.Size = new System.Drawing.Size(23, 19);
             this.subjectFieldClearButton.Text = "&Clear";
             this.subjectFieldClearButton.Click += new System.EventHandler(this.subjectFieldClearButton_Click);
             // 
@@ -2769,7 +2770,7 @@
             this.saveToolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton2.Image")));
             this.saveToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton2.Name = "saveToolStripButton2";
-            this.saveToolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton2.Size = new System.Drawing.Size(23, 19);
             this.saveToolStripButton2.Text = "&Save";
             this.saveToolStripButton2.Click += new System.EventHandler(this.saveToolStripButton2_Click);
             // 
@@ -2786,7 +2787,7 @@
             // subjectTematicPlanAddButoon
             // 
             this.subjectTematicPlanAddButoon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.subjectTematicPlanAddButoon.Location = new System.Drawing.Point(890, 145);
+            this.subjectTematicPlanAddButoon.Location = new System.Drawing.Point(890, 167);
             this.subjectTematicPlanAddButoon.Name = "subjectTematicPlanAddButoon";
             this.subjectTematicPlanAddButoon.Size = new System.Drawing.Size(201, 23);
             this.subjectTematicPlanAddButoon.TabIndex = 18;
@@ -2801,9 +2802,9 @@
             this.subjectZaochGroupBox.Controls.Add(this.subjectPractices_ZNumericUpDown);
             this.subjectZaochGroupBox.Controls.Add(lections_ZLabel);
             this.subjectZaochGroupBox.Controls.Add(this.subjectLections_ZNumericUpDown);
-            this.subjectZaochGroupBox.Location = new System.Drawing.Point(618, 137);
+            this.subjectZaochGroupBox.Location = new System.Drawing.Point(609, 135);
             this.subjectZaochGroupBox.Name = "subjectZaochGroupBox";
-            this.subjectZaochGroupBox.Size = new System.Drawing.Size(254, 102);
+            this.subjectZaochGroupBox.Size = new System.Drawing.Size(254, 111);
             this.subjectZaochGroupBox.TabIndex = 17;
             this.subjectZaochGroupBox.TabStop = false;
             this.subjectZaochGroupBox.Text = "Заочное отделение";
@@ -2813,7 +2814,7 @@
             this.subjectLaboratories_ZNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.subjectBindingSource, "Laboratories_Z", true));
             this.subjectLaboratories_ZNumericUpDown.Location = new System.Drawing.Point(119, 71);
             this.subjectLaboratories_ZNumericUpDown.Name = "subjectLaboratories_ZNumericUpDown";
-            this.subjectLaboratories_ZNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.subjectLaboratories_ZNumericUpDown.Size = new System.Drawing.Size(120, 23);
             this.subjectLaboratories_ZNumericUpDown.TabIndex = 5;
             // 
             // subjectPractices_ZNumericUpDown
@@ -2821,7 +2822,7 @@
             this.subjectPractices_ZNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.subjectBindingSource, "Practices_Z", true));
             this.subjectPractices_ZNumericUpDown.Location = new System.Drawing.Point(119, 45);
             this.subjectPractices_ZNumericUpDown.Name = "subjectPractices_ZNumericUpDown";
-            this.subjectPractices_ZNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.subjectPractices_ZNumericUpDown.Size = new System.Drawing.Size(120, 23);
             this.subjectPractices_ZNumericUpDown.TabIndex = 3;
             // 
             // subjectLections_ZNumericUpDown
@@ -2829,7 +2830,7 @@
             this.subjectLections_ZNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.subjectBindingSource, "Lections_Z", true));
             this.subjectLections_ZNumericUpDown.Location = new System.Drawing.Point(119, 19);
             this.subjectLections_ZNumericUpDown.Name = "subjectLections_ZNumericUpDown";
-            this.subjectLections_ZNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.subjectLections_ZNumericUpDown.Size = new System.Drawing.Size(120, 23);
             this.subjectLections_ZNumericUpDown.TabIndex = 1;
             // 
             // subjectEveningGroupBox
@@ -2841,9 +2842,9 @@
             this.subjectEveningGroupBox.Controls.Add(this.subjectPractices_VNumericUpDown);
             this.subjectEveningGroupBox.Controls.Add(lections_VLabel);
             this.subjectEveningGroupBox.Controls.Add(this.subjectLections_VNumericUpDown);
-            this.subjectEveningGroupBox.Location = new System.Drawing.Point(879, 7);
+            this.subjectEveningGroupBox.Location = new System.Drawing.Point(863, 7);
             this.subjectEveningGroupBox.Name = "subjectEveningGroupBox";
-            this.subjectEveningGroupBox.Size = new System.Drawing.Size(233, 123);
+            this.subjectEveningGroupBox.Size = new System.Drawing.Size(249, 126);
             this.subjectEveningGroupBox.TabIndex = 16;
             this.subjectEveningGroupBox.TabStop = false;
             this.subjectEveningGroupBox.Text = "Вечернее отделение";
@@ -2851,33 +2852,33 @@
             // subjectLaboratories_VNumericUpDown
             // 
             this.subjectLaboratories_VNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.subjectBindingSource, "Laboratories_V", true));
-            this.subjectLaboratories_VNumericUpDown.Location = new System.Drawing.Point(92, 73);
+            this.subjectLaboratories_VNumericUpDown.Location = new System.Drawing.Point(120, 72);
             this.subjectLaboratories_VNumericUpDown.Name = "subjectLaboratories_VNumericUpDown";
-            this.subjectLaboratories_VNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.subjectLaboratories_VNumericUpDown.Size = new System.Drawing.Size(120, 23);
             this.subjectLaboratories_VNumericUpDown.TabIndex = 5;
             // 
             // subjectPractices_VNumericUpDown
             // 
             this.subjectPractices_VNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.subjectBindingSource, "Practices_V", true));
-            this.subjectPractices_VNumericUpDown.Location = new System.Drawing.Point(92, 47);
+            this.subjectPractices_VNumericUpDown.Location = new System.Drawing.Point(120, 46);
             this.subjectPractices_VNumericUpDown.Name = "subjectPractices_VNumericUpDown";
-            this.subjectPractices_VNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.subjectPractices_VNumericUpDown.Size = new System.Drawing.Size(120, 23);
             this.subjectPractices_VNumericUpDown.TabIndex = 3;
             // 
             // subjectLections_VNumericUpDown
             // 
             this.subjectLections_VNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.subjectBindingSource, "Lections_V", true));
-            this.subjectLections_VNumericUpDown.Location = new System.Drawing.Point(92, 21);
+            this.subjectLections_VNumericUpDown.Location = new System.Drawing.Point(120, 20);
             this.subjectLections_VNumericUpDown.Name = "subjectLections_VNumericUpDown";
-            this.subjectLections_VNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.subjectLections_VNumericUpDown.Size = new System.Drawing.Size(120, 23);
             this.subjectLections_VNumericUpDown.TabIndex = 1;
             // 
             // subjectTestCheckBox
             // 
             this.subjectTestCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.subjectBindingSource, "Test", true));
-            this.subjectTestCheckBox.Location = new System.Drawing.Point(508, 107);
+            this.subjectTestCheckBox.Location = new System.Drawing.Point(531, 109);
             this.subjectTestCheckBox.Name = "subjectTestCheckBox";
-            this.subjectTestCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.subjectTestCheckBox.Size = new System.Drawing.Size(68, 24);
             this.subjectTestCheckBox.TabIndex = 15;
             this.subjectTestCheckBox.Text = "Да";
             this.subjectTestCheckBox.UseVisualStyleBackColor = true;
@@ -2902,7 +2903,7 @@
             this.subjectDayGroupBox.Controls.Add(this.subjectPractices_DNumericUpDown);
             this.subjectDayGroupBox.Controls.Add(lections_DLabel);
             this.subjectDayGroupBox.Controls.Add(this.subjectLections_DNumericUpDown);
-            this.subjectDayGroupBox.Location = new System.Drawing.Point(618, 6);
+            this.subjectDayGroupBox.Location = new System.Drawing.Point(609, 5);
             this.subjectDayGroupBox.Name = "subjectDayGroupBox";
             this.subjectDayGroupBox.Size = new System.Drawing.Size(254, 124);
             this.subjectDayGroupBox.TabIndex = 11;
@@ -2912,33 +2913,33 @@
             // subjectContactHoursNumericUpDown
             // 
             this.subjectContactHoursNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.subjectBindingSource, "ContactHours", true));
-            this.subjectContactHoursNumericUpDown.Location = new System.Drawing.Point(119, 98);
+            this.subjectContactHoursNumericUpDown.Location = new System.Drawing.Point(128, 97);
             this.subjectContactHoursNumericUpDown.Name = "subjectContactHoursNumericUpDown";
-            this.subjectContactHoursNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.subjectContactHoursNumericUpDown.Size = new System.Drawing.Size(120, 23);
             this.subjectContactHoursNumericUpDown.TabIndex = 7;
             // 
             // subjectLaboratories_DNumericUpDown
             // 
             this.subjectLaboratories_DNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.subjectBindingSource, "Laboratories_D", true));
-            this.subjectLaboratories_DNumericUpDown.Location = new System.Drawing.Point(119, 72);
+            this.subjectLaboratories_DNumericUpDown.Location = new System.Drawing.Point(128, 71);
             this.subjectLaboratories_DNumericUpDown.Name = "subjectLaboratories_DNumericUpDown";
-            this.subjectLaboratories_DNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.subjectLaboratories_DNumericUpDown.Size = new System.Drawing.Size(120, 23);
             this.subjectLaboratories_DNumericUpDown.TabIndex = 5;
             // 
             // subjectPractices_DNumericUpDown
             // 
             this.subjectPractices_DNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.subjectBindingSource, "Practices_D", true));
-            this.subjectPractices_DNumericUpDown.Location = new System.Drawing.Point(119, 46);
+            this.subjectPractices_DNumericUpDown.Location = new System.Drawing.Point(128, 45);
             this.subjectPractices_DNumericUpDown.Name = "subjectPractices_DNumericUpDown";
-            this.subjectPractices_DNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.subjectPractices_DNumericUpDown.Size = new System.Drawing.Size(120, 23);
             this.subjectPractices_DNumericUpDown.TabIndex = 3;
             // 
             // subjectLections_DNumericUpDown
             // 
             this.subjectLections_DNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.subjectBindingSource, "Lections_D", true));
-            this.subjectLections_DNumericUpDown.Location = new System.Drawing.Point(119, 19);
+            this.subjectLections_DNumericUpDown.Location = new System.Drawing.Point(128, 18);
             this.subjectLections_DNumericUpDown.Name = "subjectLections_DNumericUpDown";
-            this.subjectLections_DNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.subjectLections_DNumericUpDown.Size = new System.Drawing.Size(120, 23);
             this.subjectLections_DNumericUpDown.TabIndex = 1;
             // 
             // subjectKPNumericUpDown
@@ -2946,7 +2947,7 @@
             this.subjectKPNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.subjectBindingSource, "KP", true));
             this.subjectKPNumericUpDown.Location = new System.Drawing.Point(126, 110);
             this.subjectKPNumericUpDown.Name = "subjectKPNumericUpDown";
-            this.subjectKPNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.subjectKPNumericUpDown.Size = new System.Drawing.Size(120, 23);
             this.subjectKPNumericUpDown.TabIndex = 10;
             // 
             // subjectName_enTextBox
@@ -2954,7 +2955,7 @@
             this.subjectName_enTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.subjectBindingSource, "SubjectName_en", true));
             this.subjectName_enTextBox.Location = new System.Drawing.Point(126, 84);
             this.subjectName_enTextBox.Name = "subjectName_enTextBox";
-            this.subjectName_enTextBox.Size = new System.Drawing.Size(486, 20);
+            this.subjectName_enTextBox.Size = new System.Drawing.Size(473, 23);
             this.subjectName_enTextBox.TabIndex = 8;
             // 
             // subjectName_lvTextBox
@@ -2962,7 +2963,7 @@
             this.subjectName_lvTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.subjectBindingSource, "SubjectName_lv", true));
             this.subjectName_lvTextBox.Location = new System.Drawing.Point(126, 58);
             this.subjectName_lvTextBox.Name = "subjectName_lvTextBox";
-            this.subjectName_lvTextBox.Size = new System.Drawing.Size(486, 20);
+            this.subjectName_lvTextBox.Size = new System.Drawing.Size(473, 23);
             this.subjectName_lvTextBox.TabIndex = 6;
             // 
             // subjectName_rusTextBox
@@ -2970,7 +2971,7 @@
             this.subjectName_rusTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.subjectBindingSource, "SubjectName_rus", true));
             this.subjectName_rusTextBox.Location = new System.Drawing.Point(126, 32);
             this.subjectName_rusTextBox.Name = "subjectName_rusTextBox";
-            this.subjectName_rusTextBox.Size = new System.Drawing.Size(486, 20);
+            this.subjectName_rusTextBox.Size = new System.Drawing.Size(473, 23);
             this.subjectName_rusTextBox.TabIndex = 4;
             // 
             // subjectCodeTextBox
@@ -2978,7 +2979,7 @@
             this.subjectCodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.subjectBindingSource, "SubjectCode", true));
             this.subjectCodeTextBox.Location = new System.Drawing.Point(126, 6);
             this.subjectCodeTextBox.Name = "subjectCodeTextBox";
-            this.subjectCodeTextBox.Size = new System.Drawing.Size(486, 20);
+            this.subjectCodeTextBox.Size = new System.Drawing.Size(473, 23);
             this.subjectCodeTextBox.TabIndex = 2;
             this.subjectCodeTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.subjectCodeTextBox_Validating);
             // 
@@ -3019,7 +3020,7 @@
             this.subjectGrid.Name = "subjectGrid";
             this.subjectGrid.ReadOnly = true;
             this.subjectGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.subjectGrid.Size = new System.Drawing.Size(1105, 273);
+            this.subjectGrid.Size = new System.Drawing.Size(1105, 270);
             this.subjectGrid.TabIndex = 0;
             // 
             // subjectCodeDataGridViewTextBoxColumn
@@ -3028,7 +3029,7 @@
             this.subjectCodeDataGridViewTextBoxColumn.HeaderText = "Код предмета";
             this.subjectCodeDataGridViewTextBoxColumn.Name = "subjectCodeDataGridViewTextBoxColumn";
             this.subjectCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.subjectCodeDataGridViewTextBoxColumn.Width = 95;
+            this.subjectCodeDataGridViewTextBoxColumn.Width = 115;
             // 
             // subjectNamerusDataGridViewTextBoxColumn
             // 
@@ -3036,7 +3037,7 @@
             this.subjectNamerusDataGridViewTextBoxColumn.HeaderText = "Название";
             this.subjectNamerusDataGridViewTextBoxColumn.Name = "subjectNamerusDataGridViewTextBoxColumn";
             this.subjectNamerusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.subjectNamerusDataGridViewTextBoxColumn.Width = 82;
+            this.subjectNamerusDataGridViewTextBoxColumn.Width = 97;
             // 
             // subjectNamelvDataGridViewTextBoxColumn
             // 
@@ -3044,7 +3045,7 @@
             this.subjectNamelvDataGridViewTextBoxColumn.HeaderText = "Nosaukums";
             this.subjectNamelvDataGridViewTextBoxColumn.Name = "subjectNamelvDataGridViewTextBoxColumn";
             this.subjectNamelvDataGridViewTextBoxColumn.ReadOnly = true;
-            this.subjectNamelvDataGridViewTextBoxColumn.Width = 88;
+            this.subjectNamelvDataGridViewTextBoxColumn.Width = 107;
             // 
             // subjectNameenDataGridViewTextBoxColumn
             // 
@@ -3052,7 +3053,7 @@
             this.subjectNameenDataGridViewTextBoxColumn.HeaderText = "Subject";
             this.subjectNameenDataGridViewTextBoxColumn.Name = "subjectNameenDataGridViewTextBoxColumn";
             this.subjectNameenDataGridViewTextBoxColumn.ReadOnly = true;
-            this.subjectNameenDataGridViewTextBoxColumn.Width = 68;
+            this.subjectNameenDataGridViewTextBoxColumn.Width = 80;
             // 
             // kPDataGridViewTextBoxColumn
             // 
@@ -3060,7 +3061,7 @@
             this.kPDataGridViewTextBoxColumn.HeaderText = "KP";
             this.kPDataGridViewTextBoxColumn.Name = "kPDataGridViewTextBoxColumn";
             this.kPDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kPDataGridViewTextBoxColumn.Width = 46;
+            this.kPDataGridViewTextBoxColumn.Width = 51;
             // 
             // lectionsDDataGridViewTextBoxColumn
             // 
@@ -3068,7 +3069,6 @@
             this.lectionsDDataGridViewTextBoxColumn.HeaderText = "Лекции_D";
             this.lectionsDDataGridViewTextBoxColumn.Name = "lectionsDDataGridViewTextBoxColumn";
             this.lectionsDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lectionsDDataGridViewTextBoxColumn.Width = 84;
             // 
             // practicesDDataGridViewTextBoxColumn
             // 
@@ -3076,7 +3076,7 @@
             this.practicesDDataGridViewTextBoxColumn.HeaderText = "Практики_D";
             this.practicesDDataGridViewTextBoxColumn.Name = "practicesDDataGridViewTextBoxColumn";
             this.practicesDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.practicesDDataGridViewTextBoxColumn.Width = 95;
+            this.practicesDDataGridViewTextBoxColumn.Width = 114;
             // 
             // laboratoriesDDataGridViewTextBoxColumn
             // 
@@ -3084,7 +3084,7 @@
             this.laboratoriesDDataGridViewTextBoxColumn.HeaderText = "Лабораторные_D";
             this.laboratoriesDDataGridViewTextBoxColumn.Name = "laboratoriesDDataGridViewTextBoxColumn";
             this.laboratoriesDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.laboratoriesDDataGridViewTextBoxColumn.Width = 121;
+            this.laboratoriesDDataGridViewTextBoxColumn.Width = 150;
             // 
             // contactHoursDataGridViewTextBoxColumn
             // 
@@ -3092,7 +3092,7 @@
             this.contactHoursDataGridViewTextBoxColumn.HeaderText = "Контактные часы";
             this.contactHoursDataGridViewTextBoxColumn.Name = "contactHoursDataGridViewTextBoxColumn";
             this.contactHoursDataGridViewTextBoxColumn.ReadOnly = true;
-            this.contactHoursDataGridViewTextBoxColumn.Width = 111;
+            this.contactHoursDataGridViewTextBoxColumn.Width = 137;
             // 
             // lectionsVDataGridViewTextBoxColumn
             // 
@@ -3100,7 +3100,7 @@
             this.lectionsVDataGridViewTextBoxColumn.HeaderText = "Лекции_V";
             this.lectionsVDataGridViewTextBoxColumn.Name = "lectionsVDataGridViewTextBoxColumn";
             this.lectionsVDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lectionsVDataGridViewTextBoxColumn.Width = 83;
+            this.lectionsVDataGridViewTextBoxColumn.Width = 99;
             // 
             // practicesVDataGridViewTextBoxColumn
             // 
@@ -3108,7 +3108,7 @@
             this.practicesVDataGridViewTextBoxColumn.HeaderText = "Практики_V";
             this.practicesVDataGridViewTextBoxColumn.Name = "practicesVDataGridViewTextBoxColumn";
             this.practicesVDataGridViewTextBoxColumn.ReadOnly = true;
-            this.practicesVDataGridViewTextBoxColumn.Width = 94;
+            this.practicesVDataGridViewTextBoxColumn.Width = 113;
             // 
             // laboratoriesVDataGridViewTextBoxColumn
             // 
@@ -3116,7 +3116,7 @@
             this.laboratoriesVDataGridViewTextBoxColumn.HeaderText = "Лабораторные_V";
             this.laboratoriesVDataGridViewTextBoxColumn.Name = "laboratoriesVDataGridViewTextBoxColumn";
             this.laboratoriesVDataGridViewTextBoxColumn.ReadOnly = true;
-            this.laboratoriesVDataGridViewTextBoxColumn.Width = 120;
+            this.laboratoriesVDataGridViewTextBoxColumn.Width = 149;
             // 
             // lectionsZDataGridViewTextBoxColumn
             // 
@@ -3124,7 +3124,7 @@
             this.lectionsZDataGridViewTextBoxColumn.HeaderText = "Лекции_Z";
             this.lectionsZDataGridViewTextBoxColumn.Name = "lectionsZDataGridViewTextBoxColumn";
             this.lectionsZDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lectionsZDataGridViewTextBoxColumn.Width = 83;
+            this.lectionsZDataGridViewTextBoxColumn.Width = 99;
             // 
             // practicesZDataGridViewTextBoxColumn
             // 
@@ -3132,7 +3132,7 @@
             this.practicesZDataGridViewTextBoxColumn.HeaderText = "Практики_Z";
             this.practicesZDataGridViewTextBoxColumn.Name = "practicesZDataGridViewTextBoxColumn";
             this.practicesZDataGridViewTextBoxColumn.ReadOnly = true;
-            this.practicesZDataGridViewTextBoxColumn.Width = 94;
+            this.practicesZDataGridViewTextBoxColumn.Width = 113;
             // 
             // laboratoriesZDataGridViewTextBoxColumn
             // 
@@ -3140,7 +3140,7 @@
             this.laboratoriesZDataGridViewTextBoxColumn.HeaderText = "Лабораторные_Z";
             this.laboratoriesZDataGridViewTextBoxColumn.Name = "laboratoriesZDataGridViewTextBoxColumn";
             this.laboratoriesZDataGridViewTextBoxColumn.ReadOnly = true;
-            this.laboratoriesZDataGridViewTextBoxColumn.Width = 120;
+            this.laboratoriesZDataGridViewTextBoxColumn.Width = 149;
             // 
             // courseWorkDataGridViewCheckBoxColumn
             // 
@@ -3148,7 +3148,7 @@
             this.courseWorkDataGridViewCheckBoxColumn.HeaderText = "Курсовая";
             this.courseWorkDataGridViewCheckBoxColumn.Name = "courseWorkDataGridViewCheckBoxColumn";
             this.courseWorkDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.courseWorkDataGridViewCheckBoxColumn.Width = 61;
+            this.courseWorkDataGridViewCheckBoxColumn.Width = 76;
             // 
             // testDataGridViewCheckBoxColumn
             // 
@@ -3156,7 +3156,7 @@
             this.testDataGridViewCheckBoxColumn.HeaderText = "Контрольная";
             this.testDataGridViewCheckBoxColumn.Name = "testDataGridViewCheckBoxColumn";
             this.testDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.testDataGridViewCheckBoxColumn.Width = 79;
+            this.testDataGridViewCheckBoxColumn.Width = 101;
             // 
             // topicPlanDataGridViewImageColumn
             // 
@@ -3164,7 +3164,7 @@
             this.topicPlanDataGridViewImageColumn.HeaderText = "Тематический план";
             this.topicPlanDataGridViewImageColumn.Name = "topicPlanDataGridViewImageColumn";
             this.topicPlanDataGridViewImageColumn.ReadOnly = true;
-            this.topicPlanDataGridViewImageColumn.Width = 102;
+            this.topicPlanDataGridViewImageColumn.Width = 131;
             // 
             // subjectDescriptionDataGridViewImageColumn
             // 
@@ -3172,7 +3172,7 @@
             this.subjectDescriptionDataGridViewImageColumn.HeaderText = "Описание предмета";
             this.subjectDescriptionDataGridViewImageColumn.Name = "subjectDescriptionDataGridViewImageColumn";
             this.subjectDescriptionDataGridViewImageColumn.ReadOnly = true;
-            this.subjectDescriptionDataGridViewImageColumn.Width = 104;
+            this.subjectDescriptionDataGridViewImageColumn.Width = 133;
             // 
             // workLoadTab
             // 
@@ -3205,10 +3205,10 @@
             this.workLoadTab.Controls.Add(groupLabel);
             this.workLoadTab.Controls.Add(this.workLoadGroupComboBox);
             this.workLoadTab.Controls.Add(this.workLoadGrid);
-            this.workLoadTab.Location = new System.Drawing.Point(4, 22);
+            this.workLoadTab.Location = new System.Drawing.Point(4, 25);
             this.workLoadTab.Name = "workLoadTab";
             this.workLoadTab.Padding = new System.Windows.Forms.Padding(3);
-            this.workLoadTab.Size = new System.Drawing.Size(1118, 582);
+            this.workLoadTab.Size = new System.Drawing.Size(1118, 579);
             this.workLoadTab.TabIndex = 3;
             this.workLoadTab.Text = "Нагрузка";
             this.workLoadTab.UseVisualStyleBackColor = true;
@@ -3243,7 +3243,7 @@
             this.workLoadNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem3;
             this.workLoadNavigator.Name = "workLoadNavigator";
             this.workLoadNavigator.PositionItem = this.bindingNavigatorPositionItem3;
-            this.workLoadNavigator.Size = new System.Drawing.Size(301, 25);
+            this.workLoadNavigator.Size = new System.Drawing.Size(301, 22);
             this.workLoadNavigator.TabIndex = 27;
             this.workLoadNavigator.Text = "workLoadNavigator";
             // 
@@ -3253,7 +3253,7 @@
             this.bindingNavigatorAddNewItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem3.Image")));
             this.bindingNavigatorAddNewItem3.Name = "bindingNavigatorAddNewItem3";
             this.bindingNavigatorAddNewItem3.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem3.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorAddNewItem3.Text = "Add new";
             this.bindingNavigatorAddNewItem3.Click += new System.EventHandler(this.bindingNavigatorAddNewItem3_Click);
             // 
@@ -3265,7 +3265,7 @@
             // bindingNavigatorCountItem3
             // 
             this.bindingNavigatorCountItem3.Name = "bindingNavigatorCountItem3";
-            this.bindingNavigatorCountItem3.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem3.Size = new System.Drawing.Size(35, 19);
             this.bindingNavigatorCountItem3.Text = "of {0}";
             this.bindingNavigatorCountItem3.ToolTipText = "Total number of items";
             // 
@@ -3275,7 +3275,7 @@
             this.bindingNavigatorDeleteItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem3.Image")));
             this.bindingNavigatorDeleteItem3.Name = "bindingNavigatorDeleteItem3";
             this.bindingNavigatorDeleteItem3.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem3.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorDeleteItem3.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem3
@@ -3284,7 +3284,7 @@
             this.bindingNavigatorMoveFirstItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem3.Image")));
             this.bindingNavigatorMoveFirstItem3.Name = "bindingNavigatorMoveFirstItem3";
             this.bindingNavigatorMoveFirstItem3.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem3.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveFirstItem3.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem3
@@ -3293,13 +3293,13 @@
             this.bindingNavigatorMovePreviousItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem3.Image")));
             this.bindingNavigatorMovePreviousItem3.Name = "bindingNavigatorMovePreviousItem3";
             this.bindingNavigatorMovePreviousItem3.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem3.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMovePreviousItem3.Text = "Move previous";
             // 
             // bindingNavigatorSeparator9
             // 
             this.bindingNavigatorSeparator9.Name = "bindingNavigatorSeparator9";
-            this.bindingNavigatorSeparator9.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator9.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorPositionItem3
             // 
@@ -3313,7 +3313,7 @@
             // bindingNavigatorSeparator10
             // 
             this.bindingNavigatorSeparator10.Name = "bindingNavigatorSeparator10";
-            this.bindingNavigatorSeparator10.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator10.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorMoveNextItem3
             // 
@@ -3321,7 +3321,7 @@
             this.bindingNavigatorMoveNextItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem3.Image")));
             this.bindingNavigatorMoveNextItem3.Name = "bindingNavigatorMoveNextItem3";
             this.bindingNavigatorMoveNextItem3.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem3.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveNextItem3.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem3
@@ -3330,13 +3330,13 @@
             this.bindingNavigatorMoveLastItem3.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem3.Image")));
             this.bindingNavigatorMoveLastItem3.Name = "bindingNavigatorMoveLastItem3";
             this.bindingNavigatorMoveLastItem3.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem3.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem3.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveLastItem3.Text = "Move last";
             // 
             // bindingNavigatorSeparator11
             // 
             this.bindingNavigatorSeparator11.Name = "bindingNavigatorSeparator11";
-            this.bindingNavigatorSeparator11.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator11.Size = new System.Drawing.Size(6, 22);
             // 
             // newToolStripButton1
             // 
@@ -3344,7 +3344,7 @@
             this.newToolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton1.Image")));
             this.newToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton1.Name = "newToolStripButton1";
-            this.newToolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.newToolStripButton1.Size = new System.Drawing.Size(23, 19);
             this.newToolStripButton1.Text = "&Clear";
             this.newToolStripButton1.Click += new System.EventHandler(this.newToolStripButton1_Click);
             // 
@@ -3354,7 +3354,7 @@
             this.saveToolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton3.Image")));
             this.saveToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton3.Name = "saveToolStripButton3";
-            this.saveToolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton3.Size = new System.Drawing.Size(23, 19);
             this.saveToolStripButton3.Text = "&Save";
             this.saveToolStripButton3.Click += new System.EventHandler(this.saveToolStripButton3_Click);
             // 
@@ -3368,7 +3368,7 @@
             0,
             0});
             this.workLoadContactHoursNumericUpDown.Name = "workLoadContactHoursNumericUpDown";
-            this.workLoadContactHoursNumericUpDown.Size = new System.Drawing.Size(183, 20);
+            this.workLoadContactHoursNumericUpDown.Size = new System.Drawing.Size(183, 23);
             this.workLoadContactHoursNumericUpDown.TabIndex = 26;
             // 
             // workLoadTotalHoursNumericUpDown
@@ -3381,7 +3381,7 @@
             0,
             0});
             this.workLoadTotalHoursNumericUpDown.Name = "workLoadTotalHoursNumericUpDown";
-            this.workLoadTotalHoursNumericUpDown.Size = new System.Drawing.Size(183, 20);
+            this.workLoadTotalHoursNumericUpDown.Size = new System.Drawing.Size(183, 23);
             this.workLoadTotalHoursNumericUpDown.TabIndex = 24;
             // 
             // workLoadLoadMultiplyNumericUpDown
@@ -3400,7 +3400,7 @@
             0,
             65536});
             this.workLoadLoadMultiplyNumericUpDown.Name = "workLoadLoadMultiplyNumericUpDown";
-            this.workLoadLoadMultiplyNumericUpDown.Size = new System.Drawing.Size(183, 20);
+            this.workLoadLoadMultiplyNumericUpDown.Size = new System.Drawing.Size(183, 23);
             this.workLoadLoadMultiplyNumericUpDown.TabIndex = 22;
             // 
             // workLoadLanguageListBox
@@ -3409,9 +3409,10 @@
             this.workLoadLanguageListBox.DataSource = this.languageBindingSource;
             this.workLoadLanguageListBox.DisplayMember = "LanguageName";
             this.workLoadLanguageListBox.FormattingEnabled = true;
+            this.workLoadLanguageListBox.ItemHeight = 16;
             this.workLoadLanguageListBox.Location = new System.Drawing.Point(536, 122);
             this.workLoadLanguageListBox.Name = "workLoadLanguageListBox";
-            this.workLoadLanguageListBox.Size = new System.Drawing.Size(193, 95);
+            this.workLoadLanguageListBox.Size = new System.Drawing.Size(193, 84);
             this.workLoadLanguageListBox.TabIndex = 20;
             this.workLoadLanguageListBox.ValueMember = "LanguageName";
             this.workLoadLanguageListBox.SelectedValueChanged += new System.EventHandler(this.languageListBox_SelectedValueChanged);
@@ -3431,7 +3432,7 @@
             0,
             0});
             this.workLoadCourseWorkNumericUpDown.Name = "workLoadCourseWorkNumericUpDown";
-            this.workLoadCourseWorkNumericUpDown.Size = new System.Drawing.Size(193, 20);
+            this.workLoadCourseWorkNumericUpDown.Size = new System.Drawing.Size(193, 23);
             this.workLoadCourseWorkNumericUpDown.TabIndex = 18;
             // 
             // workLoadLaboratoryCountNumericUpDown
@@ -3444,7 +3445,7 @@
             0,
             0});
             this.workLoadLaboratoryCountNumericUpDown.Name = "workLoadLaboratoryCountNumericUpDown";
-            this.workLoadLaboratoryCountNumericUpDown.Size = new System.Drawing.Size(193, 20);
+            this.workLoadLaboratoryCountNumericUpDown.Size = new System.Drawing.Size(193, 23);
             this.workLoadLaboratoryCountNumericUpDown.TabIndex = 16;
             this.workLoadLaboratoryCountNumericUpDown.ValueChanged += new System.EventHandler(this.workLoadLectionCountNumericUpDown_ValueChanged);
             // 
@@ -3458,7 +3459,7 @@
             0,
             0});
             this.workLoadPracticeCountNumericUpDown.Name = "workLoadPracticeCountNumericUpDown";
-            this.workLoadPracticeCountNumericUpDown.Size = new System.Drawing.Size(193, 20);
+            this.workLoadPracticeCountNumericUpDown.Size = new System.Drawing.Size(193, 23);
             this.workLoadPracticeCountNumericUpDown.TabIndex = 14;
             this.workLoadPracticeCountNumericUpDown.ValueChanged += new System.EventHandler(this.workLoadLectionCountNumericUpDown_ValueChanged);
             // 
@@ -3472,7 +3473,7 @@
             0,
             0});
             this.workLoadLectionCountNumericUpDown.Name = "workLoadLectionCountNumericUpDown";
-            this.workLoadLectionCountNumericUpDown.Size = new System.Drawing.Size(193, 20);
+            this.workLoadLectionCountNumericUpDown.Size = new System.Drawing.Size(193, 23);
             this.workLoadLectionCountNumericUpDown.TabIndex = 12;
             this.workLoadLectionCountNumericUpDown.ValueChanged += new System.EventHandler(this.workLoadLectionCountNumericUpDown_ValueChanged);
             // 
@@ -3480,6 +3481,7 @@
             // 
             this.workLoadSemesterListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedIndex", this.workloadBindingSource, "Semester", true));
             this.workLoadSemesterListBox.FormattingEnabled = true;
+            this.workLoadSemesterListBox.ItemHeight = 16;
             this.workLoadSemesterListBox.Items.AddRange(new object[] {
             "0",
             "1",
@@ -3492,7 +3494,7 @@
             "8"});
             this.workLoadSemesterListBox.Location = new System.Drawing.Point(135, 122);
             this.workLoadSemesterListBox.Name = "workLoadSemesterListBox";
-            this.workLoadSemesterListBox.Size = new System.Drawing.Size(246, 95);
+            this.workLoadSemesterListBox.Size = new System.Drawing.Size(246, 84);
             this.workLoadSemesterListBox.TabIndex = 10;
             // 
             // workLoadStudyYearNumericUpDown
@@ -3510,7 +3512,7 @@
             0,
             0});
             this.workLoadStudyYearNumericUpDown.Name = "workLoadStudyYearNumericUpDown";
-            this.workLoadStudyYearNumericUpDown.Size = new System.Drawing.Size(246, 20);
+            this.workLoadStudyYearNumericUpDown.Size = new System.Drawing.Size(246, 23);
             this.workLoadStudyYearNumericUpDown.TabIndex = 8;
             this.workLoadStudyYearNumericUpDown.Value = new decimal(new int[] {
             1990,
@@ -3526,7 +3528,7 @@
             this.workLoadLecturerComboBox.FormattingEnabled = true;
             this.workLoadLecturerComboBox.Location = new System.Drawing.Point(135, 69);
             this.workLoadLecturerComboBox.Name = "workLoadLecturerComboBox";
-            this.workLoadLecturerComboBox.Size = new System.Drawing.Size(246, 21);
+            this.workLoadLecturerComboBox.Size = new System.Drawing.Size(246, 24);
             this.workLoadLecturerComboBox.TabIndex = 6;
             this.workLoadLecturerComboBox.ValueMember = "PK";
             // 
@@ -3538,7 +3540,7 @@
             this.workLoadSubjectComboBox.FormattingEnabled = true;
             this.workLoadSubjectComboBox.Location = new System.Drawing.Point(135, 42);
             this.workLoadSubjectComboBox.Name = "workLoadSubjectComboBox";
-            this.workLoadSubjectComboBox.Size = new System.Drawing.Size(246, 21);
+            this.workLoadSubjectComboBox.Size = new System.Drawing.Size(246, 24);
             this.workLoadSubjectComboBox.TabIndex = 4;
             this.workLoadSubjectComboBox.ValueMember = "SubjectCode";
             // 
@@ -3550,7 +3552,7 @@
             this.workLoadGroupComboBox.FormattingEnabled = true;
             this.workLoadGroupComboBox.Location = new System.Drawing.Point(135, 15);
             this.workLoadGroupComboBox.Name = "workLoadGroupComboBox";
-            this.workLoadGroupComboBox.Size = new System.Drawing.Size(246, 21);
+            this.workLoadGroupComboBox.Size = new System.Drawing.Size(246, 24);
             this.workLoadGroupComboBox.TabIndex = 2;
             this.workLoadGroupComboBox.ValueMember = "GroupNumber";
             // 
@@ -3584,7 +3586,7 @@
             this.workLoadGrid.Name = "workLoadGrid";
             this.workLoadGrid.ReadOnly = true;
             this.workLoadGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.workLoadGrid.Size = new System.Drawing.Size(1105, 296);
+            this.workLoadGrid.Size = new System.Drawing.Size(1105, 293);
             this.workLoadGrid.TabIndex = 0;
             // 
             // groupDataGridViewTextBoxColumn
@@ -3682,10 +3684,10 @@
             // 
             this.languageTab.Controls.Add(this.subjectReadingGroup);
             this.languageTab.Controls.Add(this.groupBox1);
-            this.languageTab.Location = new System.Drawing.Point(4, 22);
+            this.languageTab.Location = new System.Drawing.Point(4, 25);
             this.languageTab.Name = "languageTab";
             this.languageTab.Padding = new System.Windows.Forms.Padding(3);
-            this.languageTab.Size = new System.Drawing.Size(1118, 582);
+            this.languageTab.Size = new System.Drawing.Size(1118, 579);
             this.languageTab.TabIndex = 4;
             this.languageTab.Text = "Чтение предмета";
             this.languageTab.UseVisualStyleBackColor = true;
@@ -3710,7 +3712,7 @@
             this.subjectReadingGroup.Controls.Add(this.subjectReadingLanguageComboBox);
             this.subjectReadingGroup.Location = new System.Drawing.Point(407, 7);
             this.subjectReadingGroup.Name = "subjectReadingGroup";
-            this.subjectReadingGroup.Size = new System.Drawing.Size(705, 569);
+            this.subjectReadingGroup.Size = new System.Drawing.Size(705, 566);
             this.subjectReadingGroup.TabIndex = 5;
             this.subjectReadingGroup.TabStop = false;
             this.subjectReadingGroup.Text = "Чтение предмета";
@@ -3745,7 +3747,7 @@
             this.subjectReadingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem5;
             this.subjectReadingNavigator.Name = "subjectReadingNavigator";
             this.subjectReadingNavigator.PositionItem = this.bindingNavigatorPositionItem5;
-            this.subjectReadingNavigator.Size = new System.Drawing.Size(301, 25);
+            this.subjectReadingNavigator.Size = new System.Drawing.Size(301, 22);
             this.subjectReadingNavigator.TabIndex = 11;
             this.subjectReadingNavigator.Text = "bindingNavigator1";
             // 
@@ -3755,7 +3757,7 @@
             this.bindingNavigatorAddNewItem5.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem5.Image")));
             this.bindingNavigatorAddNewItem5.Name = "bindingNavigatorAddNewItem5";
             this.bindingNavigatorAddNewItem5.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem5.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem5.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorAddNewItem5.Text = "Add new";
             this.bindingNavigatorAddNewItem5.Click += new System.EventHandler(this.bindingNavigatorAddNewItem5_Click);
             // 
@@ -3767,7 +3769,7 @@
             // bindingNavigatorCountItem5
             // 
             this.bindingNavigatorCountItem5.Name = "bindingNavigatorCountItem5";
-            this.bindingNavigatorCountItem5.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem5.Size = new System.Drawing.Size(35, 19);
             this.bindingNavigatorCountItem5.Text = "of {0}";
             this.bindingNavigatorCountItem5.ToolTipText = "Total number of items";
             // 
@@ -3777,7 +3779,7 @@
             this.bindingNavigatorDeleteItem5.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem5.Image")));
             this.bindingNavigatorDeleteItem5.Name = "bindingNavigatorDeleteItem5";
             this.bindingNavigatorDeleteItem5.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem5.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem5.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorDeleteItem5.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem5
@@ -3786,7 +3788,7 @@
             this.bindingNavigatorMoveFirstItem5.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem5.Image")));
             this.bindingNavigatorMoveFirstItem5.Name = "bindingNavigatorMoveFirstItem5";
             this.bindingNavigatorMoveFirstItem5.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem5.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem5.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveFirstItem5.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem5
@@ -3795,13 +3797,13 @@
             this.bindingNavigatorMovePreviousItem5.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem5.Image")));
             this.bindingNavigatorMovePreviousItem5.Name = "bindingNavigatorMovePreviousItem5";
             this.bindingNavigatorMovePreviousItem5.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem5.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem5.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMovePreviousItem5.Text = "Move previous";
             // 
             // bindingNavigatorSeparator15
             // 
             this.bindingNavigatorSeparator15.Name = "bindingNavigatorSeparator15";
-            this.bindingNavigatorSeparator15.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator15.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorPositionItem5
             // 
@@ -3815,7 +3817,7 @@
             // bindingNavigatorSeparator16
             // 
             this.bindingNavigatorSeparator16.Name = "bindingNavigatorSeparator16";
-            this.bindingNavigatorSeparator16.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator16.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorMoveNextItem5
             // 
@@ -3823,7 +3825,7 @@
             this.bindingNavigatorMoveNextItem5.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem5.Image")));
             this.bindingNavigatorMoveNextItem5.Name = "bindingNavigatorMoveNextItem5";
             this.bindingNavigatorMoveNextItem5.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem5.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem5.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveNextItem5.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem5
@@ -3832,13 +3834,13 @@
             this.bindingNavigatorMoveLastItem5.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem5.Image")));
             this.bindingNavigatorMoveLastItem5.Name = "bindingNavigatorMoveLastItem5";
             this.bindingNavigatorMoveLastItem5.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem5.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem5.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveLastItem5.Text = "Move last";
             // 
             // bindingNavigatorSeparator17
             // 
             this.bindingNavigatorSeparator17.Name = "bindingNavigatorSeparator17";
-            this.bindingNavigatorSeparator17.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator17.Size = new System.Drawing.Size(6, 22);
             // 
             // newToolStripButton3
             // 
@@ -3846,7 +3848,7 @@
             this.newToolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton3.Image")));
             this.newToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton3.Name = "newToolStripButton3";
-            this.newToolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.newToolStripButton3.Size = new System.Drawing.Size(23, 19);
             this.newToolStripButton3.Text = "&Clear";
             this.newToolStripButton3.Click += new System.EventHandler(this.newToolStripButton3_Click);
             // 
@@ -3856,7 +3858,7 @@
             this.saveToolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton5.Image")));
             this.saveToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton5.Name = "saveToolStripButton5";
-            this.saveToolStripButton5.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton5.Size = new System.Drawing.Size(23, 19);
             this.saveToolStripButton5.Text = "&Save";
             this.saveToolStripButton5.Click += new System.EventHandler(this.saveToolStripButton5_Click);
             // 
@@ -3882,7 +3884,7 @@
             this.subjectReadingGrid.Name = "subjectReadingGrid";
             this.subjectReadingGrid.ReadOnly = true;
             this.subjectReadingGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.subjectReadingGrid.Size = new System.Drawing.Size(693, 310);
+            this.subjectReadingGrid.Size = new System.Drawing.Size(693, 307);
             this.subjectReadingGrid.TabIndex = 10;
             // 
             // languageDataGridViewTextBoxColumn1
@@ -3925,6 +3927,7 @@
             this.subjectReadingReadSemesterListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.subjectReadingReadSemesterListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedIndex", this.subjectReadingBindingSource, "ReadSemester", true));
             this.subjectReadingReadSemesterListBox.FormattingEnabled = true;
+            this.subjectReadingReadSemesterListBox.ItemHeight = 16;
             this.subjectReadingReadSemesterListBox.Items.AddRange(new object[] {
             "0",
             "1",
@@ -3935,15 +3938,15 @@
             "6",
             "7",
             "8"});
-            this.subjectReadingReadSemesterListBox.Location = new System.Drawing.Point(579, 16);
+            this.subjectReadingReadSemesterListBox.Location = new System.Drawing.Point(564, 16);
             this.subjectReadingReadSemesterListBox.Name = "subjectReadingReadSemesterListBox";
-            this.subjectReadingReadSemesterListBox.Size = new System.Drawing.Size(120, 95);
+            this.subjectReadingReadSemesterListBox.Size = new System.Drawing.Size(120, 84);
             this.subjectReadingReadSemesterListBox.TabIndex = 9;
             // 
             // subjectReadingReadYearNumericUpDown
             // 
             this.subjectReadingReadYearNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.subjectReadingBindingSource, "ReadYear", true));
-            this.subjectReadingReadYearNumericUpDown.Location = new System.Drawing.Point(112, 98);
+            this.subjectReadingReadYearNumericUpDown.Location = new System.Drawing.Point(133, 99);
             this.subjectReadingReadYearNumericUpDown.Maximum = new decimal(new int[] {
             3999,
             0,
@@ -3955,7 +3958,7 @@
             0,
             0});
             this.subjectReadingReadYearNumericUpDown.Name = "subjectReadingReadYearNumericUpDown";
-            this.subjectReadingReadYearNumericUpDown.Size = new System.Drawing.Size(216, 20);
+            this.subjectReadingReadYearNumericUpDown.Size = new System.Drawing.Size(216, 23);
             this.subjectReadingReadYearNumericUpDown.TabIndex = 7;
             this.subjectReadingReadYearNumericUpDown.Value = new decimal(new int[] {
             1990,
@@ -3968,9 +3971,9 @@
             this.subjectReadingLecturerComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.subjectReadingBindingSource, "Lecturer", true));
             this.subjectReadingLecturerComboBox.DisplayMember = "PK";
             this.subjectReadingLecturerComboBox.FormattingEnabled = true;
-            this.subjectReadingLecturerComboBox.Location = new System.Drawing.Point(112, 71);
+            this.subjectReadingLecturerComboBox.Location = new System.Drawing.Point(133, 72);
             this.subjectReadingLecturerComboBox.Name = "subjectReadingLecturerComboBox";
-            this.subjectReadingLecturerComboBox.Size = new System.Drawing.Size(216, 21);
+            this.subjectReadingLecturerComboBox.Size = new System.Drawing.Size(216, 24);
             this.subjectReadingLecturerComboBox.TabIndex = 5;
             this.subjectReadingLecturerComboBox.ValueMember = "PK";
             // 
@@ -3979,9 +3982,9 @@
             this.subjectReadingSubjectComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.subjectReadingBindingSource, "Subject", true));
             this.subjectReadingSubjectComboBox.DisplayMember = "SubjectCode";
             this.subjectReadingSubjectComboBox.FormattingEnabled = true;
-            this.subjectReadingSubjectComboBox.Location = new System.Drawing.Point(112, 44);
+            this.subjectReadingSubjectComboBox.Location = new System.Drawing.Point(133, 45);
             this.subjectReadingSubjectComboBox.Name = "subjectReadingSubjectComboBox";
-            this.subjectReadingSubjectComboBox.Size = new System.Drawing.Size(216, 21);
+            this.subjectReadingSubjectComboBox.Size = new System.Drawing.Size(216, 24);
             this.subjectReadingSubjectComboBox.TabIndex = 3;
             this.subjectReadingSubjectComboBox.ValueMember = "SubjectCode";
             // 
@@ -3990,9 +3993,9 @@
             this.subjectReadingLanguageComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.subjectReadingBindingSource, "Language", true));
             this.subjectReadingLanguageComboBox.DisplayMember = "Language";
             this.subjectReadingLanguageComboBox.FormattingEnabled = true;
-            this.subjectReadingLanguageComboBox.Location = new System.Drawing.Point(112, 17);
+            this.subjectReadingLanguageComboBox.Location = new System.Drawing.Point(133, 18);
             this.subjectReadingLanguageComboBox.Name = "subjectReadingLanguageComboBox";
-            this.subjectReadingLanguageComboBox.Size = new System.Drawing.Size(216, 21);
+            this.subjectReadingLanguageComboBox.Size = new System.Drawing.Size(216, 24);
             this.subjectReadingLanguageComboBox.TabIndex = 1;
             this.subjectReadingLanguageComboBox.ValueMember = "Language";
             // 
@@ -4189,7 +4192,7 @@
             this.languageNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.languageBindingSource, "LanguageName", true));
             this.languageNameTextBox.Location = new System.Drawing.Point(152, 19);
             this.languageNameTextBox.Name = "languageNameTextBox";
-            this.languageNameTextBox.Size = new System.Drawing.Size(208, 20);
+            this.languageNameTextBox.Size = new System.Drawing.Size(208, 23);
             this.languageNameTextBox.TabIndex = 2;
             this.languageNameTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.languageNameTextBox_Validating);
             // 
@@ -4214,10 +4217,10 @@
             this.planAccomplishmentTab.Controls.Add(planAccomplishmentLecturerLabel);
             this.planAccomplishmentTab.Controls.Add(this.planAccomplishmentLecturerComboBox);
             this.planAccomplishmentTab.Controls.Add(this.planAccomplishmentGrid);
-            this.planAccomplishmentTab.Location = new System.Drawing.Point(4, 22);
+            this.planAccomplishmentTab.Location = new System.Drawing.Point(4, 25);
             this.planAccomplishmentTab.Name = "planAccomplishmentTab";
             this.planAccomplishmentTab.Padding = new System.Windows.Forms.Padding(3);
-            this.planAccomplishmentTab.Size = new System.Drawing.Size(1118, 582);
+            this.planAccomplishmentTab.Size = new System.Drawing.Size(1118, 579);
             this.planAccomplishmentTab.TabIndex = 5;
             this.planAccomplishmentTab.Text = "Выполнение плана";
             this.planAccomplishmentTab.UseVisualStyleBackColor = true;
@@ -4253,7 +4256,7 @@
             this.planAccomplishmentNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem6;
             this.planAccomplishmentNavigator.Name = "planAccomplishmentNavigator";
             this.planAccomplishmentNavigator.PositionItem = this.bindingNavigatorPositionItem6;
-            this.planAccomplishmentNavigator.Size = new System.Drawing.Size(301, 25);
+            this.planAccomplishmentNavigator.Size = new System.Drawing.Size(301, 22);
             this.planAccomplishmentNavigator.TabIndex = 17;
             this.planAccomplishmentNavigator.Text = "bindingNavigator1";
             // 
@@ -4263,7 +4266,7 @@
             this.bindingNavigatorAddNewItem6.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem6.Image")));
             this.bindingNavigatorAddNewItem6.Name = "bindingNavigatorAddNewItem6";
             this.bindingNavigatorAddNewItem6.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem6.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem6.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorAddNewItem6.Text = "Add new";
             this.bindingNavigatorAddNewItem6.Click += new System.EventHandler(this.bindingNavigatorAddNewItem6_Click);
             // 
@@ -4275,7 +4278,7 @@
             // bindingNavigatorCountItem6
             // 
             this.bindingNavigatorCountItem6.Name = "bindingNavigatorCountItem6";
-            this.bindingNavigatorCountItem6.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem6.Size = new System.Drawing.Size(35, 19);
             this.bindingNavigatorCountItem6.Text = "of {0}";
             this.bindingNavigatorCountItem6.ToolTipText = "Total number of items";
             // 
@@ -4285,7 +4288,7 @@
             this.bindingNavigatorDeleteItem6.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem6.Image")));
             this.bindingNavigatorDeleteItem6.Name = "bindingNavigatorDeleteItem6";
             this.bindingNavigatorDeleteItem6.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem6.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem6.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorDeleteItem6.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem6
@@ -4294,7 +4297,7 @@
             this.bindingNavigatorMoveFirstItem6.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem6.Image")));
             this.bindingNavigatorMoveFirstItem6.Name = "bindingNavigatorMoveFirstItem6";
             this.bindingNavigatorMoveFirstItem6.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem6.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem6.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveFirstItem6.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem6
@@ -4303,13 +4306,13 @@
             this.bindingNavigatorMovePreviousItem6.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem6.Image")));
             this.bindingNavigatorMovePreviousItem6.Name = "bindingNavigatorMovePreviousItem6";
             this.bindingNavigatorMovePreviousItem6.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem6.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem6.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMovePreviousItem6.Text = "Move previous";
             // 
             // bindingNavigatorSeparator18
             // 
             this.bindingNavigatorSeparator18.Name = "bindingNavigatorSeparator18";
-            this.bindingNavigatorSeparator18.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator18.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorPositionItem6
             // 
@@ -4323,7 +4326,7 @@
             // bindingNavigatorSeparator19
             // 
             this.bindingNavigatorSeparator19.Name = "bindingNavigatorSeparator19";
-            this.bindingNavigatorSeparator19.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator19.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorMoveNextItem6
             // 
@@ -4331,7 +4334,7 @@
             this.bindingNavigatorMoveNextItem6.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem6.Image")));
             this.bindingNavigatorMoveNextItem6.Name = "bindingNavigatorMoveNextItem6";
             this.bindingNavigatorMoveNextItem6.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem6.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem6.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveNextItem6.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem6
@@ -4340,13 +4343,13 @@
             this.bindingNavigatorMoveLastItem6.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem6.Image")));
             this.bindingNavigatorMoveLastItem6.Name = "bindingNavigatorMoveLastItem6";
             this.bindingNavigatorMoveLastItem6.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem6.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem6.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveLastItem6.Text = "Move last";
             // 
             // bindingNavigatorSeparator20
             // 
             this.bindingNavigatorSeparator20.Name = "bindingNavigatorSeparator20";
-            this.bindingNavigatorSeparator20.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator20.Size = new System.Drawing.Size(6, 22);
             // 
             // newToolStripButton4
             // 
@@ -4354,7 +4357,7 @@
             this.newToolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton4.Image")));
             this.newToolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton4.Name = "newToolStripButton4";
-            this.newToolStripButton4.Size = new System.Drawing.Size(23, 22);
+            this.newToolStripButton4.Size = new System.Drawing.Size(23, 19);
             this.newToolStripButton4.Text = "&Clear";
             this.newToolStripButton4.Click += new System.EventHandler(this.newToolStripButton4_Click);
             // 
@@ -4364,7 +4367,7 @@
             this.saveToolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton6.Image")));
             this.saveToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton6.Name = "saveToolStripButton6";
-            this.saveToolStripButton6.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton6.Size = new System.Drawing.Size(23, 19);
             this.saveToolStripButton6.Text = "&Save";
             this.saveToolStripButton6.Click += new System.EventHandler(this.saveToolStripButton6_Click);
             // 
@@ -4372,27 +4375,27 @@
             // 
             this.planAccomplishmentHoursNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.planAccomplishmentHoursNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.planAccomplishmentBindingSource, "Hours", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.planAccomplishmentHoursNumericUpDown.Location = new System.Drawing.Point(760, 64);
+            this.planAccomplishmentHoursNumericUpDown.Location = new System.Drawing.Point(791, 64);
             this.planAccomplishmentHoursNumericUpDown.Name = "planAccomplishmentHoursNumericUpDown";
-            this.planAccomplishmentHoursNumericUpDown.Size = new System.Drawing.Size(191, 20);
+            this.planAccomplishmentHoursNumericUpDown.Size = new System.Drawing.Size(191, 23);
             this.planAccomplishmentHoursNumericUpDown.TabIndex = 16;
             // 
             // planAccomplishmentLectureActualTopicTextBox
             // 
             this.planAccomplishmentLectureActualTopicTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.planAccomplishmentLectureActualTopicTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.planAccomplishmentBindingSource, "LectureActualTopic", true));
-            this.planAccomplishmentLectureActualTopicTextBox.Location = new System.Drawing.Point(760, 37);
+            this.planAccomplishmentLectureActualTopicTextBox.Location = new System.Drawing.Point(791, 37);
             this.planAccomplishmentLectureActualTopicTextBox.Name = "planAccomplishmentLectureActualTopicTextBox";
-            this.planAccomplishmentLectureActualTopicTextBox.Size = new System.Drawing.Size(295, 20);
+            this.planAccomplishmentLectureActualTopicTextBox.Size = new System.Drawing.Size(295, 23);
             this.planAccomplishmentLectureActualTopicTextBox.TabIndex = 14;
             // 
             // planAccomplishmentLecturePlannedTopicTextBox
             // 
             this.planAccomplishmentLecturePlannedTopicTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.planAccomplishmentLecturePlannedTopicTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.planAccomplishmentBindingSource, "LecturePlannedTopic", true));
-            this.planAccomplishmentLecturePlannedTopicTextBox.Location = new System.Drawing.Point(760, 9);
+            this.planAccomplishmentLecturePlannedTopicTextBox.Location = new System.Drawing.Point(791, 9);
             this.planAccomplishmentLecturePlannedTopicTextBox.Name = "planAccomplishmentLecturePlannedTopicTextBox";
-            this.planAccomplishmentLecturePlannedTopicTextBox.Size = new System.Drawing.Size(295, 20);
+            this.planAccomplishmentLecturePlannedTopicTextBox.Size = new System.Drawing.Size(295, 23);
             this.planAccomplishmentLecturePlannedTopicTextBox.TabIndex = 12;
             // 
             // planAccomplishmentLectureTypeListBox
@@ -4401,18 +4404,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.planAccomplishmentLectureTypeListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.planAccomplishmentBindingSource, "LectureType", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.planAccomplishmentLectureTypeListBox.FormattingEnabled = true;
-            this.planAccomplishmentLectureTypeListBox.Location = new System.Drawing.Point(432, 9);
+            this.planAccomplishmentLectureTypeListBox.ItemHeight = 16;
+            this.planAccomplishmentLectureTypeListBox.Location = new System.Drawing.Point(452, 9);
             this.planAccomplishmentLectureTypeListBox.Name = "planAccomplishmentLectureTypeListBox";
-            this.planAccomplishmentLectureTypeListBox.Size = new System.Drawing.Size(167, 108);
+            this.planAccomplishmentLectureTypeListBox.Size = new System.Drawing.Size(167, 100);
             this.planAccomplishmentLectureTypeListBox.TabIndex = 10;
             // 
             // planAccomplishmentEventDateDateTimePicker
             // 
             this.planAccomplishmentEventDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.planAccomplishmentBindingSource, "EventDate", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.planAccomplishmentEventDateDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.planAccomplishmentEventDateDateTimePicker.Location = new System.Drawing.Point(116, 98);
+            this.planAccomplishmentEventDateDateTimePicker.Location = new System.Drawing.Point(121, 98);
             this.planAccomplishmentEventDateDateTimePicker.Name = "planAccomplishmentEventDateDateTimePicker";
-            this.planAccomplishmentEventDateDateTimePicker.Size = new System.Drawing.Size(231, 20);
+            this.planAccomplishmentEventDateDateTimePicker.Size = new System.Drawing.Size(231, 23);
             this.planAccomplishmentEventDateDateTimePicker.TabIndex = 8;
             // 
             // planAccomplishmentGroupComboBox
@@ -4421,9 +4425,9 @@
             this.planAccomplishmentGroupComboBox.DataSource = this.groupBindingSource;
             this.planAccomplishmentGroupComboBox.DisplayMember = "GroupNumber";
             this.planAccomplishmentGroupComboBox.FormattingEnabled = true;
-            this.planAccomplishmentGroupComboBox.Location = new System.Drawing.Point(116, 63);
+            this.planAccomplishmentGroupComboBox.Location = new System.Drawing.Point(121, 63);
             this.planAccomplishmentGroupComboBox.Name = "planAccomplishmentGroupComboBox";
-            this.planAccomplishmentGroupComboBox.Size = new System.Drawing.Size(231, 21);
+            this.planAccomplishmentGroupComboBox.Size = new System.Drawing.Size(231, 24);
             this.planAccomplishmentGroupComboBox.TabIndex = 6;
             this.planAccomplishmentGroupComboBox.ValueMember = "GroupNumber";
             // 
@@ -4433,9 +4437,9 @@
             this.planAccomplishmentSubjectComboBox.DataSource = this.subjectBindingSource;
             this.planAccomplishmentSubjectComboBox.DisplayMember = "SubjectName_rus";
             this.planAccomplishmentSubjectComboBox.FormattingEnabled = true;
-            this.planAccomplishmentSubjectComboBox.Location = new System.Drawing.Point(116, 36);
+            this.planAccomplishmentSubjectComboBox.Location = new System.Drawing.Point(121, 36);
             this.planAccomplishmentSubjectComboBox.Name = "planAccomplishmentSubjectComboBox";
-            this.planAccomplishmentSubjectComboBox.Size = new System.Drawing.Size(231, 21);
+            this.planAccomplishmentSubjectComboBox.Size = new System.Drawing.Size(231, 24);
             this.planAccomplishmentSubjectComboBox.TabIndex = 4;
             this.planAccomplishmentSubjectComboBox.ValueMember = "SubjectCode";
             // 
@@ -4445,9 +4449,9 @@
             this.planAccomplishmentLecturerComboBox.DataSource = this.lecturerBindingSource;
             this.planAccomplishmentLecturerComboBox.DisplayMember = "FullName";
             this.planAccomplishmentLecturerComboBox.FormattingEnabled = true;
-            this.planAccomplishmentLecturerComboBox.Location = new System.Drawing.Point(116, 9);
+            this.planAccomplishmentLecturerComboBox.Location = new System.Drawing.Point(121, 9);
             this.planAccomplishmentLecturerComboBox.Name = "planAccomplishmentLecturerComboBox";
-            this.planAccomplishmentLecturerComboBox.Size = new System.Drawing.Size(231, 21);
+            this.planAccomplishmentLecturerComboBox.Size = new System.Drawing.Size(231, 24);
             this.planAccomplishmentLecturerComboBox.TabIndex = 2;
             this.planAccomplishmentLecturerComboBox.ValueMember = "PK";
             // 
@@ -4477,7 +4481,7 @@
             this.planAccomplishmentGrid.Name = "planAccomplishmentGrid";
             this.planAccomplishmentGrid.ReadOnly = true;
             this.planAccomplishmentGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.planAccomplishmentGrid.Size = new System.Drawing.Size(1105, 306);
+            this.planAccomplishmentGrid.Size = new System.Drawing.Size(1105, 303);
             this.planAccomplishmentGrid.TabIndex = 0;
             // 
             // iDDataGridViewTextBoxColumn
@@ -4563,10 +4567,10 @@
             this.moveStudentTab.Controls.Add(groupLabel1);
             this.moveStudentTab.Controls.Add(this.moveStudentGroupComboBox);
             this.moveStudentTab.Controls.Add(this.moveStudentGrid);
-            this.moveStudentTab.Location = new System.Drawing.Point(4, 22);
+            this.moveStudentTab.Location = new System.Drawing.Point(4, 25);
             this.moveStudentTab.Name = "moveStudentTab";
             this.moveStudentTab.Padding = new System.Windows.Forms.Padding(3);
-            this.moveStudentTab.Size = new System.Drawing.Size(1118, 582);
+            this.moveStudentTab.Size = new System.Drawing.Size(1118, 579);
             this.moveStudentTab.TabIndex = 6;
             this.moveStudentTab.Text = "Перевод студентов";
             this.moveStudentTab.UseVisualStyleBackColor = true;
@@ -4602,7 +4606,7 @@
             this.moveStudentNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem7;
             this.moveStudentNavigator.Name = "moveStudentNavigator";
             this.moveStudentNavigator.PositionItem = this.bindingNavigatorPositionItem7;
-            this.moveStudentNavigator.Size = new System.Drawing.Size(301, 25);
+            this.moveStudentNavigator.Size = new System.Drawing.Size(301, 22);
             this.moveStudentNavigator.TabIndex = 15;
             this.moveStudentNavigator.Text = "bindingNavigator1";
             this.moveStudentNavigator.RefreshItems += new System.EventHandler(this.moveStudentNavigator_RefreshItems);
@@ -4613,7 +4617,7 @@
             this.bindingNavigatorAddNewItem7.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem7.Image")));
             this.bindingNavigatorAddNewItem7.Name = "bindingNavigatorAddNewItem7";
             this.bindingNavigatorAddNewItem7.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem7.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem7.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorAddNewItem7.Text = "Add new";
             this.bindingNavigatorAddNewItem7.Click += new System.EventHandler(this.bindingNavigatorAddNewItem7_Click);
             // 
@@ -4625,7 +4629,7 @@
             // bindingNavigatorCountItem7
             // 
             this.bindingNavigatorCountItem7.Name = "bindingNavigatorCountItem7";
-            this.bindingNavigatorCountItem7.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem7.Size = new System.Drawing.Size(35, 19);
             this.bindingNavigatorCountItem7.Text = "of {0}";
             this.bindingNavigatorCountItem7.ToolTipText = "Total number of items";
             // 
@@ -4635,7 +4639,7 @@
             this.bindingNavigatorDeleteItem7.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem7.Image")));
             this.bindingNavigatorDeleteItem7.Name = "bindingNavigatorDeleteItem7";
             this.bindingNavigatorDeleteItem7.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem7.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem7.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorDeleteItem7.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem7
@@ -4644,7 +4648,7 @@
             this.bindingNavigatorMoveFirstItem7.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem7.Image")));
             this.bindingNavigatorMoveFirstItem7.Name = "bindingNavigatorMoveFirstItem7";
             this.bindingNavigatorMoveFirstItem7.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem7.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem7.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveFirstItem7.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem7
@@ -4653,13 +4657,13 @@
             this.bindingNavigatorMovePreviousItem7.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem7.Image")));
             this.bindingNavigatorMovePreviousItem7.Name = "bindingNavigatorMovePreviousItem7";
             this.bindingNavigatorMovePreviousItem7.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem7.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem7.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMovePreviousItem7.Text = "Move previous";
             // 
             // bindingNavigatorSeparator21
             // 
             this.bindingNavigatorSeparator21.Name = "bindingNavigatorSeparator21";
-            this.bindingNavigatorSeparator21.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator21.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorPositionItem7
             // 
@@ -4673,7 +4677,7 @@
             // bindingNavigatorSeparator22
             // 
             this.bindingNavigatorSeparator22.Name = "bindingNavigatorSeparator22";
-            this.bindingNavigatorSeparator22.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator22.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorMoveNextItem7
             // 
@@ -4681,7 +4685,7 @@
             this.bindingNavigatorMoveNextItem7.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem7.Image")));
             this.bindingNavigatorMoveNextItem7.Name = "bindingNavigatorMoveNextItem7";
             this.bindingNavigatorMoveNextItem7.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem7.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem7.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveNextItem7.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem7
@@ -4690,13 +4694,13 @@
             this.bindingNavigatorMoveLastItem7.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem7.Image")));
             this.bindingNavigatorMoveLastItem7.Name = "bindingNavigatorMoveLastItem7";
             this.bindingNavigatorMoveLastItem7.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem7.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem7.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveLastItem7.Text = "Move last";
             // 
             // bindingNavigatorSeparator23
             // 
             this.bindingNavigatorSeparator23.Name = "bindingNavigatorSeparator23";
-            this.bindingNavigatorSeparator23.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator23.Size = new System.Drawing.Size(6, 22);
             // 
             // newToolStripButton5
             // 
@@ -4704,7 +4708,7 @@
             this.newToolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton5.Image")));
             this.newToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton5.Name = "newToolStripButton5";
-            this.newToolStripButton5.Size = new System.Drawing.Size(23, 22);
+            this.newToolStripButton5.Size = new System.Drawing.Size(23, 19);
             this.newToolStripButton5.Text = "&Clear";
             this.newToolStripButton5.Click += new System.EventHandler(this.newToolStripButton5_Click);
             // 
@@ -4714,7 +4718,7 @@
             this.saveToolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton7.Image")));
             this.saveToolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton7.Name = "saveToolStripButton7";
-            this.saveToolStripButton7.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton7.Size = new System.Drawing.Size(23, 19);
             this.saveToolStripButton7.Text = "&Save";
             this.saveToolStripButton7.Click += new System.EventHandler(this.saveToolStripButton7_Click);
             // 
@@ -4733,9 +4737,9 @@
             this.moveStudentRemovedNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.moveStudentRemovedNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.moveStudentBindingSource, "Removed", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.moveStudentRemovedNumericUpDown.Location = new System.Drawing.Point(579, 63);
+            this.moveStudentRemovedNumericUpDown.Location = new System.Drawing.Point(595, 63);
             this.moveStudentRemovedNumericUpDown.Name = "moveStudentRemovedNumericUpDown";
-            this.moveStudentRemovedNumericUpDown.Size = new System.Drawing.Size(185, 20);
+            this.moveStudentRemovedNumericUpDown.Size = new System.Drawing.Size(185, 23);
             this.moveStudentRemovedNumericUpDown.TabIndex = 12;
             // 
             // moveStudentStudentCountEndNumericUpDown
@@ -4743,9 +4747,9 @@
             this.moveStudentStudentCountEndNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.moveStudentStudentCountEndNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.moveStudentBindingSource, "StudentCountEnd", true));
-            this.moveStudentStudentCountEndNumericUpDown.Location = new System.Drawing.Point(579, 37);
+            this.moveStudentStudentCountEndNumericUpDown.Location = new System.Drawing.Point(595, 37);
             this.moveStudentStudentCountEndNumericUpDown.Name = "moveStudentStudentCountEndNumericUpDown";
-            this.moveStudentStudentCountEndNumericUpDown.Size = new System.Drawing.Size(185, 20);
+            this.moveStudentStudentCountEndNumericUpDown.Size = new System.Drawing.Size(185, 23);
             this.moveStudentStudentCountEndNumericUpDown.TabIndex = 10;
             this.moveStudentStudentCountEndNumericUpDown.ValueChanged += new System.EventHandler(this.moveStudentStudentCountEndNumericUpDown_ValueChanged);
             // 
@@ -4754,9 +4758,9 @@
             this.moveStudentStudentCountBeginNumericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.moveStudentStudentCountBeginNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.moveStudentBindingSource, "StudentCountBegin", true));
-            this.moveStudentStudentCountBeginNumericUpDown.Location = new System.Drawing.Point(579, 11);
+            this.moveStudentStudentCountBeginNumericUpDown.Location = new System.Drawing.Point(595, 11);
             this.moveStudentStudentCountBeginNumericUpDown.Name = "moveStudentStudentCountBeginNumericUpDown";
-            this.moveStudentStudentCountBeginNumericUpDown.Size = new System.Drawing.Size(185, 20);
+            this.moveStudentStudentCountBeginNumericUpDown.Size = new System.Drawing.Size(185, 23);
             this.moveStudentStudentCountBeginNumericUpDown.TabIndex = 8;
             this.moveStudentStudentCountBeginNumericUpDown.ValueChanged += new System.EventHandler(this.moveStudentStudentCountBeginNumericUpDown_ValueChanged);
             // 
@@ -4764,9 +4768,10 @@
             // 
             this.moveStudentStudySemesterListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.moveStudentBindingSource, "StudySemester", true));
             this.moveStudentStudySemesterListBox.FormattingEnabled = true;
+            this.moveStudentStudySemesterListBox.ItemHeight = 16;
             this.moveStudentStudySemesterListBox.Location = new System.Drawing.Point(117, 61);
             this.moveStudentStudySemesterListBox.Name = "moveStudentStudySemesterListBox";
-            this.moveStudentStudySemesterListBox.Size = new System.Drawing.Size(209, 95);
+            this.moveStudentStudySemesterListBox.Size = new System.Drawing.Size(209, 84);
             this.moveStudentStudySemesterListBox.TabIndex = 6;
             // 
             // moveStudentStudyYearNumericUpDown
@@ -4784,7 +4789,7 @@
             0,
             0});
             this.moveStudentStudyYearNumericUpDown.Name = "moveStudentStudyYearNumericUpDown";
-            this.moveStudentStudyYearNumericUpDown.Size = new System.Drawing.Size(209, 20);
+            this.moveStudentStudyYearNumericUpDown.Size = new System.Drawing.Size(209, 23);
             this.moveStudentStudyYearNumericUpDown.TabIndex = 4;
             this.moveStudentStudyYearNumericUpDown.Value = new decimal(new int[] {
             1990,
@@ -4800,7 +4805,7 @@
             this.moveStudentGroupComboBox.FormattingEnabled = true;
             this.moveStudentGroupComboBox.Location = new System.Drawing.Point(117, 8);
             this.moveStudentGroupComboBox.Name = "moveStudentGroupComboBox";
-            this.moveStudentGroupComboBox.Size = new System.Drawing.Size(209, 21);
+            this.moveStudentGroupComboBox.Size = new System.Drawing.Size(209, 24);
             this.moveStudentGroupComboBox.TabIndex = 2;
             this.moveStudentGroupComboBox.ValueMember = "GroupNumber";
             // 
@@ -4828,7 +4833,7 @@
             this.moveStudentGrid.Name = "moveStudentGrid";
             this.moveStudentGrid.ReadOnly = true;
             this.moveStudentGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.moveStudentGrid.Size = new System.Drawing.Size(1105, 285);
+            this.moveStudentGrid.Size = new System.Drawing.Size(1105, 282);
             this.moveStudentGrid.TabIndex = 0;
             // 
             // groupDataGridViewTextBoxColumn2
@@ -4895,10 +4900,10 @@
             this.diplomaDefenceTab.Controls.Add(diplomaTopicLabel);
             this.diplomaDefenceTab.Controls.Add(this.diplomaDefenceTopicTextBox);
             this.diplomaDefenceTab.Controls.Add(this.diplomaDefenceGrid);
-            this.diplomaDefenceTab.Location = new System.Drawing.Point(4, 22);
+            this.diplomaDefenceTab.Location = new System.Drawing.Point(4, 25);
             this.diplomaDefenceTab.Name = "diplomaDefenceTab";
             this.diplomaDefenceTab.Padding = new System.Windows.Forms.Padding(3);
-            this.diplomaDefenceTab.Size = new System.Drawing.Size(1118, 582);
+            this.diplomaDefenceTab.Size = new System.Drawing.Size(1118, 579);
             this.diplomaDefenceTab.TabIndex = 7;
             this.diplomaDefenceTab.Text = "Защита диплома";
             this.diplomaDefenceTab.UseVisualStyleBackColor = true;
@@ -4933,7 +4938,7 @@
             this.diplomaDefenceNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem8;
             this.diplomaDefenceNavigator.Name = "diplomaDefenceNavigator";
             this.diplomaDefenceNavigator.PositionItem = this.bindingNavigatorPositionItem8;
-            this.diplomaDefenceNavigator.Size = new System.Drawing.Size(301, 25);
+            this.diplomaDefenceNavigator.Size = new System.Drawing.Size(301, 22);
             this.diplomaDefenceNavigator.TabIndex = 11;
             this.diplomaDefenceNavigator.Text = "bindingNavigator2";
             // 
@@ -4943,7 +4948,7 @@
             this.bindingNavigatorAddNewItem8.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem8.Image")));
             this.bindingNavigatorAddNewItem8.Name = "bindingNavigatorAddNewItem8";
             this.bindingNavigatorAddNewItem8.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem8.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem8.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorAddNewItem8.Text = "Add new";
             this.bindingNavigatorAddNewItem8.Click += new System.EventHandler(this.bindingNavigatorAddNewItem8_Click);
             // 
@@ -4955,7 +4960,7 @@
             // bindingNavigatorCountItem8
             // 
             this.bindingNavigatorCountItem8.Name = "bindingNavigatorCountItem8";
-            this.bindingNavigatorCountItem8.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem8.Size = new System.Drawing.Size(35, 19);
             this.bindingNavigatorCountItem8.Text = "of {0}";
             this.bindingNavigatorCountItem8.ToolTipText = "Total number of items";
             // 
@@ -4965,7 +4970,7 @@
             this.bindingNavigatorDeleteItem8.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem8.Image")));
             this.bindingNavigatorDeleteItem8.Name = "bindingNavigatorDeleteItem8";
             this.bindingNavigatorDeleteItem8.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem8.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem8.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorDeleteItem8.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem8
@@ -4974,7 +4979,7 @@
             this.bindingNavigatorMoveFirstItem8.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem8.Image")));
             this.bindingNavigatorMoveFirstItem8.Name = "bindingNavigatorMoveFirstItem8";
             this.bindingNavigatorMoveFirstItem8.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem8.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem8.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveFirstItem8.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem8
@@ -4983,13 +4988,13 @@
             this.bindingNavigatorMovePreviousItem8.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem8.Image")));
             this.bindingNavigatorMovePreviousItem8.Name = "bindingNavigatorMovePreviousItem8";
             this.bindingNavigatorMovePreviousItem8.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem8.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem8.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMovePreviousItem8.Text = "Move previous";
             // 
             // bindingNavigatorSeparator24
             // 
             this.bindingNavigatorSeparator24.Name = "bindingNavigatorSeparator24";
-            this.bindingNavigatorSeparator24.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator24.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorPositionItem8
             // 
@@ -5003,7 +5008,7 @@
             // bindingNavigatorSeparator25
             // 
             this.bindingNavigatorSeparator25.Name = "bindingNavigatorSeparator25";
-            this.bindingNavigatorSeparator25.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator25.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorMoveNextItem8
             // 
@@ -5011,7 +5016,7 @@
             this.bindingNavigatorMoveNextItem8.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem8.Image")));
             this.bindingNavigatorMoveNextItem8.Name = "bindingNavigatorMoveNextItem8";
             this.bindingNavigatorMoveNextItem8.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem8.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem8.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveNextItem8.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem8
@@ -5020,13 +5025,13 @@
             this.bindingNavigatorMoveLastItem8.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem8.Image")));
             this.bindingNavigatorMoveLastItem8.Name = "bindingNavigatorMoveLastItem8";
             this.bindingNavigatorMoveLastItem8.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem8.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem8.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveLastItem8.Text = "Move last";
             // 
             // bindingNavigatorSeparator26
             // 
             this.bindingNavigatorSeparator26.Name = "bindingNavigatorSeparator26";
-            this.bindingNavigatorSeparator26.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator26.Size = new System.Drawing.Size(6, 22);
             // 
             // newToolStripButton6
             // 
@@ -5034,7 +5039,7 @@
             this.newToolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton6.Image")));
             this.newToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton6.Name = "newToolStripButton6";
-            this.newToolStripButton6.Size = new System.Drawing.Size(23, 22);
+            this.newToolStripButton6.Size = new System.Drawing.Size(23, 19);
             this.newToolStripButton6.Text = "&Clear";
             this.newToolStripButton6.Click += new System.EventHandler(this.newToolStripButton6_Click);
             // 
@@ -5044,7 +5049,7 @@
             this.saveToolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton8.Image")));
             this.saveToolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton8.Name = "saveToolStripButton8";
-            this.saveToolStripButton8.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton8.Size = new System.Drawing.Size(23, 19);
             this.saveToolStripButton8.Text = "&Save";
             this.saveToolStripButton8.Click += new System.EventHandler(this.saveToolStripButton8_Click);
             // 
@@ -5058,7 +5063,7 @@
             0,
             0});
             this.diplomaDefenceMarkNumericUpDown.Name = "diplomaDefenceMarkNumericUpDown";
-            this.diplomaDefenceMarkNumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.diplomaDefenceMarkNumericUpDown.Size = new System.Drawing.Size(120, 23);
             this.diplomaDefenceMarkNumericUpDown.TabIndex = 10;
             // 
             // diplomaDefenceDateDateTimePicker
@@ -5067,7 +5072,7 @@
             this.diplomaDefenceDateDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.diplomaDefenceDateDateTimePicker.Location = new System.Drawing.Point(497, 107);
             this.diplomaDefenceDateDateTimePicker.Name = "diplomaDefenceDateDateTimePicker";
-            this.diplomaDefenceDateDateTimePicker.Size = new System.Drawing.Size(231, 20);
+            this.diplomaDefenceDateDateTimePicker.Size = new System.Drawing.Size(231, 23);
             this.diplomaDefenceDateDateTimePicker.TabIndex = 8;
             // 
             // diplomaDefenceTypeTextBox
@@ -5119,7 +5124,7 @@
             this.diplomaDefenceGrid.Name = "diplomaDefenceGrid";
             this.diplomaDefenceGrid.ReadOnly = true;
             this.diplomaDefenceGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.diplomaDefenceGrid.Size = new System.Drawing.Size(1108, 273);
+            this.diplomaDefenceGrid.Size = new System.Drawing.Size(1108, 270);
             this.diplomaDefenceGrid.TabIndex = 0;
             // 
             // diplomaTopicDataGridViewTextBoxColumn
@@ -5172,10 +5177,10 @@
             this.projectTab.Controls.Add(projectNumberLabel);
             this.projectTab.Controls.Add(this.projectNumberTextBox);
             this.projectTab.Controls.Add(this.projectGrid);
-            this.projectTab.Location = new System.Drawing.Point(4, 22);
+            this.projectTab.Location = new System.Drawing.Point(4, 25);
             this.projectTab.Name = "projectTab";
             this.projectTab.Padding = new System.Windows.Forms.Padding(3);
-            this.projectTab.Size = new System.Drawing.Size(1118, 582);
+            this.projectTab.Size = new System.Drawing.Size(1118, 579);
             this.projectTab.TabIndex = 8;
             this.projectTab.Text = "Проект";
             this.projectTab.UseVisualStyleBackColor = true;
@@ -5210,7 +5215,7 @@
             this.projectNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem9;
             this.projectNavigator.Name = "projectNavigator";
             this.projectNavigator.PositionItem = this.bindingNavigatorPositionItem9;
-            this.projectNavigator.Size = new System.Drawing.Size(301, 25);
+            this.projectNavigator.Size = new System.Drawing.Size(301, 22);
             this.projectNavigator.TabIndex = 11;
             this.projectNavigator.Text = "bindingNavigator1";
             // 
@@ -5220,7 +5225,7 @@
             this.bindingNavigatorAddNewItem9.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem9.Image")));
             this.bindingNavigatorAddNewItem9.Name = "bindingNavigatorAddNewItem9";
             this.bindingNavigatorAddNewItem9.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem9.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem9.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorAddNewItem9.Text = "Add new";
             this.bindingNavigatorAddNewItem9.Click += new System.EventHandler(this.bindingNavigatorAddNewItem9_Click);
             // 
@@ -5232,7 +5237,7 @@
             // bindingNavigatorCountItem9
             // 
             this.bindingNavigatorCountItem9.Name = "bindingNavigatorCountItem9";
-            this.bindingNavigatorCountItem9.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem9.Size = new System.Drawing.Size(35, 19);
             this.bindingNavigatorCountItem9.Text = "of {0}";
             this.bindingNavigatorCountItem9.ToolTipText = "Total number of items";
             // 
@@ -5242,7 +5247,7 @@
             this.bindingNavigatorDeleteItem9.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem9.Image")));
             this.bindingNavigatorDeleteItem9.Name = "bindingNavigatorDeleteItem9";
             this.bindingNavigatorDeleteItem9.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem9.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem9.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorDeleteItem9.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem9
@@ -5251,7 +5256,7 @@
             this.bindingNavigatorMoveFirstItem9.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem9.Image")));
             this.bindingNavigatorMoveFirstItem9.Name = "bindingNavigatorMoveFirstItem9";
             this.bindingNavigatorMoveFirstItem9.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem9.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem9.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveFirstItem9.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem9
@@ -5260,13 +5265,13 @@
             this.bindingNavigatorMovePreviousItem9.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem9.Image")));
             this.bindingNavigatorMovePreviousItem9.Name = "bindingNavigatorMovePreviousItem9";
             this.bindingNavigatorMovePreviousItem9.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem9.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem9.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMovePreviousItem9.Text = "Move previous";
             // 
             // bindingNavigatorSeparator27
             // 
             this.bindingNavigatorSeparator27.Name = "bindingNavigatorSeparator27";
-            this.bindingNavigatorSeparator27.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator27.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorPositionItem9
             // 
@@ -5280,7 +5285,7 @@
             // bindingNavigatorSeparator28
             // 
             this.bindingNavigatorSeparator28.Name = "bindingNavigatorSeparator28";
-            this.bindingNavigatorSeparator28.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator28.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorMoveNextItem9
             // 
@@ -5288,7 +5293,7 @@
             this.bindingNavigatorMoveNextItem9.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem9.Image")));
             this.bindingNavigatorMoveNextItem9.Name = "bindingNavigatorMoveNextItem9";
             this.bindingNavigatorMoveNextItem9.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem9.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem9.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveNextItem9.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem9
@@ -5297,13 +5302,13 @@
             this.bindingNavigatorMoveLastItem9.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem9.Image")));
             this.bindingNavigatorMoveLastItem9.Name = "bindingNavigatorMoveLastItem9";
             this.bindingNavigatorMoveLastItem9.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem9.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem9.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveLastItem9.Text = "Move last";
             // 
             // bindingNavigatorSeparator29
             // 
             this.bindingNavigatorSeparator29.Name = "bindingNavigatorSeparator29";
-            this.bindingNavigatorSeparator29.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator29.Size = new System.Drawing.Size(6, 22);
             // 
             // newToolStripButton7
             // 
@@ -5311,7 +5316,7 @@
             this.newToolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton7.Image")));
             this.newToolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton7.Name = "newToolStripButton7";
-            this.newToolStripButton7.Size = new System.Drawing.Size(23, 22);
+            this.newToolStripButton7.Size = new System.Drawing.Size(23, 19);
             this.newToolStripButton7.Text = "&Clear";
             this.newToolStripButton7.Click += new System.EventHandler(this.newToolStripButton7_Click);
             // 
@@ -5321,7 +5326,7 @@
             this.saveToolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton9.Image")));
             this.saveToolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton9.Name = "saveToolStripButton9";
-            this.saveToolStripButton9.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton9.Size = new System.Drawing.Size(23, 19);
             this.saveToolStripButton9.Text = "&Save";
             this.saveToolStripButton9.Click += new System.EventHandler(this.saveToolStripButton9_Click);
             // 
@@ -5332,7 +5337,7 @@
             this.projectEndDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.projectBindingSource, "EndDate", true));
             this.projectEndDateDateTimePicker.Location = new System.Drawing.Point(536, 32);
             this.projectEndDateDateTimePicker.Name = "projectEndDateDateTimePicker";
-            this.projectEndDateDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.projectEndDateDateTimePicker.Size = new System.Drawing.Size(200, 23);
             this.projectEndDateDateTimePicker.TabIndex = 10;
             // 
             // projectStartDateDateTimePicker
@@ -5342,21 +5347,21 @@
             this.projectStartDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.projectBindingSource, "StartDate", true));
             this.projectStartDateDateTimePicker.Location = new System.Drawing.Point(536, 6);
             this.projectStartDateDateTimePicker.Name = "projectStartDateDateTimePicker";
-            this.projectStartDateDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.projectStartDateDateTimePicker.Size = new System.Drawing.Size(200, 23);
             this.projectStartDateDateTimePicker.TabIndex = 8;
             // 
             // projectTypeTextBox
             // 
             this.projectTypeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectBindingSource, "ProjectType", true));
-            this.projectTypeTextBox.Location = new System.Drawing.Point(118, 106);
+            this.projectTypeTextBox.Location = new System.Drawing.Point(140, 106);
             this.projectTypeTextBox.Name = "projectTypeTextBox";
-            this.projectTypeTextBox.Size = new System.Drawing.Size(225, 20);
+            this.projectTypeTextBox.Size = new System.Drawing.Size(225, 23);
             this.projectTypeTextBox.TabIndex = 6;
             // 
             // projectNameTextBox
             // 
             this.projectNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectBindingSource, "ProjectName", true));
-            this.projectNameTextBox.Location = new System.Drawing.Point(118, 35);
+            this.projectNameTextBox.Location = new System.Drawing.Point(140, 35);
             this.projectNameTextBox.Multiline = true;
             this.projectNameTextBox.Name = "projectNameTextBox";
             this.projectNameTextBox.Size = new System.Drawing.Size(225, 65);
@@ -5365,9 +5370,9 @@
             // projectNumberTextBox
             // 
             this.projectNumberTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.projectBindingSource, "ProjectNumber", true));
-            this.projectNumberTextBox.Location = new System.Drawing.Point(118, 6);
+            this.projectNumberTextBox.Location = new System.Drawing.Point(140, 6);
             this.projectNumberTextBox.Name = "projectNumberTextBox";
-            this.projectNumberTextBox.Size = new System.Drawing.Size(225, 20);
+            this.projectNumberTextBox.Size = new System.Drawing.Size(225, 23);
             this.projectNumberTextBox.TabIndex = 2;
             this.projectNumberTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.projectNumberTextBox_Validating);
             // 
@@ -5393,7 +5398,7 @@
             this.projectGrid.Name = "projectGrid";
             this.projectGrid.ReadOnly = true;
             this.projectGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.projectGrid.Size = new System.Drawing.Size(1105, 265);
+            this.projectGrid.Size = new System.Drawing.Size(1105, 262);
             this.projectGrid.TabIndex = 0;
             // 
             // projectNumberDataGridViewTextBoxColumn
@@ -5446,10 +5451,10 @@
             this.lecturerProject.Controls.Add(lecturerLabel2);
             this.lecturerProject.Controls.Add(this.projectLecturerComboBox);
             this.lecturerProject.Controls.Add(this.lecturerProjectGrid);
-            this.lecturerProject.Location = new System.Drawing.Point(4, 22);
+            this.lecturerProject.Location = new System.Drawing.Point(4, 25);
             this.lecturerProject.Name = "lecturerProject";
             this.lecturerProject.Padding = new System.Windows.Forms.Padding(3);
-            this.lecturerProject.Size = new System.Drawing.Size(1118, 582);
+            this.lecturerProject.Size = new System.Drawing.Size(1118, 579);
             this.lecturerProject.TabIndex = 9;
             this.lecturerProject.Text = "Участие в проекте";
             this.lecturerProject.UseVisualStyleBackColor = true;
@@ -5484,7 +5489,7 @@
             this.lecturerProjectNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem10;
             this.lecturerProjectNavigator.Name = "lecturerProjectNavigator";
             this.lecturerProjectNavigator.PositionItem = this.bindingNavigatorPositionItem10;
-            this.lecturerProjectNavigator.Size = new System.Drawing.Size(301, 25);
+            this.lecturerProjectNavigator.Size = new System.Drawing.Size(301, 22);
             this.lecturerProjectNavigator.TabIndex = 11;
             this.lecturerProjectNavigator.Text = "bindingNavigator1";
             // 
@@ -5494,7 +5499,7 @@
             this.bindingNavigatorAddNewItem10.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem10.Image")));
             this.bindingNavigatorAddNewItem10.Name = "bindingNavigatorAddNewItem10";
             this.bindingNavigatorAddNewItem10.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem10.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem10.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorAddNewItem10.Text = "Add new";
             this.bindingNavigatorAddNewItem10.Click += new System.EventHandler(this.bindingNavigatorAddNewItem10_Click);
             // 
@@ -5506,7 +5511,7 @@
             // bindingNavigatorCountItem10
             // 
             this.bindingNavigatorCountItem10.Name = "bindingNavigatorCountItem10";
-            this.bindingNavigatorCountItem10.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem10.Size = new System.Drawing.Size(35, 19);
             this.bindingNavigatorCountItem10.Text = "of {0}";
             this.bindingNavigatorCountItem10.ToolTipText = "Total number of items";
             // 
@@ -5516,7 +5521,7 @@
             this.bindingNavigatorDeleteItem10.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem10.Image")));
             this.bindingNavigatorDeleteItem10.Name = "bindingNavigatorDeleteItem10";
             this.bindingNavigatorDeleteItem10.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem10.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem10.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorDeleteItem10.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem10
@@ -5525,7 +5530,7 @@
             this.bindingNavigatorMoveFirstItem10.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem10.Image")));
             this.bindingNavigatorMoveFirstItem10.Name = "bindingNavigatorMoveFirstItem10";
             this.bindingNavigatorMoveFirstItem10.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem10.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem10.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveFirstItem10.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem10
@@ -5534,13 +5539,13 @@
             this.bindingNavigatorMovePreviousItem10.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem10.Image")));
             this.bindingNavigatorMovePreviousItem10.Name = "bindingNavigatorMovePreviousItem10";
             this.bindingNavigatorMovePreviousItem10.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem10.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem10.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMovePreviousItem10.Text = "Move previous";
             // 
             // bindingNavigatorSeparator30
             // 
             this.bindingNavigatorSeparator30.Name = "bindingNavigatorSeparator30";
-            this.bindingNavigatorSeparator30.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator30.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorPositionItem10
             // 
@@ -5554,7 +5559,7 @@
             // bindingNavigatorSeparator31
             // 
             this.bindingNavigatorSeparator31.Name = "bindingNavigatorSeparator31";
-            this.bindingNavigatorSeparator31.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator31.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorMoveNextItem10
             // 
@@ -5562,7 +5567,7 @@
             this.bindingNavigatorMoveNextItem10.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem10.Image")));
             this.bindingNavigatorMoveNextItem10.Name = "bindingNavigatorMoveNextItem10";
             this.bindingNavigatorMoveNextItem10.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem10.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem10.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveNextItem10.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem10
@@ -5571,13 +5576,13 @@
             this.bindingNavigatorMoveLastItem10.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem10.Image")));
             this.bindingNavigatorMoveLastItem10.Name = "bindingNavigatorMoveLastItem10";
             this.bindingNavigatorMoveLastItem10.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem10.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem10.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveLastItem10.Text = "Move last";
             // 
             // bindingNavigatorSeparator32
             // 
             this.bindingNavigatorSeparator32.Name = "bindingNavigatorSeparator32";
-            this.bindingNavigatorSeparator32.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator32.Size = new System.Drawing.Size(6, 22);
             // 
             // newToolStripButton8
             // 
@@ -5585,7 +5590,7 @@
             this.newToolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton8.Image")));
             this.newToolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton8.Name = "newToolStripButton8";
-            this.newToolStripButton8.Size = new System.Drawing.Size(23, 22);
+            this.newToolStripButton8.Size = new System.Drawing.Size(23, 19);
             this.newToolStripButton8.Text = "&Clear";
             this.newToolStripButton8.Click += new System.EventHandler(this.newToolStripButton8_Click);
             // 
@@ -5595,33 +5600,33 @@
             this.saveToolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton10.Image")));
             this.saveToolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton10.Name = "saveToolStripButton10";
-            this.saveToolStripButton10.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton10.Size = new System.Drawing.Size(23, 19);
             this.saveToolStripButton10.Text = "&Save";
             this.saveToolStripButton10.Click += new System.EventHandler(this.saveToolStripButton10_Click);
             // 
             // noteTextBox
             // 
             this.noteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lecturerProjectBindingSource, "Note", true));
-            this.noteTextBox.Location = new System.Drawing.Point(824, 14);
+            this.noteTextBox.Location = new System.Drawing.Point(846, 14);
             this.noteTextBox.Multiline = true;
             this.noteTextBox.Name = "noteTextBox";
-            this.noteTextBox.Size = new System.Drawing.Size(288, 47);
+            this.noteTextBox.Size = new System.Drawing.Size(266, 47);
             this.noteTextBox.TabIndex = 10;
             // 
             // participationEndDateDateTimePicker
             // 
             this.participationEndDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.lecturerProjectBindingSource, "ParticipationEndDate", true));
-            this.participationEndDateDateTimePicker.Location = new System.Drawing.Point(479, 41);
+            this.participationEndDateDateTimePicker.Location = new System.Drawing.Point(518, 41);
             this.participationEndDateDateTimePicker.Name = "participationEndDateDateTimePicker";
-            this.participationEndDateDateTimePicker.Size = new System.Drawing.Size(249, 20);
+            this.participationEndDateDateTimePicker.Size = new System.Drawing.Size(197, 23);
             this.participationEndDateDateTimePicker.TabIndex = 8;
             // 
             // participationStartDateDateTimePicker
             // 
             this.participationStartDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.lecturerProjectBindingSource, "ParticipationStartDate", true));
-            this.participationStartDateDateTimePicker.Location = new System.Drawing.Point(479, 14);
+            this.participationStartDateDateTimePicker.Location = new System.Drawing.Point(518, 14);
             this.participationStartDateDateTimePicker.Name = "participationStartDateDateTimePicker";
-            this.participationStartDateDateTimePicker.Size = new System.Drawing.Size(249, 20);
+            this.participationStartDateDateTimePicker.Size = new System.Drawing.Size(197, 23);
             this.participationStartDateDateTimePicker.TabIndex = 6;
             // 
             // projectComboBox
@@ -5630,9 +5635,9 @@
             this.projectComboBox.DataSource = this.projectBindingSource;
             this.projectComboBox.DisplayMember = "ProjectName";
             this.projectComboBox.FormattingEnabled = true;
-            this.projectComboBox.Location = new System.Drawing.Point(99, 36);
+            this.projectComboBox.Location = new System.Drawing.Point(126, 36);
             this.projectComboBox.Name = "projectComboBox";
-            this.projectComboBox.Size = new System.Drawing.Size(229, 21);
+            this.projectComboBox.Size = new System.Drawing.Size(202, 24);
             this.projectComboBox.TabIndex = 4;
             this.projectComboBox.ValueMember = "ProjectNumber";
             // 
@@ -5642,9 +5647,9 @@
             this.projectLecturerComboBox.DataSource = this.lecturerBindingSource;
             this.projectLecturerComboBox.DisplayMember = "FullName";
             this.projectLecturerComboBox.FormattingEnabled = true;
-            this.projectLecturerComboBox.Location = new System.Drawing.Point(99, 9);
+            this.projectLecturerComboBox.Location = new System.Drawing.Point(126, 9);
             this.projectLecturerComboBox.Name = "projectLecturerComboBox";
-            this.projectLecturerComboBox.Size = new System.Drawing.Size(229, 21);
+            this.projectLecturerComboBox.Size = new System.Drawing.Size(202, 24);
             this.projectLecturerComboBox.TabIndex = 2;
             this.projectLecturerComboBox.ValueMember = "PK";
             // 
@@ -5670,7 +5675,7 @@
             this.lecturerProjectGrid.Name = "lecturerProjectGrid";
             this.lecturerProjectGrid.ReadOnly = true;
             this.lecturerProjectGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.lecturerProjectGrid.Size = new System.Drawing.Size(1105, 261);
+            this.lecturerProjectGrid.Size = new System.Drawing.Size(1105, 258);
             this.lecturerProjectGrid.TabIndex = 0;
             // 
             // lecturerDataGridViewTextBoxColumn3
@@ -5721,10 +5726,10 @@
             this.publicationTab.Controls.Add(publicationNameLabel);
             this.publicationTab.Controls.Add(this.publicationNameTextBox);
             this.publicationTab.Controls.Add(this.publicationGrid);
-            this.publicationTab.Location = new System.Drawing.Point(4, 22);
+            this.publicationTab.Location = new System.Drawing.Point(4, 25);
             this.publicationTab.Name = "publicationTab";
             this.publicationTab.Padding = new System.Windows.Forms.Padding(3);
-            this.publicationTab.Size = new System.Drawing.Size(1118, 582);
+            this.publicationTab.Size = new System.Drawing.Size(1118, 579);
             this.publicationTab.TabIndex = 10;
             this.publicationTab.Text = "Публикация";
             this.publicationTab.UseVisualStyleBackColor = true;
@@ -5759,7 +5764,7 @@
             this.publicationNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem11;
             this.publicationNavigator.Name = "publicationNavigator";
             this.publicationNavigator.PositionItem = this.bindingNavigatorPositionItem11;
-            this.publicationNavigator.Size = new System.Drawing.Size(301, 25);
+            this.publicationNavigator.Size = new System.Drawing.Size(301, 22);
             this.publicationNavigator.TabIndex = 9;
             this.publicationNavigator.Text = "bindingNavigator1";
             // 
@@ -5769,7 +5774,7 @@
             this.bindingNavigatorAddNewItem11.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem11.Image")));
             this.bindingNavigatorAddNewItem11.Name = "bindingNavigatorAddNewItem11";
             this.bindingNavigatorAddNewItem11.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem11.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem11.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorAddNewItem11.Text = "Add new";
             this.bindingNavigatorAddNewItem11.Click += new System.EventHandler(this.bindingNavigatorAddNewItem11_Click);
             // 
@@ -5781,7 +5786,7 @@
             // bindingNavigatorCountItem11
             // 
             this.bindingNavigatorCountItem11.Name = "bindingNavigatorCountItem11";
-            this.bindingNavigatorCountItem11.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem11.Size = new System.Drawing.Size(35, 19);
             this.bindingNavigatorCountItem11.Text = "of {0}";
             this.bindingNavigatorCountItem11.ToolTipText = "Total number of items";
             // 
@@ -5791,7 +5796,7 @@
             this.bindingNavigatorDeleteItem11.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem11.Image")));
             this.bindingNavigatorDeleteItem11.Name = "bindingNavigatorDeleteItem11";
             this.bindingNavigatorDeleteItem11.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem11.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem11.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorDeleteItem11.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem11
@@ -5800,7 +5805,7 @@
             this.bindingNavigatorMoveFirstItem11.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem11.Image")));
             this.bindingNavigatorMoveFirstItem11.Name = "bindingNavigatorMoveFirstItem11";
             this.bindingNavigatorMoveFirstItem11.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem11.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem11.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveFirstItem11.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem11
@@ -5809,13 +5814,13 @@
             this.bindingNavigatorMovePreviousItem11.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem11.Image")));
             this.bindingNavigatorMovePreviousItem11.Name = "bindingNavigatorMovePreviousItem11";
             this.bindingNavigatorMovePreviousItem11.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem11.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem11.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMovePreviousItem11.Text = "Move previous";
             // 
             // bindingNavigatorSeparator33
             // 
             this.bindingNavigatorSeparator33.Name = "bindingNavigatorSeparator33";
-            this.bindingNavigatorSeparator33.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator33.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorPositionItem11
             // 
@@ -5829,7 +5834,7 @@
             // bindingNavigatorSeparator34
             // 
             this.bindingNavigatorSeparator34.Name = "bindingNavigatorSeparator34";
-            this.bindingNavigatorSeparator34.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator34.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorMoveNextItem11
             // 
@@ -5837,7 +5842,7 @@
             this.bindingNavigatorMoveNextItem11.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem11.Image")));
             this.bindingNavigatorMoveNextItem11.Name = "bindingNavigatorMoveNextItem11";
             this.bindingNavigatorMoveNextItem11.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem11.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem11.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveNextItem11.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem11
@@ -5846,13 +5851,13 @@
             this.bindingNavigatorMoveLastItem11.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem11.Image")));
             this.bindingNavigatorMoveLastItem11.Name = "bindingNavigatorMoveLastItem11";
             this.bindingNavigatorMoveLastItem11.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem11.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem11.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveLastItem11.Text = "Move last";
             // 
             // bindingNavigatorSeparator35
             // 
             this.bindingNavigatorSeparator35.Name = "bindingNavigatorSeparator35";
-            this.bindingNavigatorSeparator35.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator35.Size = new System.Drawing.Size(6, 22);
             // 
             // newToolStripButton9
             // 
@@ -5860,7 +5865,7 @@
             this.newToolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton9.Image")));
             this.newToolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton9.Name = "newToolStripButton9";
-            this.newToolStripButton9.Size = new System.Drawing.Size(23, 22);
+            this.newToolStripButton9.Size = new System.Drawing.Size(23, 19);
             this.newToolStripButton9.Text = "&Clear";
             this.newToolStripButton9.Click += new System.EventHandler(this.newToolStripButton9_Click);
             // 
@@ -5870,7 +5875,7 @@
             this.saveToolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton11.Image")));
             this.saveToolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton11.Name = "saveToolStripButton11";
-            this.saveToolStripButton11.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton11.Size = new System.Drawing.Size(23, 19);
             this.saveToolStripButton11.Text = "&Save";
             this.saveToolStripButton11.Click += new System.EventHandler(this.saveToolStripButton11_Click);
             // 
@@ -5889,7 +5894,7 @@
             0,
             0});
             this.publicationYearNumericUpDown.Name = "publicationYearNumericUpDown";
-            this.publicationYearNumericUpDown.Size = new System.Drawing.Size(241, 20);
+            this.publicationYearNumericUpDown.Size = new System.Drawing.Size(241, 23);
             this.publicationYearNumericUpDown.TabIndex = 8;
             this.publicationYearNumericUpDown.Value = new decimal(new int[] {
             1990,
@@ -5946,7 +5951,7 @@
             this.publicationGrid.Name = "publicationGrid";
             this.publicationGrid.ReadOnly = true;
             this.publicationGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.publicationGrid.Size = new System.Drawing.Size(1108, 270);
+            this.publicationGrid.Size = new System.Drawing.Size(1108, 267);
             this.publicationGrid.TabIndex = 0;
             // 
             // publicationIDDataGridViewTextBoxColumn
@@ -6002,10 +6007,10 @@
             this.learningResultTab.Controls.Add(groupLabel2);
             this.learningResultTab.Controls.Add(this.learningResultGroupComboBox);
             this.learningResultTab.Controls.Add(this.learningResultGrid);
-            this.learningResultTab.Location = new System.Drawing.Point(4, 22);
+            this.learningResultTab.Location = new System.Drawing.Point(4, 25);
             this.learningResultTab.Name = "learningResultTab";
             this.learningResultTab.Padding = new System.Windows.Forms.Padding(3);
-            this.learningResultTab.Size = new System.Drawing.Size(1118, 582);
+            this.learningResultTab.Size = new System.Drawing.Size(1118, 579);
             this.learningResultTab.TabIndex = 11;
             this.learningResultTab.Text = "Результаты обучения";
             this.learningResultTab.UseVisualStyleBackColor = true;
@@ -6041,7 +6046,7 @@
             this.learningResultNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem12;
             this.learningResultNavigator.Name = "learningResultNavigator";
             this.learningResultNavigator.PositionItem = this.bindingNavigatorPositionItem12;
-            this.learningResultNavigator.Size = new System.Drawing.Size(301, 25);
+            this.learningResultNavigator.Size = new System.Drawing.Size(301, 22);
             this.learningResultNavigator.TabIndex = 13;
             this.learningResultNavigator.Text = "bindingNavigator1";
             // 
@@ -6051,7 +6056,7 @@
             this.bindingNavigatorAddNewItem12.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem12.Image")));
             this.bindingNavigatorAddNewItem12.Name = "bindingNavigatorAddNewItem12";
             this.bindingNavigatorAddNewItem12.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem12.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem12.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorAddNewItem12.Text = "Add new";
             this.bindingNavigatorAddNewItem12.Click += new System.EventHandler(this.bindingNavigatorAddNewItem12_Click);
             // 
@@ -6063,7 +6068,7 @@
             // bindingNavigatorCountItem12
             // 
             this.bindingNavigatorCountItem12.Name = "bindingNavigatorCountItem12";
-            this.bindingNavigatorCountItem12.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem12.Size = new System.Drawing.Size(35, 19);
             this.bindingNavigatorCountItem12.Text = "of {0}";
             this.bindingNavigatorCountItem12.ToolTipText = "Total number of items";
             // 
@@ -6073,7 +6078,7 @@
             this.bindingNavigatorDeleteItem12.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem12.Image")));
             this.bindingNavigatorDeleteItem12.Name = "bindingNavigatorDeleteItem12";
             this.bindingNavigatorDeleteItem12.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem12.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem12.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorDeleteItem12.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem12
@@ -6082,7 +6087,7 @@
             this.bindingNavigatorMoveFirstItem12.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem12.Image")));
             this.bindingNavigatorMoveFirstItem12.Name = "bindingNavigatorMoveFirstItem12";
             this.bindingNavigatorMoveFirstItem12.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem12.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem12.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveFirstItem12.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem12
@@ -6091,13 +6096,13 @@
             this.bindingNavigatorMovePreviousItem12.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem12.Image")));
             this.bindingNavigatorMovePreviousItem12.Name = "bindingNavigatorMovePreviousItem12";
             this.bindingNavigatorMovePreviousItem12.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem12.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem12.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMovePreviousItem12.Text = "Move previous";
             // 
             // bindingNavigatorSeparator36
             // 
             this.bindingNavigatorSeparator36.Name = "bindingNavigatorSeparator36";
-            this.bindingNavigatorSeparator36.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator36.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorPositionItem12
             // 
@@ -6111,7 +6116,7 @@
             // bindingNavigatorSeparator37
             // 
             this.bindingNavigatorSeparator37.Name = "bindingNavigatorSeparator37";
-            this.bindingNavigatorSeparator37.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator37.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorMoveNextItem12
             // 
@@ -6119,7 +6124,7 @@
             this.bindingNavigatorMoveNextItem12.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem12.Image")));
             this.bindingNavigatorMoveNextItem12.Name = "bindingNavigatorMoveNextItem12";
             this.bindingNavigatorMoveNextItem12.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem12.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem12.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveNextItem12.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem12
@@ -6128,13 +6133,13 @@
             this.bindingNavigatorMoveLastItem12.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem12.Image")));
             this.bindingNavigatorMoveLastItem12.Name = "bindingNavigatorMoveLastItem12";
             this.bindingNavigatorMoveLastItem12.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem12.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem12.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveLastItem12.Text = "Move last";
             // 
             // bindingNavigatorSeparator38
             // 
             this.bindingNavigatorSeparator38.Name = "bindingNavigatorSeparator38";
-            this.bindingNavigatorSeparator38.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator38.Size = new System.Drawing.Size(6, 22);
             // 
             // newToolStripButton10
             // 
@@ -6142,7 +6147,7 @@
             this.newToolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton10.Image")));
             this.newToolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton10.Name = "newToolStripButton10";
-            this.newToolStripButton10.Size = new System.Drawing.Size(23, 22);
+            this.newToolStripButton10.Size = new System.Drawing.Size(23, 19);
             this.newToolStripButton10.Text = "&Clear";
             this.newToolStripButton10.Click += new System.EventHandler(this.newToolStripButton10_Click);
             // 
@@ -6152,16 +6157,16 @@
             this.saveToolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton12.Image")));
             this.saveToolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton12.Name = "saveToolStripButton12";
-            this.saveToolStripButton12.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton12.Size = new System.Drawing.Size(23, 19);
             this.saveToolStripButton12.Text = "&Save";
             this.saveToolStripButton12.Click += new System.EventHandler(this.saveToolStripButton12_Click);
             // 
             // learningResultFCountNumericUpDown
             // 
             this.learningResultFCountNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.learningResultBindingSource, "FCount", true));
-            this.learningResultFCountNumericUpDown.Location = new System.Drawing.Point(528, 35);
+            this.learningResultFCountNumericUpDown.Location = new System.Drawing.Point(553, 35);
             this.learningResultFCountNumericUpDown.Name = "learningResultFCountNumericUpDown";
-            this.learningResultFCountNumericUpDown.Size = new System.Drawing.Size(224, 20);
+            this.learningResultFCountNumericUpDown.Size = new System.Drawing.Size(224, 23);
             this.learningResultFCountNumericUpDown.TabIndex = 12;
             // 
             // learningResultMeanMarkNumericUpDown
@@ -6173,29 +6178,30 @@
             0,
             0,
             131072});
-            this.learningResultMeanMarkNumericUpDown.Location = new System.Drawing.Point(528, 9);
+            this.learningResultMeanMarkNumericUpDown.Location = new System.Drawing.Point(553, 9);
             this.learningResultMeanMarkNumericUpDown.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.learningResultMeanMarkNumericUpDown.Name = "learningResultMeanMarkNumericUpDown";
-            this.learningResultMeanMarkNumericUpDown.Size = new System.Drawing.Size(224, 20);
+            this.learningResultMeanMarkNumericUpDown.Size = new System.Drawing.Size(224, 23);
             this.learningResultMeanMarkNumericUpDown.TabIndex = 10;
             // 
             // learningResultSemesterListBox
             // 
             this.learningResultSemesterListBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.learningResultBindingSource, "Semester", true));
             this.learningResultSemesterListBox.FormattingEnabled = true;
-            this.learningResultSemesterListBox.Location = new System.Drawing.Point(131, 88);
+            this.learningResultSemesterListBox.ItemHeight = 16;
+            this.learningResultSemesterListBox.Location = new System.Drawing.Point(145, 88);
             this.learningResultSemesterListBox.Name = "learningResultSemesterListBox";
-            this.learningResultSemesterListBox.Size = new System.Drawing.Size(245, 95);
+            this.learningResultSemesterListBox.Size = new System.Drawing.Size(245, 84);
             this.learningResultSemesterListBox.TabIndex = 8;
             // 
             // learningResultStudyYearNumericUpDown
             // 
             this.learningResultStudyYearNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.learningResultBindingSource, "StudyYear", true));
-            this.learningResultStudyYearNumericUpDown.Location = new System.Drawing.Point(131, 62);
+            this.learningResultStudyYearNumericUpDown.Location = new System.Drawing.Point(145, 62);
             this.learningResultStudyYearNumericUpDown.Maximum = new decimal(new int[] {
             3999,
             0,
@@ -6207,7 +6213,7 @@
             0,
             0});
             this.learningResultStudyYearNumericUpDown.Name = "learningResultStudyYearNumericUpDown";
-            this.learningResultStudyYearNumericUpDown.Size = new System.Drawing.Size(246, 20);
+            this.learningResultStudyYearNumericUpDown.Size = new System.Drawing.Size(246, 23);
             this.learningResultStudyYearNumericUpDown.TabIndex = 6;
             this.learningResultStudyYearNumericUpDown.Value = new decimal(new int[] {
             1990,
@@ -6221,9 +6227,9 @@
             this.learningResultSubjectComboBox.DataSource = this.subjectBindingSource;
             this.learningResultSubjectComboBox.DisplayMember = "SubjectName_rus";
             this.learningResultSubjectComboBox.FormattingEnabled = true;
-            this.learningResultSubjectComboBox.Location = new System.Drawing.Point(131, 35);
+            this.learningResultSubjectComboBox.Location = new System.Drawing.Point(145, 35);
             this.learningResultSubjectComboBox.Name = "learningResultSubjectComboBox";
-            this.learningResultSubjectComboBox.Size = new System.Drawing.Size(246, 21);
+            this.learningResultSubjectComboBox.Size = new System.Drawing.Size(246, 24);
             this.learningResultSubjectComboBox.TabIndex = 4;
             this.learningResultSubjectComboBox.ValueMember = "SubjectCode";
             // 
@@ -6233,9 +6239,9 @@
             this.learningResultGroupComboBox.DataSource = this.groupBindingSource;
             this.learningResultGroupComboBox.DisplayMember = "GroupNumber";
             this.learningResultGroupComboBox.FormattingEnabled = true;
-            this.learningResultGroupComboBox.Location = new System.Drawing.Point(131, 8);
+            this.learningResultGroupComboBox.Location = new System.Drawing.Point(145, 8);
             this.learningResultGroupComboBox.Name = "learningResultGroupComboBox";
-            this.learningResultGroupComboBox.Size = new System.Drawing.Size(246, 21);
+            this.learningResultGroupComboBox.Size = new System.Drawing.Size(246, 24);
             this.learningResultGroupComboBox.TabIndex = 2;
             this.learningResultGroupComboBox.ValueMember = "GroupNumber";
             // 
@@ -6262,7 +6268,7 @@
             this.learningResultGrid.Name = "learningResultGrid";
             this.learningResultGrid.ReadOnly = true;
             this.learningResultGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.learningResultGrid.Size = new System.Drawing.Size(1105, 280);
+            this.learningResultGrid.Size = new System.Drawing.Size(1105, 277);
             this.learningResultGrid.TabIndex = 0;
             // 
             // groupDataGridViewTextBoxColumn3
@@ -6312,13 +6318,14 @@
             this.lecturerPublicationTab.AutoScroll = true;
             this.lecturerPublicationTab.Controls.Add(this.publicationGroup);
             this.lecturerPublicationTab.Controls.Add(this.responsibilityGroup);
-            this.lecturerPublicationTab.Location = new System.Drawing.Point(4, 22);
+            this.lecturerPublicationTab.Location = new System.Drawing.Point(4, 25);
             this.lecturerPublicationTab.Name = "lecturerPublicationTab";
             this.lecturerPublicationTab.Padding = new System.Windows.Forms.Padding(3);
-            this.lecturerPublicationTab.Size = new System.Drawing.Size(1118, 582);
+            this.lecturerPublicationTab.Size = new System.Drawing.Size(1118, 579);
             this.lecturerPublicationTab.TabIndex = 12;
-            this.lecturerPublicationTab.Text = "Публикации преподавателя";
+            this.lecturerPublicationTab.Text = "Публикации и обязанности";
             this.lecturerPublicationTab.UseVisualStyleBackColor = true;
+            this.lecturerPublicationTab.Enter += new System.EventHandler(this.lecturerPublicationTab_Enter);
             // 
             // publicationGroup
             // 
@@ -6333,7 +6340,7 @@
             this.publicationGroup.Controls.Add(this.lecturerPublicationGrid);
             this.publicationGroup.Location = new System.Drawing.Point(550, 6);
             this.publicationGroup.Name = "publicationGroup";
-            this.publicationGroup.Size = new System.Drawing.Size(565, 573);
+            this.publicationGroup.Size = new System.Drawing.Size(565, 570);
             this.publicationGroup.TabIndex = 1;
             this.publicationGroup.TabStop = false;
             this.publicationGroup.Text = "Публикации";
@@ -6368,7 +6375,7 @@
             this.lecturerPublicationNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem14;
             this.lecturerPublicationNavigator.Name = "lecturerPublicationNavigator";
             this.lecturerPublicationNavigator.PositionItem = this.bindingNavigatorPositionItem14;
-            this.lecturerPublicationNavigator.Size = new System.Drawing.Size(301, 25);
+            this.lecturerPublicationNavigator.Size = new System.Drawing.Size(301, 22);
             this.lecturerPublicationNavigator.TabIndex = 5;
             this.lecturerPublicationNavigator.Text = "bindingNavigator2";
             // 
@@ -6378,7 +6385,7 @@
             this.bindingNavigatorAddNewItem14.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem14.Image")));
             this.bindingNavigatorAddNewItem14.Name = "bindingNavigatorAddNewItem14";
             this.bindingNavigatorAddNewItem14.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem14.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem14.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorAddNewItem14.Text = "Add new";
             this.bindingNavigatorAddNewItem14.Click += new System.EventHandler(this.bindingNavigatorAddNewItem14_Click);
             // 
@@ -6390,7 +6397,7 @@
             // bindingNavigatorCountItem14
             // 
             this.bindingNavigatorCountItem14.Name = "bindingNavigatorCountItem14";
-            this.bindingNavigatorCountItem14.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem14.Size = new System.Drawing.Size(35, 19);
             this.bindingNavigatorCountItem14.Text = "of {0}";
             this.bindingNavigatorCountItem14.ToolTipText = "Total number of items";
             // 
@@ -6400,7 +6407,7 @@
             this.bindingNavigatorDeleteItem14.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem14.Image")));
             this.bindingNavigatorDeleteItem14.Name = "bindingNavigatorDeleteItem14";
             this.bindingNavigatorDeleteItem14.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem14.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem14.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorDeleteItem14.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem14
@@ -6409,7 +6416,7 @@
             this.bindingNavigatorMoveFirstItem14.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem14.Image")));
             this.bindingNavigatorMoveFirstItem14.Name = "bindingNavigatorMoveFirstItem14";
             this.bindingNavigatorMoveFirstItem14.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem14.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem14.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveFirstItem14.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem14
@@ -6418,13 +6425,13 @@
             this.bindingNavigatorMovePreviousItem14.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem14.Image")));
             this.bindingNavigatorMovePreviousItem14.Name = "bindingNavigatorMovePreviousItem14";
             this.bindingNavigatorMovePreviousItem14.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem14.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem14.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMovePreviousItem14.Text = "Move previous";
             // 
             // bindingNavigatorSeparator42
             // 
             this.bindingNavigatorSeparator42.Name = "bindingNavigatorSeparator42";
-            this.bindingNavigatorSeparator42.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator42.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorPositionItem14
             // 
@@ -6438,7 +6445,7 @@
             // bindingNavigatorSeparator43
             // 
             this.bindingNavigatorSeparator43.Name = "bindingNavigatorSeparator43";
-            this.bindingNavigatorSeparator43.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator43.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorMoveNextItem14
             // 
@@ -6446,7 +6453,7 @@
             this.bindingNavigatorMoveNextItem14.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem14.Image")));
             this.bindingNavigatorMoveNextItem14.Name = "bindingNavigatorMoveNextItem14";
             this.bindingNavigatorMoveNextItem14.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem14.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem14.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveNextItem14.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem14
@@ -6455,13 +6462,13 @@
             this.bindingNavigatorMoveLastItem14.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem14.Image")));
             this.bindingNavigatorMoveLastItem14.Name = "bindingNavigatorMoveLastItem14";
             this.bindingNavigatorMoveLastItem14.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem14.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem14.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveLastItem14.Text = "Move last";
             // 
             // bindingNavigatorSeparator44
             // 
             this.bindingNavigatorSeparator44.Name = "bindingNavigatorSeparator44";
-            this.bindingNavigatorSeparator44.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator44.Size = new System.Drawing.Size(6, 22);
             // 
             // newToolStripButton12
             // 
@@ -6469,7 +6476,7 @@
             this.newToolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton12.Image")));
             this.newToolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton12.Name = "newToolStripButton12";
-            this.newToolStripButton12.Size = new System.Drawing.Size(23, 22);
+            this.newToolStripButton12.Size = new System.Drawing.Size(23, 19);
             this.newToolStripButton12.Text = "&Clear";
             this.newToolStripButton12.Click += new System.EventHandler(this.newToolStripButton12_Click);
             // 
@@ -6479,7 +6486,7 @@
             this.saveToolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton14.Image")));
             this.saveToolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton14.Name = "saveToolStripButton14";
-            this.saveToolStripButton14.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton14.Size = new System.Drawing.Size(23, 19);
             this.saveToolStripButton14.Text = "&Save";
             this.saveToolStripButton14.Click += new System.EventHandler(this.saveToolStripButton14_Click);
             // 
@@ -6489,9 +6496,9 @@
             this.lecturer_PKComboBox.DataSource = this.lecturerBindingSource;
             this.lecturer_PKComboBox.DisplayMember = "FullName";
             this.lecturer_PKComboBox.FormattingEnabled = true;
-            this.lecturer_PKComboBox.Location = new System.Drawing.Point(124, 49);
+            this.lecturer_PKComboBox.Location = new System.Drawing.Point(145, 49);
             this.lecturer_PKComboBox.Name = "lecturer_PKComboBox";
-            this.lecturer_PKComboBox.Size = new System.Drawing.Size(338, 21);
+            this.lecturer_PKComboBox.Size = new System.Drawing.Size(338, 24);
             this.lecturer_PKComboBox.TabIndex = 4;
             this.lecturer_PKComboBox.ValueMember = "PK";
             // 
@@ -6501,9 +6508,9 @@
             this.publication_IDComboBox.DataSource = this.publicationBindingSource;
             this.publication_IDComboBox.DisplayMember = "Publication_ID";
             this.publication_IDComboBox.FormattingEnabled = true;
-            this.publication_IDComboBox.Location = new System.Drawing.Point(124, 22);
+            this.publication_IDComboBox.Location = new System.Drawing.Point(145, 22);
             this.publication_IDComboBox.Name = "publication_IDComboBox";
-            this.publication_IDComboBox.Size = new System.Drawing.Size(338, 21);
+            this.publication_IDComboBox.Size = new System.Drawing.Size(338, 24);
             this.publication_IDComboBox.TabIndex = 2;
             this.publication_IDComboBox.ValueMember = "Publication_ID";
             // 
@@ -6526,7 +6533,7 @@
             this.lecturerPublicationGrid.Name = "lecturerPublicationGrid";
             this.lecturerPublicationGrid.ReadOnly = true;
             this.lecturerPublicationGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.lecturerPublicationGrid.Size = new System.Drawing.Size(553, 153);
+            this.lecturerPublicationGrid.Size = new System.Drawing.Size(553, 150);
             this.lecturerPublicationGrid.TabIndex = 0;
             // 
             // publicationIDDataGridViewTextBoxColumn1
@@ -6560,7 +6567,7 @@
             this.responsibilityGroup.Controls.Add(this.responsibilityGrid);
             this.responsibilityGroup.Location = new System.Drawing.Point(3, 6);
             this.responsibilityGroup.Name = "responsibilityGroup";
-            this.responsibilityGroup.Size = new System.Drawing.Size(541, 573);
+            this.responsibilityGroup.Size = new System.Drawing.Size(541, 570);
             this.responsibilityGroup.TabIndex = 0;
             this.responsibilityGroup.TabStop = false;
             this.responsibilityGroup.Text = "Обязанности";
@@ -6595,7 +6602,7 @@
             this.responsibilityNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem13;
             this.responsibilityNavigator.Name = "responsibilityNavigator";
             this.responsibilityNavigator.PositionItem = this.bindingNavigatorPositionItem13;
-            this.responsibilityNavigator.Size = new System.Drawing.Size(301, 25);
+            this.responsibilityNavigator.Size = new System.Drawing.Size(301, 22);
             this.responsibilityNavigator.TabIndex = 9;
             this.responsibilityNavigator.Text = "bindingNavigator1";
             // 
@@ -6605,7 +6612,7 @@
             this.bindingNavigatorAddNewItem13.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem13.Image")));
             this.bindingNavigatorAddNewItem13.Name = "bindingNavigatorAddNewItem13";
             this.bindingNavigatorAddNewItem13.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem13.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem13.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorAddNewItem13.Text = "Add new";
             this.bindingNavigatorAddNewItem13.Click += new System.EventHandler(this.bindingNavigatorAddNewItem13_Click);
             // 
@@ -6617,7 +6624,7 @@
             // bindingNavigatorCountItem13
             // 
             this.bindingNavigatorCountItem13.Name = "bindingNavigatorCountItem13";
-            this.bindingNavigatorCountItem13.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem13.Size = new System.Drawing.Size(35, 19);
             this.bindingNavigatorCountItem13.Text = "of {0}";
             this.bindingNavigatorCountItem13.ToolTipText = "Total number of items";
             // 
@@ -6627,7 +6634,7 @@
             this.bindingNavigatorDeleteItem13.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem13.Image")));
             this.bindingNavigatorDeleteItem13.Name = "bindingNavigatorDeleteItem13";
             this.bindingNavigatorDeleteItem13.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem13.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem13.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorDeleteItem13.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem13
@@ -6636,7 +6643,7 @@
             this.bindingNavigatorMoveFirstItem13.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem13.Image")));
             this.bindingNavigatorMoveFirstItem13.Name = "bindingNavigatorMoveFirstItem13";
             this.bindingNavigatorMoveFirstItem13.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem13.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem13.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveFirstItem13.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem13
@@ -6645,13 +6652,13 @@
             this.bindingNavigatorMovePreviousItem13.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem13.Image")));
             this.bindingNavigatorMovePreviousItem13.Name = "bindingNavigatorMovePreviousItem13";
             this.bindingNavigatorMovePreviousItem13.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem13.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem13.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMovePreviousItem13.Text = "Move previous";
             // 
             // bindingNavigatorSeparator39
             // 
             this.bindingNavigatorSeparator39.Name = "bindingNavigatorSeparator39";
-            this.bindingNavigatorSeparator39.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator39.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorPositionItem13
             // 
@@ -6665,7 +6672,7 @@
             // bindingNavigatorSeparator40
             // 
             this.bindingNavigatorSeparator40.Name = "bindingNavigatorSeparator40";
-            this.bindingNavigatorSeparator40.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator40.Size = new System.Drawing.Size(6, 22);
             // 
             // bindingNavigatorMoveNextItem13
             // 
@@ -6673,7 +6680,7 @@
             this.bindingNavigatorMoveNextItem13.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem13.Image")));
             this.bindingNavigatorMoveNextItem13.Name = "bindingNavigatorMoveNextItem13";
             this.bindingNavigatorMoveNextItem13.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem13.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem13.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveNextItem13.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem13
@@ -6682,13 +6689,13 @@
             this.bindingNavigatorMoveLastItem13.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem13.Image")));
             this.bindingNavigatorMoveLastItem13.Name = "bindingNavigatorMoveLastItem13";
             this.bindingNavigatorMoveLastItem13.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem13.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem13.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorMoveLastItem13.Text = "Move last";
             // 
             // bindingNavigatorSeparator41
             // 
             this.bindingNavigatorSeparator41.Name = "bindingNavigatorSeparator41";
-            this.bindingNavigatorSeparator41.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator41.Size = new System.Drawing.Size(6, 22);
             // 
             // newToolStripButton11
             // 
@@ -6696,7 +6703,7 @@
             this.newToolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton11.Image")));
             this.newToolStripButton11.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton11.Name = "newToolStripButton11";
-            this.newToolStripButton11.Size = new System.Drawing.Size(23, 22);
+            this.newToolStripButton11.Size = new System.Drawing.Size(23, 19);
             this.newToolStripButton11.Text = "&Clear";
             this.newToolStripButton11.Click += new System.EventHandler(this.newToolStripButton11_Click);
             // 
@@ -6706,7 +6713,7 @@
             this.saveToolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton13.Image")));
             this.saveToolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton13.Name = "saveToolStripButton13";
-            this.saveToolStripButton13.Size = new System.Drawing.Size(23, 22);
+            this.saveToolStripButton13.Size = new System.Drawing.Size(23, 19);
             this.saveToolStripButton13.Text = "&Save";
             this.saveToolStripButton13.Click += new System.EventHandler(this.saveToolStripButton13_Click);
             // 
@@ -6715,7 +6722,7 @@
             this.responsibilityEndDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.responsibilityBindingSource, "EndDate", true));
             this.responsibilityEndDateDateTimePicker.Location = new System.Drawing.Point(145, 142);
             this.responsibilityEndDateDateTimePicker.Name = "responsibilityEndDateDateTimePicker";
-            this.responsibilityEndDateDateTimePicker.Size = new System.Drawing.Size(390, 20);
+            this.responsibilityEndDateDateTimePicker.Size = new System.Drawing.Size(390, 23);
             this.responsibilityEndDateDateTimePicker.TabIndex = 8;
             // 
             // responsibilityStartDateDateTimePicker
@@ -6723,7 +6730,7 @@
             this.responsibilityStartDateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.responsibilityBindingSource, "StartDate", true));
             this.responsibilityStartDateDateTimePicker.Location = new System.Drawing.Point(145, 116);
             this.responsibilityStartDateDateTimePicker.Name = "responsibilityStartDateDateTimePicker";
-            this.responsibilityStartDateDateTimePicker.Size = new System.Drawing.Size(390, 20);
+            this.responsibilityStartDateDateTimePicker.Size = new System.Drawing.Size(390, 23);
             this.responsibilityStartDateDateTimePicker.TabIndex = 6;
             this.responsibilityStartDateDateTimePicker.Validating += new System.ComponentModel.CancelEventHandler(this.responsibilityStartDateDateTimePicker_Validating);
             // 
@@ -6735,7 +6742,7 @@
             this.lecturerComboBox.FormattingEnabled = true;
             this.lecturerComboBox.Location = new System.Drawing.Point(145, 89);
             this.lecturerComboBox.Name = "lecturerComboBox";
-            this.lecturerComboBox.Size = new System.Drawing.Size(390, 21);
+            this.lecturerComboBox.Size = new System.Drawing.Size(390, 24);
             this.lecturerComboBox.TabIndex = 4;
             this.lecturerComboBox.ValueMember = "PK";
             // 
@@ -6770,7 +6777,7 @@
             this.responsibilityGrid.Name = "responsibilityGrid";
             this.responsibilityGrid.ReadOnly = true;
             this.responsibilityGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.responsibilityGrid.Size = new System.Drawing.Size(529, 153);
+            this.responsibilityGrid.Size = new System.Drawing.Size(529, 150);
             this.responsibilityGrid.TabIndex = 0;
             // 
             // responsibilityIDDataGridViewTextBoxColumn
@@ -6787,7 +6794,7 @@
             this.responsibilityDescriptionDataGridViewTextBoxColumn.HeaderText = "Описание";
             this.responsibilityDescriptionDataGridViewTextBoxColumn.Name = "responsibilityDescriptionDataGridViewTextBoxColumn";
             this.responsibilityDescriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.responsibilityDescriptionDataGridViewTextBoxColumn.Width = 82;
+            this.responsibilityDescriptionDataGridViewTextBoxColumn.Width = 99;
             // 
             // lecturerDataGridViewTextBoxColumn4
             // 
@@ -6795,7 +6802,7 @@
             this.lecturerDataGridViewTextBoxColumn4.HeaderText = "Преподаватель";
             this.lecturerDataGridViewTextBoxColumn4.Name = "lecturerDataGridViewTextBoxColumn4";
             this.lecturerDataGridViewTextBoxColumn4.ReadOnly = true;
-            this.lecturerDataGridViewTextBoxColumn4.Width = 111;
+            this.lecturerDataGridViewTextBoxColumn4.Width = 136;
             // 
             // startDateDataGridViewTextBoxColumn1
             // 
@@ -6803,7 +6810,7 @@
             this.startDateDataGridViewTextBoxColumn1.HeaderText = "Дата начала";
             this.startDateDataGridViewTextBoxColumn1.Name = "startDateDataGridViewTextBoxColumn1";
             this.startDateDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.startDateDataGridViewTextBoxColumn1.Width = 96;
+            this.startDateDataGridViewTextBoxColumn1.Width = 109;
             // 
             // endDateDataGridViewTextBoxColumn1
             // 
@@ -6811,7 +6818,7 @@
             this.endDateDataGridViewTextBoxColumn1.HeaderText = "Дата окончания";
             this.endDateDataGridViewTextBoxColumn1.Name = "endDateDataGridViewTextBoxColumn1";
             this.endDateDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.endDateDataGridViewTextBoxColumn1.Width = 114;
+            this.endDateDataGridViewTextBoxColumn1.Width = 130;
             // 
             // lecturerTableAdapter
             // 
