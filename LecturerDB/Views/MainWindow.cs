@@ -16,6 +16,8 @@ namespace LecturerDB.Views
     public partial class MainWindow : Form
     {
         private byte[] lecturerCV;
+        private byte[] subjectPlan;
+        private byte[] subjectDescription;
 
         public List<string> LectionTypeList = new List<string>() { "Лекция", "Практика", "Лабораторная","Курсовая" };
 
@@ -172,11 +174,6 @@ namespace LecturerDB.Views
             }
 
         }
-        
-        private void lecturerCVBytesTextBox_TextChanged(object sender, EventArgs e)
-        {
-            lecturerViewCVButton.Enabled = lecturerCVLinkLabel.Text != string.Empty;
-        }
 
         private void lecturerViewCVButton_Click(object sender, EventArgs e)
         {
@@ -222,7 +219,7 @@ namespace LecturerDB.Views
                 groupFacultyTextBox.Text = string.Empty;
                 groupProgramTextBox.Text = string.Empty;
                 groupLearningTypeTextBox.Text = string.Empty;
-                groupStartYearNumericUpDown.Value = new Decimal(1990);
+                groupStartYearNumericUpDown.Value = new Decimal(DateTime.Today.Year);
                 groupGrid.BeginEdit(true);
             }
             catch (Exception e)
@@ -312,7 +309,7 @@ namespace LecturerDB.Views
                 subjectLections_DNumericUpDown.Value = 0;
                 subjectPractices_DNumericUpDown.Value = 0;
                 subjectLaboratories_DNumericUpDown.Value = 0;
-                subjectContactHoursNumericUpDown.Value = 0;
+                subjectContactHoursDNumericUpDown.Value = 0;
                 subjectLections_VNumericUpDown.Value = 0;
                 subjectPractices_VNumericUpDown.Value = 0;
                 subjectLaboratories_VNumericUpDown.Value = 0;
@@ -413,7 +410,7 @@ namespace LecturerDB.Views
                 //workLoadSubjectComboBox.SelectedIndex = 1;
                 //workLoadLecturerComboBox.SelectedIndex = 1;
                 //workLoadGroupComboBox.SelectedIndex = 1;
-                workLoadStudyYearNumericUpDown.Value = 1990;
+                workLoadStudyYearNumericUpDown.Value = DateTime.Today.Year;
                 workLoadSemesterListBox.ClearSelected();
                 workLoadLectionCountNumericUpDown.Value = 0;
                 workLoadPracticeCountNumericUpDown.Value = 0;
@@ -558,6 +555,7 @@ namespace LecturerDB.Views
         private void saveToolStripButton5_Click(object sender, EventArgs e)
         {
             TabControlValidation(languageTab);
+            subjectReadingReadYearNumericUpDown.Value = subjectReadingReadYearNumericUpDown.Value;
             subjectReadingBindingSource.EndEdit();
             subjectReadingTableAdapter.Update(cathedraDataSet.SubjectReading);
             subjectReadingGrid.Refresh();
@@ -568,7 +566,7 @@ namespace LecturerDB.Views
             try
             {
                 subjectReadingGrid.CancelEdit();
-                subjectReadingReadYearNumericUpDown.Value = 1990;
+                subjectReadingReadYearNumericUpDown.Value = DateTime.Today.Year;
                 subjectReadingGrid.BeginEdit(true);
             }
             catch (Exception e)
@@ -705,7 +703,7 @@ namespace LecturerDB.Views
             {
                 moveStudentGrid.CancelEdit();
                 moveStudentReasonTextBox.Text = string.Empty;
-                moveStudentStudyYearNumericUpDown.Value = 1990;
+                moveStudentStudyYearNumericUpDown.Value = DateTime.Today.Year;
                 moveStudentStudentCountBeginNumericUpDown.Value = 0;
                 moveStudentStudentCountEndNumericUpDown.Value = 0;
                 moveStudentRemovedNumericUpDown.Value = 0;
@@ -961,7 +959,7 @@ namespace LecturerDB.Views
                 publicationGrid.CancelEdit();
                 publicationNameTextBox.Text = string.Empty;
                 publicationPlaceTextBox.Text = string.Empty;
-                publicationYearNumericUpDown.Value = 1990;
+                publicationYearNumericUpDown.Value = DateTime.Today.Year;
                 publicationRatesTextBox.Text = string.Empty;
                 publicationGrid.BeginEdit(true);
             }
@@ -1024,7 +1022,7 @@ namespace LecturerDB.Views
             try
             {
                 learningResultGrid.CancelEdit();
-                learningResultStudyYearNumericUpDown.Value = 1990;
+                learningResultStudyYearNumericUpDown.Value = DateTime.Today.Year;
                 learningResultMeanMarkNumericUpDown.Value = 0;
                 learningResultFCountNumericUpDown.Value = 0;
                 learningResultGrid.BeginEdit(true);
@@ -1244,13 +1242,14 @@ namespace LecturerDB.Views
             try
             {
                 string filePath = Directory.GetCurrentDirectory() + lecturerCVLinkLabel.Text;
-                File.WriteAllBytes(filePath, lecturerCV);
+                //lecturerCV = File.ReadAllBytes(filePath);
                 var pdfViewProcess = Process.Start(filePath);
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         private void lecturerPublicationTab_Enter(object sender, EventArgs e)
@@ -1272,8 +1271,13 @@ namespace LecturerDB.Views
         {
             try
             {
-
-            }catch(Exception ex)
+                subjectKPHoursTextBox.Text = (subjectKPNumericUpDown.Value * 40).ToString();
+                subjectContactHoursDNumericUpDown.Value = subjectKPNumericUpDown.Value * 16;
+                selfStudyDayTextBox.Text = (subjectKPNumericUpDown.Value * 24).ToString();
+                subjectContactHours_VNumericUpDown.Value = subjectKPNumericUpDown.Value * 12;
+                selfStudyVTextBox.Text = (subjectKPNumericUpDown.Value * 28).ToString();
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -1282,6 +1286,106 @@ namespace LecturerDB.Views
         private void workLoadTotalHoursNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             workLoadContactHoursNumericUpDown.Value = workLoadTotalHoursNumericUpDown.Value;
+        }
+
+        private void subjectContactHoursDNumericUpDown_Validating(object sender, CancelEventArgs e)
+        {
+            if (subjectContactHoursDNumericUpDown.Value != subjectLections_DNumericUpDown.Value+subjectPractices_DNumericUpDown.Value+subjectLaboratories_DNumericUpDown.Value)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(subjectContactHoursDNumericUpDown, "Сумма часов лекций, практик и лабораторных должна равняться контактным часам!");
+
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void subjectContactHours_VNumericUpDown_Validating(object sender, CancelEventArgs e)
+        {
+            if (subjectContactHours_VNumericUpDown.Value != subjectLections_VNumericUpDown.Value + subjectPractices_VNumericUpDown.Value + subjectLaboratories_VNumericUpDown.Value)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(subjectContactHours_VNumericUpDown, "Сумма часов лекций, практик и лабораторных должна равняться контактным часам!");
+
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+        }
+
+        private void topicPlanLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                
+                    errorProvider1.Clear();
+                    string filePath = Directory.GetCurrentDirectory() + topicPlanLinkLabel.Text;
+                    //File.WriteAllBytes(filePath, subjectPlan);
+                    var pdfViewProcess = Process.Start(filePath);
+                
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void subjectTematicPlanAddButoon_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.Title = "Тематический план";
+                dlg.Filter = "PDF Files|*.pdf";
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    string curDir = Directory.GetCurrentDirectory();
+                    subjectPlan = File.ReadAllBytes(dlg.FileName);
+                    Directory.CreateDirectory(curDir + @"\SubjectPlans\"); // If the directory already exists, this method does nothing.
+                    File.WriteAllBytes(Directory.GetCurrentDirectory() + @"\SubjectPlans\" + subjectCodeTextBox.Text +subjectName_enTextBox.Text + ".pdf", subjectPlan);
+                    topicPlanLinkLabel.Text = @"\SubjectPlans\" + subjectCodeTextBox.Text + subjectName_enTextBox.Text + ".pdf";
+                }
+            }
+        }
+
+        private void subjectDescriptionAddButton_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.Title = "Описание предмета";
+                dlg.Filter = "PDF Files|*.pdf";
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    string curDir = Directory.GetCurrentDirectory();
+                    subjectDescription = File.ReadAllBytes(dlg.FileName);
+                    Directory.CreateDirectory(curDir + @"\SubjectDescriptions\"); // If the directory already exists, this method does nothing.
+                    File.WriteAllBytes(Directory.GetCurrentDirectory() + @"\SubjectDescriptions\" + subjectCodeTextBox.Text + subjectName_enTextBox.Text + ".pdf", subjectDescription);
+                    subjectDescriptionLinkLabel.Text = @"\SubjectDescriptions\" + subjectCodeTextBox.Text + subjectName_enTextBox.Text + ".pdf";
+                }
+            }
+        }
+
+        private void subjectDescriptionLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                
+                    errorProvider1.Clear();
+                    string filePath = Directory.GetCurrentDirectory() + subjectDescriptionLinkLabel.Text;
+                    //File.WriteAllBytes(filePath, subjectDescription);
+                    var pdfViewProcess = Process.Start(filePath);
+                
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 

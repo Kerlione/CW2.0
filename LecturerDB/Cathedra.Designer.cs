@@ -621,7 +621,7 @@ namespace LecturerDB {
             base.Tables.Add(this.tablePublication);
             this.tableResponsibility = new ResponsibilityDataTable();
             base.Tables.Add(this.tableResponsibility);
-            this.tableSubject = new SubjectDataTable();
+            this.tableSubject = new SubjectDataTable(false);
             base.Tables.Add(this.tableSubject);
             this.tableSubjectReading = new SubjectReadingDataTable();
             base.Tables.Add(this.tableSubjectReading);
@@ -846,6 +846,8 @@ namespace LecturerDB {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitExpressions() {
             this.Lecturer.FullNameColumn.Expression = "FirstName + \' \'+ LastName";
+            this.Subject.PersonalWork_DColumn.Expression = "KP * 24";
+            this.Subject.PersonalWork_VColumn.Expression = "KP * 28";
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -909,6 +911,8 @@ namespace LecturerDB {
             private global::System.Data.DataColumn columnMark;
             
             private global::System.Data.DataColumn columnDiplomaType;
+            
+            private global::System.Data.DataColumn columnDiplomaDefender;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -985,6 +989,14 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DiplomaDefenderColumn {
+                get {
+                    return this.columnDiplomaDefender;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1020,14 +1032,15 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DiplomaDefenceRow AddDiplomaDefenceRow(string DiplomaTopic, string DiplomaHead, System.DateTime DefenceDate, int Mark, string DiplomaType) {
+            public DiplomaDefenceRow AddDiplomaDefenceRow(string DiplomaTopic, string DiplomaHead, System.DateTime DefenceDate, int Mark, string DiplomaType, string DiplomaDefender) {
                 DiplomaDefenceRow rowDiplomaDefenceRow = ((DiplomaDefenceRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         DiplomaTopic,
                         DiplomaHead,
                         DefenceDate,
                         Mark,
-                        DiplomaType};
+                        DiplomaType,
+                        DiplomaDefender};
                 rowDiplomaDefenceRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDiplomaDefenceRow);
                 return rowDiplomaDefenceRow;
@@ -1064,6 +1077,7 @@ namespace LecturerDB {
                 this.columnDefenceDate = base.Columns["DefenceDate"];
                 this.columnMark = base.Columns["Mark"];
                 this.columnDiplomaType = base.Columns["DiplomaType"];
+                this.columnDiplomaDefender = base.Columns["DiplomaDefender"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1079,6 +1093,8 @@ namespace LecturerDB {
                 base.Columns.Add(this.columnMark);
                 this.columnDiplomaType = new global::System.Data.DataColumn("DiplomaType", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDiplomaType);
+                this.columnDiplomaDefender = new global::System.Data.DataColumn("DiplomaDefender", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDiplomaDefender);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnDiplomaTopic,
                                 this.columnDiplomaHead,
@@ -1089,6 +1105,7 @@ namespace LecturerDB {
                 this.columnDiplomaHead.MaxLength = 255;
                 this.columnDefenceDate.AllowDBNull = false;
                 this.columnDiplomaType.MaxLength = 255;
+                this.columnDiplomaDefender.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2405,7 +2422,7 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public LecturerRow AddLecturerRow(string PK, string FirstName, string LastName, string MiddleName, System.DateTime Birthday, string CathedraID, string Occupation, string Degree, string Languages, byte[] Photo, byte[] CV, string FullName) {
+            public LecturerRow AddLecturerRow(string PK, string FirstName, string LastName, string MiddleName, System.DateTime Birthday, string CathedraID, string Occupation, string Degree, string Languages, byte[] Photo, string CV, string FullName) {
                 LecturerRow rowLecturerRow = ((LecturerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         PK,
@@ -2427,7 +2444,7 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public LecturerRow AddLecturerRow(string PK, string FirstName, string LastName, string MiddleName, System.DateTime Birthday, string CathedraID, string Occupation, string Degree, string Languages, byte[] Photo, byte[] CV) {
+            public LecturerRow AddLecturerRow(string PK, string FirstName, string LastName, string MiddleName, System.DateTime Birthday, string CathedraID, string Occupation, string Degree, string Languages, byte[] Photo, string CV) {
                 LecturerRow rowLecturerRow = ((LecturerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         PK,
@@ -2508,7 +2525,7 @@ namespace LecturerDB {
                 base.Columns.Add(this.columnLanguages);
                 this.columnPhoto = new global::System.Data.DataColumn("Photo", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPhoto);
-                this.columnCV = new global::System.Data.DataColumn("CV", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                this.columnCV = new global::System.Data.DataColumn("CV", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCV);
                 this.columnFullName = new global::System.Data.DataColumn("FullName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFullName);
@@ -4978,18 +4995,35 @@ namespace LecturerDB {
             
             private global::System.Data.DataColumn columnTest;
             
-            private global::System.Data.DataColumn columnContactHours;
-            
             private global::System.Data.DataColumn columnTopicPlan;
             
             private global::System.Data.DataColumn columnSubjectDescription;
             
+            private global::System.Data.DataColumn columnContactHours_D;
+            
+            private global::System.Data.DataColumn columnContactHours_V;
+            
+            private global::System.Data.DataColumn columnPersonalWork_D;
+            
+            private global::System.Data.DataColumn columnPersonalWork_V;
+            
+            private global::System.Data.DataColumn columnContacyHours_V;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public SubjectDataTable() {
+            public SubjectDataTable() : 
+                    this(false) {
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SubjectDataTable(bool initExpressions) {
                 this.TableName = "Subject";
                 this.BeginInit();
                 this.InitClass();
+                if ((initExpressions == true)) {
+                    this.InitExpressions();
+                }
                 this.EndInit();
             }
             
@@ -5147,14 +5181,6 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ContactHoursColumn {
-                get {
-                    return this.columnContactHours;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn TopicPlanColumn {
                 get {
                     return this.columnTopicPlan;
@@ -5166,6 +5192,46 @@ namespace LecturerDB {
             public global::System.Data.DataColumn SubjectDescriptionColumn {
                 get {
                     return this.columnSubjectDescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ContactHours_DColumn {
+                get {
+                    return this.columnContactHours_D;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ContactHours_VColumn {
+                get {
+                    return this.columnContactHours_V;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PersonalWork_DColumn {
+                get {
+                    return this.columnPersonalWork_D;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PersonalWork_VColumn {
+                get {
+                    return this.columnPersonalWork_V;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ContacyHours_VColumn {
+                get {
+                    return this.columnContacyHours_V;
                 }
             }
             
@@ -5223,9 +5289,13 @@ namespace LecturerDB {
                         int Laboratories_Z, 
                         bool CourseWork, 
                         bool Test, 
-                        int ContactHours, 
-                        byte[] TopicPlan, 
-                        byte[] SubjectDescription) {
+                        string TopicPlan, 
+                        string SubjectDescription, 
+                        int ContactHours_D, 
+                        decimal ContactHours_V, 
+                        decimal PersonalWork_D, 
+                        decimal PersonalWork_V, 
+                        int ContacyHours_V) {
                 SubjectRow rowSubjectRow = ((SubjectRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         SubjectCode,
@@ -5244,9 +5314,67 @@ namespace LecturerDB {
                         Laboratories_Z,
                         CourseWork,
                         Test,
-                        ContactHours,
                         TopicPlan,
-                        SubjectDescription};
+                        SubjectDescription,
+                        ContactHours_D,
+                        ContactHours_V,
+                        PersonalWork_D,
+                        PersonalWork_V,
+                        ContacyHours_V};
+                rowSubjectRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSubjectRow);
+                return rowSubjectRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public SubjectRow AddSubjectRow(
+                        string SubjectCode, 
+                        string SubjectName_rus, 
+                        string SubjectName_lv, 
+                        string SubjectName_en, 
+                        int KP, 
+                        int Lections_D, 
+                        int Practices_D, 
+                        int Laboratories_D, 
+                        int Lections_V, 
+                        int Practices_V, 
+                        int Laboratories_V, 
+                        int Lections_Z, 
+                        int Practices_Z, 
+                        int Laboratories_Z, 
+                        bool CourseWork, 
+                        bool Test, 
+                        string TopicPlan, 
+                        string SubjectDescription, 
+                        int ContactHours_D, 
+                        decimal ContactHours_V, 
+                        int ContacyHours_V) {
+                SubjectRow rowSubjectRow = ((SubjectRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        SubjectCode,
+                        SubjectName_rus,
+                        SubjectName_lv,
+                        SubjectName_en,
+                        KP,
+                        Lections_D,
+                        Practices_D,
+                        Laboratories_D,
+                        Lections_V,
+                        Practices_V,
+                        Laboratories_V,
+                        Lections_Z,
+                        Practices_Z,
+                        Laboratories_Z,
+                        CourseWork,
+                        Test,
+                        TopicPlan,
+                        SubjectDescription,
+                        ContactHours_D,
+                        ContactHours_V,
+                        null,
+                        null,
+                        ContacyHours_V};
                 rowSubjectRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSubjectRow);
                 return rowSubjectRow;
@@ -5292,9 +5420,13 @@ namespace LecturerDB {
                 this.columnLaboratories_Z = base.Columns["Laboratories_Z"];
                 this.columnCourseWork = base.Columns["CourseWork"];
                 this.columnTest = base.Columns["Test"];
-                this.columnContactHours = base.Columns["ContactHours"];
                 this.columnTopicPlan = base.Columns["TopicPlan"];
                 this.columnSubjectDescription = base.Columns["SubjectDescription"];
+                this.columnContactHours_D = base.Columns["ContactHours_D"];
+                this.columnContactHours_V = base.Columns["ContactHours_V"];
+                this.columnPersonalWork_D = base.Columns["PersonalWork_D"];
+                this.columnPersonalWork_V = base.Columns["PersonalWork_V"];
+                this.columnContacyHours_V = base.Columns["ContacyHours_V"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5332,12 +5464,20 @@ namespace LecturerDB {
                 base.Columns.Add(this.columnCourseWork);
                 this.columnTest = new global::System.Data.DataColumn("Test", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTest);
-                this.columnContactHours = new global::System.Data.DataColumn("ContactHours", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnContactHours);
-                this.columnTopicPlan = new global::System.Data.DataColumn("TopicPlan", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                this.columnTopicPlan = new global::System.Data.DataColumn("TopicPlan", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTopicPlan);
-                this.columnSubjectDescription = new global::System.Data.DataColumn("SubjectDescription", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                this.columnSubjectDescription = new global::System.Data.DataColumn("SubjectDescription", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSubjectDescription);
+                this.columnContactHours_D = new global::System.Data.DataColumn("ContactHours_D", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnContactHours_D);
+                this.columnContactHours_V = new global::System.Data.DataColumn("ContactHours_V", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnContactHours_V);
+                this.columnPersonalWork_D = new global::System.Data.DataColumn("PersonalWork_D", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPersonalWork_D);
+                this.columnPersonalWork_V = new global::System.Data.DataColumn("PersonalWork_V", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPersonalWork_V);
+                this.columnContacyHours_V = new global::System.Data.DataColumn("ContacyHours_V", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnContacyHours_V);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnSubjectCode}, true));
                 this.columnSubjectCode.AllowDBNull = false;
@@ -5346,6 +5486,9 @@ namespace LecturerDB {
                 this.columnSubjectName_rus.MaxLength = 255;
                 this.columnSubjectName_lv.MaxLength = 255;
                 this.columnSubjectName_en.MaxLength = 255;
+                this.columnContactHours_V.ReadOnly = true;
+                this.columnPersonalWork_D.ReadOnly = true;
+                this.columnPersonalWork_V.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5364,6 +5507,13 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(SubjectRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitExpressions() {
+                this.PersonalWork_DColumn.Expression = "KP * 24";
+                this.PersonalWork_VColumn.Expression = "KP * 28";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6000,7 +6150,7 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public WorkloadRow AddWorkloadRow(GroupRow parentGroupRowByGroupWorkload, SubjectRow parentSubjectRowBySubjectWorkload, LecturerRow parentLecturerRowByLecturerWorkload, string StudyYear, string Semester, int LectionCount, int PracticeCount, int LaboratoryCount, int CourseWork, string Language, decimal LoadMultiply, int TotalHours, int ContactHours) {
+            public WorkloadRow AddWorkloadRow(GroupRow parentGroupRowByGroupWorkload, SubjectRow parentSubjectRowBySubjectWorkload, LecturerRow parentLecturerRowByLecturerWorkload, string StudyYear, string Semester, decimal LectionCount, decimal PracticeCount, decimal LaboratoryCount, decimal CourseWork, string Language, decimal LoadMultiply, decimal TotalHours, decimal ContactHours) {
                 WorkloadRow rowWorkloadRow = ((WorkloadRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -6085,21 +6235,21 @@ namespace LecturerDB {
                 base.Columns.Add(this.columnStudyYear);
                 this.columnSemester = new global::System.Data.DataColumn("Semester", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSemester);
-                this.columnLectionCount = new global::System.Data.DataColumn("LectionCount", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnLectionCount = new global::System.Data.DataColumn("LectionCount", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLectionCount);
-                this.columnPracticeCount = new global::System.Data.DataColumn("PracticeCount", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnPracticeCount = new global::System.Data.DataColumn("PracticeCount", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPracticeCount);
-                this.columnLaboratoryCount = new global::System.Data.DataColumn("LaboratoryCount", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnLaboratoryCount = new global::System.Data.DataColumn("LaboratoryCount", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLaboratoryCount);
-                this.columnCourseWork = new global::System.Data.DataColumn("CourseWork", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnCourseWork = new global::System.Data.DataColumn("CourseWork", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCourseWork);
                 this.columnLanguage = new global::System.Data.DataColumn("Language", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLanguage);
                 this.columnLoadMultiply = new global::System.Data.DataColumn("LoadMultiply", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLoadMultiply);
-                this.columnTotalHours = new global::System.Data.DataColumn("TotalHours", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnTotalHours = new global::System.Data.DataColumn("TotalHours", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalHours);
-                this.columnContactHours = new global::System.Data.DataColumn("ContactHours", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnContactHours = new global::System.Data.DataColumn("ContactHours", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnContactHours);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnGroup,
@@ -6323,6 +6473,22 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DiplomaDefender {
+                get {
+                    try {
+                        return ((string)(this[this.tableDiplomaDefence.DiplomaDefenderColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DiplomaDefender\' in table \'DiplomaDefence\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDiplomaDefence.DiplomaDefenderColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsMarkNull() {
                 return this.IsNull(this.tableDiplomaDefence.MarkColumn);
             }
@@ -6343,6 +6509,18 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetDiplomaTypeNull() {
                 this[this.tableDiplomaDefence.DiplomaTypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDiplomaDefenderNull() {
+                return this.IsNull(this.tableDiplomaDefence.DiplomaDefenderColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDiplomaDefenderNull() {
+                this[this.tableDiplomaDefence.DiplomaDefenderColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6985,10 +7163,10 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte[] CV {
+            public string CV {
                 get {
                     try {
-                        return ((byte[])(this[this.tableLecturer.CVColumn]));
+                        return ((string)(this[this.tableLecturer.CVColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'CV\' in table \'Lecturer\' is DBNull.", e);
@@ -8657,26 +8835,10 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ContactHours {
+            public string TopicPlan {
                 get {
                     try {
-                        return ((int)(this[this.tableSubject.ContactHoursColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ContactHours\' in table \'Subject\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableSubject.ContactHoursColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte[] TopicPlan {
-                get {
-                    try {
-                        return ((byte[])(this[this.tableSubject.TopicPlanColumn]));
+                        return ((string)(this[this.tableSubject.TopicPlanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'TopicPlan\' in table \'Subject\' is DBNull.", e);
@@ -8689,10 +8851,10 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public byte[] SubjectDescription {
+            public string SubjectDescription {
                 get {
                     try {
-                        return ((byte[])(this[this.tableSubject.SubjectDescriptionColumn]));
+                        return ((string)(this[this.tableSubject.SubjectDescriptionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'SubjectDescription\' in table \'Subject\' is DBNull.", e);
@@ -8700,6 +8862,86 @@ namespace LecturerDB {
                 }
                 set {
                     this[this.tableSubject.SubjectDescriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ContactHours_D {
+                get {
+                    try {
+                        return ((int)(this[this.tableSubject.ContactHours_DColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ContactHours_D\' in table \'Subject\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSubject.ContactHours_DColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal ContactHours_V {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSubject.ContactHours_VColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ContactHours_V\' in table \'Subject\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSubject.ContactHours_VColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal PersonalWork_D {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSubject.PersonalWork_DColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PersonalWork_D\' in table \'Subject\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSubject.PersonalWork_DColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal PersonalWork_V {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableSubject.PersonalWork_VColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PersonalWork_V\' in table \'Subject\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSubject.PersonalWork_VColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int ContacyHours_V {
+                get {
+                    try {
+                        return ((int)(this[this.tableSubject.ContacyHours_VColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ContacyHours_V\' in table \'Subject\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSubject.ContacyHours_VColumn] = value;
                 }
             }
             
@@ -8885,18 +9127,6 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsContactHoursNull() {
-                return this.IsNull(this.tableSubject.ContactHoursColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetContactHoursNull() {
-                this[this.tableSubject.ContactHoursColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsTopicPlanNull() {
                 return this.IsNull(this.tableSubject.TopicPlanColumn);
             }
@@ -8917,6 +9147,66 @@ namespace LecturerDB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetSubjectDescriptionNull() {
                 this[this.tableSubject.SubjectDescriptionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsContactHours_DNull() {
+                return this.IsNull(this.tableSubject.ContactHours_DColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetContactHours_DNull() {
+                this[this.tableSubject.ContactHours_DColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsContactHours_VNull() {
+                return this.IsNull(this.tableSubject.ContactHours_VColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetContactHours_VNull() {
+                this[this.tableSubject.ContactHours_VColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPersonalWork_DNull() {
+                return this.IsNull(this.tableSubject.PersonalWork_DColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPersonalWork_DNull() {
+                this[this.tableSubject.PersonalWork_DColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPersonalWork_VNull() {
+                return this.IsNull(this.tableSubject.PersonalWork_VColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPersonalWork_VNull() {
+                this[this.tableSubject.PersonalWork_VColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsContacyHours_VNull() {
+                return this.IsNull(this.tableSubject.ContacyHours_VColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetContacyHours_VNull() {
+                this[this.tableSubject.ContacyHours_VColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9143,10 +9433,10 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int LectionCount {
+            public decimal LectionCount {
                 get {
                     try {
-                        return ((int)(this[this.tableWorkload.LectionCountColumn]));
+                        return ((decimal)(this[this.tableWorkload.LectionCountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'LectionCount\' in table \'Workload\' is DBNull.", e);
@@ -9159,10 +9449,10 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int PracticeCount {
+            public decimal PracticeCount {
                 get {
                     try {
-                        return ((int)(this[this.tableWorkload.PracticeCountColumn]));
+                        return ((decimal)(this[this.tableWorkload.PracticeCountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'PracticeCount\' in table \'Workload\' is DBNull.", e);
@@ -9175,10 +9465,10 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int LaboratoryCount {
+            public decimal LaboratoryCount {
                 get {
                     try {
-                        return ((int)(this[this.tableWorkload.LaboratoryCountColumn]));
+                        return ((decimal)(this[this.tableWorkload.LaboratoryCountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'LaboratoryCount\' in table \'Workload\' is DBNull.", e);
@@ -9191,10 +9481,10 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int CourseWork {
+            public decimal CourseWork {
                 get {
                     try {
-                        return ((int)(this[this.tableWorkload.CourseWorkColumn]));
+                        return ((decimal)(this[this.tableWorkload.CourseWorkColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'CourseWork\' in table \'Workload\' is DBNull.", e);
@@ -9239,10 +9529,10 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int TotalHours {
+            public decimal TotalHours {
                 get {
                     try {
-                        return ((int)(this[this.tableWorkload.TotalHoursColumn]));
+                        return ((decimal)(this[this.tableWorkload.TotalHoursColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'TotalHours\' in table \'Workload\' is DBNull.", e);
@@ -9255,10 +9545,10 @@ namespace LecturerDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int ContactHours {
+            public decimal ContactHours {
                 get {
                     try {
-                        return ((int)(this[this.tableWorkload.ContactHoursColumn]));
+                        return ((decimal)(this[this.tableWorkload.ContactHoursColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'ContactHours\' in table \'Workload\' is DBNull.", e);
@@ -10051,12 +10341,11 @@ namespace LecturerDB.CathedraTableAdapters {
             tableMapping.ColumnMappings.Add("DefenceDate", "DefenceDate");
             tableMapping.ColumnMappings.Add("Mark", "Mark");
             tableMapping.ColumnMappings.Add("DiplomaType", "DiplomaType");
+            tableMapping.ColumnMappings.Add("DiplomaDefender", "DiplomaDefender");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `DiplomaDefence` WHERE ((`DiplomaTopic` = ?) AND (`DiplomaHead` = ?) " +
-                "AND (`DefenceDate` = ?) AND ((? = 1 AND `Mark` IS NULL) OR (`Mark` = ?)) AND ((?" +
-                " = 1 AND `DiplomaType` IS NULL) OR (`DiplomaType` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `DiplomaDefence` WHERE ((`DiplomaTopic` = ?) AND (`DiplomaHead` = ?) AND (`DefenceDate` = ?) AND ((? = 1 AND `Mark` IS NULL) OR (`Mark` = ?)) AND ((? = 1 AND `DiplomaType` IS NULL) OR (`DiplomaType` = ?)) AND ((? = 1 AND `DiplomaDefender` IS NULL) OR (`DiplomaDefender` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DiplomaTopic", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaTopic", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DiplomaHead", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaHead", global::System.Data.DataRowVersion.Original, false, null));
@@ -10065,25 +10354,29 @@ namespace LecturerDB.CathedraTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Mark", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Mark", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DiplomaType", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaType", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DiplomaType", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaType", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DiplomaDefender", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaDefender", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DiplomaDefender", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaDefender", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `DiplomaDefence` (`DiplomaTopic`, `DiplomaHead`, `DefenceDate`, `Mark" +
-                "`, `DiplomaType`) VALUES (?, ?, ?, ?, ?)";
+                "`, `DiplomaType`, `DiplomaDefender`) VALUES (?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DiplomaTopic", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaTopic", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DiplomaHead", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaHead", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DefenceDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DefenceDate", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Mark", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Mark", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DiplomaType", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaType", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DiplomaDefender", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaDefender", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `DiplomaDefence` SET `DiplomaTopic` = ?, `DiplomaHead` = ?, `DefenceDate` = ?, `Mark` = ?, `DiplomaType` = ? WHERE ((`DiplomaTopic` = ?) AND (`DiplomaHead` = ?) AND (`DefenceDate` = ?) AND ((? = 1 AND `Mark` IS NULL) OR (`Mark` = ?)) AND ((? = 1 AND `DiplomaType` IS NULL) OR (`DiplomaType` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `DiplomaDefence` SET `DiplomaTopic` = ?, `DiplomaHead` = ?, `DefenceDate` = ?, `Mark` = ?, `DiplomaType` = ?, `DiplomaDefender` = ? WHERE ((`DiplomaTopic` = ?) AND (`DiplomaHead` = ?) AND (`DefenceDate` = ?) AND ((? = 1 AND `Mark` IS NULL) OR (`Mark` = ?)) AND ((? = 1 AND `DiplomaType` IS NULL) OR (`DiplomaType` = ?)) AND ((? = 1 AND `DiplomaDefender` IS NULL) OR (`DiplomaDefender` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DiplomaTopic", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaTopic", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DiplomaHead", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaHead", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DefenceDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DefenceDate", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Mark", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Mark", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DiplomaType", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaType", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("DiplomaDefender", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaDefender", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DiplomaTopic", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaTopic", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DiplomaHead", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaHead", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DefenceDate", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DefenceDate", global::System.Data.DataRowVersion.Original, false, null));
@@ -10091,6 +10384,8 @@ namespace LecturerDB.CathedraTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Mark", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Mark", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DiplomaType", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaType", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DiplomaType", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaType", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_DiplomaDefender", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaDefender", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_DiplomaDefender", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "DiplomaDefender", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10106,8 +10401,8 @@ namespace LecturerDB.CathedraTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT DiplomaTopic, DiplomaHead, DefenceDate, Mark, DiplomaType FROM DiplomaDefe" +
-                "nce";
+            this._commandCollection[0].CommandText = "SELECT DiplomaTopic, DiplomaHead, DefenceDate, Mark, DiplomaType, DiplomaDefender" +
+                " FROM DiplomaDefence";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10168,7 +10463,7 @@ namespace LecturerDB.CathedraTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_DiplomaTopic, string Original_DiplomaHead, global::System.Nullable<global::System.DateTime> Original_DefenceDate, global::System.Nullable<int> Original_Mark, string Original_DiplomaType) {
+        public virtual int Delete(string Original_DiplomaTopic, string Original_DiplomaHead, global::System.Nullable<global::System.DateTime> Original_DefenceDate, global::System.Nullable<int> Original_Mark, string Original_DiplomaType, string Original_DiplomaDefender) {
             if ((Original_DiplomaTopic == null)) {
                 this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -10203,6 +10498,14 @@ namespace LecturerDB.CathedraTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_DiplomaType));
             }
+            if ((Original_DiplomaDefender == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_DiplomaDefender));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10223,7 +10526,7 @@ namespace LecturerDB.CathedraTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string DiplomaTopic, string DiplomaHead, global::System.Nullable<global::System.DateTime> DefenceDate, global::System.Nullable<int> Mark, string DiplomaType) {
+        public virtual int Insert(string DiplomaTopic, string DiplomaHead, global::System.Nullable<global::System.DateTime> DefenceDate, global::System.Nullable<int> Mark, string DiplomaType, string DiplomaDefender) {
             if ((DiplomaTopic == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -10254,6 +10557,12 @@ namespace LecturerDB.CathedraTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(DiplomaType));
             }
+            if ((DiplomaDefender == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(DiplomaDefender));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10274,7 +10583,7 @@ namespace LecturerDB.CathedraTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string DiplomaTopic, string DiplomaHead, global::System.Nullable<global::System.DateTime> DefenceDate, global::System.Nullable<int> Mark, string DiplomaType, string Original_DiplomaTopic, string Original_DiplomaHead, global::System.Nullable<global::System.DateTime> Original_DefenceDate, global::System.Nullable<int> Original_Mark, string Original_DiplomaType) {
+        public virtual int Update(string DiplomaTopic, string DiplomaHead, global::System.Nullable<global::System.DateTime> DefenceDate, global::System.Nullable<int> Mark, string DiplomaType, string DiplomaDefender, string Original_DiplomaTopic, string Original_DiplomaHead, global::System.Nullable<global::System.DateTime> Original_DefenceDate, global::System.Nullable<int> Original_Mark, string Original_DiplomaType, string Original_DiplomaDefender) {
             if ((DiplomaTopic == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -10305,39 +10614,53 @@ namespace LecturerDB.CathedraTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(DiplomaType));
             }
-            if ((Original_DiplomaTopic == null)) {
+            if ((DiplomaDefender == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_DiplomaTopic));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(DiplomaDefender));
             }
-            if ((Original_DiplomaHead == null)) {
+            if ((Original_DiplomaTopic == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_DiplomaHead));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_DiplomaTopic));
             }
-            if ((Original_DefenceDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_DefenceDate.Value));
-            }
-            else {
+            if ((Original_DiplomaHead == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Original_Mark.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Mark.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_DiplomaHead));
+            }
+            if ((Original_DefenceDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_DefenceDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Mark.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Mark.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             if ((Original_DiplomaType == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_DiplomaType));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_DiplomaType));
+            }
+            if ((Original_DiplomaDefender == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_DiplomaDefender));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -10359,8 +10682,8 @@ namespace LecturerDB.CathedraTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> Mark, string DiplomaType, string Original_DiplomaTopic, string Original_DiplomaHead, global::System.Nullable<global::System.DateTime> Original_DefenceDate, global::System.Nullable<int> Original_Mark, string Original_DiplomaType) {
-            return this.Update(Original_DiplomaTopic, Original_DiplomaHead, Original_DefenceDate, Mark, DiplomaType, Original_DiplomaTopic, Original_DiplomaHead, Original_DefenceDate, Original_Mark, Original_DiplomaType);
+        public virtual int Update(global::System.Nullable<int> Mark, string DiplomaType, string DiplomaDefender, string Original_DiplomaTopic, string Original_DiplomaHead, global::System.Nullable<global::System.DateTime> Original_DefenceDate, global::System.Nullable<int> Original_Mark, string Original_DiplomaType, string Original_DiplomaDefender) {
+            return this.Update(Original_DiplomaTopic, Original_DiplomaHead, Original_DefenceDate, Mark, DiplomaType, DiplomaDefender, Original_DiplomaTopic, Original_DiplomaHead, Original_DefenceDate, Original_Mark, Original_DiplomaType, Original_DiplomaDefender);
         }
     }
     
@@ -11850,7 +12173,7 @@ namespace LecturerDB.CathedraTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Lecturer` WHERE ((`PK` = ?) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `MiddleName` IS NULL) OR (`MiddleName` = ?)) AND ((? = 1 AND `Birthday` IS NULL) OR (`Birthday` = ?)) AND ((? = 1 AND `CathedraID` IS NULL) OR (`CathedraID` = ?)) AND ((? = 1 AND `Occupation` IS NULL) OR (`Occupation` = ?)) AND ((? = 1 AND `Degree` IS NULL) OR (`Degree` = ?)) AND ((? = 1 AND `Languages` IS NULL) OR (`Languages` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Lecturer` WHERE ((`PK` = ?) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `MiddleName` IS NULL) OR (`MiddleName` = ?)) AND ((? = 1 AND `Birthday` IS NULL) OR (`Birthday` = ?)) AND ((? = 1 AND `CathedraID` IS NULL) OR (`CathedraID` = ?)) AND ((? = 1 AND `Occupation` IS NULL) OR (`Occupation` = ?)) AND ((? = 1 AND `Degree` IS NULL) OR (`Degree` = ?)) AND ((? = 1 AND `Languages` IS NULL) OR (`Languages` = ?)) AND ((? = 1 AND `CV` IS NULL) OR (`CV` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PK", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PK", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_FirstName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Original, true, null));
@@ -11869,6 +12192,8 @@ namespace LecturerDB.CathedraTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Degree", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Degree", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Languages", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Languages", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Languages", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Languages", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_CV", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CV", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_CV", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CV", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `Lecturer` (`PK`, `FirstName`, `LastName`, `MiddleName`, `Birthday`, " +
@@ -11885,10 +12210,10 @@ namespace LecturerDB.CathedraTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Degree", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Degree", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Languages", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Languages", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Photo", global::System.Data.OleDb.OleDbType.LongVarBinary, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Photo", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CV", global::System.Data.OleDb.OleDbType.LongVarBinary, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CV", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CV", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CV", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Lecturer` SET `PK` = ?, `FirstName` = ?, `LastName` = ?, `MiddleName` = ?, `Birthday` = ?, `CathedraID` = ?, `Occupation` = ?, `Degree` = ?, `Languages` = ?, `Photo` = ?, `CV` = ? WHERE ((`PK` = ?) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `MiddleName` IS NULL) OR (`MiddleName` = ?)) AND ((? = 1 AND `Birthday` IS NULL) OR (`Birthday` = ?)) AND ((? = 1 AND `CathedraID` IS NULL) OR (`CathedraID` = ?)) AND ((? = 1 AND `Occupation` IS NULL) OR (`Occupation` = ?)) AND ((? = 1 AND `Degree` IS NULL) OR (`Degree` = ?)) AND ((? = 1 AND `Languages` IS NULL) OR (`Languages` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Lecturer` SET `PK` = ?, `FirstName` = ?, `LastName` = ?, `MiddleName` = ?, `Birthday` = ?, `CathedraID` = ?, `Occupation` = ?, `Degree` = ?, `Languages` = ?, `Photo` = ?, `CV` = ? WHERE ((`PK` = ?) AND ((? = 1 AND `FirstName` IS NULL) OR (`FirstName` = ?)) AND ((? = 1 AND `LastName` IS NULL) OR (`LastName` = ?)) AND ((? = 1 AND `MiddleName` IS NULL) OR (`MiddleName` = ?)) AND ((? = 1 AND `Birthday` IS NULL) OR (`Birthday` = ?)) AND ((? = 1 AND `CathedraID` IS NULL) OR (`CathedraID` = ?)) AND ((? = 1 AND `Occupation` IS NULL) OR (`Occupation` = ?)) AND ((? = 1 AND `Degree` IS NULL) OR (`Degree` = ?)) AND ((? = 1 AND `Languages` IS NULL) OR (`Languages` = ?)) AND ((? = 1 AND `CV` IS NULL) OR (`CV` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("PK", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PK", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("FirstName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Current, false, null));
@@ -11900,7 +12225,7 @@ namespace LecturerDB.CathedraTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Degree", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Degree", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Languages", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Languages", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Photo", global::System.Data.OleDb.OleDbType.LongVarBinary, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Photo", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CV", global::System.Data.OleDb.OleDbType.LongVarBinary, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CV", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CV", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CV", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_PK", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "PK", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_FirstName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_FirstName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "FirstName", global::System.Data.DataRowVersion.Original, false, null));
@@ -11918,6 +12243,8 @@ namespace LecturerDB.CathedraTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Degree", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Degree", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Languages", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Languages", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Languages", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Languages", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_CV", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CV", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_CV", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CV", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11995,7 +12322,7 @@ namespace LecturerDB.CathedraTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_PK, string Original_FirstName, string Original_LastName, string Original_MiddleName, global::System.Nullable<global::System.DateTime> Original_Birthday, string Original_CathedraID, string Original_Occupation, string Original_Degree, string Original_Languages) {
+        public virtual int Delete(string Original_PK, string Original_FirstName, string Original_LastName, string Original_MiddleName, global::System.Nullable<global::System.DateTime> Original_Birthday, string Original_CathedraID, string Original_Occupation, string Original_Degree, string Original_Languages, string Original_CV) {
             if ((Original_PK == null)) {
                 throw new global::System.ArgumentNullException("Original_PK");
             }
@@ -12066,6 +12393,14 @@ namespace LecturerDB.CathedraTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_Languages));
             }
+            if ((Original_CV == null)) {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_CV));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -12086,7 +12421,7 @@ namespace LecturerDB.CathedraTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string PK, string FirstName, string LastName, string MiddleName, global::System.Nullable<global::System.DateTime> Birthday, string CathedraID, string Occupation, string Degree, string Languages, byte[] Photo, byte[] CV) {
+        public virtual int Insert(string PK, string FirstName, string LastName, string MiddleName, global::System.Nullable<global::System.DateTime> Birthday, string CathedraID, string Occupation, string Degree, string Languages, byte[] Photo, string CV) {
             if ((PK == null)) {
                 throw new global::System.ArgumentNullException("PK");
             }
@@ -12151,7 +12486,7 @@ namespace LecturerDB.CathedraTableAdapters {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((byte[])(CV));
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(CV));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -12184,7 +12519,7 @@ namespace LecturerDB.CathedraTableAdapters {
                     string Degree, 
                     string Languages, 
                     byte[] Photo, 
-                    byte[] CV, 
+                    string CV, 
                     string Original_PK, 
                     string Original_FirstName, 
                     string Original_LastName, 
@@ -12193,7 +12528,8 @@ namespace LecturerDB.CathedraTableAdapters {
                     string Original_CathedraID, 
                     string Original_Occupation, 
                     string Original_Degree, 
-                    string Original_Languages) {
+                    string Original_Languages, 
+                    string Original_CV) {
             if ((PK == null)) {
                 throw new global::System.ArgumentNullException("PK");
             }
@@ -12258,7 +12594,7 @@ namespace LecturerDB.CathedraTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((byte[])(CV));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(CV));
             }
             if ((Original_PK == null)) {
                 throw new global::System.ArgumentNullException("Original_PK");
@@ -12330,6 +12666,14 @@ namespace LecturerDB.CathedraTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_Languages));
             }
+            if ((Original_CV == null)) {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_CV));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -12360,7 +12704,7 @@ namespace LecturerDB.CathedraTableAdapters {
                     string Degree, 
                     string Languages, 
                     byte[] Photo, 
-                    byte[] CV, 
+                    string CV, 
                     string Original_PK, 
                     string Original_FirstName, 
                     string Original_LastName, 
@@ -12369,8 +12713,9 @@ namespace LecturerDB.CathedraTableAdapters {
                     string Original_CathedraID, 
                     string Original_Occupation, 
                     string Original_Degree, 
-                    string Original_Languages) {
-            return this.Update(Original_PK, FirstName, LastName, MiddleName, Birthday, CathedraID, Occupation, Degree, Languages, Photo, CV, Original_PK, Original_FirstName, Original_LastName, Original_MiddleName, Original_Birthday, Original_CathedraID, Original_Occupation, Original_Degree, Original_Languages);
+                    string Original_Languages, 
+                    string Original_CV) {
+            return this.Update(Original_PK, FirstName, LastName, MiddleName, Birthday, CathedraID, Occupation, Degree, Languages, Photo, CV, Original_PK, Original_FirstName, Original_LastName, Original_MiddleName, Original_Birthday, Original_CathedraID, Original_Occupation, Original_Degree, Original_Languages, Original_CV);
         }
     }
     
@@ -15298,13 +15643,14 @@ namespace LecturerDB.CathedraTableAdapters {
             tableMapping.ColumnMappings.Add("Laboratories_Z", "Laboratories_Z");
             tableMapping.ColumnMappings.Add("CourseWork", "CourseWork");
             tableMapping.ColumnMappings.Add("Test", "Test");
-            tableMapping.ColumnMappings.Add("ContactHours", "ContactHours");
             tableMapping.ColumnMappings.Add("TopicPlan", "TopicPlan");
             tableMapping.ColumnMappings.Add("SubjectDescription", "SubjectDescription");
+            tableMapping.ColumnMappings.Add("ContactHours_D", "ContactHours_D");
+            tableMapping.ColumnMappings.Add("ContacyHours_V", "ContacyHours_V");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Subject` WHERE ((`SubjectCode` = ?) AND ((? = 1 AND `SubjectName_rus` IS NULL) OR (`SubjectName_rus` = ?)) AND ((? = 1 AND `SubjectName_lv` IS NULL) OR (`SubjectName_lv` = ?)) AND ((? = 1 AND `SubjectName_en` IS NULL) OR (`SubjectName_en` = ?)) AND ((? = 1 AND `KP` IS NULL) OR (`KP` = ?)) AND ((? = 1 AND `Lections_D` IS NULL) OR (`Lections_D` = ?)) AND ((? = 1 AND `Practices_D` IS NULL) OR (`Practices_D` = ?)) AND ((? = 1 AND `Laboratories_D` IS NULL) OR (`Laboratories_D` = ?)) AND ((? = 1 AND `Lections_V` IS NULL) OR (`Lections_V` = ?)) AND ((? = 1 AND `Practices_V` IS NULL) OR (`Practices_V` = ?)) AND ((? = 1 AND `Laboratories_V` IS NULL) OR (`Laboratories_V` = ?)) AND ((? = 1 AND `Lections_Z` IS NULL) OR (`Lections_Z` = ?)) AND ((? = 1 AND `Practices_Z` IS NULL) OR (`Practices_Z` = ?)) AND ((? = 1 AND `Laboratories_Z` IS NULL) OR (`Laboratories_Z` = ?)) AND ((? = 1 AND `CourseWork` IS NULL) OR (`CourseWork` = ?)) AND ((? = 1 AND `Test` IS NULL) OR (`Test` = ?)) AND ((? = 1 AND `ContactHours` IS NULL) OR (`ContactHours` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Subject` WHERE ((`SubjectCode` = ?) AND ((? = 1 AND `SubjectName_rus` IS NULL) OR (`SubjectName_rus` = ?)) AND ((? = 1 AND `SubjectName_lv` IS NULL) OR (`SubjectName_lv` = ?)) AND ((? = 1 AND `SubjectName_en` IS NULL) OR (`SubjectName_en` = ?)) AND ((? = 1 AND `KP` IS NULL) OR (`KP` = ?)) AND ((? = 1 AND `Lections_D` IS NULL) OR (`Lections_D` = ?)) AND ((? = 1 AND `Practices_D` IS NULL) OR (`Practices_D` = ?)) AND ((? = 1 AND `Laboratories_D` IS NULL) OR (`Laboratories_D` = ?)) AND ((? = 1 AND `ContactHours_D` IS NULL) OR (`ContactHours_D` = ?)) AND ((? = 1 AND `Lections_V` IS NULL) OR (`Lections_V` = ?)) AND ((? = 1 AND `Practices_V` IS NULL) OR (`Practices_V` = ?)) AND ((? = 1 AND `Laboratories_V` IS NULL) OR (`Laboratories_V` = ?)) AND ((? = 1 AND `ContacyHours_V` IS NULL) OR (`ContacyHours_V` = ?)) AND ((? = 1 AND `Lections_Z` IS NULL) OR (`Lections_Z` = ?)) AND ((? = 1 AND `Practices_Z` IS NULL) OR (`Practices_Z` = ?)) AND ((? = 1 AND `Laboratories_Z` IS NULL) OR (`Laboratories_Z` = ?)) AND ((? = 1 AND `CourseWork` IS NULL) OR (`CourseWork` = ?)) AND ((? = 1 AND `Test` IS NULL) OR (`Test` = ?)) AND ((? = 1 AND `TopicPlan` IS NULL) OR (`TopicPlan` = ?)) AND ((? = 1 AND `SubjectDescription` IS NULL) OR (`SubjectDescription` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_SubjectCode", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectCode", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_SubjectName_rus", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectName_rus", global::System.Data.DataRowVersion.Original, true, null));
@@ -15321,12 +15667,16 @@ namespace LecturerDB.CathedraTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Practices_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Practices_D", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Laboratories_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Laboratories_D", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Laboratories_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Laboratories_D", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ContactHours_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContactHours_D", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ContactHours_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContactHours_D", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Lections_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lections_V", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Lections_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lections_V", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Practices_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Practices_V", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Practices_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Practices_V", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Laboratories_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Laboratories_V", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Laboratories_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Laboratories_V", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ContacyHours_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContacyHours_V", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ContacyHours_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContacyHours_V", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Lections_Z", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lections_Z", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Lections_Z", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lections_Z", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Practices_Z", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Practices_Z", global::System.Data.DataRowVersion.Original, true, null));
@@ -15337,11 +15687,13 @@ namespace LecturerDB.CathedraTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_CourseWork", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CourseWork", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Test", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Test", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Test", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Test", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ContactHours", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContactHours", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ContactHours", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContactHours", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_TopicPlan", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TopicPlan", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TopicPlan", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TopicPlan", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_SubjectDescription", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectDescription", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_SubjectDescription", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectDescription", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `Subject` (`SubjectCode`, `SubjectName_rus`, `SubjectName_lv`, `SubjectName_en`, `KP`, `Lections_D`, `Practices_D`, `Laboratories_D`, `Lections_V`, `Practices_V`, `Laboratories_V`, `Lections_Z`, `Practices_Z`, `Laboratories_Z`, `CourseWork`, `Test`, `ContactHours`, `TopicPlan`, `SubjectDescription`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `Subject` (`SubjectCode`, `SubjectName_rus`, `SubjectName_lv`, `SubjectName_en`, `KP`, `Lections_D`, `Practices_D`, `Laboratories_D`, `ContactHours_D`, `Lections_V`, `Practices_V`, `Laboratories_V`, `ContacyHours_V`, `Lections_Z`, `Practices_Z`, `Laboratories_Z`, `CourseWork`, `Test`, `TopicPlan`, `SubjectDescription`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SubjectCode", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectCode", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SubjectName_rus", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectName_rus", global::System.Data.DataRowVersion.Current, false, null));
@@ -15351,20 +15703,41 @@ namespace LecturerDB.CathedraTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Lections_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lections_D", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Practices_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Practices_D", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Laboratories_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Laboratories_D", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ContactHours_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContactHours_D", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Lections_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lections_V", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Practices_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Practices_V", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Laboratories_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Laboratories_V", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ContacyHours_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContacyHours_V", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Lections_Z", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lections_Z", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Practices_Z", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Practices_Z", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Laboratories_Z", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Laboratories_Z", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CourseWork", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CourseWork", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Test", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Test", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ContactHours", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContactHours", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TopicPlan", global::System.Data.OleDb.OleDbType.LongVarBinary, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TopicPlan", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SubjectDescription", global::System.Data.OleDb.OleDbType.LongVarBinary, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectDescription", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TopicPlan", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TopicPlan", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SubjectDescription", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectDescription", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Subject` SET `SubjectCode` = ?, `SubjectName_rus` = ?, `SubjectName_lv` = ?, `SubjectName_en` = ?, `KP` = ?, `Lections_D` = ?, `Practices_D` = ?, `Laboratories_D` = ?, `Lections_V` = ?, `Practices_V` = ?, `Laboratories_V` = ?, `Lections_Z` = ?, `Practices_Z` = ?, `Laboratories_Z` = ?, `CourseWork` = ?, `Test` = ?, `ContactHours` = ?, `TopicPlan` = ?, `SubjectDescription` = ? WHERE ((`SubjectCode` = ?) AND ((? = 1 AND `SubjectName_rus` IS NULL) OR (`SubjectName_rus` = ?)) AND ((? = 1 AND `SubjectName_lv` IS NULL) OR (`SubjectName_lv` = ?)) AND ((? = 1 AND `SubjectName_en` IS NULL) OR (`SubjectName_en` = ?)) AND ((? = 1 AND `KP` IS NULL) OR (`KP` = ?)) AND ((? = 1 AND `Lections_D` IS NULL) OR (`Lections_D` = ?)) AND ((? = 1 AND `Practices_D` IS NULL) OR (`Practices_D` = ?)) AND ((? = 1 AND `Laboratories_D` IS NULL) OR (`Laboratories_D` = ?)) AND ((? = 1 AND `Lections_V` IS NULL) OR (`Lections_V` = ?)) AND ((? = 1 AND `Practices_V` IS NULL) OR (`Practices_V` = ?)) AND ((? = 1 AND `Laboratories_V` IS NULL) OR (`Laboratories_V` = ?)) AND ((? = 1 AND `Lections_Z` IS NULL) OR (`Lections_Z` = ?)) AND ((? = 1 AND `Practices_Z` IS NULL) OR (`Practices_Z` = ?)) AND ((? = 1 AND `Laboratories_Z` IS NULL) OR (`Laboratories_Z` = ?)) AND ((? = 1 AND `CourseWork` IS NULL) OR (`CourseWork` = ?)) AND ((? = 1 AND `Test` IS NULL) OR (`Test` = ?)) AND ((? = 1 AND `ContactHours` IS NULL) OR (`ContactHours` = ?)))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE `Subject` SET `SubjectCode` = ?, `SubjectName_rus` = ?, `SubjectName_lv` =" +
+                " ?, `SubjectName_en` = ?, `KP` = ?, `Lections_D` = ?, `Practices_D` = ?, `Labora" +
+                "tories_D` = ?, `ContactHours_D` = ?, `Lections_V` = ?, `Practices_V` = ?, `Labor" +
+                "atories_V` = ?, `ContacyHours_V` = ?, `Lections_Z` = ?, `Practices_Z` = ?, `Labo" +
+                "ratories_Z` = ?, `CourseWork` = ?, `Test` = ?, `TopicPlan` = ?, `SubjectDescript" +
+                "ion` = ? WHERE ((`SubjectCode` = ?) AND ((? = 1 AND `SubjectName_rus` IS NULL) O" +
+                "R (`SubjectName_rus` = ?)) AND ((? = 1 AND `SubjectName_lv` IS NULL) OR (`Subjec" +
+                "tName_lv` = ?)) AND ((? = 1 AND `SubjectName_en` IS NULL) OR (`SubjectName_en` =" +
+                " ?)) AND ((? = 1 AND `KP` IS NULL) OR (`KP` = ?)) AND ((? = 1 AND `Lections_D` I" +
+                "S NULL) OR (`Lections_D` = ?)) AND ((? = 1 AND `Practices_D` IS NULL) OR (`Pract" +
+                "ices_D` = ?)) AND ((? = 1 AND `Laboratories_D` IS NULL) OR (`Laboratories_D` = ?" +
+                ")) AND ((? = 1 AND `ContactHours_D` IS NULL) OR (`ContactHours_D` = ?)) AND ((? " +
+                "= 1 AND `Lections_V` IS NULL) OR (`Lections_V` = ?)) AND ((? = 1 AND `Practices_" +
+                "V` IS NULL) OR (`Practices_V` = ?)) AND ((? = 1 AND `Laboratories_V` IS NULL) OR" +
+                " (`Laboratories_V` = ?)) AND ((? = 1 AND `ContacyHours_V` IS NULL) OR (`ContacyH" +
+                "ours_V` = ?)) AND ((? = 1 AND `Lections_Z` IS NULL) OR (`Lections_Z` = ?)) AND (" +
+                "(? = 1 AND `Practices_Z` IS NULL) OR (`Practices_Z` = ?)) AND ((? = 1 AND `Labor" +
+                "atories_Z` IS NULL) OR (`Laboratories_Z` = ?)) AND ((? = 1 AND `CourseWork` IS N" +
+                "ULL) OR (`CourseWork` = ?)) AND ((? = 1 AND `Test` IS NULL) OR (`Test` = ?)) AND" +
+                " ((? = 1 AND `TopicPlan` IS NULL) OR (`TopicPlan` = ?)) AND ((? = 1 AND `Subject" +
+                "Description` IS NULL) OR (`SubjectDescription` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SubjectCode", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectCode", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SubjectName_rus", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectName_rus", global::System.Data.DataRowVersion.Current, false, null));
@@ -15374,17 +15747,18 @@ namespace LecturerDB.CathedraTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Lections_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lections_D", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Practices_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Practices_D", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Laboratories_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Laboratories_D", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ContactHours_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContactHours_D", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Lections_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lections_V", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Practices_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Practices_V", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Laboratories_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Laboratories_V", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ContacyHours_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContacyHours_V", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Lections_Z", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lections_Z", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Practices_Z", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Practices_Z", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Laboratories_Z", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Laboratories_Z", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("CourseWork", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CourseWork", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Test", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Test", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("ContactHours", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContactHours", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TopicPlan", global::System.Data.OleDb.OleDbType.LongVarBinary, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TopicPlan", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SubjectDescription", global::System.Data.OleDb.OleDbType.LongVarBinary, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectDescription", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("TopicPlan", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TopicPlan", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("SubjectDescription", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectDescription", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_SubjectCode", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectCode", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_SubjectName_rus", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectName_rus", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_SubjectName_rus", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectName_rus", global::System.Data.DataRowVersion.Original, false, null));
@@ -15400,12 +15774,16 @@ namespace LecturerDB.CathedraTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Practices_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Practices_D", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Laboratories_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Laboratories_D", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Laboratories_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Laboratories_D", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ContactHours_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContactHours_D", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ContactHours_D", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContactHours_D", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Lections_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lections_V", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Lections_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lections_V", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Practices_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Practices_V", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Practices_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Practices_V", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Laboratories_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Laboratories_V", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Laboratories_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Laboratories_V", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ContacyHours_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContacyHours_V", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ContacyHours_V", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContacyHours_V", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Lections_Z", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lections_Z", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Lections_Z", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Lections_Z", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Practices_Z", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Practices_Z", global::System.Data.DataRowVersion.Original, true, null));
@@ -15416,8 +15794,10 @@ namespace LecturerDB.CathedraTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_CourseWork", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "CourseWork", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Test", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Test", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Test", global::System.Data.OleDb.OleDbType.Boolean, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Test", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_ContactHours", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContactHours", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_ContactHours", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "ContactHours", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_TopicPlan", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TopicPlan", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_TopicPlan", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "TopicPlan", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_SubjectDescription", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectDescription", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_SubjectDescription", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "SubjectDescription", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15433,7 +15813,9 @@ namespace LecturerDB.CathedraTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT SubjectCode, SubjectName_rus, SubjectName_lv, SubjectName_en, KP, Lections_D, Practices_D, Laboratories_D, Lections_V, Practices_V, Laboratories_V, Lections_Z, Practices_Z, Laboratories_Z, CourseWork, Test, ContactHours, TopicPlan, SubjectDescription FROM Subject";
+            this._commandCollection[0].CommandText = @"SELECT        SubjectCode, SubjectName_rus, SubjectName_lv, SubjectName_en, KP, Lections_D, Practices_D, Laboratories_D, ContactHours_D, Lections_V, Practices_V, 
+                         Laboratories_V, ContacyHours_V, Lections_Z, Practices_Z, Laboratories_Z, CourseWork, Test, TopicPlan, SubjectDescription
+FROM            Subject";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -15456,7 +15838,7 @@ namespace LecturerDB.CathedraTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual Cathedra.SubjectDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            Cathedra.SubjectDataTable dataTable = new Cathedra.SubjectDataTable();
+            Cathedra.SubjectDataTable dataTable = new Cathedra.SubjectDataTable(true);
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -15503,15 +15885,18 @@ namespace LecturerDB.CathedraTableAdapters {
                     global::System.Nullable<int> Original_Lections_D, 
                     global::System.Nullable<int> Original_Practices_D, 
                     global::System.Nullable<int> Original_Laboratories_D, 
+                    global::System.Nullable<int> Original_ContactHours_D, 
                     global::System.Nullable<int> Original_Lections_V, 
                     global::System.Nullable<int> Original_Practices_V, 
                     global::System.Nullable<int> Original_Laboratories_V, 
+                    global::System.Nullable<int> Original_ContacyHours_V, 
                     global::System.Nullable<int> Original_Lections_Z, 
                     global::System.Nullable<int> Original_Practices_Z, 
                     global::System.Nullable<int> Original_Laboratories_Z, 
                     bool Original_CourseWork, 
                     bool Original_Test, 
-                    global::System.Nullable<int> Original_ContactHours) {
+                    string Original_TopicPlan, 
+                    string Original_SubjectDescription) {
             if ((Original_SubjectCode == null)) {
                 this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -15574,65 +15959,89 @@ namespace LecturerDB.CathedraTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_Lections_V.HasValue == true)) {
+            if ((Original_ContactHours_D.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_Lections_V.Value));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_ContactHours_D.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_Practices_V.HasValue == true)) {
+            if ((Original_Lections_V.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_Practices_V.Value));
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_Lections_V.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
-            if ((Original_Laboratories_V.HasValue == true)) {
+            if ((Original_Practices_V.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_Laboratories_V.Value));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_Practices_V.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
-            if ((Original_Lections_Z.HasValue == true)) {
+            if ((Original_Laboratories_V.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_Lections_Z.Value));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_Laboratories_V.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
-            if ((Original_Practices_Z.HasValue == true)) {
+            if ((Original_ContacyHours_V.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((int)(Original_Practices_Z.Value));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((int)(Original_ContacyHours_V.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
-            if ((Original_Laboratories_Z.HasValue == true)) {
+            if ((Original_Lections_Z.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(Original_Laboratories_Z.Value));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(Original_Lections_Z.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[28].Value = ((bool)(Original_CourseWork));
-            this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
-            this.Adapter.DeleteCommand.Parameters[30].Value = ((bool)(Original_Test));
-            if ((Original_ContactHours.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[32].Value = ((int)(Original_ContactHours.Value));
+            if ((Original_Practices_Z.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((int)(Original_Practices_Z.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[32].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Laboratories_Z.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[30].Value = ((int)(Original_Laboratories_Z.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[30].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[31].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[32].Value = ((bool)(Original_CourseWork));
+            this.Adapter.DeleteCommand.Parameters[33].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[34].Value = ((bool)(Original_Test));
+            if ((Original_TopicPlan == null)) {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[36].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[36].Value = ((string)(Original_TopicPlan));
+            }
+            if ((Original_SubjectDescription == null)) {
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((string)(Original_SubjectDescription));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -15663,17 +16072,18 @@ namespace LecturerDB.CathedraTableAdapters {
                     global::System.Nullable<int> Lections_D, 
                     global::System.Nullable<int> Practices_D, 
                     global::System.Nullable<int> Laboratories_D, 
+                    global::System.Nullable<int> ContactHours_D, 
                     global::System.Nullable<int> Lections_V, 
                     global::System.Nullable<int> Practices_V, 
                     global::System.Nullable<int> Laboratories_V, 
+                    global::System.Nullable<int> ContacyHours_V, 
                     global::System.Nullable<int> Lections_Z, 
                     global::System.Nullable<int> Practices_Z, 
                     global::System.Nullable<int> Laboratories_Z, 
                     bool CourseWork, 
                     bool Test, 
-                    global::System.Nullable<int> ContactHours, 
-                    byte[] TopicPlan, 
-                    byte[] SubjectDescription) {
+                    string TopicPlan, 
+                    string SubjectDescription) {
             if ((SubjectCode == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -15722,61 +16132,67 @@ namespace LecturerDB.CathedraTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Lections_V.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(Lections_V.Value));
+            if ((ContactHours_D.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(ContactHours_D.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Practices_V.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(Practices_V.Value));
+            if ((Lections_V.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(Lections_V.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Laboratories_V.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(Laboratories_V.Value));
+            if ((Practices_V.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(Practices_V.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Lections_Z.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(Lections_Z.Value));
+            if ((Laboratories_V.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(Laboratories_V.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Practices_Z.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(Practices_Z.Value));
+            if ((ContacyHours_V.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(ContacyHours_V.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Laboratories_Z.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(Laboratories_Z.Value));
+            if ((Lections_Z.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(Lections_Z.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[14].Value = ((bool)(CourseWork));
-            this.Adapter.InsertCommand.Parameters[15].Value = ((bool)(Test));
-            if ((ContactHours.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((int)(ContactHours.Value));
+            if ((Practices_Z.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((int)(Practices_Z.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
+            if ((Laboratories_Z.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[15].Value = ((int)(Laboratories_Z.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[16].Value = ((bool)(CourseWork));
+            this.Adapter.InsertCommand.Parameters[17].Value = ((bool)(Test));
             if ((TopicPlan == null)) {
-                this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[17].Value = ((byte[])(TopicPlan));
-            }
-            if ((SubjectDescription == null)) {
                 this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[18].Value = ((byte[])(SubjectDescription));
+                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(TopicPlan));
+            }
+            if ((SubjectDescription == null)) {
+                this.Adapter.InsertCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[19].Value = ((string)(SubjectDescription));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -15807,17 +16223,18 @@ namespace LecturerDB.CathedraTableAdapters {
                     global::System.Nullable<int> Lections_D, 
                     global::System.Nullable<int> Practices_D, 
                     global::System.Nullable<int> Laboratories_D, 
+                    global::System.Nullable<int> ContactHours_D, 
                     global::System.Nullable<int> Lections_V, 
                     global::System.Nullable<int> Practices_V, 
                     global::System.Nullable<int> Laboratories_V, 
+                    global::System.Nullable<int> ContacyHours_V, 
                     global::System.Nullable<int> Lections_Z, 
                     global::System.Nullable<int> Practices_Z, 
                     global::System.Nullable<int> Laboratories_Z, 
                     bool CourseWork, 
                     bool Test, 
-                    global::System.Nullable<int> ContactHours, 
-                    byte[] TopicPlan, 
-                    byte[] SubjectDescription, 
+                    string TopicPlan, 
+                    string SubjectDescription, 
                     string Original_SubjectCode, 
                     string Original_SubjectName_rus, 
                     string Original_SubjectName_lv, 
@@ -15826,15 +16243,18 @@ namespace LecturerDB.CathedraTableAdapters {
                     global::System.Nullable<int> Original_Lections_D, 
                     global::System.Nullable<int> Original_Practices_D, 
                     global::System.Nullable<int> Original_Laboratories_D, 
+                    global::System.Nullable<int> Original_ContactHours_D, 
                     global::System.Nullable<int> Original_Lections_V, 
                     global::System.Nullable<int> Original_Practices_V, 
                     global::System.Nullable<int> Original_Laboratories_V, 
+                    global::System.Nullable<int> Original_ContacyHours_V, 
                     global::System.Nullable<int> Original_Lections_Z, 
                     global::System.Nullable<int> Original_Practices_Z, 
                     global::System.Nullable<int> Original_Laboratories_Z, 
                     bool Original_CourseWork, 
                     bool Original_Test, 
-                    global::System.Nullable<int> Original_ContactHours) {
+                    string Original_TopicPlan, 
+                    string Original_SubjectDescription) {
             if ((SubjectCode == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -15883,183 +16303,213 @@ namespace LecturerDB.CathedraTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Lections_V.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Lections_V.Value));
+            if ((ContactHours_D.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(ContactHours_D.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Practices_V.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Practices_V.Value));
+            if ((Lections_V.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Lections_V.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Laboratories_V.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Laboratories_V.Value));
+            if ((Practices_V.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Practices_V.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((Lections_Z.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Lections_Z.Value));
+            if ((Laboratories_V.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Laboratories_V.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Practices_Z.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Practices_Z.Value));
+            if ((ContacyHours_V.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(ContacyHours_V.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((Laboratories_Z.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Laboratories_Z.Value));
+            if ((Lections_Z.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Lections_Z.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((bool)(CourseWork));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((bool)(Test));
-            if ((ContactHours.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(ContactHours.Value));
+            if ((Practices_Z.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Practices_Z.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
+            if ((Laboratories_Z.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Laboratories_Z.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(CourseWork));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((bool)(Test));
             if ((TopicPlan == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((byte[])(TopicPlan));
-            }
-            if ((SubjectDescription == null)) {
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((byte[])(SubjectDescription));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(TopicPlan));
             }
-            if ((Original_SubjectCode == null)) {
+            if ((SubjectDescription == null)) {
                 this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_SubjectCode));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(SubjectDescription));
+            }
+            if ((Original_SubjectCode == null)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_SubjectCode));
             }
             if ((Original_SubjectName_rus == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_SubjectName_rus));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_SubjectName_rus));
             }
             if ((Original_SubjectName_lv == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_SubjectName_lv));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_SubjectName_lv));
             }
             if ((Original_SubjectName_en == null)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_SubjectName_en));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_SubjectName_en));
             }
             if ((Original_KP.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(Original_KP.Value));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_KP.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             if ((Original_Lections_D.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(Original_Lections_D.Value));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_Lections_D.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             if ((Original_Practices_D.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_Practices_D.Value));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(Original_Practices_D.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
             }
             if ((Original_Laboratories_D.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(Original_Laboratories_D.Value));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(Original_Laboratories_D.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ContactHours_D.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((int)(Original_ContactHours_D.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
             if ((Original_Lections_V.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((int)(Original_Lections_V.Value));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((int)(Original_Lections_V.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
             }
             if ((Original_Practices_V.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((int)(Original_Practices_V.Value));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(Original_Practices_V.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
             }
             if ((Original_Laboratories_V.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((int)(Original_Laboratories_V.Value));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(Original_Laboratories_V.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ContacyHours_V.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((int)(Original_ContacyHours_V.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
             }
             if ((Original_Lections_Z.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((int)(Original_Lections_Z.Value));
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((int)(Original_Lections_Z.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
             if ((Original_Practices_Z.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((int)(Original_Practices_Z.Value));
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((int)(Original_Practices_Z.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
             }
             if ((Original_Laboratories_Z.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((int)(Original_Laboratories_Z.Value));
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((int)(Original_Laboratories_Z.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[45].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[46].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[47].Value = ((bool)(Original_CourseWork));
-            this.Adapter.UpdateCommand.Parameters[48].Value = ((object)(0));
-            this.Adapter.UpdateCommand.Parameters[49].Value = ((bool)(Original_Test));
-            if ((Original_ContactHours.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((int)(Original_ContactHours.Value));
+            this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[52].Value = ((bool)(Original_CourseWork));
+            this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[54].Value = ((bool)(Original_Test));
+            if ((Original_TopicPlan == null)) {
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[51].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((string)(Original_TopicPlan));
+            }
+            if ((Original_SubjectDescription == null)) {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[58].Value = ((string)(Original_SubjectDescription));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -16089,17 +16539,18 @@ namespace LecturerDB.CathedraTableAdapters {
                     global::System.Nullable<int> Lections_D, 
                     global::System.Nullable<int> Practices_D, 
                     global::System.Nullable<int> Laboratories_D, 
+                    global::System.Nullable<int> ContactHours_D, 
                     global::System.Nullable<int> Lections_V, 
                     global::System.Nullable<int> Practices_V, 
                     global::System.Nullable<int> Laboratories_V, 
+                    global::System.Nullable<int> ContacyHours_V, 
                     global::System.Nullable<int> Lections_Z, 
                     global::System.Nullable<int> Practices_Z, 
                     global::System.Nullable<int> Laboratories_Z, 
                     bool CourseWork, 
                     bool Test, 
-                    global::System.Nullable<int> ContactHours, 
-                    byte[] TopicPlan, 
-                    byte[] SubjectDescription, 
+                    string TopicPlan, 
+                    string SubjectDescription, 
                     string Original_SubjectCode, 
                     string Original_SubjectName_rus, 
                     string Original_SubjectName_lv, 
@@ -16108,16 +16559,19 @@ namespace LecturerDB.CathedraTableAdapters {
                     global::System.Nullable<int> Original_Lections_D, 
                     global::System.Nullable<int> Original_Practices_D, 
                     global::System.Nullable<int> Original_Laboratories_D, 
+                    global::System.Nullable<int> Original_ContactHours_D, 
                     global::System.Nullable<int> Original_Lections_V, 
                     global::System.Nullable<int> Original_Practices_V, 
                     global::System.Nullable<int> Original_Laboratories_V, 
+                    global::System.Nullable<int> Original_ContacyHours_V, 
                     global::System.Nullable<int> Original_Lections_Z, 
                     global::System.Nullable<int> Original_Practices_Z, 
                     global::System.Nullable<int> Original_Laboratories_Z, 
                     bool Original_CourseWork, 
                     bool Original_Test, 
-                    global::System.Nullable<int> Original_ContactHours) {
-            return this.Update(Original_SubjectCode, SubjectName_rus, SubjectName_lv, SubjectName_en, KP, Lections_D, Practices_D, Laboratories_D, Lections_V, Practices_V, Laboratories_V, Lections_Z, Practices_Z, Laboratories_Z, CourseWork, Test, ContactHours, TopicPlan, SubjectDescription, Original_SubjectCode, Original_SubjectName_rus, Original_SubjectName_lv, Original_SubjectName_en, Original_KP, Original_Lections_D, Original_Practices_D, Original_Laboratories_D, Original_Lections_V, Original_Practices_V, Original_Laboratories_V, Original_Lections_Z, Original_Practices_Z, Original_Laboratories_Z, Original_CourseWork, Original_Test, Original_ContactHours);
+                    string Original_TopicPlan, 
+                    string Original_SubjectDescription) {
+            return this.Update(Original_SubjectCode, SubjectName_rus, SubjectName_lv, SubjectName_en, KP, Lections_D, Practices_D, Laboratories_D, ContactHours_D, Lections_V, Practices_V, Laboratories_V, ContacyHours_V, Lections_Z, Practices_Z, Laboratories_Z, CourseWork, Test, TopicPlan, SubjectDescription, Original_SubjectCode, Original_SubjectName_rus, Original_SubjectName_lv, Original_SubjectName_en, Original_KP, Original_Lections_D, Original_Practices_D, Original_Laboratories_D, Original_ContactHours_D, Original_Lections_V, Original_Practices_V, Original_Laboratories_V, Original_ContacyHours_V, Original_Lections_Z, Original_Practices_Z, Original_Laboratories_Z, Original_CourseWork, Original_Test, Original_TopicPlan, Original_SubjectDescription);
         }
     }
     

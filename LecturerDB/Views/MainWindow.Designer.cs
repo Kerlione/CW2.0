@@ -130,6 +130,10 @@
             System.Windows.Forms.Label endDateLabel1;
             System.Windows.Forms.Label publication_IDLabel;
             System.Windows.Forms.Label lecturer_PKLabel;
+            System.Windows.Forms.Label contactHours_VLabel;
+            System.Windows.Forms.Label topicPlanLabel;
+            System.Windows.Forms.Label subjectDescriptionLabel;
+            System.Windows.Forms.Label diplomaDefenderLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.mainTab = new System.Windows.Forms.TabControl();
             this.lecturerTab = new System.Windows.Forms.TabPage();
@@ -137,7 +141,6 @@
             this.lecturerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cathedraDataSet = new LecturerDB.Cathedra();
             this.lecturerPublicationListButton = new System.Windows.Forms.Button();
-            this.lecturerViewCVButton = new System.Windows.Forms.Button();
             this.lecturerGridNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -210,9 +213,13 @@
             this.programDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.startYearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subjectTab = new System.Windows.Forms.TabPage();
+            this.subjectDescriptionLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.subjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.topicPlanLinkLabel = new System.Windows.Forms.LinkLabel();
+            this.subjectKPHoursTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.subjectGridNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem2 = new System.Windows.Forms.ToolStripButton();
-            this.subjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem2 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem2 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem2 = new System.Windows.Forms.ToolStripButton();
@@ -232,13 +239,18 @@
             this.subjectPractices_ZNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.subjectLections_ZNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.subjectEveningGroupBox = new System.Windows.Forms.GroupBox();
+            this.selfStudyVTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.subjectContactHours_VNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.subjectLaboratories_VNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.subjectPractices_VNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.subjectLections_VNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.subjectTestCheckBox = new System.Windows.Forms.CheckBox();
             this.subjectCourseWorkCheckBox = new System.Windows.Forms.CheckBox();
             this.subjectDayGroupBox = new System.Windows.Forms.GroupBox();
-            this.subjectContactHoursNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.selfStudyDayTextBox = new System.Windows.Forms.TextBox();
+            this.selfStudyDayLabel = new System.Windows.Forms.Label();
+            this.subjectContactHoursDNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.subjectLaboratories_DNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.subjectPractices_DNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.subjectLections_DNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -248,25 +260,6 @@
             this.subjectName_rusTextBox = new System.Windows.Forms.TextBox();
             this.subjectCodeTextBox = new System.Windows.Forms.TextBox();
             this.subjectGrid = new System.Windows.Forms.DataGridView();
-            this.subjectCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subjectNamerusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subjectNamelvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subjectNameenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lectionsDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.practicesDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.laboratoriesDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contactHoursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lectionsVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.practicesVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.laboratoriesVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lectionsZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.practicesZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.laboratoriesZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseWorkDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.testDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.topicPlanDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.subjectDescriptionDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.workLoadTab = new System.Windows.Forms.TabPage();
             this.workLoadNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem3 = new System.Windows.Forms.ToolStripButton();
@@ -424,9 +417,10 @@
             this.removedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.reasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diplomaDefenceTab = new System.Windows.Forms.TabPage();
+            this.diplomaDefenderTextBox = new System.Windows.Forms.TextBox();
+            this.diplomaDefenceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.diplomaDefenceNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem8 = new System.Windows.Forms.ToolStripButton();
-            this.diplomaDefenceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem8 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem8 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem8 = new System.Windows.Forms.ToolStripButton();
@@ -447,6 +441,7 @@
             this.diplomaDefenceGrid = new System.Windows.Forms.DataGridView();
             this.diplomaTopicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diplomaHeadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiplomaDefender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diplomaTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.defenceDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.markDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -624,6 +619,28 @@
             this.lecturerPublicationTableAdapter = new LecturerDB.CathedraTableAdapters.LecturerPublicationTableAdapter();
             this.responsibilityTableAdapter = new LecturerDB.CathedraTableAdapters.ResponsibilityTableAdapter();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.subjectCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjectNamerusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjectNamelvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjectNameenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lectionsDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.practicesDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.laboratoriesDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContactHours_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PersonalWork_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lectionsVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.practicesVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.laboratoriesVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContactHours_V = new System.Windows.Forms.DataGridViewImageColumn();
+            this.PersonalWork_V = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lectionsZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.practicesZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.laboratoriesZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseWorkDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.testDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.topicPlanDataGridViewImageColumn = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.subjectDescriptionDataGridViewImageColumn = new System.Windows.Forms.DataGridViewLinkColumn();
             pKLabel = new System.Windows.Forms.Label();
             lastNameLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
@@ -725,6 +742,10 @@
             endDateLabel1 = new System.Windows.Forms.Label();
             publication_IDLabel = new System.Windows.Forms.Label();
             lecturer_PKLabel = new System.Windows.Forms.Label();
+            contactHours_VLabel = new System.Windows.Forms.Label();
+            topicPlanLabel = new System.Windows.Forms.Label();
+            subjectDescriptionLabel = new System.Windows.Forms.Label();
+            diplomaDefenderLabel = new System.Windows.Forms.Label();
             this.mainTab.SuspendLayout();
             this.lecturerTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lecturerBindingSource)).BeginInit();
@@ -741,19 +762,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupStudentCountNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupGrid)).BeginInit();
             this.subjectTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectGridNavigator)).BeginInit();
             this.subjectGridNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).BeginInit();
             this.subjectZaochGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.subjectLaboratories_ZNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectPractices_ZNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectLections_ZNumericUpDown)).BeginInit();
             this.subjectEveningGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.subjectContactHours_VNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectLaboratories_VNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectPractices_VNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectLections_VNumericUpDown)).BeginInit();
             this.subjectDayGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.subjectContactHoursNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subjectContactHoursDNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectLaboratories_DNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectPractices_DNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectLections_DNumericUpDown)).BeginInit();
@@ -800,9 +822,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.moveStudentStudyYearNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.moveStudentGrid)).BeginInit();
             this.diplomaDefenceTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.diplomaDefenceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diplomaDefenceNavigator)).BeginInit();
             this.diplomaDefenceNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.diplomaDefenceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diplomaDefenceMarkNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.diplomaDefenceGrid)).BeginInit();
             this.projectTab.SuspendLayout();
@@ -1095,11 +1117,11 @@
             // contactHoursLabel
             // 
             contactHoursLabel.AutoSize = true;
-            contactHoursLabel.Location = new System.Drawing.Point(-3, 100);
+            contactHoursLabel.Location = new System.Drawing.Point(19, 100);
             contactHoursLabel.Name = "contactHoursLabel";
-            contactHoursLabel.Size = new System.Drawing.Size(129, 17);
+            contactHoursLabel.Size = new System.Drawing.Size(107, 17);
             contactHoursLabel.TabIndex = 6;
-            contactHoursLabel.Text = "Контактные часы:";
+            contactHoursLabel.Text = "Контакт. часы:";
             // 
             // courseWorkLabel
             // 
@@ -1531,7 +1553,7 @@
             // markLabel
             // 
             markLabel.AutoSize = true;
-            markLabel.Location = new System.Drawing.Point(540, 135);
+            markLabel.Location = new System.Drawing.Point(429, 159);
             markLabel.Name = "markLabel";
             markLabel.Size = new System.Drawing.Size(62, 17);
             markLabel.TabIndex = 9;
@@ -1775,6 +1797,42 @@
             lecturer_PKLabel.TabIndex = 3;
             lecturer_PKLabel.Text = "Преподаватель:";
             // 
+            // contactHours_VLabel
+            // 
+            contactHours_VLabel.AutoSize = true;
+            contactHours_VLabel.Location = new System.Drawing.Point(6, 100);
+            contactHours_VLabel.Name = "contactHours_VLabel";
+            contactHours_VLabel.Size = new System.Drawing.Size(107, 17);
+            contactHours_VLabel.TabIndex = 6;
+            contactHours_VLabel.Text = "Контакт. часы:";
+            // 
+            // topicPlanLabel
+            // 
+            topicPlanLabel.AutoSize = true;
+            topicPlanLabel.Location = new System.Drawing.Point(40, 186);
+            topicPlanLabel.Name = "topicPlanLabel";
+            topicPlanLabel.Size = new System.Drawing.Size(143, 17);
+            topicPlanLabel.TabIndex = 23;
+            topicPlanLabel.Text = "Тематический план:";
+            // 
+            // subjectDescriptionLabel
+            // 
+            subjectDescriptionLabel.AutoSize = true;
+            subjectDescriptionLabel.Location = new System.Drawing.Point(334, 186);
+            subjectDescriptionLabel.Name = "subjectDescriptionLabel";
+            subjectDescriptionLabel.Size = new System.Drawing.Size(146, 17);
+            subjectDescriptionLabel.TabIndex = 25;
+            subjectDescriptionLabel.Text = "Описание предмета:";
+            // 
+            // diplomaDefenderLabel
+            // 
+            diplomaDefenderLabel.AutoSize = true;
+            diplomaDefenderLabel.Location = new System.Drawing.Point(49, 162);
+            diplomaDefenderLabel.Name = "diplomaDefenderLabel";
+            diplomaDefenderLabel.Size = new System.Drawing.Size(87, 17);
+            diplomaDefenderLabel.TabIndex = 12;
+            diplomaDefenderLabel.Text = "Дипломник:";
+            // 
             // mainTab
             // 
             this.mainTab.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1805,7 +1863,6 @@
             this.lecturerTab.AutoScroll = true;
             this.lecturerTab.Controls.Add(this.lecturerCVLinkLabel);
             this.lecturerTab.Controls.Add(this.lecturerPublicationListButton);
-            this.lecturerTab.Controls.Add(this.lecturerViewCVButton);
             this.lecturerTab.Controls.Add(this.lecturerGridNavigator);
             this.lecturerTab.Controls.Add(this.lecturerCVAddButton);
             this.lecturerTab.Controls.Add(cVLabel);
@@ -1874,18 +1931,6 @@
             this.lecturerPublicationListButton.Text = "Список публикаций";
             this.lecturerPublicationListButton.UseVisualStyleBackColor = true;
             this.lecturerPublicationListButton.Click += new System.EventHandler(this.lecturerPublicationListButton_Click);
-            // 
-            // lecturerViewCVButton
-            // 
-            this.lecturerViewCVButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lecturerViewCVButton.Enabled = false;
-            this.lecturerViewCVButton.Location = new System.Drawing.Point(969, 62);
-            this.lecturerViewCVButton.Name = "lecturerViewCVButton";
-            this.lecturerViewCVButton.Size = new System.Drawing.Size(100, 23);
-            this.lecturerViewCVButton.TabIndex = 25;
-            this.lecturerViewCVButton.Text = "Посмотреть CV";
-            this.lecturerViewCVButton.UseVisualStyleBackColor = true;
-            this.lecturerViewCVButton.Click += new System.EventHandler(this.lecturerViewCVButton_Click);
             // 
             // lecturerGridNavigator
             // 
@@ -2599,6 +2644,12 @@
             // subjectTab
             // 
             this.subjectTab.AutoScroll = true;
+            this.subjectTab.Controls.Add(subjectDescriptionLabel);
+            this.subjectTab.Controls.Add(this.subjectDescriptionLinkLabel);
+            this.subjectTab.Controls.Add(topicPlanLabel);
+            this.subjectTab.Controls.Add(this.topicPlanLinkLabel);
+            this.subjectTab.Controls.Add(this.subjectKPHoursTextBox);
+            this.subjectTab.Controls.Add(this.label2);
             this.subjectTab.Controls.Add(this.subjectGridNavigator);
             this.subjectTab.Controls.Add(this.subjectDescriptionAddButton);
             this.subjectTab.Controls.Add(this.subjectTematicPlanAddButoon);
@@ -2628,6 +2679,50 @@
             this.subjectTab.Text = "Предмет";
             this.subjectTab.UseVisualStyleBackColor = true;
             this.subjectTab.Enter += new System.EventHandler(this.subjectTab_Enter);
+            // 
+            // subjectDescriptionLinkLabel
+            // 
+            this.subjectDescriptionLinkLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.subjectBindingSource, "SubjectDescription", true));
+            this.subjectDescriptionLinkLabel.Location = new System.Drawing.Point(486, 186);
+            this.subjectDescriptionLinkLabel.Name = "subjectDescriptionLinkLabel";
+            this.subjectDescriptionLinkLabel.Size = new System.Drawing.Size(100, 23);
+            this.subjectDescriptionLinkLabel.TabIndex = 26;
+            this.subjectDescriptionLinkLabel.TabStop = true;
+            this.subjectDescriptionLinkLabel.Text = "Описание";
+            this.subjectDescriptionLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.subjectDescriptionLinkLabel_LinkClicked);
+            // 
+            // subjectBindingSource
+            // 
+            this.subjectBindingSource.DataMember = "Subject";
+            this.subjectBindingSource.DataSource = this.cathedraDataSet;
+            // 
+            // topicPlanLinkLabel
+            // 
+            this.topicPlanLinkLabel.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.subjectBindingSource, "TopicPlan", true));
+            this.topicPlanLinkLabel.Location = new System.Drawing.Point(190, 186);
+            this.topicPlanLinkLabel.Name = "topicPlanLinkLabel";
+            this.topicPlanLinkLabel.Size = new System.Drawing.Size(100, 23);
+            this.topicPlanLinkLabel.TabIndex = 24;
+            this.topicPlanLinkLabel.TabStop = true;
+            this.topicPlanLinkLabel.Text = "План";
+            this.topicPlanLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.topicPlanLinkLabel_LinkClicked);
+            // 
+            // subjectKPHoursTextBox
+            // 
+            this.subjectKPHoursTextBox.Location = new System.Drawing.Point(126, 144);
+            this.subjectKPHoursTextBox.Name = "subjectKPHoursTextBox";
+            this.subjectKPHoursTextBox.ReadOnly = true;
+            this.subjectKPHoursTextBox.Size = new System.Drawing.Size(120, 23);
+            this.subjectKPHoursTextBox.TabIndex = 22;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(31, 148);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 17);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Часов по КП:";
             // 
             // subjectGridNavigator
             // 
@@ -2672,11 +2767,6 @@
             this.bindingNavigatorAddNewItem2.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorAddNewItem2.Text = "Add new";
             this.bindingNavigatorAddNewItem2.Click += new System.EventHandler(this.bindingNavigatorAddNewItem2_Click);
-            // 
-            // subjectBindingSource
-            // 
-            this.subjectBindingSource.DataMember = "Subject";
-            this.subjectBindingSource.DataSource = this.cathedraDataSet;
             // 
             // bindingNavigatorCountItem2
             // 
@@ -2777,22 +2867,24 @@
             // subjectDescriptionAddButton
             // 
             this.subjectDescriptionAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.subjectDescriptionAddButton.Location = new System.Drawing.Point(890, 205);
+            this.subjectDescriptionAddButton.Location = new System.Drawing.Point(348, 212);
             this.subjectDescriptionAddButton.Name = "subjectDescriptionAddButton";
             this.subjectDescriptionAddButton.Size = new System.Drawing.Size(201, 23);
             this.subjectDescriptionAddButton.TabIndex = 19;
-            this.subjectDescriptionAddButton.Text = "Описание предмета";
+            this.subjectDescriptionAddButton.Text = "Добавить описание";
             this.subjectDescriptionAddButton.UseVisualStyleBackColor = true;
+            this.subjectDescriptionAddButton.Click += new System.EventHandler(this.subjectDescriptionAddButton_Click);
             // 
             // subjectTematicPlanAddButoon
             // 
             this.subjectTematicPlanAddButoon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.subjectTematicPlanAddButoon.Location = new System.Drawing.Point(890, 167);
+            this.subjectTematicPlanAddButoon.Location = new System.Drawing.Point(43, 212);
             this.subjectTematicPlanAddButoon.Name = "subjectTematicPlanAddButoon";
-            this.subjectTematicPlanAddButoon.Size = new System.Drawing.Size(201, 23);
+            this.subjectTematicPlanAddButoon.Size = new System.Drawing.Size(182, 23);
             this.subjectTematicPlanAddButoon.TabIndex = 18;
-            this.subjectTematicPlanAddButoon.Text = "Тематический план";
+            this.subjectTematicPlanAddButoon.Text = "Добавить план";
             this.subjectTematicPlanAddButoon.UseVisualStyleBackColor = true;
+            this.subjectTematicPlanAddButoon.Click += new System.EventHandler(this.subjectTematicPlanAddButoon_Click);
             // 
             // subjectZaochGroupBox
             // 
@@ -2802,9 +2894,9 @@
             this.subjectZaochGroupBox.Controls.Add(this.subjectPractices_ZNumericUpDown);
             this.subjectZaochGroupBox.Controls.Add(lections_ZLabel);
             this.subjectZaochGroupBox.Controls.Add(this.subjectLections_ZNumericUpDown);
-            this.subjectZaochGroupBox.Location = new System.Drawing.Point(609, 135);
+            this.subjectZaochGroupBox.Location = new System.Drawing.Point(752, 171);
             this.subjectZaochGroupBox.Name = "subjectZaochGroupBox";
-            this.subjectZaochGroupBox.Size = new System.Drawing.Size(254, 111);
+            this.subjectZaochGroupBox.Size = new System.Drawing.Size(254, 101);
             this.subjectZaochGroupBox.TabIndex = 17;
             this.subjectZaochGroupBox.TabStop = false;
             this.subjectZaochGroupBox.Text = "Заочное отделение";
@@ -2836,18 +2928,48 @@
             // subjectEveningGroupBox
             // 
             this.subjectEveningGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.subjectEveningGroupBox.Controls.Add(this.selfStudyVTextBox);
+            this.subjectEveningGroupBox.Controls.Add(this.label1);
+            this.subjectEveningGroupBox.Controls.Add(contactHours_VLabel);
+            this.subjectEveningGroupBox.Controls.Add(this.subjectContactHours_VNumericUpDown);
             this.subjectEveningGroupBox.Controls.Add(laboratories_VLabel);
             this.subjectEveningGroupBox.Controls.Add(this.subjectLaboratories_VNumericUpDown);
             this.subjectEveningGroupBox.Controls.Add(practices_VLabel);
             this.subjectEveningGroupBox.Controls.Add(this.subjectPractices_VNumericUpDown);
             this.subjectEveningGroupBox.Controls.Add(lections_VLabel);
             this.subjectEveningGroupBox.Controls.Add(this.subjectLections_VNumericUpDown);
-            this.subjectEveningGroupBox.Location = new System.Drawing.Point(863, 7);
+            this.subjectEveningGroupBox.Location = new System.Drawing.Point(865, 5);
             this.subjectEveningGroupBox.Name = "subjectEveningGroupBox";
-            this.subjectEveningGroupBox.Size = new System.Drawing.Size(249, 126);
+            this.subjectEveningGroupBox.Size = new System.Drawing.Size(247, 160);
             this.subjectEveningGroupBox.TabIndex = 16;
             this.subjectEveningGroupBox.TabStop = false;
             this.subjectEveningGroupBox.Text = "Вечернее отделение";
+            // 
+            // selfStudyVTextBox
+            // 
+            this.selfStudyVTextBox.Location = new System.Drawing.Point(120, 124);
+            this.selfStudyVTextBox.Name = "selfStudyVTextBox";
+            this.selfStudyVTextBox.ReadOnly = true;
+            this.selfStudyVTextBox.Size = new System.Drawing.Size(120, 23);
+            this.selfStudyVTextBox.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 127);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 17);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Самообразов.";
+            // 
+            // subjectContactHours_VNumericUpDown
+            // 
+            this.subjectContactHours_VNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.subjectBindingSource, "ContactHours_V", true));
+            this.subjectContactHours_VNumericUpDown.Location = new System.Drawing.Point(120, 98);
+            this.subjectContactHours_VNumericUpDown.Name = "subjectContactHours_VNumericUpDown";
+            this.subjectContactHours_VNumericUpDown.Size = new System.Drawing.Size(120, 23);
+            this.subjectContactHours_VNumericUpDown.TabIndex = 7;
+            this.subjectContactHours_VNumericUpDown.Validating += new System.ComponentModel.CancelEventHandler(this.subjectContactHours_VNumericUpDown_Validating);
             // 
             // subjectLaboratories_VNumericUpDown
             // 
@@ -2895,28 +3017,48 @@
             // 
             // subjectDayGroupBox
             // 
+            this.subjectDayGroupBox.Controls.Add(this.selfStudyDayTextBox);
+            this.subjectDayGroupBox.Controls.Add(this.selfStudyDayLabel);
             this.subjectDayGroupBox.Controls.Add(contactHoursLabel);
-            this.subjectDayGroupBox.Controls.Add(this.subjectContactHoursNumericUpDown);
+            this.subjectDayGroupBox.Controls.Add(this.subjectContactHoursDNumericUpDown);
             this.subjectDayGroupBox.Controls.Add(laboratories_DLabel);
             this.subjectDayGroupBox.Controls.Add(this.subjectLaboratories_DNumericUpDown);
             this.subjectDayGroupBox.Controls.Add(practices_DLabel);
             this.subjectDayGroupBox.Controls.Add(this.subjectPractices_DNumericUpDown);
             this.subjectDayGroupBox.Controls.Add(lections_DLabel);
             this.subjectDayGroupBox.Controls.Add(this.subjectLections_DNumericUpDown);
-            this.subjectDayGroupBox.Location = new System.Drawing.Point(609, 5);
+            this.subjectDayGroupBox.Location = new System.Drawing.Point(605, 5);
             this.subjectDayGroupBox.Name = "subjectDayGroupBox";
-            this.subjectDayGroupBox.Size = new System.Drawing.Size(254, 124);
+            this.subjectDayGroupBox.Size = new System.Drawing.Size(254, 160);
             this.subjectDayGroupBox.TabIndex = 11;
             this.subjectDayGroupBox.TabStop = false;
             this.subjectDayGroupBox.Text = "Дневное отделение";
             // 
-            // subjectContactHoursNumericUpDown
+            // selfStudyDayTextBox
             // 
-            this.subjectContactHoursNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.subjectBindingSource, "ContactHours", true));
-            this.subjectContactHoursNumericUpDown.Location = new System.Drawing.Point(128, 97);
-            this.subjectContactHoursNumericUpDown.Name = "subjectContactHoursNumericUpDown";
-            this.subjectContactHoursNumericUpDown.Size = new System.Drawing.Size(120, 23);
-            this.subjectContactHoursNumericUpDown.TabIndex = 7;
+            this.selfStudyDayTextBox.Location = new System.Drawing.Point(128, 124);
+            this.selfStudyDayTextBox.Name = "selfStudyDayTextBox";
+            this.selfStudyDayTextBox.ReadOnly = true;
+            this.selfStudyDayTextBox.Size = new System.Drawing.Size(120, 23);
+            this.selfStudyDayTextBox.TabIndex = 9;
+            // 
+            // selfStudyDayLabel
+            // 
+            this.selfStudyDayLabel.AutoSize = true;
+            this.selfStudyDayLabel.Location = new System.Drawing.Point(26, 127);
+            this.selfStudyDayLabel.Name = "selfStudyDayLabel";
+            this.selfStudyDayLabel.Size = new System.Drawing.Size(100, 17);
+            this.selfStudyDayLabel.TabIndex = 8;
+            this.selfStudyDayLabel.Text = "Самообразов.";
+            // 
+            // subjectContactHoursDNumericUpDown
+            // 
+            this.subjectContactHoursDNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.subjectBindingSource, "ContactHours_D", true));
+            this.subjectContactHoursDNumericUpDown.Location = new System.Drawing.Point(128, 97);
+            this.subjectContactHoursDNumericUpDown.Name = "subjectContactHoursDNumericUpDown";
+            this.subjectContactHoursDNumericUpDown.Size = new System.Drawing.Size(120, 23);
+            this.subjectContactHoursDNumericUpDown.TabIndex = 7;
+            this.subjectContactHoursDNumericUpDown.Validating += new System.ComponentModel.CancelEventHandler(this.subjectContactHoursDNumericUpDown_Validating);
             // 
             // subjectLaboratories_DNumericUpDown
             // 
@@ -3004,10 +3146,13 @@
             this.lectionsDDataGridViewTextBoxColumn,
             this.practicesDDataGridViewTextBoxColumn,
             this.laboratoriesDDataGridViewTextBoxColumn,
-            this.contactHoursDataGridViewTextBoxColumn,
+            this.ContactHours_D,
+            this.PersonalWork_D,
             this.lectionsVDataGridViewTextBoxColumn,
             this.practicesVDataGridViewTextBoxColumn,
             this.laboratoriesVDataGridViewTextBoxColumn,
+            this.ContactHours_V,
+            this.PersonalWork_V,
             this.lectionsZDataGridViewTextBoxColumn,
             this.practicesZDataGridViewTextBoxColumn,
             this.laboratoriesZDataGridViewTextBoxColumn,
@@ -3023,157 +3168,6 @@
             this.subjectGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.subjectGrid.Size = new System.Drawing.Size(1105, 270);
             this.subjectGrid.TabIndex = 0;
-            // 
-            // subjectCodeDataGridViewTextBoxColumn
-            // 
-            this.subjectCodeDataGridViewTextBoxColumn.DataPropertyName = "SubjectCode";
-            this.subjectCodeDataGridViewTextBoxColumn.HeaderText = "Код предмета";
-            this.subjectCodeDataGridViewTextBoxColumn.Name = "subjectCodeDataGridViewTextBoxColumn";
-            this.subjectCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.subjectCodeDataGridViewTextBoxColumn.Width = 115;
-            // 
-            // subjectNamerusDataGridViewTextBoxColumn
-            // 
-            this.subjectNamerusDataGridViewTextBoxColumn.DataPropertyName = "SubjectName_rus";
-            this.subjectNamerusDataGridViewTextBoxColumn.HeaderText = "Название";
-            this.subjectNamerusDataGridViewTextBoxColumn.Name = "subjectNamerusDataGridViewTextBoxColumn";
-            this.subjectNamerusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.subjectNamerusDataGridViewTextBoxColumn.Width = 97;
-            // 
-            // subjectNamelvDataGridViewTextBoxColumn
-            // 
-            this.subjectNamelvDataGridViewTextBoxColumn.DataPropertyName = "SubjectName_lv";
-            this.subjectNamelvDataGridViewTextBoxColumn.HeaderText = "Nosaukums";
-            this.subjectNamelvDataGridViewTextBoxColumn.Name = "subjectNamelvDataGridViewTextBoxColumn";
-            this.subjectNamelvDataGridViewTextBoxColumn.ReadOnly = true;
-            this.subjectNamelvDataGridViewTextBoxColumn.Width = 107;
-            // 
-            // subjectNameenDataGridViewTextBoxColumn
-            // 
-            this.subjectNameenDataGridViewTextBoxColumn.DataPropertyName = "SubjectName_en";
-            this.subjectNameenDataGridViewTextBoxColumn.HeaderText = "Subject";
-            this.subjectNameenDataGridViewTextBoxColumn.Name = "subjectNameenDataGridViewTextBoxColumn";
-            this.subjectNameenDataGridViewTextBoxColumn.ReadOnly = true;
-            this.subjectNameenDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // kPDataGridViewTextBoxColumn
-            // 
-            this.kPDataGridViewTextBoxColumn.DataPropertyName = "KP";
-            this.kPDataGridViewTextBoxColumn.HeaderText = "KP";
-            this.kPDataGridViewTextBoxColumn.Name = "kPDataGridViewTextBoxColumn";
-            this.kPDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kPDataGridViewTextBoxColumn.Width = 51;
-            // 
-            // lectionsDDataGridViewTextBoxColumn
-            // 
-            this.lectionsDDataGridViewTextBoxColumn.DataPropertyName = "Lections_D";
-            this.lectionsDDataGridViewTextBoxColumn.HeaderText = "Лекции_D";
-            this.lectionsDDataGridViewTextBoxColumn.Name = "lectionsDDataGridViewTextBoxColumn";
-            this.lectionsDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // practicesDDataGridViewTextBoxColumn
-            // 
-            this.practicesDDataGridViewTextBoxColumn.DataPropertyName = "Practices_D";
-            this.practicesDDataGridViewTextBoxColumn.HeaderText = "Практики_D";
-            this.practicesDDataGridViewTextBoxColumn.Name = "practicesDDataGridViewTextBoxColumn";
-            this.practicesDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.practicesDDataGridViewTextBoxColumn.Width = 114;
-            // 
-            // laboratoriesDDataGridViewTextBoxColumn
-            // 
-            this.laboratoriesDDataGridViewTextBoxColumn.DataPropertyName = "Laboratories_D";
-            this.laboratoriesDDataGridViewTextBoxColumn.HeaderText = "Лабораторные_D";
-            this.laboratoriesDDataGridViewTextBoxColumn.Name = "laboratoriesDDataGridViewTextBoxColumn";
-            this.laboratoriesDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.laboratoriesDDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // contactHoursDataGridViewTextBoxColumn
-            // 
-            this.contactHoursDataGridViewTextBoxColumn.DataPropertyName = "ContactHours";
-            this.contactHoursDataGridViewTextBoxColumn.HeaderText = "Контактные часы";
-            this.contactHoursDataGridViewTextBoxColumn.Name = "contactHoursDataGridViewTextBoxColumn";
-            this.contactHoursDataGridViewTextBoxColumn.ReadOnly = true;
-            this.contactHoursDataGridViewTextBoxColumn.Width = 137;
-            // 
-            // lectionsVDataGridViewTextBoxColumn
-            // 
-            this.lectionsVDataGridViewTextBoxColumn.DataPropertyName = "Lections_V";
-            this.lectionsVDataGridViewTextBoxColumn.HeaderText = "Лекции_V";
-            this.lectionsVDataGridViewTextBoxColumn.Name = "lectionsVDataGridViewTextBoxColumn";
-            this.lectionsVDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lectionsVDataGridViewTextBoxColumn.Width = 99;
-            // 
-            // practicesVDataGridViewTextBoxColumn
-            // 
-            this.practicesVDataGridViewTextBoxColumn.DataPropertyName = "Practices_V";
-            this.practicesVDataGridViewTextBoxColumn.HeaderText = "Практики_V";
-            this.practicesVDataGridViewTextBoxColumn.Name = "practicesVDataGridViewTextBoxColumn";
-            this.practicesVDataGridViewTextBoxColumn.ReadOnly = true;
-            this.practicesVDataGridViewTextBoxColumn.Width = 113;
-            // 
-            // laboratoriesVDataGridViewTextBoxColumn
-            // 
-            this.laboratoriesVDataGridViewTextBoxColumn.DataPropertyName = "Laboratories_V";
-            this.laboratoriesVDataGridViewTextBoxColumn.HeaderText = "Лабораторные_V";
-            this.laboratoriesVDataGridViewTextBoxColumn.Name = "laboratoriesVDataGridViewTextBoxColumn";
-            this.laboratoriesVDataGridViewTextBoxColumn.ReadOnly = true;
-            this.laboratoriesVDataGridViewTextBoxColumn.Width = 149;
-            // 
-            // lectionsZDataGridViewTextBoxColumn
-            // 
-            this.lectionsZDataGridViewTextBoxColumn.DataPropertyName = "Lections_Z";
-            this.lectionsZDataGridViewTextBoxColumn.HeaderText = "Лекции_Z";
-            this.lectionsZDataGridViewTextBoxColumn.Name = "lectionsZDataGridViewTextBoxColumn";
-            this.lectionsZDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lectionsZDataGridViewTextBoxColumn.Width = 99;
-            // 
-            // practicesZDataGridViewTextBoxColumn
-            // 
-            this.practicesZDataGridViewTextBoxColumn.DataPropertyName = "Practices_Z";
-            this.practicesZDataGridViewTextBoxColumn.HeaderText = "Практики_Z";
-            this.practicesZDataGridViewTextBoxColumn.Name = "practicesZDataGridViewTextBoxColumn";
-            this.practicesZDataGridViewTextBoxColumn.ReadOnly = true;
-            this.practicesZDataGridViewTextBoxColumn.Width = 113;
-            // 
-            // laboratoriesZDataGridViewTextBoxColumn
-            // 
-            this.laboratoriesZDataGridViewTextBoxColumn.DataPropertyName = "Laboratories_Z";
-            this.laboratoriesZDataGridViewTextBoxColumn.HeaderText = "Лабораторные_Z";
-            this.laboratoriesZDataGridViewTextBoxColumn.Name = "laboratoriesZDataGridViewTextBoxColumn";
-            this.laboratoriesZDataGridViewTextBoxColumn.ReadOnly = true;
-            this.laboratoriesZDataGridViewTextBoxColumn.Width = 149;
-            // 
-            // courseWorkDataGridViewCheckBoxColumn
-            // 
-            this.courseWorkDataGridViewCheckBoxColumn.DataPropertyName = "CourseWork";
-            this.courseWorkDataGridViewCheckBoxColumn.HeaderText = "Курсовая";
-            this.courseWorkDataGridViewCheckBoxColumn.Name = "courseWorkDataGridViewCheckBoxColumn";
-            this.courseWorkDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.courseWorkDataGridViewCheckBoxColumn.Width = 76;
-            // 
-            // testDataGridViewCheckBoxColumn
-            // 
-            this.testDataGridViewCheckBoxColumn.DataPropertyName = "Test";
-            this.testDataGridViewCheckBoxColumn.HeaderText = "Контрольная";
-            this.testDataGridViewCheckBoxColumn.Name = "testDataGridViewCheckBoxColumn";
-            this.testDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.testDataGridViewCheckBoxColumn.Width = 101;
-            // 
-            // topicPlanDataGridViewImageColumn
-            // 
-            this.topicPlanDataGridViewImageColumn.DataPropertyName = "TopicPlan";
-            this.topicPlanDataGridViewImageColumn.HeaderText = "Тематический план";
-            this.topicPlanDataGridViewImageColumn.Name = "topicPlanDataGridViewImageColumn";
-            this.topicPlanDataGridViewImageColumn.ReadOnly = true;
-            this.topicPlanDataGridViewImageColumn.Width = 131;
-            // 
-            // subjectDescriptionDataGridViewImageColumn
-            // 
-            this.subjectDescriptionDataGridViewImageColumn.DataPropertyName = "SubjectDescription";
-            this.subjectDescriptionDataGridViewImageColumn.HeaderText = "Описание предмета";
-            this.subjectDescriptionDataGridViewImageColumn.Name = "subjectDescriptionDataGridViewImageColumn";
-            this.subjectDescriptionDataGridViewImageColumn.ReadOnly = true;
-            this.subjectDescriptionDataGridViewImageColumn.Width = 133;
             // 
             // workLoadTab
             // 
@@ -3362,6 +3356,7 @@
             // workLoadContactHoursNumericUpDown
             // 
             this.workLoadContactHoursNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.workloadBindingSource, "ContactHours", true));
+            this.workLoadContactHoursNumericUpDown.DecimalPlaces = 2;
             this.workLoadContactHoursNumericUpDown.Location = new System.Drawing.Point(894, 66);
             this.workLoadContactHoursNumericUpDown.Maximum = new decimal(new int[] {
             1000,
@@ -3375,6 +3370,7 @@
             // workLoadTotalHoursNumericUpDown
             // 
             this.workLoadTotalHoursNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.workloadBindingSource, "TotalHours", true));
+            this.workLoadTotalHoursNumericUpDown.DecimalPlaces = 2;
             this.workLoadTotalHoursNumericUpDown.Location = new System.Drawing.Point(894, 40);
             this.workLoadTotalHoursNumericUpDown.Maximum = new decimal(new int[] {
             1000,
@@ -3427,6 +3423,7 @@
             // workLoadCourseWorkNumericUpDown
             // 
             this.workLoadCourseWorkNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.workloadBindingSource, "CourseWork", true));
+            this.workLoadCourseWorkNumericUpDown.DecimalPlaces = 2;
             this.workLoadCourseWorkNumericUpDown.Location = new System.Drawing.Point(536, 94);
             this.workLoadCourseWorkNumericUpDown.Maximum = new decimal(new int[] {
             1000,
@@ -3441,6 +3438,7 @@
             // workLoadLaboratoryCountNumericUpDown
             // 
             this.workLoadLaboratoryCountNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.workloadBindingSource, "LaboratoryCount", true));
+            this.workLoadLaboratoryCountNumericUpDown.DecimalPlaces = 2;
             this.workLoadLaboratoryCountNumericUpDown.Location = new System.Drawing.Point(536, 68);
             this.workLoadLaboratoryCountNumericUpDown.Maximum = new decimal(new int[] {
             1000,
@@ -3455,6 +3453,7 @@
             // workLoadPracticeCountNumericUpDown
             // 
             this.workLoadPracticeCountNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.workloadBindingSource, "PracticeCount", true));
+            this.workLoadPracticeCountNumericUpDown.DecimalPlaces = 2;
             this.workLoadPracticeCountNumericUpDown.Location = new System.Drawing.Point(536, 42);
             this.workLoadPracticeCountNumericUpDown.Maximum = new decimal(new int[] {
             1000,
@@ -3469,6 +3468,7 @@
             // workLoadLectionCountNumericUpDown
             // 
             this.workLoadLectionCountNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.workloadBindingSource, "LectionCount", true));
+            this.workLoadLectionCountNumericUpDown.DecimalPlaces = 2;
             this.workLoadLectionCountNumericUpDown.Location = new System.Drawing.Point(536, 16);
             this.workLoadLectionCountNumericUpDown.Maximum = new decimal(new int[] {
             1000,
@@ -4891,6 +4891,8 @@
             // diplomaDefenceTab
             // 
             this.diplomaDefenceTab.AutoScroll = true;
+            this.diplomaDefenceTab.Controls.Add(diplomaDefenderLabel);
+            this.diplomaDefenceTab.Controls.Add(this.diplomaDefenderTextBox);
             this.diplomaDefenceTab.Controls.Add(this.diplomaDefenceNavigator);
             this.diplomaDefenceTab.Controls.Add(markLabel);
             this.diplomaDefenceTab.Controls.Add(this.diplomaDefenceMarkNumericUpDown);
@@ -4910,6 +4912,19 @@
             this.diplomaDefenceTab.TabIndex = 7;
             this.diplomaDefenceTab.Text = "Защита диплома";
             this.diplomaDefenceTab.UseVisualStyleBackColor = true;
+            // 
+            // diplomaDefenderTextBox
+            // 
+            this.diplomaDefenderTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.diplomaDefenceBindingSource, "DiplomaDefender", true));
+            this.diplomaDefenderTextBox.Location = new System.Drawing.Point(142, 159);
+            this.diplomaDefenderTextBox.Name = "diplomaDefenderTextBox";
+            this.diplomaDefenderTextBox.Size = new System.Drawing.Size(231, 23);
+            this.diplomaDefenderTextBox.TabIndex = 13;
+            // 
+            // diplomaDefenceBindingSource
+            // 
+            this.diplomaDefenceBindingSource.DataMember = "DiplomaDefence";
+            this.diplomaDefenceBindingSource.DataSource = this.cathedraDataSet;
             // 
             // diplomaDefenceNavigator
             // 
@@ -4954,11 +4969,6 @@
             this.bindingNavigatorAddNewItem8.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorAddNewItem8.Text = "Add new";
             this.bindingNavigatorAddNewItem8.Click += new System.EventHandler(this.bindingNavigatorAddNewItem8_Click);
-            // 
-            // diplomaDefenceBindingSource
-            // 
-            this.diplomaDefenceBindingSource.DataMember = "DiplomaDefence";
-            this.diplomaDefenceBindingSource.DataSource = this.cathedraDataSet;
             // 
             // bindingNavigatorCountItem8
             // 
@@ -5059,14 +5069,14 @@
             // diplomaDefenceMarkNumericUpDown
             // 
             this.diplomaDefenceMarkNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.diplomaDefenceBindingSource, "Mark", true));
-            this.diplomaDefenceMarkNumericUpDown.Location = new System.Drawing.Point(608, 133);
+            this.diplomaDefenceMarkNumericUpDown.Location = new System.Drawing.Point(497, 157);
             this.diplomaDefenceMarkNumericUpDown.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.diplomaDefenceMarkNumericUpDown.Name = "diplomaDefenceMarkNumericUpDown";
-            this.diplomaDefenceMarkNumericUpDown.Size = new System.Drawing.Size(120, 23);
+            this.diplomaDefenceMarkNumericUpDown.Size = new System.Drawing.Size(231, 23);
             this.diplomaDefenceMarkNumericUpDown.TabIndex = 10;
             // 
             // diplomaDefenceDateDateTimePicker
@@ -5118,6 +5128,7 @@
             this.diplomaDefenceGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.diplomaTopicDataGridViewTextBoxColumn,
             this.diplomaHeadDataGridViewTextBoxColumn,
+            this.DiplomaDefender,
             this.diplomaTypeDataGridViewTextBoxColumn,
             this.defenceDateDataGridViewTextBoxColumn,
             this.markDataGridViewTextBoxColumn});
@@ -5143,6 +5154,13 @@
             this.diplomaHeadDataGridViewTextBoxColumn.HeaderText = "Руководитель";
             this.diplomaHeadDataGridViewTextBoxColumn.Name = "diplomaHeadDataGridViewTextBoxColumn";
             this.diplomaHeadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // DiplomaDefender
+            // 
+            this.DiplomaDefender.DataPropertyName = "DiplomaDefender";
+            this.DiplomaDefender.HeaderText = "Дипломник";
+            this.DiplomaDefender.Name = "DiplomaDefender";
+            this.DiplomaDefender.ReadOnly = true;
             // 
             // diplomaTypeDataGridViewTextBoxColumn
             // 
@@ -6907,6 +6925,183 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // subjectCodeDataGridViewTextBoxColumn
+            // 
+            this.subjectCodeDataGridViewTextBoxColumn.DataPropertyName = "SubjectCode";
+            this.subjectCodeDataGridViewTextBoxColumn.HeaderText = "Код предмета";
+            this.subjectCodeDataGridViewTextBoxColumn.Name = "subjectCodeDataGridViewTextBoxColumn";
+            this.subjectCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.subjectCodeDataGridViewTextBoxColumn.Width = 126;
+            // 
+            // subjectNamerusDataGridViewTextBoxColumn
+            // 
+            this.subjectNamerusDataGridViewTextBoxColumn.DataPropertyName = "SubjectName_rus";
+            this.subjectNamerusDataGridViewTextBoxColumn.HeaderText = "Название";
+            this.subjectNamerusDataGridViewTextBoxColumn.Name = "subjectNamerusDataGridViewTextBoxColumn";
+            this.subjectNamerusDataGridViewTextBoxColumn.ReadOnly = true;
+            this.subjectNamerusDataGridViewTextBoxColumn.Width = 97;
+            // 
+            // subjectNamelvDataGridViewTextBoxColumn
+            // 
+            this.subjectNamelvDataGridViewTextBoxColumn.DataPropertyName = "SubjectName_lv";
+            this.subjectNamelvDataGridViewTextBoxColumn.HeaderText = "Nosaukums";
+            this.subjectNamelvDataGridViewTextBoxColumn.Name = "subjectNamelvDataGridViewTextBoxColumn";
+            this.subjectNamelvDataGridViewTextBoxColumn.ReadOnly = true;
+            this.subjectNamelvDataGridViewTextBoxColumn.Width = 107;
+            // 
+            // subjectNameenDataGridViewTextBoxColumn
+            // 
+            this.subjectNameenDataGridViewTextBoxColumn.DataPropertyName = "SubjectName_en";
+            this.subjectNameenDataGridViewTextBoxColumn.HeaderText = "Subject";
+            this.subjectNameenDataGridViewTextBoxColumn.Name = "subjectNameenDataGridViewTextBoxColumn";
+            this.subjectNameenDataGridViewTextBoxColumn.ReadOnly = true;
+            this.subjectNameenDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // kPDataGridViewTextBoxColumn
+            // 
+            this.kPDataGridViewTextBoxColumn.DataPropertyName = "KP";
+            this.kPDataGridViewTextBoxColumn.HeaderText = "KP";
+            this.kPDataGridViewTextBoxColumn.Name = "kPDataGridViewTextBoxColumn";
+            this.kPDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kPDataGridViewTextBoxColumn.Width = 51;
+            // 
+            // lectionsDDataGridViewTextBoxColumn
+            // 
+            this.lectionsDDataGridViewTextBoxColumn.DataPropertyName = "Lections_D";
+            this.lectionsDDataGridViewTextBoxColumn.HeaderText = "Лекции_D";
+            this.lectionsDDataGridViewTextBoxColumn.Name = "lectionsDDataGridViewTextBoxColumn";
+            this.lectionsDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // practicesDDataGridViewTextBoxColumn
+            // 
+            this.practicesDDataGridViewTextBoxColumn.DataPropertyName = "Practices_D";
+            this.practicesDDataGridViewTextBoxColumn.HeaderText = "Практики_D";
+            this.practicesDDataGridViewTextBoxColumn.Name = "practicesDDataGridViewTextBoxColumn";
+            this.practicesDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.practicesDDataGridViewTextBoxColumn.Width = 114;
+            // 
+            // laboratoriesDDataGridViewTextBoxColumn
+            // 
+            this.laboratoriesDDataGridViewTextBoxColumn.DataPropertyName = "Laboratories_D";
+            this.laboratoriesDDataGridViewTextBoxColumn.HeaderText = "Лабораторные_D";
+            this.laboratoriesDDataGridViewTextBoxColumn.Name = "laboratoriesDDataGridViewTextBoxColumn";
+            this.laboratoriesDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.laboratoriesDDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // ContactHours_D
+            // 
+            this.ContactHours_D.DataPropertyName = "ContactHours_D";
+            this.ContactHours_D.HeaderText = "Контактные часы_D";
+            this.ContactHours_D.Name = "ContactHours_D";
+            this.ContactHours_D.ReadOnly = true;
+            this.ContactHours_D.Width = 153;
+            // 
+            // PersonalWork_D
+            // 
+            this.PersonalWork_D.DataPropertyName = "PersonalWork_D";
+            this.PersonalWork_D.HeaderText = "Самостоятельное обучение_D";
+            this.PersonalWork_D.Name = "PersonalWork_D";
+            this.PersonalWork_D.ReadOnly = true;
+            this.PersonalWork_D.Width = 214;
+            // 
+            // lectionsVDataGridViewTextBoxColumn
+            // 
+            this.lectionsVDataGridViewTextBoxColumn.DataPropertyName = "Lections_V";
+            this.lectionsVDataGridViewTextBoxColumn.HeaderText = "Лекции_V";
+            this.lectionsVDataGridViewTextBoxColumn.Name = "lectionsVDataGridViewTextBoxColumn";
+            this.lectionsVDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lectionsVDataGridViewTextBoxColumn.Width = 99;
+            // 
+            // practicesVDataGridViewTextBoxColumn
+            // 
+            this.practicesVDataGridViewTextBoxColumn.DataPropertyName = "Practices_V";
+            this.practicesVDataGridViewTextBoxColumn.HeaderText = "Практики_V";
+            this.practicesVDataGridViewTextBoxColumn.Name = "practicesVDataGridViewTextBoxColumn";
+            this.practicesVDataGridViewTextBoxColumn.ReadOnly = true;
+            this.practicesVDataGridViewTextBoxColumn.Width = 113;
+            // 
+            // laboratoriesVDataGridViewTextBoxColumn
+            // 
+            this.laboratoriesVDataGridViewTextBoxColumn.DataPropertyName = "Laboratories_V";
+            this.laboratoriesVDataGridViewTextBoxColumn.HeaderText = "Лабораторные_V";
+            this.laboratoriesVDataGridViewTextBoxColumn.Name = "laboratoriesVDataGridViewTextBoxColumn";
+            this.laboratoriesVDataGridViewTextBoxColumn.ReadOnly = true;
+            this.laboratoriesVDataGridViewTextBoxColumn.Width = 149;
+            // 
+            // ContactHours_V
+            // 
+            this.ContactHours_V.DataPropertyName = "ContactHours_V";
+            this.ContactHours_V.HeaderText = "Контактные часы_V";
+            this.ContactHours_V.Name = "ContactHours_V";
+            this.ContactHours_V.ReadOnly = true;
+            this.ContactHours_V.Width = 133;
+            // 
+            // PersonalWork_V
+            // 
+            this.PersonalWork_V.DataPropertyName = "PersonalWork_V";
+            this.PersonalWork_V.HeaderText = "Самостоятельное обучение_V";
+            this.PersonalWork_V.Name = "PersonalWork_V";
+            this.PersonalWork_V.ReadOnly = true;
+            this.PersonalWork_V.Width = 213;
+            // 
+            // lectionsZDataGridViewTextBoxColumn
+            // 
+            this.lectionsZDataGridViewTextBoxColumn.DataPropertyName = "Lections_Z";
+            this.lectionsZDataGridViewTextBoxColumn.HeaderText = "Лекции_Z";
+            this.lectionsZDataGridViewTextBoxColumn.Name = "lectionsZDataGridViewTextBoxColumn";
+            this.lectionsZDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lectionsZDataGridViewTextBoxColumn.Width = 99;
+            // 
+            // practicesZDataGridViewTextBoxColumn
+            // 
+            this.practicesZDataGridViewTextBoxColumn.DataPropertyName = "Practices_Z";
+            this.practicesZDataGridViewTextBoxColumn.HeaderText = "Практики_Z";
+            this.practicesZDataGridViewTextBoxColumn.Name = "practicesZDataGridViewTextBoxColumn";
+            this.practicesZDataGridViewTextBoxColumn.ReadOnly = true;
+            this.practicesZDataGridViewTextBoxColumn.Width = 113;
+            // 
+            // laboratoriesZDataGridViewTextBoxColumn
+            // 
+            this.laboratoriesZDataGridViewTextBoxColumn.DataPropertyName = "Laboratories_Z";
+            this.laboratoriesZDataGridViewTextBoxColumn.HeaderText = "Лабораторные_Z";
+            this.laboratoriesZDataGridViewTextBoxColumn.Name = "laboratoriesZDataGridViewTextBoxColumn";
+            this.laboratoriesZDataGridViewTextBoxColumn.ReadOnly = true;
+            this.laboratoriesZDataGridViewTextBoxColumn.Width = 149;
+            // 
+            // courseWorkDataGridViewCheckBoxColumn
+            // 
+            this.courseWorkDataGridViewCheckBoxColumn.DataPropertyName = "CourseWork";
+            this.courseWorkDataGridViewCheckBoxColumn.HeaderText = "Курсовая";
+            this.courseWorkDataGridViewCheckBoxColumn.Name = "courseWorkDataGridViewCheckBoxColumn";
+            this.courseWorkDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.courseWorkDataGridViewCheckBoxColumn.Width = 76;
+            // 
+            // testDataGridViewCheckBoxColumn
+            // 
+            this.testDataGridViewCheckBoxColumn.DataPropertyName = "Test";
+            this.testDataGridViewCheckBoxColumn.HeaderText = "Контрольная";
+            this.testDataGridViewCheckBoxColumn.Name = "testDataGridViewCheckBoxColumn";
+            this.testDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.testDataGridViewCheckBoxColumn.Width = 101;
+            // 
+            // topicPlanDataGridViewImageColumn
+            // 
+            this.topicPlanDataGridViewImageColumn.DataPropertyName = "TopicPlan";
+            this.topicPlanDataGridViewImageColumn.HeaderText = "Тематический план";
+            this.topicPlanDataGridViewImageColumn.Name = "topicPlanDataGridViewImageColumn";
+            this.topicPlanDataGridViewImageColumn.ReadOnly = true;
+            this.topicPlanDataGridViewImageColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.topicPlanDataGridViewImageColumn.Width = 131;
+            // 
+            // subjectDescriptionDataGridViewImageColumn
+            // 
+            this.subjectDescriptionDataGridViewImageColumn.DataPropertyName = "SubjectDescription";
+            this.subjectDescriptionDataGridViewImageColumn.HeaderText = "Описание предмета";
+            this.subjectDescriptionDataGridViewImageColumn.Name = "subjectDescriptionDataGridViewImageColumn";
+            this.subjectDescriptionDataGridViewImageColumn.ReadOnly = true;
+            this.subjectDescriptionDataGridViewImageColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.subjectDescriptionDataGridViewImageColumn.Width = 133;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6937,10 +7132,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupGrid)).EndInit();
             this.subjectTab.ResumeLayout(false);
             this.subjectTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectGridNavigator)).EndInit();
             this.subjectGridNavigator.ResumeLayout(false);
             this.subjectGridNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).EndInit();
             this.subjectZaochGroupBox.ResumeLayout(false);
             this.subjectZaochGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.subjectLaboratories_ZNumericUpDown)).EndInit();
@@ -6948,12 +7143,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.subjectLections_ZNumericUpDown)).EndInit();
             this.subjectEveningGroupBox.ResumeLayout(false);
             this.subjectEveningGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.subjectContactHours_VNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectLaboratories_VNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectPractices_VNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectLections_VNumericUpDown)).EndInit();
             this.subjectDayGroupBox.ResumeLayout(false);
             this.subjectDayGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.subjectContactHoursNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subjectContactHoursDNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectLaboratories_DNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectPractices_DNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectLections_DNumericUpDown)).EndInit();
@@ -7011,10 +7207,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.moveStudentGrid)).EndInit();
             this.diplomaDefenceTab.ResumeLayout(false);
             this.diplomaDefenceTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.diplomaDefenceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diplomaDefenceNavigator)).EndInit();
             this.diplomaDefenceNavigator.ResumeLayout(false);
             this.diplomaDefenceNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.diplomaDefenceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diplomaDefenceMarkNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.diplomaDefenceGrid)).EndInit();
             this.projectTab.ResumeLayout(false);
@@ -7116,7 +7312,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton saveToolStripButton;
         private System.Windows.Forms.ToolStripButton newToolStripButton;
-        private System.Windows.Forms.Button lecturerViewCVButton;
         private System.Windows.Forms.Button lecturerPublicationListButton;
         private System.Windows.Forms.DataGridView groupGrid;
         private CathedraTableAdapters.GroupTableAdapter groupTableAdapter;
@@ -7159,25 +7354,7 @@
         private System.Windows.Forms.TextBox subjectName_lvTextBox;
         private System.Windows.Forms.TextBox subjectName_rusTextBox;
         private System.Windows.Forms.TextBox subjectCodeTextBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subjectCodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subjectNamerusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subjectNamelvDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subjectNameenDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kPDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lectionsDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn practicesDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn laboratoriesDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contactHoursDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lectionsVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn practicesVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn laboratoriesVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lectionsZDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn practicesZDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn laboratoriesZDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn courseWorkDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn testDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn topicPlanDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewImageColumn subjectDescriptionDataGridViewImageColumn;
         private System.Windows.Forms.GroupBox subjectZaochGroupBox;
         private System.Windows.Forms.NumericUpDown subjectLaboratories_ZNumericUpDown;
         private System.Windows.Forms.NumericUpDown subjectPractices_ZNumericUpDown;
@@ -7189,7 +7366,7 @@
         private System.Windows.Forms.CheckBox subjectTestCheckBox;
         private System.Windows.Forms.CheckBox subjectCourseWorkCheckBox;
         private System.Windows.Forms.GroupBox subjectDayGroupBox;
-        private System.Windows.Forms.NumericUpDown subjectContactHoursNumericUpDown;
+        private System.Windows.Forms.NumericUpDown subjectContactHoursDNumericUpDown;
         private System.Windows.Forms.NumericUpDown subjectLaboratories_DNumericUpDown;
         private System.Windows.Forms.NumericUpDown subjectPractices_DNumericUpDown;
         private System.Windows.Forms.NumericUpDown subjectLections_DNumericUpDown;
@@ -7375,11 +7552,6 @@
         private System.Windows.Forms.DataGridView diplomaDefenceGrid;
         private System.Windows.Forms.BindingSource diplomaDefenceBindingSource;
         private CathedraTableAdapters.DiplomaDefenceTableAdapter diplomaDefenceTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diplomaTopicDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diplomaHeadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diplomaTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn defenceDateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn markDataGridViewTextBoxColumn;
         private System.Windows.Forms.NumericUpDown diplomaDefenceMarkNumericUpDown;
         private System.Windows.Forms.DateTimePicker diplomaDefenceDateDateTimePicker;
         private System.Windows.Forms.TextBox diplomaDefenceTypeTextBox;
@@ -7564,5 +7736,43 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn lecturerPKDataGridViewTextBoxColumn;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.LinkLabel lecturerCVLinkLabel;
+        private System.Windows.Forms.TextBox subjectKPHoursTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox selfStudyVTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown subjectContactHours_VNumericUpDown;
+        private System.Windows.Forms.TextBox selfStudyDayTextBox;
+        private System.Windows.Forms.Label selfStudyDayLabel;
+        private System.Windows.Forms.LinkLabel subjectDescriptionLinkLabel;
+        private System.Windows.Forms.LinkLabel topicPlanLinkLabel;
+        private System.Windows.Forms.TextBox diplomaDefenderTextBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diplomaTopicDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diplomaHeadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiplomaDefender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diplomaTypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn defenceDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn markDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subjectCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subjectNamerusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subjectNamelvDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subjectNameenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kPDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lectionsDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn practicesDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn laboratoriesDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ContactHours_D;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PersonalWork_D;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lectionsVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn practicesVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn laboratoriesVDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn ContactHours_V;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PersonalWork_V;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lectionsZDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn practicesZDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn laboratoriesZDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn courseWorkDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn testDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewLinkColumn topicPlanDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewLinkColumn subjectDescriptionDataGridViewImageColumn;
     }
 }
