@@ -260,6 +260,28 @@
             this.subjectName_rusTextBox = new System.Windows.Forms.TextBox();
             this.subjectCodeTextBox = new System.Windows.Forms.TextBox();
             this.subjectGrid = new System.Windows.Forms.DataGridView();
+            this.subjectCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjectNamerusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjectNamelvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjectNameenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lectionsDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.practicesDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.laboratoriesDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContactHours_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PersonalWork_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lectionsVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.practicesVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.laboratoriesVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContactHours_V = new System.Windows.Forms.DataGridViewImageColumn();
+            this.PersonalWork_V = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lectionsZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.practicesZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.laboratoriesZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.courseWorkDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.testDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.topicPlanDataGridViewImageColumn = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.subjectDescriptionDataGridViewImageColumn = new System.Windows.Forms.DataGridViewLinkColumn();
             this.workLoadTab = new System.Windows.Forms.TabPage();
             this.workLoadNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem3 = new System.Windows.Forms.ToolStripButton();
@@ -619,28 +641,6 @@
             this.lecturerPublicationTableAdapter = new LecturerDB.CathedraTableAdapters.LecturerPublicationTableAdapter();
             this.responsibilityTableAdapter = new LecturerDB.CathedraTableAdapters.ResponsibilityTableAdapter();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.subjectCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subjectNamerusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subjectNamelvDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subjectNameenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lectionsDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.practicesDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.laboratoriesDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContactHours_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PersonalWork_D = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lectionsVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.practicesVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.laboratoriesVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContactHours_V = new System.Windows.Forms.DataGridViewImageColumn();
-            this.PersonalWork_V = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lectionsZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.practicesZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.laboratoriesZDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.courseWorkDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.testDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.topicPlanDataGridViewImageColumn = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.subjectDescriptionDataGridViewImageColumn = new System.Windows.Forms.DataGridViewLinkColumn();
             pKLabel = new System.Windows.Forms.Label();
             lastNameLabel = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
@@ -2215,6 +2215,7 @@
             this.lecturerGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.lecturerGrid.Size = new System.Drawing.Size(1105, 291);
             this.lecturerGrid.TabIndex = 0;
+            this.lecturerGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lecturerGrid_CellContentClick);
             this.lecturerGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.lecturerGrid_RowEnter);
             // 
             // pKDataGridViewTextBoxColumn
@@ -3169,6 +3170,183 @@
             this.subjectGrid.Size = new System.Drawing.Size(1105, 270);
             this.subjectGrid.TabIndex = 0;
             // 
+            // subjectCodeDataGridViewTextBoxColumn
+            // 
+            this.subjectCodeDataGridViewTextBoxColumn.DataPropertyName = "SubjectCode";
+            this.subjectCodeDataGridViewTextBoxColumn.HeaderText = "Код предмета";
+            this.subjectCodeDataGridViewTextBoxColumn.Name = "subjectCodeDataGridViewTextBoxColumn";
+            this.subjectCodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.subjectCodeDataGridViewTextBoxColumn.Width = 115;
+            // 
+            // subjectNamerusDataGridViewTextBoxColumn
+            // 
+            this.subjectNamerusDataGridViewTextBoxColumn.DataPropertyName = "SubjectName_rus";
+            this.subjectNamerusDataGridViewTextBoxColumn.HeaderText = "Название";
+            this.subjectNamerusDataGridViewTextBoxColumn.Name = "subjectNamerusDataGridViewTextBoxColumn";
+            this.subjectNamerusDataGridViewTextBoxColumn.ReadOnly = true;
+            this.subjectNamerusDataGridViewTextBoxColumn.Width = 97;
+            // 
+            // subjectNamelvDataGridViewTextBoxColumn
+            // 
+            this.subjectNamelvDataGridViewTextBoxColumn.DataPropertyName = "SubjectName_lv";
+            this.subjectNamelvDataGridViewTextBoxColumn.HeaderText = "Nosaukums";
+            this.subjectNamelvDataGridViewTextBoxColumn.Name = "subjectNamelvDataGridViewTextBoxColumn";
+            this.subjectNamelvDataGridViewTextBoxColumn.ReadOnly = true;
+            this.subjectNamelvDataGridViewTextBoxColumn.Width = 107;
+            // 
+            // subjectNameenDataGridViewTextBoxColumn
+            // 
+            this.subjectNameenDataGridViewTextBoxColumn.DataPropertyName = "SubjectName_en";
+            this.subjectNameenDataGridViewTextBoxColumn.HeaderText = "Subject";
+            this.subjectNameenDataGridViewTextBoxColumn.Name = "subjectNameenDataGridViewTextBoxColumn";
+            this.subjectNameenDataGridViewTextBoxColumn.ReadOnly = true;
+            this.subjectNameenDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // kPDataGridViewTextBoxColumn
+            // 
+            this.kPDataGridViewTextBoxColumn.DataPropertyName = "KP";
+            this.kPDataGridViewTextBoxColumn.HeaderText = "KP";
+            this.kPDataGridViewTextBoxColumn.Name = "kPDataGridViewTextBoxColumn";
+            this.kPDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kPDataGridViewTextBoxColumn.Width = 51;
+            // 
+            // lectionsDDataGridViewTextBoxColumn
+            // 
+            this.lectionsDDataGridViewTextBoxColumn.DataPropertyName = "Lections_D";
+            this.lectionsDDataGridViewTextBoxColumn.HeaderText = "Лекции_D";
+            this.lectionsDDataGridViewTextBoxColumn.Name = "lectionsDDataGridViewTextBoxColumn";
+            this.lectionsDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // practicesDDataGridViewTextBoxColumn
+            // 
+            this.practicesDDataGridViewTextBoxColumn.DataPropertyName = "Practices_D";
+            this.practicesDDataGridViewTextBoxColumn.HeaderText = "Практики_D";
+            this.practicesDDataGridViewTextBoxColumn.Name = "practicesDDataGridViewTextBoxColumn";
+            this.practicesDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.practicesDDataGridViewTextBoxColumn.Width = 114;
+            // 
+            // laboratoriesDDataGridViewTextBoxColumn
+            // 
+            this.laboratoriesDDataGridViewTextBoxColumn.DataPropertyName = "Laboratories_D";
+            this.laboratoriesDDataGridViewTextBoxColumn.HeaderText = "Лабораторные_D";
+            this.laboratoriesDDataGridViewTextBoxColumn.Name = "laboratoriesDDataGridViewTextBoxColumn";
+            this.laboratoriesDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.laboratoriesDDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // ContactHours_D
+            // 
+            this.ContactHours_D.DataPropertyName = "ContactHours_D";
+            this.ContactHours_D.HeaderText = "Контактные часы_D";
+            this.ContactHours_D.Name = "ContactHours_D";
+            this.ContactHours_D.ReadOnly = true;
+            this.ContactHours_D.Width = 153;
+            // 
+            // PersonalWork_D
+            // 
+            this.PersonalWork_D.DataPropertyName = "PersonalWork_D";
+            this.PersonalWork_D.HeaderText = "Самостоятельное обучение_D";
+            this.PersonalWork_D.Name = "PersonalWork_D";
+            this.PersonalWork_D.ReadOnly = true;
+            this.PersonalWork_D.Width = 214;
+            // 
+            // lectionsVDataGridViewTextBoxColumn
+            // 
+            this.lectionsVDataGridViewTextBoxColumn.DataPropertyName = "Lections_V";
+            this.lectionsVDataGridViewTextBoxColumn.HeaderText = "Лекции_V";
+            this.lectionsVDataGridViewTextBoxColumn.Name = "lectionsVDataGridViewTextBoxColumn";
+            this.lectionsVDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lectionsVDataGridViewTextBoxColumn.Width = 99;
+            // 
+            // practicesVDataGridViewTextBoxColumn
+            // 
+            this.practicesVDataGridViewTextBoxColumn.DataPropertyName = "Practices_V";
+            this.practicesVDataGridViewTextBoxColumn.HeaderText = "Практики_V";
+            this.practicesVDataGridViewTextBoxColumn.Name = "practicesVDataGridViewTextBoxColumn";
+            this.practicesVDataGridViewTextBoxColumn.ReadOnly = true;
+            this.practicesVDataGridViewTextBoxColumn.Width = 113;
+            // 
+            // laboratoriesVDataGridViewTextBoxColumn
+            // 
+            this.laboratoriesVDataGridViewTextBoxColumn.DataPropertyName = "Laboratories_V";
+            this.laboratoriesVDataGridViewTextBoxColumn.HeaderText = "Лабораторные_V";
+            this.laboratoriesVDataGridViewTextBoxColumn.Name = "laboratoriesVDataGridViewTextBoxColumn";
+            this.laboratoriesVDataGridViewTextBoxColumn.ReadOnly = true;
+            this.laboratoriesVDataGridViewTextBoxColumn.Width = 149;
+            // 
+            // ContactHours_V
+            // 
+            this.ContactHours_V.DataPropertyName = "ContactHours_V";
+            this.ContactHours_V.HeaderText = "Контактные часы_V";
+            this.ContactHours_V.Name = "ContactHours_V";
+            this.ContactHours_V.ReadOnly = true;
+            this.ContactHours_V.Width = 133;
+            // 
+            // PersonalWork_V
+            // 
+            this.PersonalWork_V.DataPropertyName = "PersonalWork_V";
+            this.PersonalWork_V.HeaderText = "Самостоятельное обучение_V";
+            this.PersonalWork_V.Name = "PersonalWork_V";
+            this.PersonalWork_V.ReadOnly = true;
+            this.PersonalWork_V.Width = 213;
+            // 
+            // lectionsZDataGridViewTextBoxColumn
+            // 
+            this.lectionsZDataGridViewTextBoxColumn.DataPropertyName = "Lections_Z";
+            this.lectionsZDataGridViewTextBoxColumn.HeaderText = "Лекции_Z";
+            this.lectionsZDataGridViewTextBoxColumn.Name = "lectionsZDataGridViewTextBoxColumn";
+            this.lectionsZDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lectionsZDataGridViewTextBoxColumn.Width = 99;
+            // 
+            // practicesZDataGridViewTextBoxColumn
+            // 
+            this.practicesZDataGridViewTextBoxColumn.DataPropertyName = "Practices_Z";
+            this.practicesZDataGridViewTextBoxColumn.HeaderText = "Практики_Z";
+            this.practicesZDataGridViewTextBoxColumn.Name = "practicesZDataGridViewTextBoxColumn";
+            this.practicesZDataGridViewTextBoxColumn.ReadOnly = true;
+            this.practicesZDataGridViewTextBoxColumn.Width = 113;
+            // 
+            // laboratoriesZDataGridViewTextBoxColumn
+            // 
+            this.laboratoriesZDataGridViewTextBoxColumn.DataPropertyName = "Laboratories_Z";
+            this.laboratoriesZDataGridViewTextBoxColumn.HeaderText = "Лабораторные_Z";
+            this.laboratoriesZDataGridViewTextBoxColumn.Name = "laboratoriesZDataGridViewTextBoxColumn";
+            this.laboratoriesZDataGridViewTextBoxColumn.ReadOnly = true;
+            this.laboratoriesZDataGridViewTextBoxColumn.Width = 149;
+            // 
+            // courseWorkDataGridViewCheckBoxColumn
+            // 
+            this.courseWorkDataGridViewCheckBoxColumn.DataPropertyName = "CourseWork";
+            this.courseWorkDataGridViewCheckBoxColumn.HeaderText = "Курсовая";
+            this.courseWorkDataGridViewCheckBoxColumn.Name = "courseWorkDataGridViewCheckBoxColumn";
+            this.courseWorkDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.courseWorkDataGridViewCheckBoxColumn.Width = 76;
+            // 
+            // testDataGridViewCheckBoxColumn
+            // 
+            this.testDataGridViewCheckBoxColumn.DataPropertyName = "Test";
+            this.testDataGridViewCheckBoxColumn.HeaderText = "Контрольная";
+            this.testDataGridViewCheckBoxColumn.Name = "testDataGridViewCheckBoxColumn";
+            this.testDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.testDataGridViewCheckBoxColumn.Width = 101;
+            // 
+            // topicPlanDataGridViewImageColumn
+            // 
+            this.topicPlanDataGridViewImageColumn.DataPropertyName = "TopicPlan";
+            this.topicPlanDataGridViewImageColumn.HeaderText = "Тематический план";
+            this.topicPlanDataGridViewImageColumn.Name = "topicPlanDataGridViewImageColumn";
+            this.topicPlanDataGridViewImageColumn.ReadOnly = true;
+            this.topicPlanDataGridViewImageColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.topicPlanDataGridViewImageColumn.Width = 131;
+            // 
+            // subjectDescriptionDataGridViewImageColumn
+            // 
+            this.subjectDescriptionDataGridViewImageColumn.DataPropertyName = "SubjectDescription";
+            this.subjectDescriptionDataGridViewImageColumn.HeaderText = "Описание предмета";
+            this.subjectDescriptionDataGridViewImageColumn.Name = "subjectDescriptionDataGridViewImageColumn";
+            this.subjectDescriptionDataGridViewImageColumn.ReadOnly = true;
+            this.subjectDescriptionDataGridViewImageColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.subjectDescriptionDataGridViewImageColumn.Width = 133;
+            // 
             // workLoadTab
             // 
             this.workLoadTab.AutoScroll = true;
@@ -3784,6 +3962,7 @@
             this.bindingNavigatorDeleteItem5.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem5.Size = new System.Drawing.Size(23, 19);
             this.bindingNavigatorDeleteItem5.Text = "Delete";
+            this.bindingNavigatorDeleteItem5.Click += new System.EventHandler(this.bindingNavigatorDeleteItem5_Click);
             // 
             // bindingNavigatorMoveFirstItem5
             // 
@@ -6924,183 +7103,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // subjectCodeDataGridViewTextBoxColumn
-            // 
-            this.subjectCodeDataGridViewTextBoxColumn.DataPropertyName = "SubjectCode";
-            this.subjectCodeDataGridViewTextBoxColumn.HeaderText = "Код предмета";
-            this.subjectCodeDataGridViewTextBoxColumn.Name = "subjectCodeDataGridViewTextBoxColumn";
-            this.subjectCodeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.subjectCodeDataGridViewTextBoxColumn.Width = 126;
-            // 
-            // subjectNamerusDataGridViewTextBoxColumn
-            // 
-            this.subjectNamerusDataGridViewTextBoxColumn.DataPropertyName = "SubjectName_rus";
-            this.subjectNamerusDataGridViewTextBoxColumn.HeaderText = "Название";
-            this.subjectNamerusDataGridViewTextBoxColumn.Name = "subjectNamerusDataGridViewTextBoxColumn";
-            this.subjectNamerusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.subjectNamerusDataGridViewTextBoxColumn.Width = 97;
-            // 
-            // subjectNamelvDataGridViewTextBoxColumn
-            // 
-            this.subjectNamelvDataGridViewTextBoxColumn.DataPropertyName = "SubjectName_lv";
-            this.subjectNamelvDataGridViewTextBoxColumn.HeaderText = "Nosaukums";
-            this.subjectNamelvDataGridViewTextBoxColumn.Name = "subjectNamelvDataGridViewTextBoxColumn";
-            this.subjectNamelvDataGridViewTextBoxColumn.ReadOnly = true;
-            this.subjectNamelvDataGridViewTextBoxColumn.Width = 107;
-            // 
-            // subjectNameenDataGridViewTextBoxColumn
-            // 
-            this.subjectNameenDataGridViewTextBoxColumn.DataPropertyName = "SubjectName_en";
-            this.subjectNameenDataGridViewTextBoxColumn.HeaderText = "Subject";
-            this.subjectNameenDataGridViewTextBoxColumn.Name = "subjectNameenDataGridViewTextBoxColumn";
-            this.subjectNameenDataGridViewTextBoxColumn.ReadOnly = true;
-            this.subjectNameenDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // kPDataGridViewTextBoxColumn
-            // 
-            this.kPDataGridViewTextBoxColumn.DataPropertyName = "KP";
-            this.kPDataGridViewTextBoxColumn.HeaderText = "KP";
-            this.kPDataGridViewTextBoxColumn.Name = "kPDataGridViewTextBoxColumn";
-            this.kPDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kPDataGridViewTextBoxColumn.Width = 51;
-            // 
-            // lectionsDDataGridViewTextBoxColumn
-            // 
-            this.lectionsDDataGridViewTextBoxColumn.DataPropertyName = "Lections_D";
-            this.lectionsDDataGridViewTextBoxColumn.HeaderText = "Лекции_D";
-            this.lectionsDDataGridViewTextBoxColumn.Name = "lectionsDDataGridViewTextBoxColumn";
-            this.lectionsDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // practicesDDataGridViewTextBoxColumn
-            // 
-            this.practicesDDataGridViewTextBoxColumn.DataPropertyName = "Practices_D";
-            this.practicesDDataGridViewTextBoxColumn.HeaderText = "Практики_D";
-            this.practicesDDataGridViewTextBoxColumn.Name = "practicesDDataGridViewTextBoxColumn";
-            this.practicesDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.practicesDDataGridViewTextBoxColumn.Width = 114;
-            // 
-            // laboratoriesDDataGridViewTextBoxColumn
-            // 
-            this.laboratoriesDDataGridViewTextBoxColumn.DataPropertyName = "Laboratories_D";
-            this.laboratoriesDDataGridViewTextBoxColumn.HeaderText = "Лабораторные_D";
-            this.laboratoriesDDataGridViewTextBoxColumn.Name = "laboratoriesDDataGridViewTextBoxColumn";
-            this.laboratoriesDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.laboratoriesDDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // ContactHours_D
-            // 
-            this.ContactHours_D.DataPropertyName = "ContactHours_D";
-            this.ContactHours_D.HeaderText = "Контактные часы_D";
-            this.ContactHours_D.Name = "ContactHours_D";
-            this.ContactHours_D.ReadOnly = true;
-            this.ContactHours_D.Width = 153;
-            // 
-            // PersonalWork_D
-            // 
-            this.PersonalWork_D.DataPropertyName = "PersonalWork_D";
-            this.PersonalWork_D.HeaderText = "Самостоятельное обучение_D";
-            this.PersonalWork_D.Name = "PersonalWork_D";
-            this.PersonalWork_D.ReadOnly = true;
-            this.PersonalWork_D.Width = 214;
-            // 
-            // lectionsVDataGridViewTextBoxColumn
-            // 
-            this.lectionsVDataGridViewTextBoxColumn.DataPropertyName = "Lections_V";
-            this.lectionsVDataGridViewTextBoxColumn.HeaderText = "Лекции_V";
-            this.lectionsVDataGridViewTextBoxColumn.Name = "lectionsVDataGridViewTextBoxColumn";
-            this.lectionsVDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lectionsVDataGridViewTextBoxColumn.Width = 99;
-            // 
-            // practicesVDataGridViewTextBoxColumn
-            // 
-            this.practicesVDataGridViewTextBoxColumn.DataPropertyName = "Practices_V";
-            this.practicesVDataGridViewTextBoxColumn.HeaderText = "Практики_V";
-            this.practicesVDataGridViewTextBoxColumn.Name = "practicesVDataGridViewTextBoxColumn";
-            this.practicesVDataGridViewTextBoxColumn.ReadOnly = true;
-            this.practicesVDataGridViewTextBoxColumn.Width = 113;
-            // 
-            // laboratoriesVDataGridViewTextBoxColumn
-            // 
-            this.laboratoriesVDataGridViewTextBoxColumn.DataPropertyName = "Laboratories_V";
-            this.laboratoriesVDataGridViewTextBoxColumn.HeaderText = "Лабораторные_V";
-            this.laboratoriesVDataGridViewTextBoxColumn.Name = "laboratoriesVDataGridViewTextBoxColumn";
-            this.laboratoriesVDataGridViewTextBoxColumn.ReadOnly = true;
-            this.laboratoriesVDataGridViewTextBoxColumn.Width = 149;
-            // 
-            // ContactHours_V
-            // 
-            this.ContactHours_V.DataPropertyName = "ContactHours_V";
-            this.ContactHours_V.HeaderText = "Контактные часы_V";
-            this.ContactHours_V.Name = "ContactHours_V";
-            this.ContactHours_V.ReadOnly = true;
-            this.ContactHours_V.Width = 133;
-            // 
-            // PersonalWork_V
-            // 
-            this.PersonalWork_V.DataPropertyName = "PersonalWork_V";
-            this.PersonalWork_V.HeaderText = "Самостоятельное обучение_V";
-            this.PersonalWork_V.Name = "PersonalWork_V";
-            this.PersonalWork_V.ReadOnly = true;
-            this.PersonalWork_V.Width = 213;
-            // 
-            // lectionsZDataGridViewTextBoxColumn
-            // 
-            this.lectionsZDataGridViewTextBoxColumn.DataPropertyName = "Lections_Z";
-            this.lectionsZDataGridViewTextBoxColumn.HeaderText = "Лекции_Z";
-            this.lectionsZDataGridViewTextBoxColumn.Name = "lectionsZDataGridViewTextBoxColumn";
-            this.lectionsZDataGridViewTextBoxColumn.ReadOnly = true;
-            this.lectionsZDataGridViewTextBoxColumn.Width = 99;
-            // 
-            // practicesZDataGridViewTextBoxColumn
-            // 
-            this.practicesZDataGridViewTextBoxColumn.DataPropertyName = "Practices_Z";
-            this.practicesZDataGridViewTextBoxColumn.HeaderText = "Практики_Z";
-            this.practicesZDataGridViewTextBoxColumn.Name = "practicesZDataGridViewTextBoxColumn";
-            this.practicesZDataGridViewTextBoxColumn.ReadOnly = true;
-            this.practicesZDataGridViewTextBoxColumn.Width = 113;
-            // 
-            // laboratoriesZDataGridViewTextBoxColumn
-            // 
-            this.laboratoriesZDataGridViewTextBoxColumn.DataPropertyName = "Laboratories_Z";
-            this.laboratoriesZDataGridViewTextBoxColumn.HeaderText = "Лабораторные_Z";
-            this.laboratoriesZDataGridViewTextBoxColumn.Name = "laboratoriesZDataGridViewTextBoxColumn";
-            this.laboratoriesZDataGridViewTextBoxColumn.ReadOnly = true;
-            this.laboratoriesZDataGridViewTextBoxColumn.Width = 149;
-            // 
-            // courseWorkDataGridViewCheckBoxColumn
-            // 
-            this.courseWorkDataGridViewCheckBoxColumn.DataPropertyName = "CourseWork";
-            this.courseWorkDataGridViewCheckBoxColumn.HeaderText = "Курсовая";
-            this.courseWorkDataGridViewCheckBoxColumn.Name = "courseWorkDataGridViewCheckBoxColumn";
-            this.courseWorkDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.courseWorkDataGridViewCheckBoxColumn.Width = 76;
-            // 
-            // testDataGridViewCheckBoxColumn
-            // 
-            this.testDataGridViewCheckBoxColumn.DataPropertyName = "Test";
-            this.testDataGridViewCheckBoxColumn.HeaderText = "Контрольная";
-            this.testDataGridViewCheckBoxColumn.Name = "testDataGridViewCheckBoxColumn";
-            this.testDataGridViewCheckBoxColumn.ReadOnly = true;
-            this.testDataGridViewCheckBoxColumn.Width = 101;
-            // 
-            // topicPlanDataGridViewImageColumn
-            // 
-            this.topicPlanDataGridViewImageColumn.DataPropertyName = "TopicPlan";
-            this.topicPlanDataGridViewImageColumn.HeaderText = "Тематический план";
-            this.topicPlanDataGridViewImageColumn.Name = "topicPlanDataGridViewImageColumn";
-            this.topicPlanDataGridViewImageColumn.ReadOnly = true;
-            this.topicPlanDataGridViewImageColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.topicPlanDataGridViewImageColumn.Width = 131;
-            // 
-            // subjectDescriptionDataGridViewImageColumn
-            // 
-            this.subjectDescriptionDataGridViewImageColumn.DataPropertyName = "SubjectDescription";
-            this.subjectDescriptionDataGridViewImageColumn.HeaderText = "Описание предмета";
-            this.subjectDescriptionDataGridViewImageColumn.Name = "subjectDescriptionDataGridViewImageColumn";
-            this.subjectDescriptionDataGridViewImageColumn.ReadOnly = true;
-            this.subjectDescriptionDataGridViewImageColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.subjectDescriptionDataGridViewImageColumn.Width = 133;
             // 
             // MainWindow
             // 

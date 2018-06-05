@@ -554,11 +554,15 @@ namespace LecturerDB.Views
 
         private void saveToolStripButton5_Click(object sender, EventArgs e)
         {
-            TabControlValidation(languageTab);
-            subjectReadingReadYearNumericUpDown.Value = subjectReadingReadYearNumericUpDown.Value; //non-working kostyl
-            subjectReadingBindingSource.EndEdit(); // fix exception with null in ReadYear
-            subjectReadingTableAdapter.Update(cathedraDataSet.SubjectReading);
-            subjectReadingGrid.Refresh();
+           
+            if (subjectReadingReadYearNumericUpDown.Value != null && subjectReadingReadSemesterListBox.SelectedItem!=null)
+            {
+                TabControlValidation(languageTab);
+                subjectReadingBindingSource.EndEdit(); // fix exception with null in ReadYear
+                subjectReadingTableAdapter.Update(cathedraDataSet.SubjectReading);
+                subjectReadingGrid.Refresh();
+            }
+            
         }
 
         private void clearSubjectReading()
@@ -567,6 +571,7 @@ namespace LecturerDB.Views
             {
                 subjectReadingGrid.CancelEdit();
                 subjectReadingReadYearNumericUpDown.Value = DateTime.Today.Year;
+                subjectReadingReadSemesterListBox.ClearSelected();
                 subjectReadingGrid.BeginEdit(true);
             }
             catch (Exception e)
@@ -704,6 +709,7 @@ namespace LecturerDB.Views
                 moveStudentGrid.CancelEdit();
                 moveStudentReasonTextBox.Text = string.Empty;
                 moveStudentStudyYearNumericUpDown.Value = DateTime.Today.Year;
+                moveStudentStudySemesterListBox.ClearSelected();
                 moveStudentStudentCountBeginNumericUpDown.Value = 0;
                 moveStudentStudentCountEndNumericUpDown.Value = 0;
                 moveStudentRemovedNumericUpDown.Value = 0;
@@ -1025,6 +1031,7 @@ namespace LecturerDB.Views
                 learningResultStudyYearNumericUpDown.Value = DateTime.Today.Year;
                 learningResultMeanMarkNumericUpDown.Value = 0;
                 learningResultFCountNumericUpDown.Value = 0;
+                learningResultSemesterListBox.ClearSelected();
                 learningResultGrid.BeginEdit(true);
             }
             catch (Exception e)
@@ -1386,6 +1393,16 @@ namespace LecturerDB.Views
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void bindingNavigatorDeleteItem5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lecturerGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //todo cell click open CV
         }
 
 
